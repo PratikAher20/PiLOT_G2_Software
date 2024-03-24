@@ -23,6 +23,8 @@ drivers/mss_nvm \
 drivers/mss_i2c \
 drivers/mss_hpdma \
 drivers/mss_gpio \
+drivers/CoreUARTapb \
+drivers/CoreTimer \
 drivers/CoreSPI \
 drivers/CoreI2C \
 CMSIS \

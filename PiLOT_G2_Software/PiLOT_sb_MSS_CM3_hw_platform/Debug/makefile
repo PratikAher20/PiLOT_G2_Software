@@ -19,6 +19,8 @@ RM := rm -rf
 -include drivers/mss_i2c/subdir.mk
 -include drivers/mss_hpdma/subdir.mk
 -include drivers/mss_gpio/subdir.mk
+-include drivers/CoreUARTapb/subdir.mk
+-include drivers/CoreTimer/subdir.mk
 -include drivers/CoreSPI/subdir.mk
 -include drivers/CoreI2C/subdir.mk
 -include CMSIS/subdir.mk

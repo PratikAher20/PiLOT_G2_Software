@@ -8,13 +8,12 @@
 #ifndef INCLUDES_VC_SENSOR_H_
 #define INCLUDES_VC_SENSOR_H_
 
-#include "core_i2c.h"
-i2c_instance_t g_core_i2c2;
+#include "peripherals.h"
 
 #define VC1 0x40
 #define VC2 0x41
 #define VC3 0x43
-#define VC_SENSOR_I2C &g_core_i2c2
+#define VC_SENSOR_I2C &g_core_i2c0
 
 // Reg Addresses
 #define VC_BUSV_CHx(x)                  ((0x2 * x))

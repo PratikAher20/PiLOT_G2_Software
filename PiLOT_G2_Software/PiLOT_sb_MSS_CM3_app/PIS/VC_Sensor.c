@@ -65,6 +65,7 @@ uint8_t vc_write_reg(uint8_t vc_addr, uint8_t reg_addr,uint8_t *tx,uint8_t tx_si
 }
 
 uint8_t vc_init(uint8_t addr) {
+
     init_command = VC_INIT_CMD;
     config_reg = VC_CONFIG_REG;
     if(vc_write(addr,&config_reg,sizeof(config_reg)) >= 10) {

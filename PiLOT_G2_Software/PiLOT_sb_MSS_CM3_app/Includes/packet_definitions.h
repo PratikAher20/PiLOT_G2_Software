@@ -12,6 +12,8 @@
 #ifndef _PACKET_DEFINITIONS_
 #define _PACKET_DEFINITIONS_
 
+#include "main.h"
+#define PILOT_REVERSE_BYTE_ORDER(var)	(((var) << 8) | ((var) >> 8))
 #define THERMISTOR_API_ID			20
 #define THERMISTOR_PKT_LENGTH		sizeof(thermistor_pkt_t)
 #define THERMISTOR_FLETCHER_CODE	0xCDCD
@@ -24,7 +26,7 @@
 #define LOGS_PKT_LENGTH		sizeof(log_packet_t)
 #define LOGS_FLETCHER_CODE	0x00
 
-#define HK_API_ID			10
+#define HK_API_ID			1
 #define HK_PKT_LENGTH		sizeof(hk_pkt_t)
 #define HK_FLETCHER_CODE	0xCDCD
 
@@ -86,32 +88,32 @@ typedef struct {
     uint32_t ccsds_s1;
     uint32_t ccsds_s2;
 
-    uint16_t q_head;
-    uint16_t q_tail;
-    uint8_t CDH_Periph_Status; //For all the 8 flags
+//    uint16_t q_head;
+//    uint16_t q_tail;
+//    uint8_t CDH_Periph_Status; //For all the 8 flags
     uint16_t Acc[3];  // X,Y,Z Axis
     uint16_t Angular_Rate[3]; //Pitch, Roll, Yaw
-    uint16_t Sensor_Board_VC[2];
+    uint16_t imu_temp;
     uint16_t CDH_VC[2];
-    uint16_t Comms_VC[2];
+    uint16_t PIS_VC[2];
 
-    uint32_t HK_Read_Pointer;
-    uint32_t HK_Write_Pointer;
-    uint32_t Thermistor_Read_Pointer;
-    uint32_t Thermistor_Write_Pointer;
-    uint32_t Logs_Read_Pointer;
-    uint32_t Logs_Write_Pointer;
-    uint32_t SD_Test_Read_Pointer;
-    uint32_t SD_Test_Write_Pointer;
-    uint32_t ARIS_Read_Pointer;
-    uint32_t ARIS_Write_Pointer;
-
-    uint16_t aris_miss;
-    uint16_t hk_miss;
-    uint16_t payload_miss;
-    uint8_t sd_dump;
+//    uint32_t HK_Read_Pointer;
+//    uint32_t HK_Write_Pointer;
+//    uint32_t Thermistor_Read_Pointer;
+//    uint32_t Thermistor_Write_Pointer;
+//    uint32_t Logs_Read_Pointer;
+//    uint32_t Logs_Write_Pointer;
+//    uint32_t SD_Test_Read_Pointer;
+//    uint32_t SD_Test_Write_Pointer;
+//    uint32_t ARIS_Read_Pointer;
+//    uint32_t ARIS_Write_Pointer;
 //
-    uint16_t Fletcher_Code;
+//    uint16_t aris_miss;
+//    uint16_t hk_miss;
+//    uint16_t payload_miss;
+//    uint8_t sd_dump;
+//
+//    uint16_t Fletcher_Code;
 }__attribute__((packed)) hk_pkt_t;
 
 /**
@@ -218,14 +220,35 @@ typedef struct{
 
 } __attribute__((packed)) i2c_packet_t;
 
-typedef struct {
-    uint16_t ccsds_p1;
-    uint16_t ccsds_p2;
-    uint16_t ccsds_p3;
+//typedef struct {
+//    uint16_t ccsds_p1;
+//    uint16_t ccsds_p2;
+//    uint16_t ccsds_p3;
+//
+//    uint32_t ccsds_s1;
+//    uint32_t ccsds_s2;
+//};
 
-    uint32_t ccsds_s1;
-    uint32_t ccsds_s2;
-};
+
+typedef enum pkt_name{
+	hk = 0,
+	pld,
+}pkt_name_t;
+
+typedef struct pkt{
+
+	pkt_name_t pkt_type;
+
+	void * pkt_data;
+
+	uint8_t pkt_size;
+
+} __attribute__((packed)) pkt_t;
+
+
+uint16_t blck_pkt[4][256];
+
+void vGetPktStruct(pkt_name_t pktname, void* pktdata, uint8_t pktsize);
 
 #endif
 

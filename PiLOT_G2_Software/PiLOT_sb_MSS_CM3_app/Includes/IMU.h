@@ -11,7 +11,9 @@
 #define IMU_ADDR 0x6a
 #define IMU_WHO_AM_I_REG 0x0F
 
-i2c_instance_t g_core_i2c5;
+i2c_instance_t g_core_i2c3;
+
+#define IMU_CORE_I2C &g_core_i2c3
 
 uint8_t get_IMU_acc(uint16_t *a_x,uint16_t *a_y,uint16_t *a_z);
 

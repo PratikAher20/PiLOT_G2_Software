@@ -13,20 +13,21 @@
 #define PERIPH_H
 
 #include<CMSIS/hw_reg_io.h>
-#include<drivers/CoreUARTapb/core_uart_apb.h>
+//#include<drivers/CoreUARTapb/core_uart_apb.h>
 #include<drivers/CoreI2C/core_i2c.h>
-#include<drivers/mss_rtc/mss_rtc.h>
+//#include<drivers/mss_rtc/mss_rtc.h>
 #include<drivers/mss_spi/mss_spi.h>
 #include<drivers/mss_timer/mss_timer.h>
-#include <PiLOT_hw_platform.h>
+//#include <PiLOT_hw_platform.h>
 #include <drivers/mss_gpio/mss_gpio.h>
 #include <drivers/mss_i2c/mss_i2c.h>
 #include <drivers/mss_uart/mss_uart.h>
 #include <drivers_config/sys_config/sys_config_mss_clocks.h>
-#include <drivers/CoreTimer/core_timer.h>
-#include <drivers/mss_watchdog/mss_watchdog.h>
+#include "PiLOT_G2_hw_platform.h"
+//#include <drivers/CoreTimer/core_timer.h>
+//#include <drivers/mss_watchdog/mss_watchdog.h>
 //#include"../../AHAN_FSW/AHAN_sb_MSS_CM3_hw_platform/drivers/CoreSPI/core_spi.h"
-#include <drivers/CoreSPI/core_spi_new.h>
+//#include <drivers/CoreSPI/core_spi_new.h>
 #define WDOG_SYSREG_CR_ENABLE_MASK      0x00000001u
 //UART
 //defining PE bit of LSR register for MSS_UART
@@ -46,10 +47,6 @@ i2c_instance_t g_core_i2c5;
 
 i2c_status_t core_i2c_status;
 
-timer_instance_t sd_timer;
-
-//Core SPI instance
-spi_instance_t g_core_spi0;
 #define SD_TIMER_BASE_ADDR	0x5000B000
 
 #define i2c_3 g_core_i2c1
