@@ -12,6 +12,7 @@
 #include "hw_reg_access.h"
 #include "hal.h"
 #include "sys_config_mss_clocks.h"
+//#include "P1.h"
 
 #define WRITE_SRAM_REG_OFFSET   0x00u
 #define WRITE_SRAM_ENABLE_REG_OFFSET 0x04u

@@ -7,17 +7,32 @@
 
 #include "RS485_Controller.h"
 
-void GPIO2_IRQHandler( void ){
+
+void GPIO1_IRQHandler( void ){
     uint16_t a, i = 0;
     a  = 1;
     uint16_t buf[1];
-    buf[0] = 0;
-    for(;i<1024;i++){
+    uint16_t r_addr, w_addr;
+    buf[0] = 0xFF;
+//
+		r_addr = HAL_get_16bit_reg(RS_485_Controller_0, READ_RADDR);
+		w_addr = HAL_get_16bit_reg(RS_485_Controller_0, READ_WADDR);
 
-        HAL_set_16bit_reg(RS_485_Controller_0, WRITE_SRAM, (uint_fast16_t) buf[0]);
-    }
-    NVIC_ClearPendingIRQ(GPIO2_IRQn);
-    return ;
+//		MSS_GPIO_set_output(MSS_GPIO_8, 0);
+
+//		for(;i<3;i++){
+////
+//			HAL_set_16bit_reg(RS_485_Controller_0, WRITE_SRAM, (uint_fast16_t) buf[0]);
+//		}
+		r_addr = HAL_get_16bit_reg(RS_485_Controller_0, READ_RADDR);
+		w_addr = HAL_get_16bit_reg(RS_485_Controller_0, READ_WADDR);
+//        if(i == 255){
+
+        	NVIC_ClearPendingIRQ(GPIO1_IRQn);
+			return ;
+//        }
+//    }
+
     //Start storing in SD_CARD
     //Clear the interrupt after reading a 256 block packet
 }
@@ -26,11 +41,12 @@ void GPIO2_IRQHandler( void ){
 uint16_t init_RS485_Controller(){
     MSS_GPIO_init();
     MSS_GPIO_config(MSS_GPIO_0, MSS_GPIO_OUTPUT_MODE);
+    MSS_GPIO_config(MSS_GPIO_8, MSS_GPIO_OUTPUT_MODE);
     MSS_GPIO_set_output(MSS_GPIO_0, 1);
-    MSS_GPIO_config(MSS_GPIO_2, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
-    MSS_GPIO_enable_irq(MSS_GPIO_2);
-    NVIC_EnableIRQ(GPIO2_IRQn);
-
+    MSS_GPIO_config(MSS_GPIO_1, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
+    MSS_GPIO_enable_irq(MSS_GPIO_1);
+    NVIC_EnableIRQ(GPIO1_IRQn);
+    NVIC_SetPriority(GPIO1_IRQn, 255);
     uint16_t buf[1];
     uint16_t waddr, i;
     buf[0] = 0;
@@ -42,12 +58,11 @@ uint16_t init_RS485_Controller(){
 
     waddr = HAL_get_16bit_reg(RS_485_Controller_0, READ_WADDR);
 
-    for(;i<1024;i++){
-
-        HAL_set_16bit_reg(RS_485_Controller_0, WRITE_SRAM, (uint_fast16_t) buf[0]);
-    }
+//    for(;i<1025;i++){
+//
+//        HAL_set_16bit_reg(RS_485_Controller_0, WRITE_SRAM, (uint_fast16_t) buf[0]);
+//    }
 
     return waddr;
 }
-
 

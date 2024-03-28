@@ -5,9 +5,20 @@
  *      Author: S-SPACE
  */
 
-#include "main.h"
+#include "P1.h"
+#include "cmd.h"
+//#include "RS485_Controller.h"
 
 timer_instance_t t1;
+timer_instance_t t2;
+
+
+uint16_t rssi_cca;
+uint16_t rssi;
+uint8_t cmd_rx_count = 0;
+uint8_t cmd_succ_count = 0;
+uint8_t cmd_reject_count = 0;
+rx_cmd_t* rx_cmd_pkt;
 
 void HK_ISR(){
 
@@ -15,6 +26,49 @@ void HK_ISR(){
 	TMR_clear_int(&t1);
 }
 
+void COMMS_ISR(){
+
+	get_comms();
+	TMR_clear_int(&t2);
+}
+
+void timer_intr_set(){
+	TMR_init(&t1, CORETIMER_C0_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, HK_PKT_PERIOD);
+	TMR_enable_int(&t1);
+	NVIC_EnableIRQ( FabricIrq4_IRQn);
+	NVIC_SetPriority(FabricIrq4_IRQn, 254);
+
+	TMR_init(&t2, CORETIMER_C1_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, COMMS_PKT_PERIOD);
+	TMR_enable_int(&t2);
+	NVIC_EnableIRQ( FabricIrq5_IRQn);
+	NVIC_SetPriority(FabricIrq5_IRQn, 254);
+
+	TMR_start(&t1);
+	TMR_start(&t2);
+}
+
+void timer_dis(){
+	NVIC_DisableIRQ(FabricIrq4_IRQn);
+	NVIC_DisableIRQ(FabricIrq5_IRQn);
+}
+
+void timer_ena(){
+	NVIC_EnableIRQ(FabricIrq4_IRQn);
+	NVIC_EnableIRQ(FabricIrq5_IRQn);
+}
+
+void get_cmd(uint8_t* cmd){
+
+	rx_cmd_pkt = (rx_cmd_t*) cmd;
+
+	if(cmd_valid(rx_cmd_pkt)){
+		cmd_engine(rx_cmd_pkt);
+		cmd_succ_count++;
+	}
+	else{
+		cmd_reject_count++;
+	}
+}
 
 int main(){
 
@@ -24,22 +78,59 @@ int main(){
     //pslv_interface_init
     //interface_init
 	p1_init();
-//	uint16_t ax, ay, az;
-//	uint16_t roll_rate, pitch_rate, yaw_rate;
-//	uint16_t imu_temp;
+	uint16_t ax, ay, az;
+	uint16_t roll_rate, pitch_rate, yaw_rate;
+	uint16_t imu_temp;
 	uint8_t result = 0, flag;
 	uint32_t tmr_value;
+	uint16_t i = 1;
+	uint16_t cont, waddr, raddr;
+	uint16_t buf[256];
+	buf[0] = 0;
+	uint16_t data[256];
+	uint16_t rssi;
+	uint8_t mode;
+	uint32_t freq;
+
+	uint8_t cmd;
+	uint8_t cmd_rx_flag = 0;
+
+	MSS_GPIO_init();
+	MSS_GPIO_config(MSS_GPIO_0, MSS_GPIO_OUTPUT_MODE);
+	MSS_GPIO_set_output(MSS_GPIO_0, 1);
+
+	cont = HAL_get_16bit_reg(RS_485_Controller_0, READ_CONST);
+
+	waddr = init_RS485_Controller();
+
+	adf_init();
+
+	mode = adf_get_state();
 
 	 MSS_UART_init(&g_mss_uart0,
 	                   MSS_UART_9600_BAUD,
 	                   MSS_UART_DATA_8_BITS | MSS_UART_NO_PARITY | MSS_UART_ONE_STOP_BIT);
 
+
 	NVIC_ClearPendingIRQ(FabricIrq4_IRQn);
-	TMR_init(&t1, CoreTimer_C0_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, HK_PKT_PERIOD);
-	TMR_enable_int(&t1);
-	NVIC_EnableIRQ( FabricIrq4_IRQn);
-	NVIC_SetPriority(FabricIrq4_IRQn, 255);
-	TMR_start(&t1);
+	NVIC_ClearPendingIRQ(FabricIrq5_IRQn);
+
+	timer_intr_set();
+
+	uint32_t timer_count = 0xFFFFFFFF;
+	uint32_t ICI = 0xFFFFFFFF - (MSS_SYS_M3_CLK_FREQ* (10));
+	uint32_t curr_value = 0x0;
+
+//	MSS_TIM1_init(MSS_TIMER_PERIODIC_MODE);
+//    MSS_TIM1_load_immediate(timer_count);
+//    MSS_TIM1_start();
+
+
+//    while(1){
+//    	adf_send_cmd(CMD_PHY_RX);
+//    	rx_pkt(&cmd, &rssi, &cmd_rx_flag);
+//    }
+
 
 	while(1){
 //		result = get_IMU_acc(&ax, &ay, &az);
@@ -47,9 +138,36 @@ int main(){
 //		result = get_IMU_temp(&imu_temp);
 //		HK_ISR();
 
+//Just Keep Checking For Commands
+//		tmr_value = TMR_current_value(&t1);
+		adf_send_cmd(CMD_PHY_RX);
 
-		tmr_value = TMR_current_value(&t1);
+		curr_value = MSS_TIM1_get_current_value();
 
+		while(curr_value > ICI){
+
+			rx_pkt(&cmd, &rssi, &cmd_rx_flag);
+			if(cmd_rx_flag == 1){
+				cmd_rx_count++;
+				cmd_rx_flag = 0;
+				get_cmd(&cmd);
+				break;
+			}
+
+			curr_value = MSS_TIM1_get_current_value();
+		}
+
+		adf_send_cmd(CMD_PHY_ON);
+		adf_send_cmd(CMD_PHY_CCA);
+
+		get_rssi_cca_data(&rssi_cca);
+
+		MSS_TIM1_load_immediate(timer_count);
+		//Get _in Rx
+		//timer_start
+		//rx_pkt -> check_for_100_tries --- continue until timer expires
+		//read_rssi_cca
+		//reload_timer
 	}
 
     uint8_t message[12] = "Hello World";
@@ -61,11 +179,7 @@ int main(){
 //    }
 
 
-    uint16_t i = 1;
-    uint16_t cont, waddr, raddr;
-    uint16_t buf[256];
-    buf[0] = 0;
-    uint16_t data[256];
+
 
     data[0] = 0;
     for(;i<256;i++){
@@ -73,29 +187,29 @@ int main(){
     }
 
 
-    uint32_t timer_count = 0xFFFFFFFF;
-    uint32_t ICI = 0xFFFFFFFF - (MSS_SYS_M3_CLK_FREQ* (0.237567));
+
     uint32_t gpio_delay = 0xFFFFFFCD;
-    uint32_t curr_value = 0x0;
     uint16_t data_temp = 0xABCD;
 
 
 //  MSS_GPIO_set_output(MSS_GPIO_1, 1);
 //    waddr = init_RS485_Controller();
-//
+////
 //    cont = HAL_get_16bit_reg(RS_485_Controller_0, READ_CONST);
-
+//
 //    MSS_TIM1_init(MSS_TIMER_PERIODIC_MODE);
 //    MSS_TIM1_load_immediate(timer_count);
 //    MSS_TIM1_start();
 //
 //    MSS_TIM64_init(MSS_TIMER_PERIODIC_MODE);
 
+//    while(1){
+////    	store_pkt();
+//    	tmr_value = TMR_current_value(&t1);
+//    }
 
 
 //    while(1){
-//
-//
 //
 //        cont = HAL_get_16bit_reg(RS_485_Controller_0, READ_CONST);
 //
@@ -158,4 +272,9 @@ void FabricIrq4_IRQHandler(void)
 {
     HK_ISR();
 
+}
+
+void FabricIrq5_IRQHandler(void)
+{
+    COMMS_ISR();
 }
