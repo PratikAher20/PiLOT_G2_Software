@@ -4,6 +4,8 @@
 
 #include "stdint.h"
 
+#include "P1.h"
+
 #define MAX_CMD_PARAM 32
 #define NUM_CMDS 1
 

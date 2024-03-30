@@ -9,8 +9,8 @@
 #include "cmd.h"
 //#include "RS485_Controller.h"
 
-timer_instance_t t1;
-timer_instance_t t2;
+timer_instance_t hk_timer;
+timer_instance_t comms_timer;
 
 
 uint16_t rssi_cca;
@@ -23,37 +23,37 @@ rx_cmd_t* rx_cmd_pkt;
 void HK_ISR(){
 
 	get_hk();
-	TMR_clear_int(&t1);
+	TMR_clear_int(&hk_timer);
 }
 
 void COMMS_ISR(){
 
 	get_comms();
-	TMR_clear_int(&t2);
+	TMR_clear_int(&comms_timer);
 }
 
 void timer_intr_set(){
-	TMR_init(&t1, CORETIMER_C0_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, HK_PKT_PERIOD);
-	TMR_enable_int(&t1);
+	TMR_init(&hk_timer, CORETIMER_C0_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, HK_PKT_PERIOD);
+	TMR_enable_int(&hk_timer);
 	NVIC_EnableIRQ( FabricIrq4_IRQn);
 	NVIC_SetPriority(FabricIrq4_IRQn, 254);
 
-	TMR_init(&t2, CORETIMER_C1_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, COMMS_PKT_PERIOD);
-	TMR_enable_int(&t2);
+	TMR_init(&comms_timer, CORETIMER_C1_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, COMMS_PKT_PERIOD);
+	TMR_enable_int(&comms_timer);
 	NVIC_EnableIRQ( FabricIrq5_IRQn);
 	NVIC_SetPriority(FabricIrq5_IRQn, 254);
 
-	TMR_start(&t1);
-	TMR_start(&t2);
+	TMR_start(&hk_timer);
+	TMR_start(&comms_timer);
 }
 
 void timer_dis(){
-	NVIC_DisableIRQ(FabricIrq4_IRQn);
+//	NVIC_DisableIRQ(FabricIrq4_IRQn);
 	NVIC_DisableIRQ(FabricIrq5_IRQn);
 }
 
 void timer_ena(){
-	NVIC_EnableIRQ(FabricIrq4_IRQn);
+//	NVIC_EnableIRQ(FabricIrq4_IRQn);
 	NVIC_EnableIRQ(FabricIrq5_IRQn);
 }
 

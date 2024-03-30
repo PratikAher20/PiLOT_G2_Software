@@ -271,6 +271,7 @@ typedef enum pkt_name{
 	comms = 1,
 	gmc = 2
 }pkt_name_t;
+
 typedef struct pkt{
 
 	pkt_name_t pkt_type;
