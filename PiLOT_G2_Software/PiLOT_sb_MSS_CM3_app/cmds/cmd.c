@@ -12,6 +12,7 @@ extern uint16_t command_cnt;
 extern uint16_t command_reject_cnt;
 extern timer_instance_t hk_timer;
 extern timer_instance_t comms_timer;
+extern uint8_t ERR_LOG;
 
 uint8_t cmd_valid(rx_cmd_t* rx_cmd){
 	return 1;  //Will be checking the validated of the checksum.
@@ -28,8 +29,7 @@ void add_cmd(uint8_t id, uint16_t length, void (*ex_func)(uint8_t id, rx_cmd_t* 
 
 void cmd_engine(rx_cmd_t* rx_cmd){
 
-	add_cmd(0, 2, cmd_noop);
-	add_cmd(1, 3, set_pkt_rate);   //the actual command apid's is one greater than this.
+	   //the actual command apid's is one greater than this.
 //	add_cmd(2, 2, cmd_sc_reset);
 
 	cmd_list[rx_cmd->cmd_id - 1].ex_func(rx_cmd);
@@ -68,6 +68,38 @@ void set_pkt_rate(rx_cmd_t* rcv_cmd){
 			NVIC_DisableIRQ(FabricIrq5_IRQn);
 		}
 	}
+
+}
+
+void delay ( volatile unsigned int n)
+{
+	while(n!=0)
+	{
+		n--;
+	}
+}
+
+void exe_iap(rx_cmd_t* rcv_cmd){
+
+	// TODO Add a sequence of commands to ensure the cmd reception, and then to get the address of the image.
+
+	uint8_t prog_status, auth_status;
+	MSS_SPI_set_slave_select( &g_mss_spi0, MSS_SPI_SLAVE_0 );
+
+	g_mss_spi0.hw_reg->CONTROL |= (0x04000000);
+	delay(80000);
+
+	auth_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_AUTHENTICATE, 0x001000);
+
+	delay(80000);
+
+	if(auth_status){
+		ERR_LOG = ERR_LOG | 0x01;
+	}
+	else{
+		prog_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_PROGRAM, 0x001000);
+	}
+
 
 }
 

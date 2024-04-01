@@ -15,6 +15,7 @@ timer_instance_t comms_timer;
 
 uint16_t rssi_cca;
 uint16_t rssi;
+uint8_t ERR_LOG = 0;
 uint8_t cmd_rx_count = 0;
 uint8_t cmd_succ_count = 0;
 uint8_t cmd_reject_count = 0;
@@ -70,6 +71,12 @@ void get_cmd(uint8_t* cmd){
 	}
 }
 
+void init_cmd_engine(){
+	add_cmd(0, 2, cmd_noop);
+	add_cmd(1, 3, set_pkt_rate);
+	add_cmd(2, 3, exe_iap);
+}
+
 int main(){
 
     //adf_init
@@ -95,11 +102,24 @@ int main(){
 	uint8_t cmd;
 	uint8_t cmd_rx_flag = 0;
 
+	MSS_SYS_init(MSS_SYS_NO_EVENT_HANDLER);
+	MSS_SPI_init( &g_mss_spi0 );
+	MSS_SPI_configure_master_mode
+		(
+			&g_mss_spi0,
+			MSS_SPI_SLAVE_0,
+			MSS_SPI_MODE0,
+			8u,
+			8
+		);
 	MSS_GPIO_init();
 	MSS_GPIO_config(MSS_GPIO_0, MSS_GPIO_OUTPUT_MODE);
 	MSS_GPIO_set_output(MSS_GPIO_0, 1);
 
+	init_cmd_engine();
+
 	cont = HAL_get_16bit_reg(RS_485_Controller_0, READ_CONST);
+
 
 	waddr = init_RS485_Controller();
 

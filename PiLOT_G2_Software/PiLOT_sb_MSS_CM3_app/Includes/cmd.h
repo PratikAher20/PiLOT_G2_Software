@@ -5,9 +5,10 @@
 #include "stdint.h"
 
 #include "P1.h"
+#include "mss_sys_services.h"
 
 #define MAX_CMD_PARAM 32
-#define NUM_CMDS 1
+#define NUM_CMDS 5
 
 
 typedef struct rx_cmd{
@@ -35,6 +36,7 @@ void cmd_engine(rx_cmd_t* rx_cmd);
 
 void cmd_noop(rx_cmd_t* rcv_cmd);
 void set_pkt_rate(rx_cmd_t* rcv_cmd);
+void exe_iap(rx_cmd_t* rcv_cmd);
 void cmd_sc_reset(rx_cmd_t* rcv_cmd);
 
 typedef struct pkt_rate{
