@@ -75,6 +75,7 @@ void init_cmd_engine(){
 	add_cmd(0, 2, cmd_noop);
 	add_cmd(1, 3, set_pkt_rate);
 	add_cmd(2, 3, exe_iap);
+	add_cmd(3, 6, read_adf_reg);
 }
 
 int main(){

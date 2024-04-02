@@ -32,9 +32,9 @@ typedef struct{
 	uint8_t comms_adf_preamble_patt;
 	uint32_t comms_adf_sync_word;
 	uint32_t comms_adf_freq;
-//	uint32_t comms_adf_read_reg_addr;
-//	uint8_t comms_adf_read_reg_byte;
-//	uint64_t comms_adf_data[8];
+	uint32_t comms_adf_read_reg_addr;
+	uint8_t comms_adf_read_No_double_words;
+	uint32_t comms_adf_data[8];
 //	uint8_t comms_adf_read_flag;
 //	uint8_t comms_adf_state;
 //	uint8_t comms_cmd_list;

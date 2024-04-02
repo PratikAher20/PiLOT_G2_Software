@@ -37,6 +37,7 @@ void cmd_engine(rx_cmd_t* rx_cmd);
 void cmd_noop(rx_cmd_t* rcv_cmd);
 void set_pkt_rate(rx_cmd_t* rcv_cmd);
 void exe_iap(rx_cmd_t* rcv_cmd);
+void read_adf_reg(rx_cmd_t* rcv_cmd);
 void cmd_sc_reset(rx_cmd_t* rcv_cmd);
 
 typedef struct pkt_rate{

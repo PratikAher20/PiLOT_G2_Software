@@ -721,6 +721,14 @@ uint8_t rx_pkt(uint8_t * cmd, uint16_t* rssi, uint8_t* cmd_rx_flg){
 		cmd[1] = rx_buf[4];
 		cmd[2] = rx_buf[3];
 		cmd[3] = rx_buf[2];
+//		cmd[4] = rx_buf[1];
+//		cmd[5] = rx_buf[0];
+
+		adf_read_from_memory(RMODE_1, RX_BUFFER + 4, rx_buf, 4);
+		cmd[4] = rx_buf[5];
+		cmd[5] = rx_buf[4];
+//		cmd[8] = rx_buf[1];
+//		cmd[9] = rx_buf[0];
 
 		adf_write_to_memory(WMODE_1, RX_BUFFER, clr_tx_buf, 4);
 		adf_write_to_memory(WMODE_1, IRQ_CTRL_STATUS0, clr_tx, 4);

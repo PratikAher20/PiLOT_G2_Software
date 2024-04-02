@@ -17,13 +17,16 @@ extern uint8_t cmd_reject_count;
 uint16_t data_test[25] = {0};
 comms_pkt_t* comms_pkt;
 uint16_t comms_seq_num = 0;
+uint32_t cmd_adf_read_addr = 0;
+uint8_t cmd_adf_read_No_double_words = 0;
+uint32_t cmd_adf_data[8];
 
 void get_gmc(){
 
 }
 
 void get_comms(){
-	uint16_t i = 1;
+	uint16_t i = 0;
 	comms_pkt = (comms_pkt_t*) data;
 //	data_test[0]++;
 //	for(;i<25;i++){
@@ -42,6 +45,15 @@ void get_comms(){
 	comms_pkt->comms_adf_preamble_patt = get_preamble_pkt();
 	comms_pkt->comms_adf_sync_word = get_sync_word();
 	comms_pkt->comms_adf_freq = get_freq();
+	comms_pkt->comms_adf_read_reg_addr = cmd_adf_read_addr;
+	comms_pkt->comms_adf_read_No_double_words = cmd_adf_read_No_double_words;
+
+	for(;i<cmd_adf_read_No_double_words;i++){
+		comms_pkt->comms_adf_data[i] =	cmd_adf_data[i];
+	}
+
+	i = 0;
+
 //	comms_pkt->comms_adf_state = adf_get_state();
 
 	comms_seq_num++;
