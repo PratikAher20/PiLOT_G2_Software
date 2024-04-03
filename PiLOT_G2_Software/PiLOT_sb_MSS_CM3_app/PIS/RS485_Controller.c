@@ -7,6 +7,10 @@
 
 #include "RS485_Controller.h"
 
+extern rx_cmd_t* rx_cmd_pkt;
+extern uint8_t cmd_rs485_succ_count;
+extern uint8_t cmd_rs485_fail_count;
+extern uint8_t store_in_sd_card;
 
 void GPIO1_IRQHandler( void ){
     uint16_t a, i = 0;
@@ -18,20 +22,14 @@ void GPIO1_IRQHandler( void ){
 		r_addr = HAL_get_16bit_reg(RS_485_Controller_0, READ_RADDR);
 		w_addr = HAL_get_16bit_reg(RS_485_Controller_0, READ_WADDR);
 
-//		MSS_GPIO_set_output(MSS_GPIO_8, 0);
+		//Start storing the packets in sd card
 
-//		for(;i<3;i++){
-////
-//			HAL_set_16bit_reg(RS_485_Controller_0, WRITE_SRAM, (uint_fast16_t) buf[0]);
-//		}
-		r_addr = HAL_get_16bit_reg(RS_485_Controller_0, READ_RADDR);
-		w_addr = HAL_get_16bit_reg(RS_485_Controller_0, READ_WADDR);
-//        if(i == 255){
+		store_in_sd_card = 1;
+
 		MSS_GPIO_clear_irq(MSS_GPIO_1);
-//        	NVIC_ClearPendingIRQ(GPIO1_IRQn);
-			return ;
-//        }
-//    }
+
+		return ;
+
 
     //Start storing in SD_CARD
     //Clear the interrupt after reading a 256 block packet
@@ -52,6 +50,17 @@ void GPIO3_IRQHandler(void){
 	for(;i<32;i++){
 		cmd[i] = cmd[i+1];
 	}
+
+	rx_cmd_pkt = (rx_cmd_t*) cmd;
+
+	if(cmd_valid(rx_cmd_pkt)){
+		cmd_engine(rx_cmd_pkt);
+		cmd_rs485_succ_count++;
+	}
+	else{
+		cmd_rs485_fail_count++;
+	}
+
 
 	MSS_GPIO_clear_irq( MSS_GPIO_3);
 

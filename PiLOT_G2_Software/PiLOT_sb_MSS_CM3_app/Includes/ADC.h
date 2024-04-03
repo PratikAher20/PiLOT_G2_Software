@@ -21,7 +21,12 @@
 #define DATA_HIGH_REG(x) ((x) * 3 + 0x5)
 #define ADC_CHX(x) (((x) + 0x8)<<4)
 
+#define TEMP_ADC_CORE_I2C	&g_core_i2c1
+
 #include "core_i2c.h"
 
+
+uint8_t ADC_Init(i2c_instance_t *i2c_chx,uint8_t address);
+uint16_t get_ADC_value(i2c_instance_t *i2c_chx,uint8_t address,uint8_t chx,uint8_t *flag);
 
 #endif /* INCLUDES_ADC_H_ */

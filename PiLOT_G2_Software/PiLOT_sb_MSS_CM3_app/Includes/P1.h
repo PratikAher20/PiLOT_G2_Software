@@ -20,6 +20,7 @@
 #include "sys_config_mss_clocks.h"
 #include "adf7030.h"
 #include "PiLOT_G2_hw_platform.h"
+#include "memory.h"
 
 //#define CoreTimer_C0_0	0x50006000
 //#define CoreTimer_C1_0	0x50007000
@@ -30,6 +31,7 @@
 
 #define HK_PKT_PERIOD 	MSS_SYS_M3_CLK_FREQ/1024 * 1
 #define COMMS_PKT_PERIOD	MSS_SYS_M3_CLK_FREQ/1024 * 2
+#define TEMP_PKT_PERIOD	MSS_SYS_M3_CLK_FREQ/1024 * 3
 
 #define HK_PACKET_SIZE  132
 
@@ -70,26 +72,6 @@ void get_hk();
 #define TIME_API_ID			60
 #define TIME_PKT_LENGTH		sizeof(timer_pkt)
 
-
-typedef struct {
-    //CCSDS
-
-	uint16_t ccsds_p1;
-	uint16_t ccsds_p2;
-	uint16_t ccsds_p3;
-
-    uint32_t ccsds_s1;
-    uint32_t ccsds_s2;
-
-    uint32_t data_valid;
-    uint16_t thermistor_set_A[8];
-    uint16_t thermistor_set_B[8];
-    uint16_t thermistor_set_C[8];
-    uint16_t sensor_board_voltage;
-
-    uint16_t Fletcher_Code;
-}__attribute__((packed)) thermistor_pkt_t;
-
 typedef struct {
 	uint32_t collect_time;
 	uint8_t data_valid;
@@ -125,6 +107,8 @@ typedef struct {
 //    uint16_t q_head;
 //    uint16_t q_tail;
 //    uint8_t CDH_Periph_Status; //For all the 8 flags
+    uint8_t Cmd_RS485_Succ_counts;
+    uint8_t Cmd_RS485_Fail_counts;
     uint16_t Acc[3];  // X,Y,Z Axis
     uint16_t Angular_Rate[3]; //Pitch, Roll, Yaw
     uint16_t imu_temp;
@@ -152,6 +136,17 @@ typedef struct {
 //    uint16_t Fletcher_Code;
 }__attribute__((packed)) hk_pkt_t;
 
+typedef struct{
+
+	uint16_t ccsds_p1;
+	uint16_t ccsds_p2;
+	uint16_t ccsds_p3;
+
+	uint32_t ccsds_s1;
+	uint32_t ccsds_s2;
+	uint16_t Temperature_Values[8];
+
+}__attribute__((packed))thermistor_pkt_t;
 /**
  * @brief Each log entry has the below four fields for every task that occurs
  *
@@ -269,7 +264,8 @@ typedef struct{
 typedef enum pkt_name{
 	hk = 0,
 	comms = 1,
-	gmc = 2
+	thermistor = 2,
+	gmc = 3
 }pkt_name_t;
 
 typedef struct pkt{

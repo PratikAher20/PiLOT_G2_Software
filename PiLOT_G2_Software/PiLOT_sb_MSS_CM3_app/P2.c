@@ -13,6 +13,8 @@ extern uint8_t cmd_rx_count;
 extern uint8_t cmd_succ_count;
 extern uint8_t data[512];
 extern uint8_t cmd_reject_count;
+extern partition_t comms_partition;
+extern uint8_t store_in_sd_card;
 
 uint16_t data_test[25] = {0};
 comms_pkt_t* comms_pkt;
@@ -63,6 +65,13 @@ void get_comms(){
 	comms_pkt->ccsds_s1 = 0;
 
 	comms_pkt->ccsds_s2 = 0;
+
+	if(store_in_sd_card){
+		store_data(&comms_partition, data);
+	}
+	else{
+		vGetPktStruct(comms, (void*) data_test, sizeof(data_test));
+	}
 
 	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(comms_pkt_t));
 //	vGetPktStruct(comms, (void*) data_test, sizeof(data_test));

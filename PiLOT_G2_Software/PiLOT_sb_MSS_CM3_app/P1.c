@@ -8,6 +8,7 @@
 #include "P1.h"
 
 hk_pkt_t* hk_pkt;
+thermistor_pkt_t* thermistor_pkt;
 uint8_t data[512];
 uint16_t hk_seq_num =0;
 
@@ -15,6 +16,11 @@ uint16_t blck_pkt[4][256];
 uint8_t send_pkt_flg = 0;
 uint8_t active_blck = 0;
 uint8_t wri_ptr = 0;
+uint8_t store_in_sd_card = 0;
+extern uint8_t cmd_rs485_succ_count;
+extern uint8_t cmd_rs485_fail_count;
+extern partition_t hk_partition;
+extern partition_t thermistor_partition;
 
 //uint16_t data_test[256] = {0};
 
@@ -29,22 +35,6 @@ void timer_intr_en(){
 void store_pkt(){
 	uint16_t i = 0;
 
-//		timer_intr_dis();
-
-//		data_test[0]++;
-//	    for(;i<256;i++){
-//	        data_test[i] = i;
-//	        if(i == 255){
-//				break;
-//			}
-//	    }
-//
-//	    i = 0;
-//	    for(;i<256;i++){
-//
-//			HAL_set_16bit_reg(RS_485_Controller_0, WRITE_SRAM, (uint_fast16_t) data_test[i]);
-//
-//		}
 
 		for(;i<256;i++){
 
@@ -54,22 +44,6 @@ void store_pkt(){
 				return;
 			}
 		}
-//		send_pkt_flg = 0;
-//		timer_intr_en();
-//	if(send_pkt_flg == 2){
-//		send_pkt_flg = 0;
-////		timer_intr_dis();
-//		for(;i<256;i++){
-//
-//			HAL_set_16bit_reg(RS_485_Controller_0, WRITE_SRAM, (uint_fast16_t) blck_pkt[3][i]);
-//
-//		}
-////		timer_intr_en();
-//	}
-//
-//	else{
-//		send_pkt_flg = 0;
-//	}
 
 
 }
@@ -78,6 +52,7 @@ void store_pkt(){
 void p1_init(){
 	I2C_init(VC_SENSOR_I2C, COREI2C_0_0, VC1, I2C_PCLK_DIV_256);	//VC_Sensor
 	I2C_init(IMU_CORE_I2C, COREI2C_3_0, IMU_ADDR, I2C_PCLK_DIV_256);	//IMU_Sensor
+	I2C_init(TEMP_ADC_CORE_I2C, COREI2C_1_0, ADC_ADDR, I2C_PCLK_DIV_256);	//Temp_ADC_Sensor
 }
 
 
@@ -143,6 +118,8 @@ void get_hk(){
 //	CDH_VC[1] = read_shunt_voltage(VC1, 2, &flag);
 //	PIS_VC[1] = read_shunt_voltage(VC1, 3, &flag);
 
+	hk_pkt->Cmd_RS485_Succ_counts = cmd_rs485_succ_count;
+	hk_pkt->Cmd_RS485_Fail_counts = cmd_rs485_fail_count;
 	hk_pkt->Acc[0] = ((ax));
 	hk_pkt->Acc[1] = ((ay));
 	hk_pkt->Acc[2] = ((az));
@@ -169,7 +146,33 @@ void get_hk(){
 	hk_pkt->ccsds_s1 = 0;
 	hk_pkt->ccsds_s2 = 0;
 
-//	vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
+	if(store_in_sd_card){
+		store_data(&hk_partition, data);
+	}
+	else{
+		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
+	}
+
 	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 //	MSS_UART_polled_tx_string(&g_mss_uart0, msg);
+}
+
+
+void get_temp(){
+	uint8_t i = 0;
+	uint8_t flag;
+	thermistor_pkt = (thermistor_pkt_t*) data;
+
+	for(;i<8;i++){
+		thermistor_pkt->Temperature_Values[i] = get_ADC_value(TEMP_ADC_CORE_I2C, ADC_ADDR, i, flag);
+	}
+
+	if(store_in_sd_card){
+		store_data(&thermistor_partition, data);
+	}
+	else{
+		vGetPktStruct(thermistor, (void*) thermistor_pkt, sizeof(thermistor_pkt_t));
+	}
+
+
 }

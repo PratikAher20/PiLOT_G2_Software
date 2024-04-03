@@ -11,7 +11,11 @@
 
 timer_instance_t hk_timer;
 timer_instance_t comms_timer;
+timer_instance_t temp_timer;
 
+partition_t hk_partition;
+partition_t comms_partition;
+partition_t thermistor_partition;
 
 uint16_t rssi_cca;
 uint16_t rssi;
@@ -19,6 +23,8 @@ uint8_t ERR_LOG = 0;
 uint8_t cmd_rx_count = 0;
 uint8_t cmd_succ_count = 0;
 uint8_t cmd_reject_count = 0;
+uint8_t cmd_rs485_succ_count = 0;
+uint8_t cmd_rs485_fail_count = 0;
 rx_cmd_t* rx_cmd_pkt;
 
 void HK_ISR(){
@@ -44,8 +50,15 @@ void timer_intr_set(){
 	NVIC_EnableIRQ( FabricIrq5_IRQn);
 	NVIC_SetPriority(FabricIrq5_IRQn, 254);
 
-	TMR_start(&hk_timer);
-	TMR_start(&comms_timer);
+
+	TMR_init(&comms_timer, CORETIMER_C2_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, TEMP_PKT_PERIOD);
+	TMR_enable_int(&temp_timer);
+	NVIC_EnableIRQ( FabricIrq6_IRQn);
+	NVIC_SetPriority(FabricIrq6_IRQn, 254);
+
+//	TMR_start(&hk_timer);
+//	TMR_start(&comms_timer);
+//	TMR_start(&temp_timer);
 }
 
 void timer_dis(){
@@ -86,6 +99,13 @@ int main(){
     //pslv_interface_init
     //interface_init
 	p1_init();
+
+	initialise_partition(&hk_partition, HK_BLOCK_INIT, HK_BLOCK_END);
+	initialise_partition(&comms_partition, COMMS_BLOCK_INIT, COMMS_BLOCK_END);
+	initialise_partition(&thermistor_partition, THERMISTOR_BLOCK_INIT, THERMISTOR_BLOCK_END);
+
+	ADC_Init(TEMP_ADC_CORE_I2C, ADC_ADDR);
+
 	uint16_t ax, ay, az;
 	uint16_t roll_rate, pitch_rate, yaw_rate;
 	uint16_t imu_temp;
@@ -99,7 +119,6 @@ int main(){
 	uint16_t rssi;
 	uint8_t mode;
 	uint32_t freq;
-
 	uint8_t cmd;
 	uint8_t cmd_rx_flag = 0;
 
@@ -115,9 +134,28 @@ int main(){
 		);
 	MSS_GPIO_init();
 	MSS_GPIO_config(MSS_GPIO_0, MSS_GPIO_OUTPUT_MODE);
+	MSS_GPIO_config(MSS_GPIO_10, MSS_GPIO_OUTPUT_MODE);
 	MSS_GPIO_set_output(MSS_GPIO_0, 1);
+	uint32_t sd_addr = 3;
+	uint8_t sd_data_write[512];
+	uint8_t data_read[512];
+	uint8_t sd_flg;
 
-	init_cmd_engine();
+	sd_data_write[0] = 0x21;
+	sd_data_write[1] = 0x20;
+	sd_data_write[3] = 0x19;
+	sd_data_write[4] = 0x18;
+
+	MSS_SPI_init(&g_mss_spi1);
+	MSS_SPI_configure_master_mode(&g_mss_spi1, MSS_SPI_SLAVE_0, MSS_SPI_MODE0, 512, 8);
+
+//	sd_flg = SD_Init();
+//
+//	sd_flg = SD_Write(sd_addr, sd_data_write);
+//
+//	sd_flg = SD_Read(sd_addr, data_read);
+//
+//	init_cmd_engine();
 
 	cont = HAL_get_16bit_reg(RS_485_Controller_0, READ_CONST);
 
@@ -139,33 +177,22 @@ int main(){
 	timer_intr_set();
 
 	uint32_t timer_count = 0xFFFFFFFF;
-	uint32_t ICI = 0xFFFFFFFF - (MSS_SYS_M3_CLK_FREQ* (10));
+	uint32_t CMD_CHK_TIMER = 0xFFFFFFFF - (MSS_SYS_M3_CLK_FREQ* (10));
 	uint32_t curr_value = 0x0;
 
-//	MSS_TIM1_init(MSS_TIMER_PERIODIC_MODE);
-//    MSS_TIM1_load_immediate(timer_count);
-//    MSS_TIM1_start();
-
-
-//    while(1){
-//    	adf_send_cmd(CMD_PHY_RX);
-//    	rx_pkt(&cmd, &rssi, &cmd_rx_flag);
-//    }
+	MSS_TIM1_init(MSS_TIMER_PERIODIC_MODE);
+    MSS_TIM1_load_immediate(timer_count);
+    MSS_TIM1_start();
 
 
 	while(1){
-//		result = get_IMU_acc(&ax, &ay, &az);
-//		result = get_IMU_gyro(&roll_rate, &pitch_rate, &yaw_rate);
-//		result = get_IMU_temp(&imu_temp);
-//		HK_ISR();
 
-//Just Keep Checking For Commands
-//		tmr_value = TMR_current_value(&t1);
 		adf_send_cmd(CMD_PHY_RX);
 
 		curr_value = MSS_TIM1_get_current_value();
 
-		while(curr_value > ICI){
+		get_hk();
+		while(curr_value > CMD_CHK_TIMER){
 
 			rx_pkt(&cmd, &rssi, &cmd_rx_flag);
 			if(cmd_rx_flag == 1){
@@ -180,8 +207,10 @@ int main(){
 
 		adf_send_cmd(CMD_PHY_ON);
 		adf_send_cmd(CMD_PHY_CCA);
-
+//
 		get_rssi_cca_data(&rssi_cca);
+
+		curr_value = MSS_TIM1_get_current_value();
 
 		MSS_TIM1_load_immediate(timer_count);
 		//Get _in Rx
