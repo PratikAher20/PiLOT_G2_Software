@@ -21,6 +21,9 @@
 #include "adf7030.h"
 #include "PiLOT_G2_hw_platform.h"
 #include "memory.h"
+#include "P2.h"
+#include "drivers/mss_watchdog/mss_watchdog.h"
+#include "drivers/mss_nvm/mss_nvm.h"
 
 //#define CoreTimer_C0_0	0x50006000
 //#define CoreTimer_C1_0	0x50007000
@@ -29,18 +32,20 @@
 //#define CoreTimer_C4_0	0x5000A000
 
 
-#define HK_PKT_PERIOD 	MSS_SYS_M3_CLK_FREQ/1024 * 1
+#define HK_PKT_PERIOD 		MSS_SYS_M3_CLK_FREQ/1024 * 1
 #define COMMS_PKT_PERIOD	MSS_SYS_M3_CLK_FREQ/1024 * 2
-#define TEMP_PKT_PERIOD	MSS_SYS_M3_CLK_FREQ/1024 * 3
+#define TEMP_PKT_PERIOD		MSS_SYS_M3_CLK_FREQ/1024 * 3
+#define SD_PKT_PERIOD		MSS_SYS_M3_CLK_FREQ/1024 * 10
 
-#define HK_PACKET_SIZE  132
-
+//ENVM Storage address for critical data
+#define ENVM_RESET_COUNT_ADDR		0x60032000
 
 
 #define P1_ADC_ADDR		0x40
 
 void p1_init();
 void get_hk();
+void get_temp();
 //void get_comms();
 
 
@@ -104,11 +109,15 @@ typedef struct {
     uint32_t ccsds_s1;
     uint32_t ccsds_s2;
 
-//    uint16_t q_head;
-//    uint16_t q_tail;
-//    uint8_t CDH_Periph_Status; //For all the 8 flags
+    uint8_t Cmd_ADF_counts;
     uint8_t Cmd_RS485_Succ_counts;
     uint8_t Cmd_RS485_Fail_counts;
+    uint8_t IMG_ID;
+    uint16_t CLK_RATE;		// In KHz
+    uint32_t Command_Loss_Timer;
+    uint8_t PREV_CMD_RX;
+    uint8_t Reset_Counts;
+    uint8_t RTM[16];
     uint16_t Acc[3];  // X,Y,Z Axis
     uint16_t Angular_Rate[3]; //Pitch, Roll, Yaw
     uint16_t imu_temp;
@@ -117,21 +126,21 @@ typedef struct {
     uint16_t Voltages[2];
     uint16_t Currents[2];
 
-//    uint32_t HK_Read_Pointer;
-//    uint32_t HK_Write_Pointer;
-//    uint32_t Thermistor_Read_Pointer;
-//    uint32_t Thermistor_Write_Pointer;
+    uint32_t HK_Read_Pointer;
+    uint32_t HK_Write_Pointer;
+    uint32_t Thermistor_Read_Pointer;
+    uint32_t Thermistor_Write_Pointer;
 //    uint32_t Logs_Read_Pointer;
 //    uint32_t Logs_Write_Pointer;
 //    uint32_t SD_Test_Read_Pointer;
 //    uint32_t SD_Test_Write_Pointer;
-//    uint32_t ARIS_Read_Pointer;
-//    uint32_t ARIS_Write_Pointer;
+    uint32_t COMMS_Read_Pointer;
+    uint32_t COMMS_Write_Pointer;
 //
 //    uint16_t aris_miss;
 //    uint16_t hk_miss;
 //    uint16_t payload_miss;
-//    uint8_t sd_dump;
+    uint8_t sd_dump;
 //
 //    uint16_t Fletcher_Code;
 }__attribute__((packed)) hk_pkt_t;
@@ -281,5 +290,6 @@ typedef struct pkt{
 
 void vGetPktStruct(pkt_name_t pktname, void* pktdata, uint8_t pktsize);
 void store_pkt();
+void get_sd_data();
 
 #endif /* P1_H_ */

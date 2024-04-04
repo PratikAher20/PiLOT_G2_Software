@@ -24,6 +24,7 @@ typedef struct{
 	uint32_t ccsds_s2;
 
 //	uint16_t comms_adf_temp;
+	uint8_t IMG_ID;
 	uint8_t comms_adf_cmd_rx;
 	uint8_t comms_adf_cmd_succ;
 	uint8_t comms_adf_cmd_reject;
@@ -35,8 +36,10 @@ typedef struct{
 	uint32_t comms_adf_read_reg_addr;
 	uint8_t comms_adf_read_No_double_words;
 	uint32_t comms_adf_data[8];
+	uint8_t comms_adf_state;
+	uint8_t comms_sd_dump;
 //	uint8_t comms_adf_read_flag;
-//	uint8_t comms_adf_state;
+
 //	uint8_t comms_cmd_list;
 
 }__attribute__((packed)) comms_pkt_t;

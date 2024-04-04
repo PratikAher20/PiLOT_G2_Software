@@ -1,6 +1,7 @@
 #include "adf7030.h"
 
 ADF_SPI_INSTANCE_t *adf_spi;
+extern cmd_t cmd_list[NUM_CMDS];
 
 void set_adf_spi_instance(ADF_SPI_INSTANCE_t *instance) {
     adf_spi = instance;
@@ -470,6 +471,9 @@ uint8_t adf_get_state() {
     uint8_t curr_mode = 0;
     while(!(misc_fw[0] == 0xe4 || misc_fw[0] == 0xA4)){
     	adf_read_from_memory(RMODE_1,MISC_FW,misc_fw,4);
+    	if( misc_fw[0] == 0xe2 || misc_fw[0] == 0xA2){
+    		break;
+    	}
     }
 
     curr_mode = misc_fw[4] & 0x3F;
@@ -675,6 +679,7 @@ uint8_t rx_pkt(uint8_t * cmd, uint16_t* rssi, uint8_t* cmd_rx_flg){
 
 	uint8_t rx_buf[6];
 	uint8_t tries = 0;
+	uint8_t i = 0;
 	rx_buf[5] = 0x00;
 	uint8_t clr_tx_buf[4];
 	clr_tx_buf[0] = 0xFF;
@@ -715,20 +720,46 @@ uint8_t rx_pkt(uint8_t * cmd, uint16_t* rssi, uint8_t* cmd_rx_flg){
 	//If tries<100 read from rx_buffer! or else do not
 	if(tries < 100){
 		*cmd_rx_flg = 1;
+
+
 		adf_read_from_memory(RMODE_1, RX_BUFFER, rx_buf, 4);
 
 		cmd[0] = rx_buf[5];
 		cmd[1] = rx_buf[4];
 		cmd[2] = rx_buf[3];
 		cmd[3] = rx_buf[2];
-//		cmd[4] = rx_buf[1];
-//		cmd[5] = rx_buf[0];
 
-		adf_read_from_memory(RMODE_1, RX_BUFFER + 4, rx_buf, 4);
-		cmd[4] = rx_buf[5];
-		cmd[5] = rx_buf[4];
-//		cmd[8] = rx_buf[1];
-//		cmd[9] = rx_buf[0];
+//		adf_read_from_memory(RMODE_1, RX_BUFFER + 4, rx_buf, cmd_list[cmd[0] - 1].length - 3);	TODO Rectify This..Gives HardFualt Handler
+//		cmd[4] = rx_buf[5];
+
+		if(cmd_list[cmd[0] - 1].length > 4 && cmd_list[cmd[0] - 1].length <= 8){
+			adf_read_from_memory(RMODE_1, RX_BUFFER + 4, rx_buf, 4);
+			cmd[4] = rx_buf[5];
+			cmd[5] = rx_buf[4];
+			cmd[6] = rx_buf[3];
+			cmd[7] = rx_buf[2];
+		}
+
+		else if(cmd_list[cmd[0] - 1].length > 8 && cmd_list[cmd[0] - 1].length <= 16){
+			adf_read_from_memory(RMODE_1, RX_BUFFER + 4, rx_buf, 4);
+			cmd[4] = rx_buf[5];
+			cmd[5] = rx_buf[4];
+			cmd[6] = rx_buf[3];
+			cmd[7] = rx_buf[2];
+
+			adf_read_from_memory(RMODE_1, RX_BUFFER + 8, rx_buf, 4);
+			cmd[8] = rx_buf[5];
+			cmd[9] = rx_buf[4];
+			cmd[10] = rx_buf[3];
+			cmd[11] = rx_buf[2];
+
+			adf_read_from_memory(RMODE_1, RX_BUFFER + 12, rx_buf, 4);
+			cmd[12] = rx_buf[5];
+			cmd[13] = rx_buf[4];
+			cmd[14] = rx_buf[3];
+			cmd[15] = rx_buf[2];
+		}
+
 
 		adf_write_to_memory(WMODE_1, RX_BUFFER, clr_tx_buf, 4);
 		adf_write_to_memory(WMODE_1, IRQ_CTRL_STATUS0, clr_tx, 4);

@@ -17,6 +17,7 @@ extern uint8_t ERR_LOG;
 extern uint32_t cmd_adf_read_addr;
 extern uint8_t cmd_adf_read_No_double_words;
 extern uint32_t cmd_adf_data[8];
+extern uint8_t RTM[16];
 
 uint8_t cmd_valid(rx_cmd_t* rx_cmd){
 	return 1;  //Will be checking the validated of the checksum.
@@ -125,6 +126,15 @@ void read_adf_reg(rx_cmd_t* rcv_cmd){
 
 	cmd_adf_data[1] = (data_read[2] << 24) | (data_read[3] << 16) | (data_read[4] << 8) | (data_read[5]);
 
+
+}
+
+void exe_rtm(rx_cmd_t* rcv_cmd){
+	uint8_t i = 0;
+
+	for(;i<16;i++){
+		RTM[i] = rcv_cmd->parameters[i];
+	}
 
 }
 

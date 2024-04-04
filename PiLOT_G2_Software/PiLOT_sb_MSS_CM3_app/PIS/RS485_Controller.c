@@ -11,6 +11,7 @@ extern rx_cmd_t* rx_cmd_pkt;
 extern uint8_t cmd_rs485_succ_count;
 extern uint8_t cmd_rs485_fail_count;
 extern uint8_t store_in_sd_card;
+extern timer_instance_t sd_timer;
 
 void GPIO1_IRQHandler( void ){
     uint16_t a, i = 0;
@@ -25,6 +26,7 @@ void GPIO1_IRQHandler( void ){
 		//Start storing the packets in sd card
 
 		store_in_sd_card = 1;
+		TMR_start(&sd_timer);
 
 		MSS_GPIO_clear_irq(MSS_GPIO_1);
 

@@ -11,16 +11,23 @@ hk_pkt_t* hk_pkt;
 thermistor_pkt_t* thermistor_pkt;
 uint8_t data[512];
 uint16_t hk_seq_num =0;
+uint8_t RTM[16];
 
 uint16_t blck_pkt[4][256];
 uint8_t send_pkt_flg = 0;
 uint8_t active_blck = 0;
 uint8_t wri_ptr = 0;
 uint8_t store_in_sd_card = 0;
+extern uint8_t cmd_rx_count;
 extern uint8_t cmd_rs485_succ_count;
 extern uint8_t cmd_rs485_fail_count;
 extern partition_t hk_partition;
+extern partition_t comms_partition;
 extern partition_t thermistor_partition;
+extern uint8_t sd_dump;
+extern uint8_t IMG_ID;
+extern uint8_t reset_counts[1];
+extern rx_cmd_t* rx_cmd_pkt;
 
 //uint16_t data_test[256] = {0};
 
@@ -109,6 +116,7 @@ void get_hk(){
 	uint16_t PIS_VC[2];
 	uint16_t imu_temp;
 	uint8_t result=0, flag;
+	uint8_t i = 0 ;
 	uint8_t msg[18] = "\n\rGot HK Readings\0";
 	result = get_IMU_acc(&ax, &ay, &az);
 	result = get_IMU_gyro(&roll_rate, &pitch_rate, &yaw_rate);
@@ -117,6 +125,17 @@ void get_hk(){
 //	PIS_VC[0] = read_bus_voltage(VC1, 3, &flag);
 //	CDH_VC[1] = read_shunt_voltage(VC1, 2, &flag);
 //	PIS_VC[1] = read_shunt_voltage(VC1, 3, &flag);
+
+	hk_pkt->IMG_ID = IMG_ID;
+	hk_pkt->CLK_RATE = MSS_SYS_M3_CLK_FREQ / 1000;
+	hk_pkt->Command_Loss_Timer = MSS_WD_current_value();
+	hk_pkt->Reset_Counts = reset_counts[0];
+	hk_pkt->PREV_CMD_RX = rx_cmd_pkt->cmd_id;
+	hk_pkt->Cmd_ADF_counts = cmd_rx_count;
+
+	for(;i<16;i++){
+		hk_pkt->RTM[i] = RTM[i];
+	}
 
 	hk_pkt->Cmd_RS485_Succ_counts = cmd_rs485_succ_count;
 	hk_pkt->Cmd_RS485_Fail_counts = cmd_rs485_fail_count;
@@ -137,8 +156,16 @@ void get_hk(){
 //	hk_pkt->CDH_VC[1] = read_shunt_voltage( VC1,  2, &flag);
 //	hk_pkt->PIS_VC[1] = read_shunt_voltage( VC1,  3, &flag);
 
+	hk_pkt->HK_Write_Pointer = hk_partition.write_pointer;
+	hk_pkt->HK_Read_Pointer = hk_partition.read_pointer;
+	hk_pkt->COMMS_Write_Pointer = comms_partition.write_pointer;
+	hk_pkt->COMMS_Read_Pointer = comms_partition.read_pointer;
+	hk_pkt->Thermistor_Write_Pointer = thermistor_partition.write_pointer;
+	hk_pkt->Thermistor_Read_Pointer = thermistor_partition.read_pointer;
+
 	hk_pkt->Currents[0] = read_shunt_voltage( VC1,  2, &flag);
 	hk_pkt->Currents[1] = read_shunt_voltage( VC1,  3, &flag);
+
 
 	hk_pkt->ccsds_p1 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p1(tlm_pkt_type, HK_API_ID))));
 	hk_pkt->ccsds_p2 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p2((hk_seq_num++)))));
@@ -147,13 +174,19 @@ void get_hk(){
 	hk_pkt->ccsds_s2 = 0;
 
 	if(store_in_sd_card){
+		sd_dump = 1;
+		hk_pkt->sd_dump = sd_dump;
 		store_data(&hk_partition, data);
+		store_in_sd_card = 0;
 	}
 	else{
+		sd_dump = 0;
+		hk_pkt->sd_dump = sd_dump;
 		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
+//		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 	}
 
-	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
+//	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 //	MSS_UART_polled_tx_string(&g_mss_uart0, msg);
 }
 
@@ -161,6 +194,7 @@ void get_hk(){
 void get_temp(){
 	uint8_t i = 0;
 	uint8_t flag;
+	uint8_t sd_dump_thermistor = 0;
 	thermistor_pkt = (thermistor_pkt_t*) data;
 
 	for(;i<8;i++){
@@ -168,11 +202,18 @@ void get_temp(){
 	}
 
 	if(store_in_sd_card){
+		sd_dump_thermistor = 1;
 		store_data(&thermistor_partition, data);
+		store_in_sd_card = 0;
 	}
 	else{
-		vGetPktStruct(thermistor, (void*) thermistor_pkt, sizeof(thermistor_pkt_t));
+		sd_dump_thermistor = 0;
+//		vGetPktStruct(thermistor, (void*) thermistor_pkt, sizeof(thermistor_pkt_t));
+		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 	}
+}
 
-
+void get_sd_data(){
+	read_data(&hk_partition, data);
+	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 }

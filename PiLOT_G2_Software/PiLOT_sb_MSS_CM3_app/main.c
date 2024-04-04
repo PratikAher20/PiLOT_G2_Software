@@ -12,11 +12,13 @@
 timer_instance_t hk_timer;
 timer_instance_t comms_timer;
 timer_instance_t temp_timer;
+timer_instance_t sd_timer;
 
 partition_t hk_partition;
 partition_t comms_partition;
 partition_t thermistor_partition;
 
+uint8_t IMG_ID = 0;
 uint16_t rssi_cca;
 uint16_t rssi;
 uint8_t ERR_LOG = 0;
@@ -25,6 +27,8 @@ uint8_t cmd_succ_count = 0;
 uint8_t cmd_reject_count = 0;
 uint8_t cmd_rs485_succ_count = 0;
 uint8_t cmd_rs485_fail_count = 0;
+uint8_t sd_dump = 0;
+uint8_t reset_counts[1] = {0};
 rx_cmd_t* rx_cmd_pkt;
 
 void HK_ISR(){
@@ -39,6 +43,16 @@ void COMMS_ISR(){
 	TMR_clear_int(&comms_timer);
 }
 
+void THER_ISR(){
+	get_temp();
+	TMR_clear_int(&temp_timer);
+}
+
+void SD_ISR(){
+	get_sd_data();
+	TMR_clear_int(&sd_timer);
+}
+
 void timer_intr_set(){
 	TMR_init(&hk_timer, CORETIMER_C0_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, HK_PKT_PERIOD);
 	TMR_enable_int(&hk_timer);
@@ -51,14 +65,20 @@ void timer_intr_set(){
 	NVIC_SetPriority(FabricIrq5_IRQn, 254);
 
 
-	TMR_init(&comms_timer, CORETIMER_C2_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, TEMP_PKT_PERIOD);
+	TMR_init(&temp_timer, CORETIMER_C2_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, TEMP_PKT_PERIOD);
 	TMR_enable_int(&temp_timer);
 	NVIC_EnableIRQ( FabricIrq6_IRQn);
 	NVIC_SetPriority(FabricIrq6_IRQn, 254);
 
-//	TMR_start(&hk_timer);
+	TMR_init(&sd_timer, CORETIMER_C3_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, SD_PKT_PERIOD);
+	TMR_enable_int(&sd_timer);
+	NVIC_EnableIRQ( FabricIrq7_IRQn);
+	NVIC_SetPriority(FabricIrq7_IRQn, 254);
+
+	TMR_start(&hk_timer);
 //	TMR_start(&comms_timer);
 //	TMR_start(&temp_timer);
+//	TMR_start(&sd_timer);
 }
 
 void timer_dis(){
@@ -89,6 +109,7 @@ void init_cmd_engine(){
 	add_cmd(1, 3, set_pkt_rate);
 	add_cmd(2, 3, exe_iap);
 	add_cmd(3, 6, read_adf_reg);
+	add_cmd(4, 16, exe_rtm);
 }
 
 int main(){
@@ -98,6 +119,8 @@ int main(){
     //sd_init
     //pslv_interface_init
     //interface_init
+	MSS_WD_init();
+	MSS_WD_reload();
 	p1_init();
 
 	initialise_partition(&hk_partition, HK_BLOCK_INIT, HK_BLOCK_END);
@@ -136,10 +159,11 @@ int main(){
 	MSS_GPIO_config(MSS_GPIO_0, MSS_GPIO_OUTPUT_MODE);
 	MSS_GPIO_config(MSS_GPIO_10, MSS_GPIO_OUTPUT_MODE);
 	MSS_GPIO_set_output(MSS_GPIO_0, 1);
-	uint32_t sd_addr = 3;
+	uint32_t sd_addr = 10;
 	uint8_t sd_data_write[512];
 	uint8_t data_read[512];
 	uint8_t sd_flg;
+	uint32_t wd_reset;
 
 	sd_data_write[0] = 0x21;
 	sd_data_write[1] = 0x20;
@@ -149,13 +173,13 @@ int main(){
 	MSS_SPI_init(&g_mss_spi1);
 	MSS_SPI_configure_master_mode(&g_mss_spi1, MSS_SPI_SLAVE_0, MSS_SPI_MODE0, 512, 8);
 
-//	sd_flg = SD_Init();
-//
+	sd_flg = SD_Init();
+////
 //	sd_flg = SD_Write(sd_addr, sd_data_write);
 //
 //	sd_flg = SD_Read(sd_addr, data_read);
 //
-//	init_cmd_engine();
+	init_cmd_engine();
 
 	cont = HAL_get_16bit_reg(RS_485_Controller_0, READ_CONST);
 
@@ -191,7 +215,6 @@ int main(){
 
 		curr_value = MSS_TIM1_get_current_value();
 
-		get_hk();
 		while(curr_value > CMD_CHK_TIMER){
 
 			rx_pkt(&cmd, &rssi, &cmd_rx_flag);
@@ -210,79 +233,25 @@ int main(){
 //
 		get_rssi_cca_data(&rssi_cca);
 
-		curr_value = MSS_TIM1_get_current_value();
+//		curr_value = MSS_TIM1_get_current_value();
 
 		MSS_TIM1_load_immediate(timer_count);
+
+		wd_reset = MSS_WD_timeout_occured();
+		  if(wd_reset)
+		  {
+			  reset_counts[0]++;
+			  NVM_write(ENVM_RESET_COUNT_ADDR, reset_counts, sizeof(reset_counts), NVM_DO_NOT_LOCK_PAGE);
+			  MSS_WD_clear_timeout_event();
+		  }
+
+		MSS_WD_reload();
 		//Get _in Rx
 		//timer_start
 		//rx_pkt -> check_for_100_tries --- continue until timer expires
 		//read_rssi_cca
 		//reload_timer
 	}
-
-    uint8_t message[12] = "Hello World";
-
-//    if(hk_time_expire){
-//        if(wr_ptr + HK_PACKET_SIZE <= 255){
-//            //Store HK_PKT in Active_blck
-//        }
-//    }
-
-
-
-
-    data[0] = 0;
-    for(;i<256;i++){
-        data[i] = i;
-    }
-
-
-
-    uint32_t gpio_delay = 0xFFFFFFCD;
-    uint16_t data_temp = 0xABCD;
-
-
-//  MSS_GPIO_set_output(MSS_GPIO_1, 1);
-//    waddr = init_RS485_Controller();
-////
-//    cont = HAL_get_16bit_reg(RS_485_Controller_0, READ_CONST);
-//
-//    MSS_TIM1_init(MSS_TIMER_PERIODIC_MODE);
-//    MSS_TIM1_load_immediate(timer_count);
-//    MSS_TIM1_start();
-//
-//    MSS_TIM64_init(MSS_TIMER_PERIODIC_MODE);
-
-//    while(1){
-////    	store_pkt();
-//    	tmr_value = TMR_current_value(&t1);
-//    }
-
-
-//    while(1){
-//
-//        cont = HAL_get_16bit_reg(RS_485_Controller_0, READ_CONST);
-//
-//        waddr = HAL_get_16bit_reg(RS_485_Controller_0, READ_WADDR);
-//
-//        raddr = HAL_get_16bit_reg(RS_485_Controller_0, READ_RADDR);
-//
-//        i = 0;
-//
-//        curr_value = MSS_TIM1_get_current_value();
-//        if(curr_value < ICI){
-//            data[0] = data[0] + 1;
-//            for(;i<256;i++){
-//
-//                HAL_set_16bit_reg(RS_485_Controller_0, WRITE_SRAM, (uint_fast16_t) data[i]);
-//
-//            }
-//            MSS_TIM1_load_immediate(timer_count);
-//        }
-//        else{
-//            curr_value = MSS_TIM1_get_current_value();
-//        }
-//    }
 
     return 0;
 
@@ -308,16 +277,6 @@ void FabricIrq3_IRQHandler(void)
     I2C_isr(&g_core_i2c3);
 }
 
-//void FabricIrq4_IRQHandler(void)
-//{
-//    I2C_isr(&g_core_i2c4);
-//}
-//
-//void FabricIrq5_IRQHandler(void)
-//{
-//    I2C_isr(&g_core_i2c5);
-//}
-
 void FabricIrq4_IRQHandler(void)
 {
     HK_ISR();
@@ -327,4 +286,14 @@ void FabricIrq4_IRQHandler(void)
 void FabricIrq5_IRQHandler(void)
 {
     COMMS_ISR();
+}
+
+void FabricIrq6_IRQHandler(void)
+{
+    THER_ISR();
+}
+
+void FabricIrq7_IRQHandler(void)
+{
+    SD_ISR();
 }
