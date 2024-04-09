@@ -10,7 +10,6 @@
 #define MAX_CMD_PARAM 32
 #define NUM_CMDS 5
 
-
 typedef struct rx_cmd{
 
 	uint8_t cmd_id;
@@ -30,7 +29,7 @@ typedef struct cmd{
 
 
 
-uint8_t cmd_valid(rx_cmd_t* rx_cmd);
+uint8_t cmd_valid(rx_cmd_t* rx_cmd, uint8_t src);
 void add_cmd(uint8_t id, uint16_t length, void (*ex_func)(uint8_t id, rx_cmd_t* rcv_cmd));
 void cmd_engine(rx_cmd_t* rx_cmd);
 

@@ -39,7 +39,7 @@
 
 //ENVM Storage address for critical data
 #define ENVM_RESET_COUNT_ADDR		0x60032000
-
+#define ENVM_RESET_COUNT_ADDR_WD		0x60032004
 
 #define P1_ADC_ADDR		0x40
 
@@ -116,6 +116,7 @@ typedef struct {
     uint16_t CLK_RATE;		// In KHz
     uint32_t Command_Loss_Timer;
     uint8_t PREV_CMD_RX;
+    uint8_t latest_codeword_rx;
     uint8_t Reset_Counts;
     uint8_t RTM[16];
     uint16_t Acc[3];  // X,Y,Z Axis
@@ -141,8 +142,9 @@ typedef struct {
 //    uint16_t hk_miss;
 //    uint16_t payload_miss;
     uint8_t sd_dump;
+    uint8_t GTime_SVector[32];
 //
-//    uint16_t Fletcher_Code;
+    uint16_t Fletcher_Code;
 }__attribute__((packed)) hk_pkt_t;
 
 typedef struct{
@@ -154,6 +156,10 @@ typedef struct{
 	uint32_t ccsds_s1;
 	uint32_t ccsds_s2;
 	uint16_t Temperature_Values[8];
+	uint8_t sd_dump;
+	uint8_t Thermistor_GTime_SVector[32];
+//
+	uint16_t Fletcher_Code;
 
 }__attribute__((packed))thermistor_pkt_t;
 /**
