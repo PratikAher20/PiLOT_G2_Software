@@ -36,15 +36,37 @@ uint8_t Time_Vector[32];
 uint16_t Read_TPSRAM_addr;
 rx_cmd_t* rx_cmd_pkt;
 
-void HK_ISR(){
+//Declare data buffer to store log data
+uint8_t log_data[512];
 
-	get_hk();
+//Declare log packet pointer
+log_packet_t *log_packet_ptr;
+
+//Declare log counter
+uint8_t log_counter; 
+
+//Declare variables to hold the current 64 bit timer counts
+uint64_t current_time_upper,current_time_lower;
+
+
+void HK_ISR(){
+	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
+	uint16_t hk_status = get_hk();
+	if(log_counter >= 10) {
+		form_log_packet();
+	}
+	//Need to add mutex here
+	log_packet_ptr->logs[log_counter].task_id = HK_TASK_ID;
+	log_packet->logs[log_counter].time_H = current_time_upper;
+	log_packet->logs[log_counter].time_L = current_time_lower;
+	log_packet->logs[log_counter].task_status = hk_status;
+	log_counter++;
+	//Need to remove mutex here
 	TMR_clear_int(&hk_timer);
 }
 
 void COMMS_ISR(){
-
-	get_comms();
+	uint16_t comms_status = get_comms();
 	TMR_clear_int(&comms_timer);
 }
 
@@ -121,6 +143,13 @@ void init_cmd_engine(){
 	add_cmd(4, 16, exe_rtm);
 }
 
+//Function to initialise 64 bit timer
+void Tim64_init() {
+	MSS_TIM64_init(MSS_TIMER_ONE_SHOT_MODE);
+	MSS_TIM64_load_immediate(0xFFFFFFFF,0xFFFFFFFF);
+	MSS_TIM64_start();
+}
+
 int main(){
 
     //adf_init
@@ -135,6 +164,15 @@ int main(){
 	initialise_partition(&hk_partition, HK_BLOCK_INIT, HK_BLOCK_END);
 	initialise_partition(&comms_partition, COMMS_BLOCK_INIT, COMMS_BLOCK_END);
 	initialise_partition(&thermistor_partition, THERMISTOR_BLOCK_INIT, THERMISTOR_BLOCK_END);
+
+	//Assign log packet pointer to log data buffer
+	log_packet_ptr = (log_packet_t*)log_data;
+
+	//Initialise log counter to zero
+	log_counter = 0;
+
+	//Function to initialise 64 bit timer
+	Tim64_init();
 
 	ADC_Init(TEMP_ADC_CORE_I2C, ADC_ADDR);
 

@@ -122,19 +122,20 @@ void vGetPktStruct(pkt_name_t pktname, void* pktdata, uint8_t pktsize){
 //}
 
 
-void get_hk(){
+uint16_t get_hk(){
 	hk_pkt = (hk_pkt_t* )data;
 	uint16_t ax, ay, az;
 	uint16_t roll_rate, pitch_rate, yaw_rate;
 	uint16_t CDH_VC[2];
 	uint16_t PIS_VC[2];
 	uint16_t imu_temp;
-	uint8_t result=0, flag;
+	uint16_t result=0;
+	uint8_t flag;
 	uint8_t i = 0 ;
 	uint8_t msg[18] = "\n\rGot HK Readings\0";
-	result = get_IMU_acc(&ax, &ay, &az);
-	result = get_IMU_gyro(&roll_rate, &pitch_rate, &yaw_rate);
-	result = get_IMU_temp(&imu_temp);
+	result = (get_IMU_acc(&ax, &ay, &az) == 0 ? 0 : 1);
+	result |= ((get_IMU_gyro(&roll_rate, &pitch_rate, &yaw_rate) == 0 ? 0 : 1) << 1);
+	result |= ((get_IMU_temp(&imu_temp) == 0 ? : 1) << 2);
 //	CDH_VC[0] = read_bus_voltage( VC1,  2, &flag);
 //	PIS_VC[0] = read_bus_voltage(VC1, 3, &flag);
 //	CDH_VC[1] = read_shunt_voltage(VC1, 2, &flag);
@@ -166,7 +167,9 @@ void get_hk(){
 //	hk_pkt->CDH_VC[0] = read_bus_voltage( VC1,  2, &flag);
 //	hk_pkt->PIS_VC[0] = read_bus_voltage( VC1,  3, &flag);
 	hk_pkt->Voltages[0] = read_bus_voltage(VC1, 2, &flag);
+	result |= flag << 3;
 	hk_pkt->Voltages[1] = read_bus_voltage(VC1, 3, &flag);
+	result |= flag << 4;
 //	hk_pkt->Sensor_Board_VC[1] = read_shunt_voltage(VC1, 1, &flag);
 //	hk_pkt->CDH_VC[1] = read_shunt_voltage( VC1,  2, &flag);
 //	hk_pkt->PIS_VC[1] = read_shunt_voltage( VC1,  3, &flag);
@@ -179,7 +182,9 @@ void get_hk(){
 	hk_pkt->Thermistor_Read_Pointer = thermistor_partition.read_pointer;
 
 	hk_pkt->Currents[0] = read_shunt_voltage( VC1,  2, &flag);
+	result |= flag << 5;
 	hk_pkt->Currents[1] = read_shunt_voltage( VC1,  3, &flag);
+	result |= flag << 6;
 
 	get_time_vector(Time_Vector);
 	for(;i<32;i++){
@@ -200,7 +205,7 @@ void get_hk(){
 		sd_dump = 1;
 		hk_pkt->sd_dump = sd_dump;
 		hk_pkt->Fletcher_Code = make_FLetcher(data, sizeof(hk_pkt_t) - 2);
-		store_data(&hk_partition, data);
+		result |= ((store_data(&hk_partition, data) == 0 ? 0 : 1) << 7);
 //		a = MSS_GPIO_get_inputs();
 //		if(a && 0x01 == 0){
 //			store_in_sd_card = 0;
@@ -214,6 +219,8 @@ void get_hk(){
 //		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
 		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 	}
+
+	return result;
 
 }
 

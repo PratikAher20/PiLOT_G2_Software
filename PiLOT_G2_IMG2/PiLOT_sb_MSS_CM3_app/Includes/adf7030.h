@@ -164,11 +164,13 @@ extern ADF_SPI_INSTANCE_t *adf_spi;
 #define DIS_CALIB           0x20002A21 //Disable calibration key
 
 //Macros to define errors
-#define ERR_LENGTH_OVERFLOW     0x1//Error when length overflows 0xFFFF in config_adf()
-#define ERR_CMD_FAILED          0x2//Error when send_cmd fails
-#define ERR_CONFIG_FILE_FAILED  0x3//Error to indicate applying config file failed
-#define ERR_CALIB_FILE_FAILED   0x4//Error to indicate applying calib file failed
+#define ERR_LENGTH_OVERFLOW         0x1//Error when length overflows 0xFFFF in config_adf()
+#define ERR_CMD_FAILED              0x2//Error when send_cmd fails
+#define ERR_CONFIG_FILE_FAILED      0x3//Error to indicate applying config file failed
+#define ERR_CALIB_FILE_FAILED       0x4//Error to indicate applying calib file failed
 #define ERR_CALIB_FAILED            0x5//Error to indicate calibration failed
+#define ERR_FAIL_TO_SET_PHY_OFF     0x6//Error to reach PHY OFF
+#define ERR_IN_IDLE_FAILED          0x7//Error to reach idle state
 
 // Important register addresses
 
@@ -206,7 +208,7 @@ void set_adf_spi_instance(ADF_SPI_INSTANCE_t *instance);
  * @return uint8_t 
  */
 
-void adf_init();
+uint8_t adf_init();
 uint8_t adf_write_to_memory(uint8_t mode,uint32_t addr,uint8_t *data,uint32_t size);
 
 uint8_t* adf_read_from_memory(uint8_t mode,uint32_t addr,uint8_t *data,uint32_t size);

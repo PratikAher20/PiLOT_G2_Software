@@ -77,6 +77,14 @@ void get_temp();
 #define TIME_API_ID			60
 #define TIME_PKT_LENGTH		sizeof(timer_pkt)
 
+//Task IDs
+#define TIMER_TASK_ID		0
+#define THERMISTOR_TASK_ID	1
+#define HK_TASK_ID			2
+#define SD_HK_TASK_ID		3
+#define ARIS_TASK_ID		4
+#define LOGS_TASK_ID		5
+
 typedef struct {
 	uint32_t collect_time;
 	uint8_t data_valid;
@@ -170,7 +178,7 @@ typedef struct {
 	uint32_t time_L;//lower time value
 	uint32_t time_H;//upper time value
 	uint8_t task_id;//task id
-	uint8_t task_status;//task status;
+	uint16_t task_status;//task status;
 }__attribute__((packed)) log_entry_t;
 
 typedef struct {
