@@ -88,8 +88,3 @@ uint16_t get_comms(){
 //	vGetPktStruct(comms, (void*) data_test, sizeof(data_test));
 }
 
-void get_gmc(){
-
-
-
-}
