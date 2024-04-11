@@ -166,11 +166,6 @@ void get_hk(){
 	hk_pkt->Currents[0] = read_shunt_voltage( VC1,  2, &flag);
 	hk_pkt->Currents[1] = read_shunt_voltage( VC1,  3, &flag);
 
-	get_time_vector(Time_Vector);
-	for(;i<32;i++){
-		hk_pkt->GTime_SVector[i] = Time_Vector[i];
-	}
-
 	hk_pkt->ccsds_p1 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p1(tlm_pkt_type, HK_API_ID))));
 	hk_pkt->ccsds_p2 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p2((hk_seq_num++)))));
 	hk_pkt->ccsds_p3 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p3(HK_PKT_LENGTH))));

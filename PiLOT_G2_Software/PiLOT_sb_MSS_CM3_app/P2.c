@@ -30,7 +30,7 @@ void get_gmc(){
 
 }
 
-void get_comms(){
+uint16_t get_comms(){
 	uint16_t i = 0;
 	comms_pkt = (comms_pkt_t*) data;
 //	data_test[0]++;
@@ -86,4 +86,10 @@ void get_comms(){
 
 //	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(comms_pkt_t));
 //	vGetPktStruct(comms, (void*) data_test, sizeof(data_test));
+}
+
+void get_gmc(){
+
+
+
 }

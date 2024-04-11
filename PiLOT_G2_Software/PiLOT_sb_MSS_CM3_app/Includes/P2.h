@@ -12,7 +12,7 @@
 #include "P1.h"
 
 void get_gmc();
-void get_comms();
+uint16_t get_comms();
 
 typedef struct{
 
@@ -44,6 +44,22 @@ typedef struct{
 //	uint8_t comms_cmd_list;
 
 }__attribute__((packed)) comms_pkt_t;
+
+typedef struct{
+	uint16_t ccsds_p1;
+	uint16_t ccsds_p2;
+	uint16_t ccsds_p3;
+
+	uint32_t ccsds_s1;
+	uint32_t ccsds_s2;
+
+	uint8_t IMG_ID;
+	uint32_t Radiation_Counts;
+	uint32_t GMC_Raditation_Timestamp;
+	uint32_t Counter_Free_Register;
+
+
+}__attribute__((packed)) gmc_pkt_t;
 
 
 #endif /* P2_H_ */

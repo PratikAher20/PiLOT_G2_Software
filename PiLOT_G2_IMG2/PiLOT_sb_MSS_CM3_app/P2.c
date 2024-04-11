@@ -56,11 +56,6 @@ void get_comms(){
 		comms_pkt->comms_adf_data[i] =	cmd_adf_data[i];
 	}
 
-	get_time_vector(Time_Vector);
-
-	for(;i<32;i++){
-		comms_pkt->comms_GTime_SVector[i] = Time_Vector[i];
-	}
 
 //	comms_pkt->comms_adf_state = adf_get_state();
 

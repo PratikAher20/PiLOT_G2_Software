@@ -206,7 +206,7 @@ void set_adf_spi_instance(ADF_SPI_INSTANCE_t *instance);
  * @return uint8_t 
  */
 
-void adf_init();
+uint8_t adf_init();
 uint8_t adf_write_to_memory(uint8_t mode,uint32_t addr,uint8_t *data,uint32_t size);
 
 uint8_t* adf_read_from_memory(uint8_t mode,uint32_t addr,uint8_t *data,uint32_t size);

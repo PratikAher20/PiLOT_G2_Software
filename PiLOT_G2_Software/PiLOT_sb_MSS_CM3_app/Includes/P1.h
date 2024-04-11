@@ -24,6 +24,7 @@
 #include "P2.h"
 #include "drivers/mss_watchdog/mss_watchdog.h"
 #include "drivers/mss_nvm/mss_nvm.h"
+#include "counter.h"
 
 //#define CoreTimer_C0_0	0x50006000
 //#define CoreTimer_C1_0	0x50007000
@@ -44,7 +45,7 @@
 #define P1_ADC_ADDR		0x40
 
 void p1_init();
-void get_hk();
+uint16_t get_hk();
 void get_temp();
 //void get_comms();
 

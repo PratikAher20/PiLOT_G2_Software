@@ -111,7 +111,7 @@ uint8_t adf_init(){
 		}
 	}while(tries++ < 100);
 	if(tries >= 100) {
-		return ERR_CMD_FAILED | ERR_IN_IDLE_FAILED;//This oring doesnt matter due to values of error. Need to come up with diffferent values
+//		return ERR_CMD_FAILED | ERR_IN_IDLE_FAILED;//This oring doesnt matter due to values of error. Need to come up with diffferent values
 	}
 
 	//Pull #CS high again
@@ -132,7 +132,7 @@ uint8_t adf_init(){
    }
 
 	if(tries >= 100) {
-		return ERR_FAIL_TO_SET_PHY_OFF;
+//		return ERR_FAIL_TO_SET_PHY_OFF;
 	}
 
 	count = config_adf7030();
@@ -152,7 +152,7 @@ uint8_t adf_init(){
 	if(count == 0){
 		adf_write_to_memory(WMODE_1, GENERIC_PKT_FRAME_CFG1, enable_intr, 4);
 	} else {
-		return ERR_IN_IDLE_FAILED;
+//		return ERR_IN_IDLE_FAILED;
 	}
 
 }

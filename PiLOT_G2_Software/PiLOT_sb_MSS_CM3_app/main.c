@@ -52,14 +52,14 @@ uint64_t current_time_upper,current_time_lower;
 void HK_ISR(){
 	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
 	uint16_t hk_status = get_hk();
-	if(log_counter >= 10) {
-		form_log_packet();
-	}
+//	if(log_counter >= 10) {
+////		form_log_packet();
+//	}
 	//Need to add mutex here
 	log_packet_ptr->logs[log_counter].task_id = HK_TASK_ID;
-	log_packet->logs[log_counter].time_H = current_time_upper;
-	log_packet->logs[log_counter].time_L = current_time_lower;
-	log_packet->logs[log_counter].task_status = hk_status;
+	log_packet_ptr->logs[log_counter].time_H = current_time_upper;
+	log_packet_ptr->logs[log_counter].time_L = current_time_lower;
+	log_packet_ptr->logs[log_counter].task_status = hk_status;
 	log_counter++;
 	//Need to remove mutex here
 	TMR_clear_int(&hk_timer);
