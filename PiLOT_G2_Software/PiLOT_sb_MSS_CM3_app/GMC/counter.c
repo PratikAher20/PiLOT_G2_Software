@@ -12,6 +12,8 @@
 
 uint8_t rx_size = 3u;
 i2c_status_t status;
+uint8_t flag;
+uint8_t gmc_voltage_flags;
 
 i2c_status_t counter_init(i2c_instance_t *i2c_GMC_counter){
     MSS_GPIO_config(RESET_GMC_GPIO, MSS_GPIO_OUTPUT_MODE);
@@ -69,4 +71,12 @@ i2c_status_t get_free_res(i2c_instance_t *i2c_GMC_counter, uint8_t* free_res){
     I2C_read(i2c_GMC_counter, counter_addr, free_res, rx_size, I2C_RELEASE_BUS);
     status = I2C_wait_complete(i2c_GMC_counter, I2C_NO_TIMEOUT);
     return status;
+}
+
+i2c_status_t get_gmc_voltages(i2c_instance_t *i2c_GMC_ADC, uint8_t* ADC_voltages){
+	uint8_t channel;
+	for (channel=0; channel<8; channel++){
+		ADC_voltages[channel] = get_ADC_value(&counter_i2c, GMC_ADC_address, channel, &flag);
+		gmc_voltage_flags = gmc_voltage_flags << 1 | flag;
+	}
 }

@@ -9,9 +9,10 @@
 #define P2_H_
 
 #include "adf7030.h"
+#include "counter.h"
 #include "P1.h"
 
-void get_gmc();
+uint8_t get_gmc();
 uint16_t get_comms();
 
 typedef struct{
@@ -39,6 +40,7 @@ typedef struct{
 	uint8_t comms_adf_state;
 	uint8_t comms_sd_dump;
 	uint8_t comms_GTime_SVector[32];
+	uint16_t Fletcher_Code;
 //	uint8_t comms_adf_read_flag;
 
 //	uint8_t comms_cmd_list;
@@ -55,8 +57,12 @@ typedef struct{
 
 	uint8_t IMG_ID;
 	uint32_t Radiation_Counts;
-	uint32_t GMC_Raditation_Timestamp;
 	uint32_t Counter_Free_Register;
+	uint16_t GMC_Voltage_ADC[8];
+	uint8_t GMC_sd_dump;
+	uint8_t GMC_GTime_SVector[32];
+	uint16_t Fletcher_Code;
+
 
 
 }__attribute__((packed)) gmc_pkt_t;

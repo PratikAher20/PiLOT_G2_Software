@@ -67,6 +67,11 @@ void get_temp();
 #define HK_PKT_LENGTH		sizeof(hk_pkt_t)
 #define HK_FLETCHER_CODE	0xCDCD
 
+#define GMC_API_ID			2
+#define GMC_PKT_LENGTH		sizeof(gmc_pkt_t)
+#define GMC_FLETCHER_CODE		0xCDCD
+
+
 #define COMMS_API_ID			3
 #define COMMS_PKT_LENGTH		sizeof(comms_pkt_t)
 #define COMMS_FLETCHER_CODE		0xCDCD

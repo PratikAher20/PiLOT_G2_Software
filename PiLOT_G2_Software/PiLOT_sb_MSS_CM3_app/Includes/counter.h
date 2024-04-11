@@ -23,6 +23,7 @@
 #include "mss_gpio.h"
 #include "CoreI2C/core_i2c.h"
 #include "PiLOT_G2_hw_platform.h"
+#include "ADC.h"
 //#include "peripherals.h"
 
 
@@ -30,6 +31,9 @@
 #define     counter_addr            0x32
 #define     base_addr               COREI2C_2_0
 #define     RESET_GMC_GPIO          MSS_GPIO_6
+#define 	GMC_ADC_address 			0x21
+
+i2c_instance_t counter_i2c;
 
 
 // function to initialize IC
@@ -40,9 +44,11 @@ i2c_status_t reset_counter(i2c_instance_t *i2c_GMC_counter); //should i return u
 
 
 // function to get the current value of count
-i2c_status_t get_count(i2c_instance_t *i2c_GMC_counter, uint8_t *count);
+i2c_status_t get_count(i2c_instance_t *i2c_GMC_counter, uint8_t* count);
 
 //to get values of free register
 i2c_status_t set_free_res(i2c_instance_t *i2c_GMC_counter, uint8_t byte1, uint8_t byte2, uint8_t byte3);
 
 i2c_status_t get_free_res(i2c_instance_t *i2c_GMC_counter, uint8_t* free_res);
+
+i2c_status_t get_gmc_voltages(i2c_instance_t *i2c_GMC_ADC, uint8_t* ADC_voltages);

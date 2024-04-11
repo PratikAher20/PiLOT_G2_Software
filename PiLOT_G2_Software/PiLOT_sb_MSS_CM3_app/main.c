@@ -18,6 +18,7 @@ timer_instance_t sd_timer;
 
 partition_t hk_partition;
 partition_t comms_partition;
+partition_t gmc_partition;
 partition_t thermistor_partition;
 extern uint8_t store_in_sd_card;
 
@@ -175,6 +176,9 @@ int main(){
 	Tim64_init();
 
 	ADC_Init(TEMP_ADC_CORE_I2C, ADC_ADDR);
+
+	counter_init(&counter_i2c);
+	ADC_Init(&counter_i2c, ADC_ADDR);
 
 	uint16_t ax, ay, az;
 	uint16_t roll_rate, pitch_rate, yaw_rate;
