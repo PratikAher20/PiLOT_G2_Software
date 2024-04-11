@@ -13,6 +13,7 @@
 
 timer_instance_t hk_timer;
 timer_instance_t comms_timer;
+timer_instance_t gmc_timer;
 timer_instance_t temp_timer;
 timer_instance_t sd_timer;
 
@@ -66,6 +67,12 @@ void HK_ISR(){
 	TMR_clear_int(&hk_timer);
 }
 
+void GMC_ISR(){
+	uint8_t gmc_status;
+	gmc_status = get_gmc();
+	TMR_clear_int(&gmc_timer);
+}
+
 void COMMS_ISR(){
 	uint16_t comms_status = get_comms();
 	TMR_clear_int(&comms_timer);
@@ -107,10 +114,16 @@ void timer_intr_set(){
 	NVIC_EnableIRQ( FabricIrq7_IRQn);
 	NVIC_SetPriority(FabricIrq7_IRQn, 254);
 
+	TMR_init(&gmc_timer, CORETIMER_C4_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, GMC_PKT_PERIOD);
+	TMR_enable_int(&gmc_timer);
+	NVIC_EnableIRQ( FabricIrq8_IRQn);
+	NVIC_SetPriority(FabricIrq8_IRQn, 254);
+
 	TMR_start(&hk_timer);
 //	TMR_start(&comms_timer);
 //	TMR_start(&temp_timer);
 //	TMR_start(&sd_timer);
+	TMR_start(&gmc_timer);
 }
 
 void timer_dis(){
@@ -165,7 +178,7 @@ int main(){
 	initialise_partition(&hk_partition, HK_BLOCK_INIT, HK_BLOCK_END);
 	initialise_partition(&comms_partition, COMMS_BLOCK_INIT, COMMS_BLOCK_END);
 	initialise_partition(&thermistor_partition, THERMISTOR_BLOCK_INIT, THERMISTOR_BLOCK_END);
-
+	initialise_partition(&gmc_partition, GMC_BLOCK_INIT, GMC_BLOCK_END);
 	//Assign log packet pointer to log data buffer
 	log_packet_ptr = (log_packet_t*)log_data;
 
@@ -333,7 +346,7 @@ void FabricIrq1_IRQHandler(void)
 
 void FabricIrq2_IRQHandler(void)
 {
-    I2C_isr(&g_core_i2c2);
+    I2C_isr(&counter_i2c);
 }
 
 void FabricIrq3_IRQHandler(void)
@@ -360,4 +373,9 @@ void FabricIrq6_IRQHandler(void)
 void FabricIrq7_IRQHandler(void)
 {
     SD_ISR();
+}
+
+void FabricIrq8_IRQHandler(void)
+{
+    GMC_ISR();
 }

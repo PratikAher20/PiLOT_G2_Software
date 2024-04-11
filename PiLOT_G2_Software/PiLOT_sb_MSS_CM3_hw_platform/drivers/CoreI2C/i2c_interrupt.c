@@ -13,7 +13,7 @@
 
 extern i2c_instance_t g_core_i2c0;
 extern i2c_instance_t g_core_i2c1;
-extern i2c_instance_t g_core_i2c2;
+extern i2c_instance_t counter_i2c;
 extern i2c_instance_t g_core_i2c3;
 extern i2c_instance_t g_core_i2c4;
 extern i2c_instance_t g_core_i2c5;
@@ -34,7 +34,7 @@ void I2C_enable_irq( i2c_instance_t * this_i2c )
 	{
 		NVIC_EnableIRQ( FabricIrq1_IRQn );
 	}
-	if(this_i2c == &g_core_i2c2)
+	if(this_i2c == &counter_i2c)
 	{
 		NVIC_EnableIRQ( FabricIrq2_IRQn );
 	}
@@ -69,7 +69,7 @@ void I2C_disable_irq( i2c_instance_t * this_i2c )
 		NVIC_DisableIRQ( FabricIrq1_IRQn );
 	}
 
-	if(this_i2c == &g_core_i2c2)
+	if(this_i2c == &counter_i2c)
 	{
 		NVIC_DisableIRQ( FabricIrq2_IRQn );
 	}
