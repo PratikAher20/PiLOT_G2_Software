@@ -14,8 +14,8 @@ extern uint8_t store_in_sd_card;
 extern timer_instance_t sd_timer;
 
 void GPIO1_IRQHandler( void ){
-    uint32_t a, i = 0;
-
+    uint16_t a, i = 0;
+    a  = 1;
     uint16_t buf[1];
     uint16_t r_addr, w_addr;
     buf[0] = 0xFF;
@@ -23,12 +23,10 @@ void GPIO1_IRQHandler( void ){
 		r_addr = HAL_get_16bit_reg(RS_485_Controller_0, READ_RADDR);
 		w_addr = HAL_get_16bit_reg(RS_485_Controller_0, READ_WADDR);
 
-		a = MSS_GPIO_get_inputs();
 		//Start storing the packets in sd card
+
 		store_in_sd_card = 1;
 
-
-//		TMR_start(&sd_timer);
 
 		MSS_GPIO_clear_irq(MSS_GPIO_1);
 
@@ -51,21 +49,21 @@ void GPIO3_IRQHandler(void){
 		cmd[i] = HAL_get_8bit_reg(APB_READ_CMD_0, READ_SRAM_CMD);
 	}
 
-	i = 0;
-
 	for(;i<32;i++){
 		cmd[i] = HAL_get_8bit_reg(APB_READ_CMD_0, READ_SRAM_CMD);
 	}
 
-	rx_cmd_pkt = (rx_cmd_t*) cmd;
+	get_cmd(cmd, 0);
 
-	if(cmd_valid(rx_cmd_pkt)){
-		cmd_engine(rx_cmd_pkt);
-		cmd_rs485_succ_count++;
-	}
-	else{
-		cmd_rs485_fail_count++;
-	}
+//	rx_cmd_pkt = (rx_cmd_t*) cmd;
+//
+//	if(cmd_valid(rx_cmd_pkt)){
+//		cmd_engine(rx_cmd_pkt);
+//		cmd_rs485_succ_count++;
+//	}
+//	else{
+//		cmd_rs485_fail_count++;
+//	}
 
 
 	MSS_GPIO_clear_irq( MSS_GPIO_3);
@@ -87,10 +85,11 @@ void get_time_vector(uint8_t* time_vect){
 
 
 uint16_t init_RS485_Controller(){
-    MSS_GPIO_config(MSS_GPIO_0, MSS_GPIO_OUTPUT_MODE);
-    MSS_GPIO_set_output(MSS_GPIO_0, 1);
 
-    MSS_GPIO_config(MSS_GPIO_1, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_BOTH);
+    MSS_GPIO_config(MSS_GPIO_0, MSS_GPIO_OUTPUT_MODE);
+    MSS_GPIO_config(MSS_GPIO_8, MSS_GPIO_OUTPUT_MODE);
+    MSS_GPIO_set_output(MSS_GPIO_0, 1);
+    MSS_GPIO_config(MSS_GPIO_1, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
     MSS_GPIO_enable_irq(MSS_GPIO_1);
     NVIC_EnableIRQ(GPIO1_IRQn);
     NVIC_SetPriority(GPIO1_IRQn, 255);
@@ -98,15 +97,12 @@ uint16_t init_RS485_Controller(){
     MSS_GPIO_config(MSS_GPIO_3, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_NEGATIVE);
 	MSS_GPIO_enable_irq(MSS_GPIO_3);
 	NVIC_EnableIRQ(GPIO3_IRQn);
-	NVIC_SetPriority(GPIO3_IRQn, 255);
+	NVIC_SetPriority(GPIO3_IRQn, 253);
     uint16_t buf[1];
     uint16_t waddr, i;
     buf[0] = 0;
     i = 0;
-
-//    HAL_get_8bit_reg(APB_READ_CMD_0, READ_CONST);
-
-	HAL_set_8bit_reg(APB_READ_CMD_0, WRITE_PAY_ID, (uint_fast8_t) PAY_ID);
+    uint8_t cont;
 
     HAL_set_8bit_reg(RS_485_Controller_0, WRITE_SLAVE_ADDR, (uint_fast8_t) SLAVE_ADDR);
 
@@ -114,18 +110,20 @@ uint16_t init_RS485_Controller(){
 
     waddr = HAL_get_16bit_reg(RS_485_Controller_0, READ_WADDR);
 
+    HAL_set_8bit_reg(RS_485_Controller_0, WRITE_NUM_BYTES, (uint_fast8_t) NUM_BYTES);
 
+    cont = HAL_get_8bit_reg(APB_READ_CMD_0, READ_CONST);
+    cont = HAL_get_8bit_reg(APB_READ_CMD_0, READ_CONST);
+//	HAL_set_8bit_reg(RS_485_Controller_0, WRITE_CMD_ID, (uint_fast8_t) CMD_ID);
+    HAL_set_8bit_reg(APB_READ_CMD_0, WRITE_PAY_ID, (uint_fast8_t) PAY_ID);
 
+    buf[0] = HAL_get_8bit_reg(APB_READ_CMD_0, READ_RADDR);
+	buf[0] = HAL_get_8bit_reg(APB_READ_TLM_0, READ_RADDR);
 
 //    for(;i<1025;i++){
 //
 //        HAL_set_16bit_reg(RS_485_Controller_0, WRITE_SRAM, (uint_fast16_t) buf[0]);
 //    }
-
-	//Reading Dummy Variables to increment the Read_Addr
-
-	buf[0] = HAL_get_8bit_reg(APB_READ_CMD_0, READ_RADDR);
-	buf[0] = HAL_get_8bit_reg(APB_READ_TLM_0, READ_RADDR);
 
     return waddr;
 }

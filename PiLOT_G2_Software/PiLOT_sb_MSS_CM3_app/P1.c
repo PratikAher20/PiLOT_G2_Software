@@ -12,7 +12,7 @@ thermistor_pkt_t* thermistor_pkt;
 uint8_t data[512];
 uint16_t hk_seq_num =0;
 uint8_t RTM[16];
-uint8_t latest_codeword = 0;
+
 uint16_t blck_pkt[4][256];
 uint8_t send_pkt_flg = 0;
 uint8_t active_blck = 0;
@@ -29,6 +29,8 @@ extern uint8_t IMG_ID;
 extern uint8_t reset_counts[1];
 extern rx_cmd_t* rx_cmd_pkt;
 extern uint8_t Time_Vector[32];
+extern uint8_t CHK_CMD;
+
 
 //uint16_t data_test[256] = {0};
 
@@ -53,19 +55,6 @@ void store_pkt(){
 			}
 		}
 
-}
-
-uint16_t make_FLetcher(uint8_t *data,uint16_t len) {
-	uint8_t sumA = 0,sumB = 0,temp = 0;
-	uint8_t i = 0;
-	for(i = 0;i<len;i++) {
-		sumA = (sumA + data[i]) % 255;
-		sumB = (sumB + sumA) % 255;
-	}
-	temp = 255 - ((sumA + sumB) % 255);
-	sumB = 255 - ((sumA + temp) % 255);
-
-	return ((sumB << 8) | temp);
 
 }
 
@@ -122,7 +111,21 @@ void vGetPktStruct(pkt_name_t pktname, void* pktdata, uint8_t pktsize){
 //}
 
 
-uint16_t get_hk(){
+uint16_t make_FLetcher(uint8_t *data,uint16_t len) {
+	uint8_t sumA = 0,sumB = 0,temp = 0;
+	uint8_t i = 0;
+	for(i = 0;i<len;i++) {
+		sumA = (sumA + data[i]) % 255;
+		sumB = (sumB + sumA) % 255;
+	}
+	temp = 255 - ((sumA + sumB) % 255);
+	sumB = 255 - ((sumA + temp) % 255);
+
+	return ((sumB << 8) | temp);
+
+}
+
+void get_hk(){
 	hk_pkt = (hk_pkt_t* )data;
 	uint16_t ax, ay, az;
 	uint16_t roll_rate, pitch_rate, yaw_rate;
@@ -133,6 +136,9 @@ uint16_t get_hk(){
 	uint8_t flag;
 	uint8_t i = 0 ;
 	uint8_t msg[18] = "\n\rGot HK Readings\0";
+	uint16_t hk_status;
+	uint8_t cmd_cntr = 0;
+
 	result = (get_IMU_acc(&ax, &ay, &az) == 0 ? 0 : 1);
 	result |= ((get_IMU_gyro(&roll_rate, &pitch_rate, &yaw_rate) == 0 ? 0 : 1) << 1);
 	result |= ((get_IMU_temp(&imu_temp) == 0 ? : 1) << 2);
@@ -146,13 +152,12 @@ uint16_t get_hk(){
 	hk_pkt->Command_Loss_Timer = MSS_WD_current_value();
 	hk_pkt->Reset_Counts = reset_counts[0];
 	hk_pkt->PREV_CMD_RX = rx_cmd_pkt->cmd_id;
-	hk_pkt->latest_codeword_rx = latest_codeword;
 	hk_pkt->Cmd_ADF_counts = cmd_rx_count;
 
 	for(;i<16;i++){
 		hk_pkt->RTM[i] = RTM[i];
 	}
-	i = 0;
+
 	hk_pkt->Cmd_RS485_Succ_counts = cmd_rs485_succ_count;
 	hk_pkt->Cmd_RS485_Fail_counts = cmd_rs485_fail_count;
 	hk_pkt->Acc[0] = ((ax));
@@ -197,10 +202,14 @@ uint16_t get_hk(){
 	hk_pkt->ccsds_s1 = 0;
 	hk_pkt->ccsds_s2 = 0;
 
+	if(cmd_cntr == 20){
+		cmd_cntr = 1;
+		CHK_CMD = 0;
+	}
+	else{
+		cmd_cntr++ ;
+	}
 
-
-
-	uint32_t a;
 	if(store_in_sd_card){
 		sd_dump = 1;
 		hk_pkt->sd_dump = sd_dump;
@@ -211,17 +220,20 @@ uint16_t get_hk(){
 //			store_in_sd_card = 0;
 //		}
 //		store_in_sd_card = 0;
+		store_data(&hk_partition, data);
+		store_in_sd_card = 0;
 	}
 	else{
 		sd_dump = 0;
 		hk_pkt->sd_dump = sd_dump;
-		hk_pkt->Fletcher_Code = make_FLetcher(data, sizeof(hk_pkt_t) - 2);
 //		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
 		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 	}
 
-	return result;
 
+
+//	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
+//	MSS_UART_polled_tx_string(&g_mss_uart0, msg);
 }
 
 
@@ -238,7 +250,7 @@ void get_temp(){
 	if(store_in_sd_card){
 		sd_dump_thermistor = 1;
 		store_data(&thermistor_partition, data);
-//		store_in_sd_card = 0;
+		store_in_sd_card = 0;
 	}
 	else{
 		sd_dump_thermistor = 0;
@@ -248,8 +260,6 @@ void get_temp(){
 }
 
 void get_sd_data(){
-
 	read_data(&hk_partition, data);
-//	vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
-//	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
+	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 }

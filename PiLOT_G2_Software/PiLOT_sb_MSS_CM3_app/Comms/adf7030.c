@@ -735,7 +735,7 @@ uint8_t rx_pkt(uint8_t * cmd, uint16_t* rssi, uint8_t* cmd_rx_flg){
 //		adf_read_from_memory(RMODE_1, IRQ_CTRL_STATUS0, rx_buf, 4);
 //	}
 
-
+	adf_read_from_memory(RMODE_1, IRQ_CTRL_STATUS0, rx_buf, 4);
 
 	do{
 		timer_dis();
@@ -753,6 +753,12 @@ uint8_t rx_pkt(uint8_t * cmd, uint16_t* rssi, uint8_t* cmd_rx_flg){
 //	chk_status();
 	//If tries<100 read from rx_buffer! or else do not
 	if(tries < 100){
+
+		while(rx_buf[5] == 0xDF){
+			adf_read_from_memory(RMODE_1, IRQ_CTRL_STATUS0, rx_buf, 4);
+			adf_write_to_memory(WMODE_1, IRQ_CTRL_STATUS0, clr_tx, 4);
+		}
+
 		*cmd_rx_flg = 1;
 
 
@@ -796,7 +802,7 @@ uint8_t rx_pkt(uint8_t * cmd, uint16_t* rssi, uint8_t* cmd_rx_flg){
 
 
 		adf_write_to_memory(WMODE_1, RX_BUFFER, clr_tx_buf, 4);
-		adf_write_to_memory(WMODE_1, IRQ_CTRL_STATUS0, clr_tx, 4);
+		get_rssi_data(rssi);
 	}
 
 

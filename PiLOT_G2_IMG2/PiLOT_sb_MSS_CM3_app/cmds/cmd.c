@@ -19,7 +19,8 @@ extern uint8_t cmd_adf_read_No_double_words;
 extern uint32_t cmd_adf_data[8];
 extern uint8_t RTM[16];
 
-uint8_t cmd_valid(rx_cmd_t* rx_cmd){
+uint8_t cmd_valid(rx_cmd_t* rx_cmd, uint8_t src){
+	//Logic to check validity of the command ID within limits along with the params limits.
 	return 1;  //Will be checking the validated of the checksum.
 }
 

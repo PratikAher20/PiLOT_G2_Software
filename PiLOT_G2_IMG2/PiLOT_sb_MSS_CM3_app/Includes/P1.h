@@ -24,6 +24,7 @@
 #include "P2.h"
 #include "drivers/mss_watchdog/mss_watchdog.h"
 #include "drivers/mss_nvm/mss_nvm.h"
+#include "counter.h"
 
 //#define CoreTimer_C0_0	0x50006000
 //#define CoreTimer_C1_0	0x50007000
@@ -36,10 +37,11 @@
 #define COMMS_PKT_PERIOD	MSS_SYS_M3_CLK_FREQ/1024 * 2
 #define TEMP_PKT_PERIOD		MSS_SYS_M3_CLK_FREQ/1024 * 3
 #define SD_PKT_PERIOD		MSS_SYS_M3_CLK_FREQ/1024 * 10
+#define GMC_PKT_PERIOD		MSS_SYS_M3_CLK_FREQ/1024 * 2
 
 //ENVM Storage address for critical data
 #define ENVM_RESET_COUNT_ADDR		0x60032000
-#define ENVM_RESET_COUNT_ADDR_WD		0x60032004
+
 
 #define P1_ADC_ADDR		0x40
 
@@ -66,6 +68,11 @@ void get_temp();
 #define HK_PKT_LENGTH		sizeof(hk_pkt_t)
 #define HK_FLETCHER_CODE	0xCDCD
 
+#define GMC_API_ID			2
+#define GMC_PKT_LENGTH		sizeof(gmc_pkt_t)
+#define GMC_FLETCHER_CODE		0xCDCD
+
+
 #define COMMS_API_ID			3
 #define COMMS_PKT_LENGTH		sizeof(comms_pkt_t)
 #define COMMS_FLETCHER_CODE		0xCDCD
@@ -76,6 +83,14 @@ void get_temp();
 
 #define TIME_API_ID			60
 #define TIME_PKT_LENGTH		sizeof(timer_pkt)
+
+//Task IDs
+#define TIMER_TASK_ID		0
+#define THERMISTOR_TASK_ID	1
+#define HK_TASK_ID			2
+#define SD_HK_TASK_ID		3
+#define ARIS_TASK_ID		4
+#define LOGS_TASK_ID		5
 
 typedef struct {
 	uint32_t collect_time;
@@ -116,6 +131,7 @@ typedef struct {
     uint16_t CLK_RATE;		// In KHz
     uint32_t Command_Loss_Timer;
     uint8_t PREV_CMD_RX;
+    uint8_t latest_codeword_rx;
     uint8_t Reset_Counts;
     uint8_t RTM[16];
     uint16_t Acc[3];  // X,Y,Z Axis
@@ -143,7 +159,7 @@ typedef struct {
     uint8_t sd_dump;
     uint8_t GTime_SVector[32];
 //
-//    uint16_t Fletcher_Code;
+    uint16_t Fletcher_Code;
 }__attribute__((packed)) hk_pkt_t;
 
 typedef struct{
@@ -165,7 +181,7 @@ typedef struct {
 	uint32_t time_L;//lower time value
 	uint32_t time_H;//upper time value
 	uint8_t task_id;//task id
-	uint8_t task_status;//task status;
+	uint16_t task_status;//task status;
 }__attribute__((packed)) log_entry_t;
 
 typedef struct {

@@ -17,7 +17,6 @@ extern partition_t comms_partition;
 extern partition_t gmc_partition;
 extern uint8_t store_in_sd_card;
 extern uint8_t IMG_ID;
-extern uint8_t Time_Vector[32];
 
 uint8_t sd_dump_comms = 0;
 uint8_t sd_dump_gmc = 0;
@@ -69,12 +68,12 @@ uint8_t get_gmc(){
 	gmc_pkt->GMC_Voltage_ADC[i] = ADC_voltages[i];
 	}
 
-	get_time_vector(Time_Vector);
+//	get_time_vector(Time_Vector);
 
 	i = 0;
-	for(;i<32;i++){
-		gmc_pkt->GMC_GTime_SVector[i] = Time_Vector[i];
-	}
+//	for(;i<32;i++){
+//		gmc_pkt->GMC_GTime_SVector[i] = Time_Vector[i];
+//	}
 
 	gmc_pkt->ccsds_p1 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p1(tlm_pkt_type, GMC_API_ID))));
 	gmc_pkt->ccsds_p2 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p2((gmc_seq_num++)))));
@@ -128,11 +127,7 @@ uint16_t get_comms(){
 		comms_pkt->comms_adf_data[i] =	cmd_adf_data[i];
 	}
 
-	get_time_vector(Time_Vector);
 
-	for(;i<32;i++){
-		comms_pkt->comms_GTime_SVector[i] = Time_Vector[i];
-	}
 
 //	comms_pkt->comms_adf_state = adf_get_state();
 
@@ -148,7 +143,7 @@ uint16_t get_comms(){
 		comms_pkt->comms_sd_dump = sd_dump_comms;
 		comms_pkt->Fletcher_Code = make_FLetcher(data, sizeof(comms_pkt_t) - 2);
 		store_data(&comms_partition, data);
-//		store_in_sd_card = 0;
+		store_in_sd_card = 0;
 	}
 	else{
 		sd_dump_comms = 0;

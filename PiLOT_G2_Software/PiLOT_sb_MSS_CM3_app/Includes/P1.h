@@ -33,7 +33,7 @@
 //#define CoreTimer_C4_0	0x5000A000
 
 
-#define HK_PKT_PERIOD 		MSS_SYS_M3_CLK_FREQ/1024 * 1
+#define HK_PKT_PERIOD 		MSS_SYS_M3_CLK_FREQ/1024 * 0.5
 #define COMMS_PKT_PERIOD	MSS_SYS_M3_CLK_FREQ/1024 * 2
 #define TEMP_PKT_PERIOD		MSS_SYS_M3_CLK_FREQ/1024 * 3
 #define SD_PKT_PERIOD		MSS_SYS_M3_CLK_FREQ/1024 * 10
@@ -41,28 +41,17 @@
 
 //ENVM Storage address for critical data
 #define ENVM_RESET_COUNT_ADDR		0x60032000
-#define ENVM_RESET_COUNT_ADDR_WD		0x60032004
+
 
 #define P1_ADC_ADDR		0x40
 
 void p1_init();
-uint16_t get_hk();
+void get_hk();
 void get_temp();
 //void get_comms();
 
 
 #define PILOT_REVERSE_BYTE_ORDER(var)	(((var) << 8) | ((var) >> 8))
-#define THERMISTOR_API_ID			20
-#define THERMISTOR_PKT_LENGTH		sizeof(thermistor_pkt_t)
-#define THERMISTOR_FLETCHER_CODE	0xCDCD
-
-#define ARIS_API_ID           50
-#define ARIS_PKT_LENGTH       sizeof(aris_pkt_t)
-#define ARIS_FLETCHER_CODE    0x01
-
-#define LOGS_API_ID			30
-#define LOGS_PKT_LENGTH		sizeof(log_packet_t)
-#define LOGS_FLETCHER_CODE	0x00
 
 #define HK_API_ID			1
 #define HK_PKT_LENGTH		sizeof(hk_pkt_t)
@@ -72,14 +61,17 @@ void get_temp();
 #define GMC_PKT_LENGTH		sizeof(gmc_pkt_t)
 #define GMC_FLETCHER_CODE		0xCDCD
 
-
 #define COMMS_API_ID			3
 #define COMMS_PKT_LENGTH		sizeof(comms_pkt_t)
 #define COMMS_FLETCHER_CODE		0xCDCD
 
-#define SD_HK_API_ID    	40
-#define SD_HK_PKT_LENGTH  sizeof(sd_test)
-#define SD_HK_FLETCHER_CODE 0xCDCD
+#define THERMISTOR_API_ID			4
+#define THERMISTOR_PKT_LENGTH		sizeof(thermistor_pkt_t)
+#define THERMISTOR_FLETCHER_CODE	0xCDCD
+
+#define INIT_API_ID    	5
+#define INIT_PKT_LENGTH  sizeof(init_packet_t)
+#define INIT_FLETCHER_CODE 0xCDCD
 
 #define TIME_API_ID			60
 #define TIME_PKT_LENGTH		sizeof(timer_pkt)
@@ -172,8 +164,7 @@ typedef struct{
 	uint32_t ccsds_s2;
 	uint16_t Temperature_Values[8];
 	uint8_t sd_dump;
-	uint8_t Thermistor_GTime_SVector[32];
-//
+	uint8_t GTime_SVector[32];
 	uint16_t Fletcher_Code;
 
 }__attribute__((packed))thermistor_pkt_t;
@@ -214,13 +205,14 @@ typedef struct {
     uint32_t ccsds_s1;
     uint32_t ccsds_s2;
 
-//    uint16_t SD_Test_count[5];
-//    uint16_t SD_Test_time[5];
-    uint8_t sd_result;
-    uint16_t time;
+    uint8_t Image_ID;
+    uint8_t Status_1;
+    uint8_t Adf_inti_status;
+    uint8_t status_2;
 
+    uint8_t GTime_SVector[32];
     uint16_t Fletcher_Code;
-}__attribute__((packed)) sd_test_t;
+}__attribute__((packed)) init_packet_t;
 
 typedef struct {
 //	uint32_t sync;
@@ -312,5 +304,6 @@ typedef struct pkt{
 void vGetPktStruct(pkt_name_t pktname, void* pktdata, uint8_t pktsize);
 void store_pkt();
 void get_sd_data();
+uint16_t make_FLetcher(uint8_t *data,uint16_t len);
 
 #endif /* P1_H_ */

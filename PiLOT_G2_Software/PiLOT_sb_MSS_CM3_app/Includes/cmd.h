@@ -10,6 +10,7 @@
 #define MAX_CMD_PARAM 32
 #define NUM_CMDS 5
 
+
 typedef struct rx_cmd{
 
 	uint8_t cmd_id;

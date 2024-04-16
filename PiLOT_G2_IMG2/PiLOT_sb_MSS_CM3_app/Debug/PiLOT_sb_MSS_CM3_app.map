@@ -1,0 +1,1989 @@
+Archive member included because of file (symbol)
+
+C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hw_reg_access.o)
+                              ./P1.o (HW_set_16bit_reg)
+C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+                              ./P1.o (g_mss_uart0)
+C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                              ./main.o (MSS_SYS_init)
+C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                              ./main.o (g_mss_spi0)
+C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+                              ./main.o (MSS_GPIO_init)
+C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+                              ./main.o (TMR_init)
+C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+                              ./Comms/adf7030.o (SPI_init)
+C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                              ./P1.o (I2C_init)
+C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+                              C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o) (I2C_enable_irq)
+C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                              C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o) (g_FrequencyPCLK0)
+C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(startup_m2sxxx.o)
+                              C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o) (mscc_post_hw_cfg_init)
+C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hal.o)
+                              C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o) (HAL_disable_interrupts)
+C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+                              C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o) (MSS_COMBLK_init)
+c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+                              C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(startup_m2sxxx.o) (__libc_init_array)
+c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+                              C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o) (memcpy)
+c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+                              C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o) (memset)
+
+Allocating common symbols
+Common symbol       size              file
+
+log_counter         0x1               ./main.o
+gmc_pkt             0x4               ./P2.o
+ADC_voltages        0x10              ./P2.o
+comms_timer         0x4               ./main.o
+comms_pkt           0x4               ./P2.o
+log_packet_ptr      0x4               ./main.o
+gmc_partition       0x10              ./main.o
+Read_TPSRAM_addr    0x2               ./main.o
+g_core_i2c2         0x6c              ./P1.o
+g_core_i2c0         0x6c              ./P1.o
+g_core_i2c1         0x6c              ./P1.o
+g_mss_spi1          0x84              C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+gmc_voltage_flags   0x1               ./GMC/counter.o
+flag                0x1               ./OBC/SD.o
+gmc_radiation_count
+                    0x4               ./P2.o
+hk_pkt              0x4               ./P1.o
+log_data            0x200             ./main.o
+adf_spi             0x4               ./Comms/adf7030.o
+gmc_timer           0x4               ./main.o
+g_core_spi0         0x48              ./P1.o
+g_core_i2c5         0x6c              ./P1.o
+count_val           0x3               ./P2.o
+init_command        0x2               ./PIS/VC_Sensor.o
+temp_timer          0x4               ./main.o
+g_core_i2c3         0x6c              ./P1.o
+free_res            0x3               ./P2.o
+current_time_lower  0x8               ./main.o
+cmd_adf_data        0x20              ./P2.o
+read                0x2               ./PIS/VC_Sensor.o
+g_mss_uart1         0x40              C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+bvol                0x2               ./PIS/VC_Sensor.o
+sd_timer            0x4               ./main.o
+thermistor_pkt      0x4               ./P1.o
+data                0x200             ./P1.o
+current_time_upper  0x8               ./main.o
+rx_cmd_pkt          0x4               ./main.o
+gmc_free_res_value  0x4               ./P2.o
+g_mss_uart0         0x40              C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+rssi_cca            0x2               ./main.o
+count               0x1               ./PIS/VC_Sensor.o
+cmd_buff            0x10              ./P1.o
+thermistor_partition
+                    0x10              ./main.o
+rssi                0x2               ./main.o
+config_reg          0x1               ./PIS/VC_Sensor.o
+core_i2c_status     0x1               ./P1.o
+radio_memory_configuration_start_spi_command
+                    0x4               ./Comms/adf7030.o
+blck_pkt            0x800             ./P1.o
+g_mss_spi0          0x84              C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+comms_partition     0x10              ./main.o
+cmd_list            0x23              ./cmds/cmd.o
+hk_partition        0x10              ./main.o
+counter_i2c         0x6c              ./P1.o
+hk_timer            0x4               ./main.o
+Time_Vector         0x20              ./main.o
+RTM                 0x10              ./P1.o
+status              0x1               ./P2.o
+cmd                 0x4               ./cmds/cmd.o
+g_core_i2c4         0x6c              ./P1.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .data          0x00000000        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .text          0x00000000        0x0 ./P1.o
+ .data          0x00000000        0x0 ./P1.o
+ .bss           0x00000000        0x0 ./P1.o
+ .text.NVIC_EnableIRQ
+                0x00000000       0x38 ./P1.o
+ .text.NVIC_DisableIRQ
+                0x00000000       0x3c ./P1.o
+ .bss.send_pkt_flg
+                0x00000000        0x1 ./P1.o
+ .bss.active_blck
+                0x00000000        0x1 ./P1.o
+ .bss.wri_ptr   0x00000000        0x1 ./P1.o
+ .text.timer_intr_dis
+                0x00000000       0x10 ./P1.o
+ .text.timer_intr_en
+                0x00000000       0x10 ./P1.o
+ .text.store_pkt
+                0x00000000       0x60 ./P1.o
+ .text.vGetPktStruct
+                0x00000000       0xf8 ./P1.o
+ .text          0x00000000        0x0 ./P2.o
+ .data          0x00000000        0x0 ./P2.o
+ .bss           0x00000000        0x0 ./P2.o
+ .bss.data_test
+                0x00000000       0x34 ./P2.o
+ .text          0x00000000        0x0 ./main.o
+ .data          0x00000000        0x0 ./main.o
+ .bss           0x00000000        0x0 ./main.o
+ .text.MSS_TIM64_init
+                0x00000000       0xa4 ./main.o
+ .text.MSS_TIM64_start
+                0x00000000       0x1c ./main.o
+ .text.MSS_TIM64_load_immediate
+                0x00000000       0x2c ./main.o
+ .text.timer_dis
+                0x00000000       0x10 ./main.o
+ .text.timer_ena
+                0x00000000       0x10 ./main.o
+ .text.Tim64_init
+                0x00000000       0x20 ./main.o
+ .text          0x00000000        0x0 ./packet_definition.o
+ .data          0x00000000        0x0 ./packet_definition.o
+ .bss           0x00000000        0x0 ./packet_definition.o
+ .text          0x00000000        0x0 ./cmds/cmd.o
+ .data          0x00000000        0x0 ./cmds/cmd.o
+ .bss           0x00000000        0x0 ./cmds/cmd.o
+ .text          0x00000000        0x0 ./PIS/RS485_Controller.o
+ .data          0x00000000        0x0 ./PIS/RS485_Controller.o
+ .bss           0x00000000        0x0 ./PIS/RS485_Controller.o
+ .text          0x00000000        0x0 ./PIS/VC_Sensor.o
+ .data          0x00000000        0x0 ./PIS/VC_Sensor.o
+ .bss           0x00000000        0x0 ./PIS/VC_Sensor.o
+ .text.vc_write_reg
+                0x00000000       0x58 ./PIS/VC_Sensor.o
+ .text          0x00000000        0x0 ./OBC/ADC.o
+ .data          0x00000000        0x0 ./OBC/ADC.o
+ .bss           0x00000000        0x0 ./OBC/ADC.o
+ .text          0x00000000        0x0 ./OBC/IMU.o
+ .data          0x00000000        0x0 ./OBC/IMU.o
+ .bss           0x00000000        0x0 ./OBC/IMU.o
+ .text          0x00000000        0x0 ./OBC/SD.o
+ .data          0x00000000        0x0 ./OBC/SD.o
+ .bss           0x00000000        0x0 ./OBC/SD.o
+ .data.CMD1     0x00000000        0x8 ./OBC/SD.o
+ .text          0x00000000        0x0 ./OBC/memory.o
+ .data          0x00000000        0x0 ./OBC/memory.o
+ .bss           0x00000000        0x0 ./OBC/memory.o
+ .text          0x00000000        0x0 ./GMC/counter.o
+ .data          0x00000000        0x0 ./GMC/counter.o
+ .bss           0x00000000        0x0 ./GMC/counter.o
+ .text.reset_counter
+                0x00000000       0x68 ./GMC/counter.o
+ .text.set_free_res
+                0x00000000       0x68 ./GMC/counter.o
+ .text          0x00000000        0x0 ./Comms/adf7030.o
+ .data          0x00000000        0x0 ./Comms/adf7030.o
+ .bss           0x00000000        0x0 ./Comms/adf7030.o
+ .data.callibrations_config
+                0x00000000     0x1b64 ./Comms/adf7030.o
+ .bss.config_length_header
+                0x00000000        0x4 ./Comms/adf7030.o
+ .text.adf_send_cmd_without_ready
+                0x00000000       0x78 ./Comms/adf7030.o
+ .text.adf_config_gpio
+                0x00000000      0x160 ./Comms/adf7030.o
+ .text.read_cmd
+                0x00000000       0x38 ./Comms/adf7030.o
+ .text.get_temp_data
+                0x00000000       0x58 ./Comms/adf7030.o
+ .rodata        0x00000000       0x10 ./Comms/adf7030.o
+ .text.send_nop
+                0x00000000      0x13c ./Comms/adf7030.o
+ .text.chk_status
+                0x00000000       0xbc ./Comms/adf7030.o
+ .text.rx_pkt   0x00000000      0x2e4 ./Comms/adf7030.o
+ .text.tx_pkt   0x00000000      0x1b4 ./Comms/adf7030.o
+ .rodata.C.83.5494
+                0x00000000        0x4 ./Comms/adf7030.o
+ .data          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hw_reg_access.o)
+ .bss           0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hw_reg_access.o)
+ .text          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .data          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .bss           0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.NVIC_EnableIRQ
+                0x00000000       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.NVIC_DisableIRQ
+                0x00000000       0x3c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_lin_init
+                0x00000000       0x78 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_irda_init
+                0x00000000       0xfc C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_smartcard_init
+                0x00000000       0x94 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_polled_tx_string
+                0x00000000       0xcc C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_irq_tx
+                0x00000000       0xb4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_tx_complete
+                0x00000000       0x90 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_get_rx
+                0x00000000       0xdc C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_irq
+                0x00000000       0xbc C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_irq
+                0x00000000       0xb8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_rx_handler
+                0x00000000       0xc0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_loopback
+                0x00000000       0xec C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_rxstatus_handler
+                0x00000000       0x8c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_tx_handler
+                0x00000000       0x9c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_modemstatus_handler
+                0x00000000       0x8c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_fill_tx_fifo
+                0x00000000       0xd4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_get_rx_status
+                0x00000000       0x80 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_get_modem_status
+                0x00000000       0x60 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_get_tx_status
+                0x00000000       0x78 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_break
+                0x00000000       0x5c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_clear_break
+                0x00000000       0x5c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_pidpei_handler
+                0x00000000       0x8c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_linbreak_handler
+                0x00000000       0x8c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_linsync_handler
+                0x00000000       0x8c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_nack_handler
+                0x00000000       0x8c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_rx_timeout_handler
+                0x00000000       0x8c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_half_duplex
+                0x00000000       0x5c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_half_duplex
+                0x00000000       0x5c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_rx_endian
+                0x00000000       0x88 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_tx_endian
+                0x00000000       0x88 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_filter_length
+                0x00000000       0x68 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_afm
+                0x00000000       0x5c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_afm
+                0x00000000       0x5c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_afclear
+                0x00000000       0x5c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_afclear
+                0x00000000       0x5c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_rx_timeout
+                0x00000000       0x6c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_rx_timeout
+                0x00000000       0x5c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_tx_time_guard
+                0x00000000       0x6c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_tx_time_guard
+                0x00000000       0x5c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_address
+                0x00000000       0x5c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_ready_mode
+                0x00000000       0x88 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_usart_mode
+                0x00000000       0x90 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .data          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss           0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_get_serial_number
+                0x00000000       0x2c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_get_user_code
+                0x00000000       0x2c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_get_design_version
+                0x00000000       0x2c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_get_device_certificate
+                0x00000000       0x2c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_get_secondary_device_certificate
+                0x00000000       0x90 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.ind       0x00000000        0x1 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_flash_freeze
+                0x00000000       0xf0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_128bit_aes
+                0x00000000       0xa4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_256bit_aes
+                0x00000000       0xa4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_sha256
+                0x00000000       0x7c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_hmac
+                0x00000000       0x98 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_key_tree
+                0x00000000       0x7c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_challenge_response
+                0x00000000       0x78 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_nrbg_reset
+                0x00000000       0x7c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_nrbg_self_test
+                0x00000000       0x68 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_nrbg_instantiate
+                0x00000000       0x6c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_nrbg_generate
+                0x00000000       0x70 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_nrbg_reseed
+                0x00000000       0x50 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_nrbg_uninstantiate
+                0x00000000       0x70 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_zeroize_device
+                0x00000000       0xa4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.g_isp_response
+                0x00000000        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.g_isp_completion_handler
+                0x00000000        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.g_isp_page_read_handler
+                0x00000000        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.g_mode    0x00000000        0x1 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .data.wait_for_clock_switch
+                0x00000000        0x1 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.isp_page_read_handler
+                0x00000000       0xa8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.isp_sys_completion_handler
+                0x00000000       0x70 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_start_isp
+                0x00000000      0x154 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_create_activation_code
+                0x00000000       0xa8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_delete_activation_code
+                0x00000000       0xa8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_get_number_of_keys
+                0x00000000       0xd8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_enroll_key
+                0x00000000       0xf0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_delete_key
+                0x00000000       0xb0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_fetch_key
+                0x00000000       0xc8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_export_keycodes
+                0x00000000       0xac C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_import_keycodes
+                0x00000000       0xac C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_fetch_ecc_public_key
+                0x00000000       0xa4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_get_random_seed
+                0x00000000       0xa4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_ecc_point_multiplication
+                0x00000000       0xcc C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_ecc_point_addition
+                0x00000000       0xcc C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_ecc_get_base_point
+                0x00000000       0x3c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_start_clock_monitor
+                0x00000000       0xd4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_stop_clock_monitor
+                0x00000000       0xd4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_enable_puf_power_down
+                0x00000000       0xd4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_disable_puf_power_down
+                0x00000000       0xd4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_clear_lock_parity
+                0x00000000       0xd4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_clear_mesh_short
+                0x00000000       0xd4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.execute_service
+                0x00000000       0x6c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.write_ptr_value_into_array
+                0x00000000       0x60 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.write_array_into_ptr_value
+                0x00000000       0x70 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .rodata.C.119.4941
+                0x00000000       0x60 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .data          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .bss           0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_configure_slave_mode
+                0x00000000       0xd0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_set_frame_rx_handler
+                0x00000000       0xf0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_set_slave_tx_frame
+                0x00000000      0x110 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_set_slave_block_buffers
+                0x00000000      0x23c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_set_cmd_handler
+                0x00000000       0xc4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_set_cmd_response
+                0x00000000       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_enable
+                0x00000000       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_disable
+                0x00000000       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_set_transfer_byte_count
+                0x00000000       0x84 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_tx_done
+                0x00000000       0x24 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .data          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .bss           0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .text.MSS_GPIO_drive_inout
+                0x00000000      0x128 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .text.MSS_GPIO_disable_irq
+                0x00000000       0x50 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .text          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .data          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .bss           0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .text.TMR_stop
+                0x00000000       0x3c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .text.TMR_current_value
+                0x00000000       0x40 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .text.TMR_reload
+                0x00000000       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .text          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .data          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .bss           0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_configure_slave_mode
+                0x00000000       0x84 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_transfer_frame
+                0x00000000       0x94 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_set_frame_rx_handler
+                0x00000000      0x140 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_set_slave_tx_frame
+                0x00000000      0x13c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_set_slave_block_buffers
+                0x00000000      0x1c8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_set_cmd_handler
+                0x00000000       0xbc C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_set_cmd_response
+                0x00000000       0x58 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_enable
+                0x00000000       0x34 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_disable
+                0x00000000       0x34 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_isr  0x00000000      0x4d4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.fill_slave_tx_fifo
+                0x00000000       0xc0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.read_slave_rx_fifo
+                0x00000000       0xd4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .data          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .bss           0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_channel_init
+                0x00000000       0xec C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_get_status
+                0x00000000       0x20 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_system_tick
+                0x00000000       0x68 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_set_slave_tx_buffer
+                0x00000000       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_set_slave_rx_buffer
+                0x00000000       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_set_slave_mem_offset_length
+                0x00000000       0x34 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_register_write_handler
+                0x00000000       0x28 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_enable_slave
+                0x00000000       0x44 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_disable_slave
+                0x00000000       0x40 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_set_slave_second_addr
+                0x00000000       0x30 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_disable_slave_second_addr
+                0x00000000       0x24 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_set_gca
+                0x00000000       0x2c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_clear_gca
+                0x00000000       0x2c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_smbus_init
+                0x00000000       0x24 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_enable_smbus_irq
+                0x00000000       0x6c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_disable_smbus_irq
+                0x00000000       0x6c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_suspend_smbus_slave
+                0x00000000       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_resume_smbus_slave
+                0x00000000       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_reset_smbus
+                0x00000000       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_set_smbus_alert
+                0x00000000       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_clear_smbus_alert
+                0x00000000       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_get_irq_status
+                0x00000000       0x70 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_set_user_data
+                0x00000000       0x1c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_get_user_data
+                0x00000000       0x18 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .data          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .bss           0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .text          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .data          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .bss           0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(startup_m2sxxx.o)
+ .data          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(startup_m2sxxx.o)
+ .bss           0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(startup_m2sxxx.o)
+ .data          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hal.o)
+ .bss           0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hal.o)
+ .text          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .data          0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss           0x00000000        0x0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.MSS_COMBLK_send_cmd_with_ptr
+                0x00000000      0x160 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.MSS_COMBLK_send_paged_cmd
+                0x00000000      0x1a4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .text          0x00000000      0x190 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .text          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00000000         0x00040000         xr
+ram              0x20000000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+LOAD ./P1.o
+LOAD ./P2.o
+LOAD ./main.o
+LOAD ./packet_definition.o
+LOAD ./cmds/cmd.o
+LOAD ./PIS/RS485_Controller.o
+LOAD ./PIS/VC_Sensor.o
+LOAD ./OBC/ADC.o
+LOAD ./OBC/IMU.o
+LOAD ./OBC/SD.o
+LOAD ./OBC/memory.o
+LOAD ./GMC/counter.o
+LOAD ./Comms/adf7030.o
+LOAD C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a
+START GROUP
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a
+END GROUP
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+START GROUP
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a
+END GROUP
+                0x00000000                __DYNAMIC = 0x0
+                0x20000000                RAM_START_ADDRESS = 0x20000000
+                0x00010000                RAM_SIZE = 0x10000
+                0x00001000                MAIN_STACK_SIZE = 0x1000
+                0x00001000                MIN_SIZE_HEAP = 0x1000
+                0x20010000                PROVIDE (__main_stack_start, (RAM_START_ADDRESS + RAM_SIZE))
+                0x2000f000                PROVIDE (__process_stack_start, (__main_stack_start - MAIN_STACK_SIZE))
+                0x20010000                PROVIDE (_estack, __main_stack_start)
+                0x00000000                PROVIDE (__mirrored_nvm, 0x0)
+                0x00000000                PROVIDE (__smartfusion2_memory_remap, 0x0)
+
+.vector_table   0x00000000      0x190
+                0x00000000                __vector_table_load = LOADADDR (.vector_table)
+                0x00000000                __vector_table_start = .
+                0x00000000                __vector_table_vma_base_address = .
+ *(.isr_vector)
+ .isr_vector    0x00000000      0x190 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(startup_m2sxxx.o)
+                0x00000000                g_pfnVectors
+                0x00000190                . = ALIGN (0x10)
+                0x00000190                _evector_table = .
+
+.boot_code      0x00000190      0x330
+ *(.boot_code)
+ .boot_code     0x00000190      0x330 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(startup_m2sxxx.o)
+                0x00000190                Reset_Handler
+                0x0000037e                NMI_Handler
+                0x00000380                HardFault_Handler
+                0x00000382                MemManage_Handler
+                0x00000384                BusFault_Handler
+                0x00000386                UsageFault_Handler
+                0x00000388                SVC_Handler
+                0x0000038a                DebugMon_Handler
+                0x0000038c                PendSV_Handler
+                0x0000038e                SysTick_Handler
+                0x00000390                WdogWakeup_IRQHandler
+                0x00000392                RTC_Wakeup_IRQHandler
+                0x00000398                I2C0_IRQHandler
+                0x0000039a                I2C0_SMBAlert_IRQHandler
+                0x0000039c                I2C0_SMBus_IRQHandler
+                0x0000039e                I2C1_IRQHandler
+                0x000003a0                I2C1_SMBAlert_IRQHandler
+                0x000003a2                I2C1_SMBus_IRQHandler
+                0x000003a8                EthernetMAC_IRQHandler
+                0x000003aa                DMA_IRQHandler
+                0x000003ac                Timer1_IRQHandler
+                0x000003ae                Timer2_IRQHandler
+                0x000003b0                CAN_IRQHandler
+                0x000003b2                ENVM0_IRQHandler
+                0x000003b4                ENVM1_IRQHandler
+                0x000003b8                USB_IRQHandler
+                0x000003ba                USB_DMA_IRQHandler
+                0x000003bc                PLL_Lock_IRQHandler
+                0x000003be                PLL_LockLost_IRQHandler
+                0x000003c0                CommSwitchError_IRQHandler
+                0x000003c2                CacheError_IRQHandler
+                0x000003c4                DDR_IRQHandler
+                0x000003c6                HPDMA_Complete_IRQHandler
+                0x000003c8                HPDMA_Error_IRQHandler
+                0x000003ca                ECC_Error_IRQHandler
+                0x000003cc                MDDR_IOCalib_IRQHandler
+                0x000003ce                FAB_PLL_Lock_IRQHandler
+                0x000003d0                FAB_PLL_LockLost_IRQHandler
+                0x000003d2                FIC64_IRQHandler
+                0x000003e6                FabricIrq9_IRQHandler
+                0x000003e8                FabricIrq10_IRQHandler
+                0x000003ea                FabricIrq11_IRQHandler
+                0x000003ec                FabricIrq12_IRQHandler
+                0x000003ee                FabricIrq13_IRQHandler
+                0x000003f0                FabricIrq14_IRQHandler
+                0x000003f2                FabricIrq15_IRQHandler
+                0x000003f4                GPIO0_IRQHandler
+                0x000003f8                GPIO2_IRQHandler
+                0x000003fc                GPIO4_IRQHandler
+                0x000003fe                GPIO5_IRQHandler
+                0x00000400                GPIO6_IRQHandler
+                0x00000402                GPIO7_IRQHandler
+                0x00000404                GPIO8_IRQHandler
+                0x00000406                GPIO9_IRQHandler
+                0x00000408                GPIO10_IRQHandler
+                0x0000040a                GPIO11_IRQHandler
+                0x0000040c                GPIO12_IRQHandler
+                0x0000040e                GPIO13_IRQHandler
+                0x00000410                GPIO14_IRQHandler
+                0x00000412                GPIO15_IRQHandler
+                0x00000414                GPIO16_IRQHandler
+                0x00000416                GPIO17_IRQHandler
+                0x00000418                GPIO18_IRQHandler
+                0x0000041a                GPIO19_IRQHandler
+                0x0000041c                GPIO20_IRQHandler
+                0x0000041e                GPIO21_IRQHandler
+                0x00000420                GPIO22_IRQHandler
+                0x00000422                GPIO23_IRQHandler
+                0x00000424                GPIO24_IRQHandler
+                0x00000426                GPIO25_IRQHandler
+                0x00000428                GPIO26_IRQHandler
+                0x0000042a                GPIO27_IRQHandler
+                0x0000042c                GPIO28_IRQHandler
+                0x0000042e                GPIO29_IRQHandler
+                0x00000430                GPIO30_IRQHandler
+                0x00000432                GPIO31_IRQHandler
+                0x00000434                mscc_post_hw_cfg_init
+                0x000004c0                . = ALIGN (0x10)
+
+.text           0x000004c0     0x98f0
+ CREATE_OBJECT_SYMBOLS
+                0x000004c0                __text_load = LOADADDR (.text)
+                0x000004c0                __text_start = .
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x000004c0       0x30 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .text.MSS_WD_current_value
+                0x000004f0       0x18 ./P1.o
+ .text.p1_init  0x00000508       0x58 ./P1.o
+                0x00000508                p1_init
+ .text.make_FLetcher
+                0x00000560      0x138 ./P1.o
+                0x00000560                make_FLetcher
+ .text.get_hk   0x00000698      0x914 ./P1.o
+                0x00000698                get_hk
+ .text.get_temp
+                0x00000fac       0xe8 ./P1.o
+                0x00000fac                get_temp
+ .text.get_sd_data
+                0x00001094       0x34 ./P1.o
+                0x00001094                get_sd_data
+ .text.get_gmc  0x000010c8      0x518 ./P2.o
+                0x000010c8                get_gmc
+ .text.get_comms
+                0x000015e0      0x50c ./P2.o
+                0x000015e0                get_comms
+ .text.NVIC_EnableIRQ
+                0x00001aec       0x38 ./main.o
+ .text.NVIC_DisableIRQ
+                0x00001b24       0x3c ./main.o
+ .text.NVIC_ClearPendingIRQ
+                0x00001b60       0x3c ./main.o
+ .text.NVIC_SetPriority
+                0x00001b9c       0x5c ./main.o
+ .text.MSS_TIM1_init
+                0x00001bf8       0x84 ./main.o
+ .text.MSS_TIM1_start
+                0x00001c7c       0x1c ./main.o
+ .text.MSS_TIM1_load_immediate
+                0x00001c98       0x20 ./main.o
+ .text.MSS_TIM64_get_current_value
+                0x00001cb8       0x30 ./main.o
+ .text.MSS_WD_init
+                0x00001ce8       0x6c ./main.o
+ .text.MSS_WD_reload
+                0x00001d54       0x1c ./main.o
+ .text.HK_ISR   0x00001d70       0x30 ./main.o
+                0x00001d70                HK_ISR
+ .text.GMC_ISR  0x00001da0       0x24 ./main.o
+                0x00001da0                GMC_ISR
+ .text.COMMS_ISR
+                0x00001dc4       0x24 ./main.o
+                0x00001dc4                COMMS_ISR
+ .text.THER_ISR
+                0x00001de8       0x18 ./main.o
+                0x00001de8                THER_ISR
+ .text.SD_ISR   0x00001e00       0x40 ./main.o
+                0x00001e00                SD_ISR
+ .text.timer_intr_set
+                0x00001e40      0x170 ./main.o
+                0x00001e40                timer_intr_set
+ .text.get_cmd  0x00001fb0       0xc4 ./main.o
+                0x00001fb0                get_cmd
+ .text.init_cmd_engine
+                0x00002074       0x74 ./main.o
+                0x00002074                init_cmd_engine
+ .text.main     0x000020e8      0x2ac ./main.o
+                0x000020e8                main
+ .text.FabricIrq0_IRQHandler
+                0x00002394       0x14 ./main.o
+                0x00002394                FabricIrq0_IRQHandler
+ .text.FabricIrq1_IRQHandler
+                0x000023a8       0x14 ./main.o
+                0x000023a8                FabricIrq1_IRQHandler
+ .text.FabricIrq2_IRQHandler
+                0x000023bc       0x14 ./main.o
+                0x000023bc                FabricIrq2_IRQHandler
+ .text.FabricIrq3_IRQHandler
+                0x000023d0       0x14 ./main.o
+                0x000023d0                FabricIrq3_IRQHandler
+ .text.FabricIrq4_IRQHandler
+                0x000023e4        0xc ./main.o
+                0x000023e4                FabricIrq4_IRQHandler
+ .text.FabricIrq5_IRQHandler
+                0x000023f0        0xc ./main.o
+                0x000023f0                FabricIrq5_IRQHandler
+ .text.FabricIrq6_IRQHandler
+                0x000023fc        0xc ./main.o
+                0x000023fc                FabricIrq6_IRQHandler
+ .text.FabricIrq7_IRQHandler
+                0x00002408        0xc ./main.o
+                0x00002408                FabricIrq7_IRQHandler
+ .text.FabricIrq8_IRQHandler
+                0x00002414        0xc ./main.o
+                0x00002414                FabricIrq8_IRQHandler
+ .text.NVIC_DisableIRQ
+                0x00002420       0x3c ./cmds/cmd.o
+ .text.cmd_valid
+                0x0000245c       0x1c ./cmds/cmd.o
+                0x0000245c                cmd_valid
+ .text.add_cmd  0x00002478       0xbc ./cmds/cmd.o
+                0x00002478                add_cmd
+ .text.cmd_engine
+                0x00002534       0x50 ./cmds/cmd.o
+                0x00002534                cmd_engine
+ .text.cmd_noop
+                0x00002584       0x14 ./cmds/cmd.o
+                0x00002584                cmd_noop
+ .text.set_pkt_rate
+                0x00002598       0xd0 ./cmds/cmd.o
+                0x00002598                set_pkt_rate
+ .text.delay    0x00002668       0x24 ./cmds/cmd.o
+                0x00002668                delay
+ .text.exe_iap  0x0000268c       0x98 ./cmds/cmd.o
+                0x0000268c                exe_iap
+ .text.read_adf_reg
+                0x00002724      0x100 ./cmds/cmd.o
+                0x00002724                read_adf_reg
+ .text.exe_rtm  0x00002824       0x3c ./cmds/cmd.o
+                0x00002824                exe_rtm
+ .text.NVIC_EnableIRQ
+                0x00002860       0x38 ./PIS/RS485_Controller.o
+ .text.NVIC_SetPriority
+                0x00002898       0x5c ./PIS/RS485_Controller.o
+ .text.GPIO1_IRQHandler
+                0x000028f4       0x58 ./PIS/RS485_Controller.o
+                0x000028f4                GPIO1_IRQHandler
+ .text.GPIO3_IRQHandler
+                0x0000294c       0x98 ./PIS/RS485_Controller.o
+                0x0000294c                GPIO3_IRQHandler
+ .text.get_time_vector
+                0x000029e4       0x6c ./PIS/RS485_Controller.o
+                0x000029e4                get_time_vector
+ .text.init_RS485_Controller
+                0x00002a50      0x124 ./PIS/RS485_Controller.o
+                0x00002a50                init_RS485_Controller
+ .text.vc_write
+                0x00002b74       0xa8 ./PIS/VC_Sensor.o
+                0x00002b74                vc_write
+ .text.vc_read  0x00002c1c       0xa8 ./PIS/VC_Sensor.o
+                0x00002c1c                vc_read
+ .text.vc_read_reg
+                0x00002cc4       0x58 ./PIS/VC_Sensor.o
+                0x00002cc4                vc_read_reg
+ .text.vc_init  0x00002d1c       0x78 ./PIS/VC_Sensor.o
+                0x00002d1c                vc_init
+ .text.read_bus_voltage
+                0x00002d94       0xbc ./PIS/VC_Sensor.o
+                0x00002d94                read_bus_voltage
+ .text.read_shunt_voltage
+                0x00002e50       0xc0 ./PIS/VC_Sensor.o
+                0x00002e50                read_shunt_voltage
+ .text.ADC_Init
+                0x00002f10       0xf0 ./OBC/ADC.o
+                0x00002f10                ADC_Init
+ .text.get_ADC_value
+                0x00003000       0xa0 ./OBC/ADC.o
+                0x00003000                get_ADC_value
+ .text.get_IMU_acc
+                0x000030a0      0x318 ./OBC/IMU.o
+                0x000030a0                get_IMU_acc
+ .text.get_IMU_gyro
+                0x000033b8      0x2e4 ./OBC/IMU.o
+                0x000033b8                get_IMU_gyro
+ .text.get_IMU_temp
+                0x0000369c       0xc0 ./OBC/IMU.o
+                0x0000369c                get_IMU_temp
+ .text.SD_Init  0x0000375c      0x47c ./OBC/SD.o
+                0x0000375c                SD_Init
+ .text.SD_Write
+                0x00003bd8      0x23c ./OBC/SD.o
+                0x00003bd8                SD_Write
+ .text.SD_Read  0x00003e14      0x1bc ./OBC/SD.o
+                0x00003e14                SD_Read
+ .text.initialise_partition
+                0x00003fd0       0x30 ./OBC/memory.o
+                0x00003fd0                initialise_partition
+ .text.store_data
+                0x00004000       0x5c ./OBC/memory.o
+                0x00004000                store_data
+ .text.read_data
+                0x0000405c       0x5c ./OBC/memory.o
+                0x0000405c                read_data
+ .text.counter_init
+                0x000040b8       0x64 ./GMC/counter.o
+                0x000040b8                counter_init
+ .text.get_count
+                0x0000411c       0x54 ./GMC/counter.o
+                0x0000411c                get_count
+ .text.get_free_res
+                0x00004170       0x8c ./GMC/counter.o
+                0x00004170                get_free_res
+ .text.get_gmc_voltages
+                0x000041fc       0x80 ./GMC/counter.o
+                0x000041fc                get_gmc_voltages
+ .text.set_adf_spi_instance
+                0x0000427c       0x20 ./Comms/adf7030.o
+                0x0000427c                set_adf_spi_instance
+ .text.adf_init
+                0x0000429c      0x298 ./Comms/adf7030.o
+                0x0000429c                adf_init
+ .text.apply_file
+                0x00004534       0xcc ./Comms/adf7030.o
+                0x00004534                apply_file
+ .text.config_adf7030
+                0x00004600      0x100 ./Comms/adf7030.o
+                0x00004600                config_adf7030
+ .text.adf_write_to_memory
+                0x00004700       0x94 ./Comms/adf7030.o
+                0x00004700                adf_write_to_memory
+ .text.adf_read_from_memory
+                0x00004794       0x98 ./Comms/adf7030.o
+                0x00004794                adf_read_from_memory
+ .text.adf_send_cmd
+                0x0000482c       0xcc ./Comms/adf7030.o
+                0x0000482c                adf_send_cmd
+ .text.cmd_ready_set
+                0x000048f8       0x7c ./Comms/adf7030.o
+                0x000048f8                cmd_ready_set
+ .text.adf_in_idle
+                0x00004974       0x7c ./Comms/adf7030.o
+                0x00004974                adf_in_idle
+ .text.adf_spi_trans_read
+                0x000049f0       0x68 ./Comms/adf7030.o
+                0x000049f0                adf_spi_trans_read
+ .text.adf_spi_trans_write
+                0x00004a58       0xf4 ./Comms/adf7030.o
+                0x00004a58                adf_spi_trans_write
+ .text.adf_get_state
+                0x00004b4c       0x94 ./Comms/adf7030.o
+                0x00004b4c                adf_get_state
+ .text.get_rssi_data
+                0x00004be0       0x94 ./Comms/adf7030.o
+                0x00004be0                get_rssi_data
+ .text.get_rssi_cca_data
+                0x00004c74       0xb4 ./Comms/adf7030.o
+                0x00004c74                get_rssi_cca_data
+ .text.get_preamble_pkt
+                0x00004d28       0x30 ./Comms/adf7030.o
+                0x00004d28                get_preamble_pkt
+ .text.get_sync_word
+                0x00004d58       0x50 ./Comms/adf7030.o
+                0x00004d58                get_sync_word
+ .text.get_freq
+                0x00004da8       0x50 ./Comms/adf7030.o
+                0x00004da8                get_freq
+ .text          0x00004df8       0x90 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hw_reg_access.o)
+                0x00004df8                HW_set_32bit_reg
+                0x00004dfc                HW_get_32bit_reg
+                0x00004e00                HW_set_32bit_reg_field
+                0x00004e1c                HW_get_32bit_reg_field
+                0x00004e28                HW_set_16bit_reg
+                0x00004e2c                HW_get_16bit_reg
+                0x00004e30                HW_set_16bit_reg_field
+                0x00004e4c                HW_get_16bit_reg_field
+                0x00004e58                HW_set_8bit_reg
+                0x00004e5c                HW_get_8bit_reg
+                0x00004e60                HW_set_8bit_reg_field
+                0x00004e7c                HW_get_8bit_reg_field
+ .text.NVIC_ClearPendingIRQ
+                0x00004e88       0x3c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.set_bit_reg8
+                0x00004ec4       0x40 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.clear_bit_reg8
+                0x00004f04       0x40 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.read_bit_reg8
+                0x00004f44       0x40 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_init
+                0x00004f84       0x84 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x00004f84                MSS_UART_init
+ .text.MSS_UART_polled_tx
+                0x00005008       0xe4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x00005008                MSS_UART_polled_tx
+ .text.UART0_IRQHandler
+                0x000050ec       0x24 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x000050ec                UART0_IRQHandler
+ .text.UART1_IRQHandler
+                0x00005110       0x24 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x00005110                UART1_IRQHandler
+ .text.config_baud_divisors
+                0x00005134      0x198 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.global_init
+                0x000052cc      0x26c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_isr
+                0x00005538      0x22c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.default_tx_handler
+                0x00005764      0x10c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_SYS_init
+                0x00005870       0x64 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x00005870                MSS_SYS_init
+ .text.asynchronous_event_handler
+                0x000058d4      0x12c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.determine_seq
+                0x00005a00       0xc8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.clk_switching_fix
+                0x00005ac8      0x3a0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.revert_clk_config
+                0x00005e68      0x254 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_initiate_iap
+                0x000060bc      0x198 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x000060bc                MSS_SYS_initiate_iap
+ .text.MSS_SYS_check_digest
+                0x00006254      0x108 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x00006254                MSS_SYS_check_digest
+ .text.request_completion_handler
+                0x0000635c       0x30 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.signal_request_start
+                0x0000638c       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.wait_for_request_completion
+                0x000063c4       0x28 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.NVIC_EnableIRQ
+                0x000063ec       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.NVIC_DisableIRQ
+                0x00006424       0x3c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.NVIC_ClearPendingIRQ
+                0x00006460       0x3c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_init
+                0x0000649c      0x134 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x0000649c                MSS_SPI_init
+ .text.recover_from_rx_overflow
+                0x000065d0      0x160 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_configure_master_mode
+                0x00006730      0x150 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x00006730                MSS_SPI_configure_master_mode
+ .text.MSS_SPI_set_slave_select
+                0x00006880      0x108 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x00006880                MSS_SPI_set_slave_select
+ .text.MSS_SPI_clear_slave_select
+                0x00006988       0x90 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x00006988                MSS_SPI_clear_slave_select
+ .text.MSS_SPI_transfer_frame
+                0x00006a18       0xc0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x00006a18                MSS_SPI_transfer_frame
+ .text.MSS_SPI_transfer_block
+                0x00006ad8      0x228 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x00006ad8                MSS_SPI_transfer_block
+ .text.fill_slave_tx_fifo
+                0x00006d00       0xe0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.read_slave_rx_fifo
+                0x00006de0       0xac C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.mss_spi_isr
+                0x00006e8c      0x2b0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.SPI0_IRQHandler
+                0x0000713c       0x24 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x0000713c                SPI0_IRQHandler
+ .text.SPI1_IRQHandler
+                0x00007160       0x24 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x00007160                SPI1_IRQHandler
+ .text.NVIC_EnableIRQ
+                0x00007184       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .text.NVIC_DisableIRQ
+                0x000071bc       0x3c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .text.NVIC_ClearPendingIRQ
+                0x000071f8       0x3c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .text.MSS_GPIO_init
+                0x00007234       0xac C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+                0x00007234                MSS_GPIO_init
+ .text.MSS_GPIO_config
+                0x000072e0       0x3c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+                0x000072e0                MSS_GPIO_config
+ .text.MSS_GPIO_set_output
+                0x0000731c       0x70 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+                0x0000731c                MSS_GPIO_set_output
+ .text.MSS_GPIO_enable_irq
+                0x0000738c       0x60 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+                0x0000738c                MSS_GPIO_enable_irq
+ .text.MSS_GPIO_clear_irq
+                0x000073ec       0x40 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+                0x000073ec                MSS_GPIO_clear_irq
+ .text.TMR_init
+                0x0000742c       0xd0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+                0x0000742c                TMR_init
+ .text.TMR_start
+                0x000074fc       0x3c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+                0x000074fc                TMR_start
+ .text.TMR_enable_int
+                0x00007538       0x3c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+                0x00007538                TMR_enable_int
+ .text.TMR_clear_int
+                0x00007574       0x34 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+                0x00007574                TMR_clear_int
+ .text.SPI_init
+                0x000075a8       0xe4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+                0x000075a8                SPI_init
+ .text.SPI_configure_master_mode
+                0x0000768c       0x84 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+                0x0000768c                SPI_configure_master_mode
+ .text.SPI_set_slave_select
+                0x00007710       0xa8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+                0x00007710                SPI_set_slave_select
+ .text.SPI_clear_slave_select
+                0x000077b8       0xac C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+                0x000077b8                SPI_clear_slave_select
+ .text.SPI_transfer_block
+                0x00007864      0x400 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+                0x00007864                SPI_transfer_block
+ .text.recover_from_rx_overflow
+                0x00007c64       0x60 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.I2C_init
+                0x00007cc4       0xec C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                0x00007cc4                I2C_init
+ .text.I2C_write
+                0x00007db0       0xe4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                0x00007db0                I2C_write
+ .text.I2C_read
+                0x00007e94       0xe4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                0x00007e94                I2C_read
+ .text.I2C_write_read
+                0x00007f78      0x130 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                0x00007f78                I2C_write_read
+ .text.I2C_wait_complete
+                0x000080a8       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                0x000080a8                I2C_wait_complete
+ .text.enable_slave_if_required
+                0x000080e0       0x30 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_isr  0x00008110      0xa94 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                0x00008110                I2C_isr
+ .text.NVIC_EnableIRQ
+                0x00008ba4       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .text.NVIC_DisableIRQ
+                0x00008bdc       0x3c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .text.I2C_enable_irq
+                0x00008c18       0x94 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+                0x00008c18                I2C_enable_irq
+ .text.I2C_disable_irq
+                0x00008cac       0x94 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+                0x00008cac                I2C_disable_irq
+ .text.SystemInit
+                0x00008d40       0x28 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x00008d40                SystemInit
+ .text.SystemCoreClockUpdate
+                0x00008d68      0x14c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x00008d68                SystemCoreClockUpdate
+ .text.get_rcosc_25_50mhz_frequency
+                0x00008eb4       0x44 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.set_clock_frequency_globals
+                0x00008ef8       0x6c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.get_silicon_revision
+                0x00008f64       0x50 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.silicon_workarounds
+                0x00008fb4       0x20 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.m2s050_rev_a_workarounds
+                0x00008fd4       0x44 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text          0x00009018        0xe C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hal.o)
+                0x00009018                HAL_disable_interrupts
+                0x00009020                HAL_restore_interrupts
+ *fill*         0x00009026        0x2 00
+ .text.NVIC_EnableIRQ
+                0x00009028       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.NVIC_DisableIRQ
+                0x00009060       0x3c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.NVIC_ClearPendingIRQ
+                0x0000909c       0x3c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.MSS_COMBLK_init
+                0x000090d8      0x13c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+                0x000090d8                MSS_COMBLK_init
+ .text.MSS_COMBLK_send_cmd
+                0x00009214      0x1ac C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+                0x00009214                MSS_COMBLK_send_cmd
+ .text.ComBlk_IRQHandler
+                0x000093c0       0x54 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+                0x000093c0                ComBlk_IRQHandler
+ .text.handle_tx_okay_irq
+                0x00009414      0x2c4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.handle_rx_okay_irq
+                0x000096d8      0x2f8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.complete_request
+                0x000099d0       0x58 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.abort_current_cmd
+                0x00009a28       0x60 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.send_cmd_opcode
+                0x00009a88       0x50 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.fill_tx_fifo
+                0x00009ad8       0x80 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.process_sys_ctrl_command
+                0x00009b58       0x30 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text          0x00009b88       0x50 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+                0x00009b88                __libc_init_array
+ .text          0x00009bd8       0xd4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+                0x00009bd8                memset
+ *(.plt)
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+                0x00009cac                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x00009cac       0x14 ./P1.o
+ .rodata.C.0.1475
+                0x00009cc0        0x4 ./OBC/ADC.o
+ .rodata.C.8.2448
+                0x00009cc4        0x4 ./OBC/IMU.o
+ .rodata.C.0.2383
+                0x00009cc8        0x4 ./OBC/IMU.o
+ .rodata.C.57.5280
+                0x00009ccc        0x4 ./Comms/adf7030.o
+ .rodata.C.58.5281
+                0x00009cd0        0x4 ./Comms/adf7030.o
+ .rodata.C.59.5282
+                0x00009cd4        0x4 ./Comms/adf7030.o
+ .rodata.C.60.5283
+                0x00009cd8        0x4 ./Comms/adf7030.o
+ .rodata.g_config_reg_lut
+                0x00009cdc       0x80 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .rodata.g_gpio_irqn_lut
+                0x00009d5c       0x20 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .rodata.C.18.3527
+                0x00009d7c        0x8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ *(.gcc_except_table)
+ *(.eh_frame_hdr)
+ *(.eh_frame)
+ *(.vector_table)
+ *(.init)
+ .init          0x00009d84        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x00009d84                _init
+ .init          0x00009d88        0x8 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ *(.fini)
+ .fini          0x00009d90        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x00009d90                _fini
+ .fini          0x00009d94        0x8 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+                0x00009d9c                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x00009d9c                PROVIDE (__preinit_array_end, .)
+                0x00009d9c                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x00009d9c        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+                0x00009da0                PROVIDE (__init_array_end, .)
+                0x00009da0                PROVIDE (__fini_array_start, .)
+ *(.fini_array)
+ .fini_array    0x00009da0        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x00009da4                PROVIDE (__fini_array_end, .)
+                0x00009db0                . = ALIGN (0x10)
+ *fill*         0x00009da4        0xc 00
+                0x00009db0                __exidx_start = .
+
+.v4_bx          0x00009db0        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00009db0                __exidx_end = .
+                0x00009db0                _etext = .
+
+.data           0x20000000      0x350 load address 0x00009db0
+                0x00009db0                __data_load = LOADADDR (.data)
+                0x00009db0                _sidata = LOADADDR (.data)
+                0x20000000                __data_start = .
+                0x20000000                _sdata = .
+ *(.jcr)
+ .jcr           0x20000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .jcr           0x20000000        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ *(.got.plt)
+ *(.got)
+ *(.shdata)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data.CMD0     0x20000004        0x8 ./OBC/SD.o
+                0x20000004                CMD0
+ .data.CMD8     0x2000000c        0x8 ./OBC/SD.o
+                0x2000000c                CMD8
+ .data.CMD58    0x20000014        0x8 ./OBC/SD.o
+                0x20000014                CMD58
+ .data.CMD55    0x2000001c        0x8 ./OBC/SD.o
+                0x2000001c                CMD55
+ .data.ACMD41   0x20000024        0x8 ./OBC/SD.o
+                0x20000024                ACMD41
+ .data.rx_size  0x2000002c        0x1 ./GMC/counter.o
+                0x2000002c                rx_size
+ *fill*         0x2000002d        0x3 00
+ .data.radio_memory_configuration
+                0x20000030      0x2d8 ./Comms/adf7030.o
+                0x20000030                radio_memory_configuration
+ .data.div1_seq
+                0x20000308        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x20000308                div1_seq
+ .data.div2_seq
+                0x2000030c        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x2000030c                div2_seq
+ .data.div4_seq
+                0x20000310        0x8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x20000310                div4_seq
+ .data.div8_seq
+                0x20000318        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x20000318                div8_seq
+ .data.div16_seq
+                0x2000031c        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x2000031c                div16_seq
+ .data.div32_seq
+                0x20000320        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x20000320                div32_seq
+ .data.g_initial_envm_cr
+                0x20000324        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .data.SystemCoreClock
+                0x20000328        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x20000328                SystemCoreClock
+ .data.g_FrequencyPCLK0
+                0x2000032c        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x2000032c                g_FrequencyPCLK0
+ .data.g_FrequencyPCLK1
+                0x20000330        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x20000330                g_FrequencyPCLK1
+ .data.g_FrequencyPCLK2
+                0x20000334        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x20000334                g_FrequencyPCLK2
+ .data.g_FrequencyFIC0
+                0x20000338        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x20000338                g_FrequencyFIC0
+ .data.g_FrequencyFIC1
+                0x2000033c        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x2000033c                g_FrequencyFIC1
+ .data.g_FrequencyFIC64
+                0x20000340        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x20000340                g_FrequencyFIC64
+                0x20000350                . = ALIGN (0x10)
+ *fill*         0x20000344        0xc 00
+                0x20000350                _edata = .
+
+.bss            0x20000350     0x1290 load address 0x0000a100
+                0x20000350                __bss_start__ = .
+                0x20000350                _sbss = .
+ *(.shbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x20000350        0x1 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ *fill*         0x20000351        0x1 00
+ .bss.hk_seq_num
+                0x20000352        0x2 ./P1.o
+                0x20000352                hk_seq_num
+ .bss.store_in_sd_card
+                0x20000354        0x1 ./P1.o
+                0x20000354                store_in_sd_card
+ .bss.sd_dump_comms
+                0x20000355        0x1 ./P2.o
+                0x20000355                sd_dump_comms
+ .bss.sd_dump_gmc
+                0x20000356        0x1 ./P2.o
+                0x20000356                sd_dump_gmc
+ *fill*         0x20000357        0x1 00
+ .bss.comms_seq_num
+                0x20000358        0x2 ./P2.o
+                0x20000358                comms_seq_num
+ .bss.gmc_seq_num
+                0x2000035a        0x2 ./P2.o
+                0x2000035a                gmc_seq_num
+ .bss.cmd_adf_read_addr
+                0x2000035c        0x4 ./P2.o
+                0x2000035c                cmd_adf_read_addr
+ .bss.cmd_adf_read_No_double_words
+                0x20000360        0x1 ./P2.o
+                0x20000360                cmd_adf_read_No_double_words
+ .bss.IMG_ID    0x20000361        0x1 ./main.o
+                0x20000361                IMG_ID
+ .bss.ERR_LOG   0x20000362        0x1 ./main.o
+                0x20000362                ERR_LOG
+ .bss.cmd_rx_count
+                0x20000363        0x1 ./main.o
+                0x20000363                cmd_rx_count
+ .bss.cmd_succ_count
+                0x20000364        0x1 ./main.o
+                0x20000364                cmd_succ_count
+ .bss.cmd_reject_count
+                0x20000365        0x1 ./main.o
+                0x20000365                cmd_reject_count
+ .bss.cmd_rs485_succ_count
+                0x20000366        0x1 ./main.o
+                0x20000366                cmd_rs485_succ_count
+ .bss.cmd_rs485_fail_count
+                0x20000367        0x1 ./main.o
+                0x20000367                cmd_rs485_fail_count
+ .bss.sd_dump   0x20000368        0x1 ./main.o
+                0x20000368                sd_dump
+ *fill*         0x20000369        0x3 00
+ .bss.reset_counts
+                0x2000036c        0x4 ./main.o
+                0x2000036c                reset_counts
+ .bss.g_request_in_progress
+                0x20000370        0x1 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ *fill*         0x20000371        0x1 00
+ .bss.g_last_response_length
+                0x20000372        0x2 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.g_event_handler
+                0x20000374        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.g_response
+                0x20000378        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.g_initial_mssddr_facc1_cr
+                0x2000037c        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.divisor   0x20000380       0x10 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x20000380                divisor
+ .bss.g_initial_mssddr_facc2_cr
+                0x20000390        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.NULL_timer_instance
+                0x20000394        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .bss.g_comblk_cmd_opcode
+                0x20000398        0x1 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ *fill*         0x20000399        0x3 00
+ .bss.g_comblk_p_cmd
+                0x2000039c        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_cmd_size
+                0x200003a0        0x2 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ *fill*         0x200003a2        0x2 00
+ .bss.g_comblk_p_data
+                0x200003a4        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_data_size
+                0x200003a8        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_p_response
+                0x200003ac        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_response_size
+                0x200003b0        0x2 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_response_idx
+                0x200003b2        0x2 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_completion_handler
+                0x200003b4        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_page_handler
+                0x200003b8        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_request_in_progress
+                0x200003bc        0x1 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_state
+                0x200003bd        0x1 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ *fill*         0x200003be        0x2 00
+ .bss.g_async_event_handler
+                0x200003c0        0x4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ *(COMMON)
+ COMMON         0x200003c4      0xd68 ./P1.o
+                0x200003c4                g_core_i2c2
+                0x20000430                g_core_i2c0
+                0x2000049c                g_core_i2c1
+                0x20000508                hk_pkt
+                0x2000050c                g_core_spi0
+                0x20000554                g_core_i2c5
+                0x200005c0                g_core_i2c3
+                0x2000062c                thermistor_pkt
+                0x20000630                data
+                0x20000830                cmd_buff
+                0x20000840                core_i2c_status
+                0x20000844                blck_pkt
+                0x20001044                counter_i2c
+                0x200010b0                RTM
+                0x200010c0                g_core_i2c4
+ COMMON         0x2000112c       0x49 ./P2.o
+                0x2000112c                gmc_pkt
+                0x20001130                ADC_voltages
+                0x20001140                comms_pkt
+                0x20001144                gmc_radiation_count
+                0x20001148                count_val
+                0x2000114c                free_res
+                0x20001150                cmd_adf_data
+                0x20001170                gmc_free_res_value
+                0x20001174                status
+ *fill*         0x20001175        0x3 00
+ COMMON         0x20001178      0x2a0 ./main.o
+                0x20001178                log_counter
+                0x2000117c                comms_timer
+                0x20001180                log_packet_ptr
+                0x20001184                gmc_partition
+                0x20001194                Read_TPSRAM_addr
+                0x20001198                log_data
+                0x20001398                gmc_timer
+                0x2000139c                temp_timer
+                0x200013a0                current_time_lower
+                0x200013a8                sd_timer
+                0x200013b0                current_time_upper
+                0x200013b8                rx_cmd_pkt
+                0x200013bc                rssi_cca
+                0x200013c0                thermistor_partition
+                0x200013d0                rssi
+                0x200013d4                comms_partition
+                0x200013e4                hk_partition
+                0x200013f4                hk_timer
+                0x200013f8                Time_Vector
+ COMMON         0x20001418       0x28 ./cmds/cmd.o
+                0x20001418                cmd_list
+                0x2000143c                cmd
+ COMMON         0x20001440        0xa ./PIS/VC_Sensor.o
+                0x20001440                init_command
+                0x20001444                read
+                0x20001446                bvol
+                0x20001448                count
+                0x20001449                config_reg
+ COMMON         0x2000144a        0x1 ./OBC/SD.o
+                0x2000144a                flag
+ COMMON         0x2000144b        0x1 ./GMC/counter.o
+                0x2000144b                gmc_voltage_flags
+ COMMON         0x2000144c        0x8 ./Comms/adf7030.o
+                0x2000144c                adf_spi
+                0x20001450                radio_memory_configuration_start_spi_command
+ COMMON         0x20001454       0x80 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x20001454                g_mss_uart1
+                0x20001494                g_mss_uart0
+ COMMON         0x200014d4      0x108 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x200014d4                g_mss_spi1
+                0x20001558                g_mss_spi0
+                0x200015e0                . = ALIGN (0x10)
+ *fill*         0x200015dc        0x4 00
+                0x200015e0                __bss_end__ = .
+                0x200015e0                _end = .
+                0x200015e0                __end = _end
+                0x200015e0                _ebss = .
+                0x200015e0                PROVIDE (end, .)
+
+.heap           0x200015e0     0xda20 load address 0x0000a100
+                0x200015e0                __heap_start__ = .
+                0x200025e0                . = (. + MIN_SIZE_HEAP)
+ *fill*         0x200015e0     0x1000 00
+                0x2000f000                . = (. + (((ABSOLUTE (RAM_START_ADDRESS) + RAM_SIZE) - MAIN_STACK_SIZE) - .))
+ *fill*         0x200025e0     0xca20 00
+                0x2000f000                _eheap = .
+
+.stack          0x2000f000     0x1000 load address 0x0000a100
+                0x2000f000                __stack_start__ = .
+                0x20010000                . = (. + MAIN_STACK_SIZE)
+ *fill*         0x2000f000     0x1000 00
+                0x20010000                _estack = .
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.comment        0x00000000      0x3dd
+ .comment       0x00000000       0x2b ./P1.o
+ .comment       0x0000002b       0x2b ./P2.o
+ .comment       0x00000056       0x2b ./main.o
+ .comment       0x00000081       0x2b ./packet_definition.o
+ .comment       0x000000ac       0x2b ./cmds/cmd.o
+ .comment       0x000000d7       0x2b ./PIS/RS485_Controller.o
+ .comment       0x00000102       0x2b ./PIS/VC_Sensor.o
+ .comment       0x0000012d       0x2b ./OBC/ADC.o
+ .comment       0x00000158       0x2b ./OBC/IMU.o
+ .comment       0x00000183       0x2b ./OBC/SD.o
+ .comment       0x000001ae       0x2b ./OBC/memory.o
+ .comment       0x000001d9       0x2b ./GMC/counter.o
+ .comment       0x00000204       0x2b ./Comms/adf7030.o
+ .comment       0x0000022f       0x2b C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .comment       0x0000025a       0x2b C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .comment       0x00000285       0x2b C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .comment       0x000002b0       0x2b C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .comment       0x000002db       0x2b C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .comment       0x00000306       0x2b C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .comment       0x00000331       0x2b C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .comment       0x0000035c       0x2b C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .comment       0x00000387       0x2b C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .comment       0x000003b2       0x2b C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_aranges  0x00000000      0xca8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x78 ./P1.o
+ .debug_aranges
+                0x00000078       0x28 ./P2.o
+ .debug_aranges
+                0x000000a0      0x128 ./main.o
+ .debug_aranges
+                0x000001c8       0x68 ./cmds/cmd.o
+ .debug_aranges
+                0x00000230       0x48 ./PIS/RS485_Controller.o
+ .debug_aranges
+                0x00000278       0x50 ./PIS/VC_Sensor.o
+ .debug_aranges
+                0x000002c8       0x28 ./OBC/ADC.o
+ .debug_aranges
+                0x000002f0       0x30 ./OBC/IMU.o
+ .debug_aranges
+                0x00000320       0x30 ./OBC/SD.o
+ .debug_aranges
+                0x00000350       0x30 ./OBC/memory.o
+ .debug_aranges
+                0x00000380       0x48 ./GMC/counter.o
+ .debug_aranges
+                0x000003c8       0xe0 ./Comms/adf7030.o
+ .debug_aranges
+                0x000004a8      0x1d0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_aranges
+                0x00000678      0x1c8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_aranges
+                0x00000840       0xe0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_aranges
+                0x00000920       0x68 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_aranges
+                0x00000988       0x50 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_aranges
+                0x000009d8       0xa8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_aranges
+                0x00000a80      0x110 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_aranges
+                0x00000b90       0x38 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_aranges
+                0x00000bc8       0x50 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_aranges
+                0x00000c18       0x90 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_pubnames
+                0x00000000     0x23e8
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x1cb ./P1.o
+ .debug_pubnames
+                0x000001cb      0x1e7 ./P2.o
+ .debug_pubnames
+                0x000003b2      0x41f ./main.o
+ .debug_pubnames
+                0x000007d1      0x142 ./cmds/cmd.o
+ .debug_pubnames
+                0x00000913      0x10b ./PIS/RS485_Controller.o
+ .debug_pubnames
+                0x00000a1e      0x13f ./PIS/VC_Sensor.o
+ .debug_pubnames
+                0x00000b5d       0x31 ./OBC/ADC.o
+ .debug_pubnames
+                0x00000b8e       0x54 ./OBC/IMU.o
+ .debug_pubnames
+                0x00000be2       0x7a ./OBC/SD.o
+ .debug_pubnames
+                0x00000c5c       0x48 ./OBC/memory.o
+ .debug_pubnames
+                0x00000ca4       0xc0 ./GMC/counter.o
+ .debug_pubnames
+                0x00000d64      0x2f5 ./Comms/adf7030.o
+ .debug_pubnames
+                0x00001059      0x50f C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_pubnames
+                0x00001568      0x571 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_pubnames
+                0x00001ad9      0x21a C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_pubnames
+                0x00001cf3       0xb1 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_pubnames
+                0x00001da4       0x84 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_pubnames
+                0x00001e28      0x170 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_pubnames
+                0x00001f98      0x2b9 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_pubnames
+                0x00002251       0x39 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_pubnames
+                0x0000228a       0xcb C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_pubnames
+                0x00002355       0x93 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_info     0x00000000    0x13e36
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000     0x157c ./P1.o
+ .debug_info    0x0000157c     0x1089 ./P2.o
+ .debug_info    0x00002605     0x2906 ./main.o
+ .debug_info    0x00004f0b       0x29 ./packet_definition.o
+ .debug_info    0x00004f34     0x1091 ./cmds/cmd.o
+ .debug_info    0x00005fc5      0xd8f ./PIS/RS485_Controller.o
+ .debug_info    0x00006d54      0x626 ./PIS/VC_Sensor.o
+ .debug_info    0x0000737a      0x462 ./OBC/ADC.o
+ .debug_info    0x000077dc      0x5b9 ./OBC/IMU.o
+ .debug_info    0x00007d95      0x95d ./OBC/SD.o
+ .debug_info    0x000086f2      0x1bb ./OBC/memory.o
+ .debug_info    0x000088ad      0x689 ./GMC/counter.o
+ .debug_info    0x00008f36     0x121d ./Comms/adf7030.o
+ .debug_info    0x0000a153     0x1ed4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_info    0x0000c027     0x1fb4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_info    0x0000dfdb     0x1723 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_info    0x0000f6fe     0x1164 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_info    0x00010862      0x242 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_info    0x00010aa4      0x7d9 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_info    0x0001127d      0xd0c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_info    0x00011f89      0x7ce C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_info    0x00012757      0xbbf C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_info    0x00013316      0xb20 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_abbrev   0x00000000     0x2452
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x297 ./P1.o
+ .debug_abbrev  0x00000297      0x1bc ./P2.o
+ .debug_abbrev  0x00000453      0x2c5 ./main.o
+ .debug_abbrev  0x00000718       0x16 ./packet_definition.o
+ .debug_abbrev  0x0000072e      0x23d ./cmds/cmd.o
+ .debug_abbrev  0x0000096b      0x1d4 ./PIS/RS485_Controller.o
+ .debug_abbrev  0x00000b3f      0x131 ./PIS/VC_Sensor.o
+ .debug_abbrev  0x00000c70      0x125 ./OBC/ADC.o
+ .debug_abbrev  0x00000d95      0x12f ./OBC/IMU.o
+ .debug_abbrev  0x00000ec4      0x16a ./OBC/SD.o
+ .debug_abbrev  0x0000102e       0xc0 ./OBC/memory.o
+ .debug_abbrev  0x000010ee      0x140 ./GMC/counter.o
+ .debug_abbrev  0x0000122e      0x271 ./Comms/adf7030.o
+ .debug_abbrev  0x0000149f      0x280 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_abbrev  0x0000171f      0x1fe C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_abbrev  0x0000191d      0x1ee C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_abbrev  0x00001b0b      0x165 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_abbrev  0x00001c70       0xb0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_abbrev  0x00001d20      0x14f C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_abbrev  0x00001e6f      0x185 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_abbrev  0x00001ff4      0x169 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_abbrev  0x0000215d      0x150 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_abbrev  0x000022ad      0x1a5 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_line     0x00000000     0xe4da
+ *(.debug_line)
+ .debug_line    0x00000000     0x15e7 ./P1.o
+ .debug_line    0x000015e7     0x150e ./P2.o
+ .debug_line    0x00002af5     0x1713 ./main.o
+ .debug_line    0x00004208       0x37 ./packet_definition.o
+ .debug_line    0x0000423f     0x1564 ./cmds/cmd.o
+ .debug_line    0x000057a3     0x1530 ./PIS/RS485_Controller.o
+ .debug_line    0x00006cd3      0xb81 ./PIS/VC_Sensor.o
+ .debug_line    0x00007854      0x29f ./OBC/ADC.o
+ .debug_line    0x00007af3      0x535 ./OBC/IMU.o
+ .debug_line    0x00008028      0x4b2 ./OBC/SD.o
+ .debug_line    0x000084da      0x417 ./OBC/memory.o
+ .debug_line    0x000088f1      0x579 ./GMC/counter.o
+ .debug_line    0x00008e6a     0x17fd ./Comms/adf7030.o
+ .debug_line    0x0000a667      0x8f8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_line    0x0000af5f      0xa2a C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_line    0x0000b989      0x6d1 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_line    0x0000c05a      0x389 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_line    0x0000c3e3      0x49f C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_line    0x0000c882      0x79e C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_line    0x0000d020      0x87e C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_line    0x0000d89e      0x51b C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_line    0x0000ddb9      0x228 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_line    0x0000dfe1      0x4f9 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_frame    0x00000000     0x2ac8
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x170 ./P1.o
+ .debug_frame   0x00000170       0x50 ./P2.o
+ .debug_frame   0x000001c0      0x3dc ./main.o
+ .debug_frame   0x0000059c      0x138 ./cmds/cmd.o
+ .debug_frame   0x000006d4       0xc8 ./PIS/RS485_Controller.o
+ .debug_frame   0x0000079c       0xf0 ./PIS/VC_Sensor.o
+ .debug_frame   0x0000088c       0x50 ./OBC/ADC.o
+ .debug_frame   0x000008dc       0x70 ./OBC/IMU.o
+ .debug_frame   0x0000094c       0x70 ./OBC/SD.o
+ .debug_frame   0x000009bc       0x6c ./OBC/memory.o
+ .debug_frame   0x00000a28       0xd0 ./GMC/counter.o
+ .debug_frame   0x00000af8      0x334 ./Comms/adf7030.o
+ .debug_frame   0x00000e2c      0x6b4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_frame   0x000014e0      0x6b0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_frame   0x00001b90      0x320 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_frame   0x00001eb0      0x130 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_frame   0x00001fe0       0xf0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_frame   0x000020d0      0x250 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_frame   0x00002320      0x3e4 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_frame   0x00002704       0x88 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_frame   0x0000278c       0xd8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_frame   0x00002864      0x1dc C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .debug_frame   0x00002a40       0x2c c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .debug_frame   0x00002a6c       0x34 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x00002aa0       0x28 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+
+.debug_str      0x00000000     0x5048
+ *(.debug_str)
+ .debug_str     0x00000000      0xfd5 ./P1.o
+                               0x11f5 (size before relaxing)
+ .debug_str     0x00000fd5      0x28b ./P2.o
+                                0xfee (size before relaxing)
+ .debug_str     0x00001260     0x11c6 ./main.o
+                               0x20cc (size before relaxing)
+ .debug_str     0x00002426       0x17 ./packet_definition.o
+                                 0x95 (size before relaxing)
+ .debug_str     0x0000243d       0x9a ./cmds/cmd.o
+                                0xf30 (size before relaxing)
+ .debug_str     0x000024d7       0x7a ./PIS/RS485_Controller.o
+                                0xdb1 (size before relaxing)
+ .debug_str     0x00002551       0x8e ./PIS/VC_Sensor.o
+                                0x4ed (size before relaxing)
+ .debug_str     0x000025df       0x63 ./OBC/ADC.o
+                                0x444 (size before relaxing)
+ .debug_str     0x00002642       0xf1 ./OBC/IMU.o
+                                0x4fa (size before relaxing)
+ .debug_str     0x00002733       0x69 ./OBC/SD.o
+                                0xb93 (size before relaxing)
+ .debug_str     0x0000279c       0x48 ./OBC/memory.o
+                                0x1bc (size before relaxing)
+ .debug_str     0x000027e4       0xa1 ./GMC/counter.o
+                                0x6e6 (size before relaxing)
+ .debug_str     0x00002885      0x352 ./Comms/adf7030.o
+                                0xbe6 (size before relaxing)
+ .debug_str     0x00002bd7      0xa90 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+                               0x19b3 (size before relaxing)
+ .debug_str     0x00003667      0xa20 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                               0x1324 (size before relaxing)
+ .debug_str     0x00004087      0x2f5 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                               0x156c (size before relaxing)
+ .debug_str     0x0000437c      0x2ec C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+                               0x122d (size before relaxing)
+ .debug_str     0x00004668       0xa0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+                                0x211 (size before relaxing)
+ .debug_str     0x00004708       0x39 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+                                0x5fc (size before relaxing)
+ .debug_str     0x00004741      0x481 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                                0x958 (size before relaxing)
+ .debug_str     0x00004bc2       0x42 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+                                0x9da (size before relaxing)
+ .debug_str     0x00004c04      0x184 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                                0xa2d (size before relaxing)
+ .debug_str     0x00004d88      0x2c0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+                                0xa80 (size before relaxing)
+
+.debug_loc      0x00000000     0x476d
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x25a ./P1.o
+ .debug_loc     0x0000025a       0x6e ./P2.o
+ .debug_loc     0x000002c8      0x66c ./main.o
+ .debug_loc     0x00000934      0x226 ./cmds/cmd.o
+ .debug_loc     0x00000b5a      0x14a ./PIS/RS485_Controller.o
+ .debug_loc     0x00000ca4      0x181 ./PIS/VC_Sensor.o
+ .debug_loc     0x00000e25       0x6e ./OBC/ADC.o
+ .debug_loc     0x00000e93       0xa9 ./OBC/IMU.o
+ .debug_loc     0x00000f3c       0xa5 ./OBC/SD.o
+ .debug_loc     0x00000fe1       0xa5 ./OBC/memory.o
+ .debug_loc     0x00001086      0x14a ./GMC/counter.o
+ .debug_loc     0x000011d0      0x563 ./Comms/adf7030.o
+ .debug_loc     0x00001733      0xbb9 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_loc     0x000022ec      0xb8c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_loc     0x00002e78      0x549 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_loc     0x000033c1      0x226 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_loc     0x000035e7      0x181 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_loc     0x00003768      0x3de C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_loc     0x00003b46      0x6a9 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_loc     0x000041ef       0xdc C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_loc     0x000042cb      0x169 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_loc     0x00004434      0x339 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_macinfo  0x00000000    0xaf930
+ *(.debug_macinfo)
+ .debug_macinfo
+                0x00000000     0xbb89 ./P1.o
+ .debug_macinfo
+                0x0000bb89     0xbb91 ./P2.o
+ .debug_macinfo
+                0x0001771a     0xbb8d ./main.o
+ .debug_macinfo
+                0x000232a7      0xc81 ./packet_definition.o
+ .debug_macinfo
+                0x00023f28     0xbb8d ./cmds/cmd.o
+ .debug_macinfo
+                0x0002fab5     0xbb90 ./PIS/RS485_Controller.o
+ .debug_macinfo
+                0x0003b645     0x858c ./PIS/VC_Sensor.o
+ .debug_macinfo
+                0x00043bd1     0x16f0 ./OBC/ADC.o
+ .debug_macinfo
+                0x000452c1     0x4071 ./OBC/IMU.o
+ .debug_macinfo
+                0x00049332     0x73d4 ./OBC/SD.o
+ .debug_macinfo
+                0x00050706     0x7580 ./OBC/memory.o
+ .debug_macinfo
+                0x00057c86     0x76a6 ./GMC/counter.o
+ .debug_macinfo
+                0x0005f32c     0xbb99 ./Comms/adf7030.o
+ .debug_macinfo
+                0x0006aec5     0x8184 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_macinfo
+                0x00073049     0xa898 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_macinfo
+                0x0007d8e1     0x8fd8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_macinfo
+                0x000868b9     0x777c C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_macinfo
+                0x0008e035     0x2593 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_macinfo
+                0x000905c8     0x4d64 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_macinfo
+                0x0009532c     0x44f1 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_macinfo
+                0x0009981d     0x79df C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_macinfo
+                0x000a11fc     0x73cd C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_macinfo
+                0x000a85c9     0x7367 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x00000000       0x25
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x19 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .ARM.attributes
+                0x00000019       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .ARM.attributes
+                0x00000042       0x31 ./P1.o
+ .ARM.attributes
+                0x00000073       0x31 ./P2.o
+ .ARM.attributes
+                0x000000a4       0x31 ./main.o
+ .ARM.attributes
+                0x000000d5       0x31 ./packet_definition.o
+ .ARM.attributes
+                0x00000106       0x31 ./cmds/cmd.o
+ .ARM.attributes
+                0x00000137       0x31 ./PIS/RS485_Controller.o
+ .ARM.attributes
+                0x00000168       0x31 ./PIS/VC_Sensor.o
+ .ARM.attributes
+                0x00000199       0x31 ./OBC/ADC.o
+ .ARM.attributes
+                0x000001ca       0x31 ./OBC/IMU.o
+ .ARM.attributes
+                0x000001fb       0x31 ./OBC/SD.o
+ .ARM.attributes
+                0x0000022c       0x31 ./OBC/memory.o
+ .ARM.attributes
+                0x0000025d       0x31 ./GMC/counter.o
+ .ARM.attributes
+                0x0000028e       0x31 ./Comms/adf7030.o
+ .ARM.attributes
+                0x000002bf       0x21 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hw_reg_access.o)
+ .ARM.attributes
+                0x000002e0       0x31 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .ARM.attributes
+                0x00000311       0x31 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .ARM.attributes
+                0x00000342       0x31 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .ARM.attributes
+                0x00000373       0x31 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .ARM.attributes
+                0x000003a4       0x31 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .ARM.attributes
+                0x000003d5       0x31 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .ARM.attributes
+                0x00000406       0x31 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .ARM.attributes
+                0x00000437       0x31 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .ARM.attributes
+                0x00000468       0x31 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .ARM.attributes
+                0x00000499       0x21 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(startup_m2sxxx.o)
+ .ARM.attributes
+                0x000004ba       0x21 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hal.o)
+ .ARM.attributes
+                0x000004db       0x31 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .ARM.attributes
+                0x0000050c       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000535       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x0000055e       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000587       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .ARM.attributes
+                0x000005b0       0x19 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+
+/DISCARD/
+ *(.note.GNU-stack)
+OUTPUT(PiLOT_sb_MSS_CM3_app elf32-littlearm)
+
+.debug_ranges   0x00000000      0xc90
+ .debug_ranges  0x00000000       0x70 ./P1.o
+ .debug_ranges  0x00000070       0x20 ./P2.o
+ .debug_ranges  0x00000090      0x120 ./main.o
+ .debug_ranges  0x000001b0       0x60 ./cmds/cmd.o
+ .debug_ranges  0x00000210       0x40 ./PIS/RS485_Controller.o
+ .debug_ranges  0x00000250       0x48 ./PIS/VC_Sensor.o
+ .debug_ranges  0x00000298       0x20 ./OBC/ADC.o
+ .debug_ranges  0x000002b8       0x28 ./OBC/IMU.o
+ .debug_ranges  0x000002e0       0x28 ./OBC/SD.o
+ .debug_ranges  0x00000308       0x28 ./OBC/memory.o
+ .debug_ranges  0x00000330       0x40 ./GMC/counter.o
+ .debug_ranges  0x00000370       0xd8 ./Comms/adf7030.o
+ .debug_ranges  0x00000448      0x1c8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_ranges  0x00000610      0x1f0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_ranges  0x00000800       0xd8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_ranges  0x000008d8       0x60 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_ranges  0x00000938       0x48 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_ranges  0x00000980       0xa0 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_ranges  0x00000a20      0x120 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_ranges  0x00000b40       0x30 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_ranges  0x00000b70       0x48 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_ranges  0x00000bb8       0xd8 C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)

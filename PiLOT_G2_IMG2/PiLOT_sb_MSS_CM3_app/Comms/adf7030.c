@@ -22,7 +22,7 @@ static uint32_t config_length_header;
 //Pointer to store the beginning of the SPI commands in radio_memory_configuration
 uint8_t *radio_memory_configuration_start_spi_command;
 
-void adf_init(){
+uint8_t adf_init(){
 	uint32_t before = 0xFFFFFFFF,current,limit;
 	uint8_t buf=0xFF, count=0;
 	uint8_t flag = 1,rx_data =0;
@@ -110,6 +110,9 @@ void adf_init(){
 			break;
 		}
 	}while(tries++ < 100);
+	if(tries >= 100) {
+//		return ERR_CMD_FAILED | ERR_IN_IDLE_FAILED;//This oring doesnt matter due to values of error. Need to come up with diffferent values
+	}
 
 	//Pull #CS high again
 	//Old version
@@ -119,26 +122,37 @@ void adf_init(){
 //	TMR_stop(&timer);
 
 	uint8_t ret_val;
+	tries = 0;
 	//Call adf_config to configure the ADF
-	while(1) {
+	while(tries++ < 100) {
 	   ret_val = adf_get_state();
 	   if(ret_val == PHY_OFF) {
 		   break;
 	   }
    }
 
+	if(tries >= 100) {
+//		return ERR_FAIL_TO_SET_PHY_OFF;
+	}
+
 	count = config_adf7030();
 
 	if(count == 0){
 		count = cmd_ready_set();
+	} else {
+		return ERR_CONFIG_FILE_FAILED;
 	}
 
 	if(count == 0){
 		count = adf_in_idle();
+	} else {
+		return ERR_CMD_FAILED;
 	}
 
 	if(count == 0){
 		adf_write_to_memory(WMODE_1, GENERIC_PKT_FRAME_CFG1, enable_intr, 4);
+	} else {
+//		return ERR_IN_IDLE_FAILED;
 	}
 
 }
@@ -222,6 +236,7 @@ uint8_t config_adf7030() {
     uint8_t dis_calib_array[] = {DIS_CALIB >> 24,(DIS_CALIB >> 16) & 0xFF, (DIS_CALIB >> 8) & 0xFF, DIS_CALIB & 0xFF};
     uint8_t dis_calib_ar[] = {DIS_CALIB & 0xFF, (DIS_CALIB >> 8) & 0xFF, (DIS_CALIB >> 16) & 0xFF, DIS_CALIB >> 24};
     uint8_t read_reg[6] = {0x00,0x00,0x00,0x00,0x00,0x00};
+	uint8_t tries = 0;
 
     //Apply the configuration file
     ret_val = apply_file(radio_memory_configuration, SIZEOFCONFIG);
@@ -242,6 +257,10 @@ uint8_t config_adf7030() {
 //    return 0;
     ret_val = adf_send_cmd(CMD_CFG_DEV);
 
+	if(ret_val != 0) {
+		return 1;
+	}
+
 //    if(ret_val) {
 //        adf_write_to_memory(WMODE_1,SM_DATA_CALIBRATION,dis_calib_ar,4);
 //        return (ret_val | 0x80);
@@ -261,12 +280,16 @@ uint8_t config_adf7030() {
 //        adf_write_to_memory(WMODE_1,SM_DATA_CALIBRATION,dis_calib_ar,4);
         return (ret_val | 0xC0);
     }
-    while(1) {
+    while(tries++ < 100) {
     	ret_val = adf_get_state();
 	   if(ret_val == PHY_ON) {
 		   break;
 	   }
    }
+
+	if(tries >= 100) {
+		return 1;
+	}
     //Issue CMD_DO_CAL
 //    ret_val = adf_get_state();
 //    ret_val = adf_send_cmd(CMD_DO_CAL);
@@ -388,7 +411,7 @@ uint8_t cmd_ready_set() {
         }
     }while(tries++ < 100);
     if(tries >= 100) {
-        return check_val;
+        return 1;
     }
     return 0;
 }
@@ -404,7 +427,7 @@ uint8_t adf_in_idle() {
         }
     }while(tries++ < 100);
     if(tries >= 100) {
-        return check_val;
+        return 1;
     }
     return 0;
 }
@@ -469,13 +492,14 @@ void adf_spi_trans_write( spi_instance_t * this_spi,
 uint8_t adf_get_state() {
     uint8_t misc_fw[6] = {0x00,0x00,0x00,0x00,0x00,0x00};
     uint8_t curr_mode = 0;
-    while(!(misc_fw[0] == 0xe4 || misc_fw[0] == 0xA4)){
+	uint8_t tries = 0;
+    while((!(misc_fw[0] == 0xe4 || misc_fw[0] == 0xA4)) && tries++ < 100){
     	adf_read_from_memory(RMODE_1,MISC_FW,misc_fw,4);
     	if( misc_fw[0] == 0xe2 || misc_fw[0] == 0xA2){
     		break;
     	}
     }
-
+	//PHY SLEEP is zero. Need to discuss what to return when tries goes out of limits
     curr_mode = misc_fw[4] & 0x3F;
     return curr_mode;
 }
@@ -487,18 +511,26 @@ uint8_t adf_config_gpio(){
 //	uint8_t	data2[4] = {0x1C, 0x1D, 0x1E, 0x1F};
 	uint8_t rx_buffer[6];
 	rx_buffer[0] = 0x00;
+	uint8_t tries = 0;
 
 	adf_write_to_memory(WMODE_1, GPIO_CONFIG_ADDR1, data1, sizeof(data1));	// Power On LNA connected to GPIO_0 in older design and GPIO_1 in newer version.
 																			// Power On PA connected to GPIO_1 in older design and GPIO_2 in newer version
-	while(rx_buffer[0] == 0x00){
+	while((rx_buffer[0] == 0x00) && tries++ < 100){
 		adf_read_from_memory(RMODE_1, GPIO_CONFIG_ADDR1, rx_buffer, 6);
+	}
+	if(tries >= 100) {
+		return 1;
 	}
 
 	rx_buffer[0] = 0x00;
-
-	while(rx_buffer[0] == 0x00){
+	tries = 0;
+	while((rx_buffer[0] == 0x00) && tries++ < 100){
 		adf_read_from_memory(RMODE_1, TX_CONFIG1_REG, rx_buffer, 6);
 	}
+	if(tries >= 100) {
+		return 1;
+	}
+
 
 	uint8_t data2[4];
 
@@ -510,11 +542,13 @@ uint8_t adf_config_gpio(){
 
 	adf_write_to_memory(WMODE_1, TX_CONFIG1_REG, data2, sizeof(data2));
 
-	while(rx_buffer[0] == 0x00){
+	while((rx_buffer[0] == 0x00) && tries++ < 100){
 		adf_read_from_memory(RMODE_1, TX_CONFIG1_REG, rx_buffer, 6);
 	}
-
-
+	tries = 0;
+	if(tries >= 100) {
+		return 1;
+	}
 	return 0;
 
 }

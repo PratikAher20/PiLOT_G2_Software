@@ -12,24 +12,21 @@ extern uint8_t cmd_rs485_succ_count;
 extern uint8_t cmd_rs485_fail_count;
 extern uint8_t store_in_sd_card;
 extern timer_instance_t sd_timer;
-extern uint16_t Read_TPSRAM_addr;
 
 void GPIO1_IRQHandler( void ){
-    uint32_t a, i = 0;
-
+    uint16_t a, i = 0;
+    a  = 1;
     uint16_t buf[1];
-    uint16_t w_addr;
+    uint16_t r_addr, w_addr;
     buf[0] = 0xFF;
 //
-		Read_TPSRAM_addr = HAL_get_16bit_reg(RS_485_Controller_0, READ_RADDR);
+		r_addr = HAL_get_16bit_reg(RS_485_Controller_0, READ_RADDR);
 		w_addr = HAL_get_16bit_reg(RS_485_Controller_0, READ_WADDR);
 
-		a = MSS_GPIO_get_inputs();
 		//Start storing the packets in sd card
+
 		store_in_sd_card = 1;
 
-
-//		TMR_start(&sd_timer);
 
 		MSS_GPIO_clear_irq(MSS_GPIO_1);
 
@@ -52,21 +49,21 @@ void GPIO3_IRQHandler(void){
 		cmd[i] = HAL_get_8bit_reg(APB_READ_CMD_0, READ_SRAM_CMD);
 	}
 
-	i = 0;
-
 	for(;i<32;i++){
 		cmd[i] = HAL_get_8bit_reg(APB_READ_CMD_0, READ_SRAM_CMD);
 	}
 
-	rx_cmd_pkt = (rx_cmd_t*) cmd;
+	get_cmd(cmd, 0);
 
-	if(cmd_valid(rx_cmd_pkt, 0)){
-		cmd_engine(rx_cmd_pkt);
-		cmd_rs485_succ_count++;
-	}
-	else{
-		cmd_rs485_fail_count++;
-	}
+//	rx_cmd_pkt = (rx_cmd_t*) cmd;
+//
+//	if(cmd_valid(rx_cmd_pkt)){
+//		cmd_engine(rx_cmd_pkt);
+//		cmd_rs485_succ_count++;
+//	}
+//	else{
+//		cmd_rs485_fail_count++;
+//	}
 
 
 	MSS_GPIO_clear_irq( MSS_GPIO_3);
@@ -87,47 +84,73 @@ void get_time_vector(uint8_t* time_vect){
 }
 
 
-uint16_t init_RS485_Controller(){
-    MSS_GPIO_config(MSS_GPIO_0, MSS_GPIO_OUTPUT_MODE);
-    MSS_GPIO_set_output(MSS_GPIO_0, 1);
+uint8_t init_RS485_Controller(){
 
-    MSS_GPIO_config(MSS_GPIO_1, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_BOTH);
+    MSS_GPIO_config(MSS_GPIO_1, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);		//SRAM Full INTR
     MSS_GPIO_enable_irq(MSS_GPIO_1);
     NVIC_EnableIRQ(GPIO1_IRQn);
     NVIC_SetPriority(GPIO1_IRQn, 255);
 
-    MSS_GPIO_config(MSS_GPIO_3, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_NEGATIVE);
+    MSS_GPIO_config(MSS_GPIO_3, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_NEGATIVE);		//RS485_cmd_INTR
 	MSS_GPIO_enable_irq(MSS_GPIO_3);
 	NVIC_EnableIRQ(GPIO3_IRQn);
-	NVIC_SetPriority(GPIO3_IRQn, 255);
+	NVIC_SetPriority(GPIO3_IRQn, 253);
     uint16_t buf[1];
-    uint16_t waddr, i;
+    uint16_t waddr, i, raddr;
     buf[0] = 0;
     i = 0;
-
-//    HAL_get_8bit_reg(APB_READ_CMD_0, READ_CONST);
-
-	HAL_set_8bit_reg(APB_READ_CMD_0, WRITE_PAY_ID, (uint_fast8_t) PAY_ID);
+    uint8_t cont;
+    uint8_t status;
 
     HAL_set_8bit_reg(RS_485_Controller_0, WRITE_SLAVE_ADDR, (uint_fast8_t) SLAVE_ADDR);
 
     HAL_set_8bit_reg(RS_485_Controller_0, WRITE_CLKS_PER_BIT, (uint_fast8_t) CLKS_PER_BIT);
 
-    waddr = HAL_get_16bit_reg(RS_485_Controller_0, READ_WADDR);
+    HAL_set_8bit_reg(APB_READ_CMD_0, WRITE_PAY_ID, (uint_fast8_t) PAY_ID);
+
+    cont = HAL_get_8bit_reg(RS_485_Controller_0, READ_CONST);
+    if(cont != 0xab){
+    	status |= 0x01;
+    	status  = status << 1;
+    }
+    status  = status << 1;
+    cont = HAL_get_8bit_reg(APB_READ_CMD_0, READ_CONST);
+    if(cont != 0xab){
+		status |= 0x01;
+		status  = status << 1;
+	}
+	status  = status << 1;
+    cont = HAL_get_8bit_reg(APB_READ_TLM_0, READ_CONST);
+    if(cont != 0xab){
+		status |= 0x01;
+		status  = status << 1;
+	}
+	status  = status << 1;
+
+	raddr = HAL_get_16bit_reg(RS_485_CONTROLLER_0, READ_RADDR);
+
+	if(raddr != 0){
+		status |= 0x01;
+		status  = status << 1;
+	}
+	status  = status << 1;
+
+	waddr = HAL_get_16bit_reg(RS_485_Controller_0, READ_WADDR);
+	if(waddr != 2){
+		status |= 0x01;
+		status  = status << 1;
+	}
+	status  = status << 1;
 
 
-
+    buf[0] = HAL_get_8bit_reg(APB_READ_CMD_0, READ_RADDR);
+	buf[0] = HAL_get_8bit_reg(APB_READ_TLM_0, READ_RADDR);
 
 //    for(;i<1025;i++){
 //
 //        HAL_set_16bit_reg(RS_485_Controller_0, WRITE_SRAM, (uint_fast16_t) buf[0]);
 //    }
 
-	//Reading Dummy Variables to increment the Read_Addr
-
-	buf[0] = HAL_get_8bit_reg(APB_READ_CMD_0, READ_RADDR);
-	buf[0] = HAL_get_8bit_reg(APB_READ_TLM_0, READ_RADDR);
-
-    return waddr;
+    return status;
 }
 

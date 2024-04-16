@@ -13,24 +13,22 @@ extern uint16_t command_reject_cnt;
 extern timer_instance_t hk_timer;
 extern timer_instance_t comms_timer;
 extern uint8_t ERR_LOG;
-extern uint8_t latest_codeword;
+
 extern uint32_t cmd_adf_read_addr;
 extern uint8_t cmd_adf_read_No_double_words;
 extern uint32_t cmd_adf_data[8];
 extern uint8_t RTM[16];
 
-uint32_t REPRO_CODE_WORD_ADDR = 0x60033000;
-uint8_t* code_word = (uint8_t*) 0x60033000;
-
 uint8_t cmd_valid(rx_cmd_t* rx_cmd, uint8_t src){
-	uint8_t chk = 0, i=0;
-//	if(src == 0){
-//		for(;i<30;i++){
-//			crc = crc ^ rx_cmd->parameters[i];
-//		}
-//	}
+	//Logic to check validity of the command ID within limits along with the params limits.
 
-	return 1;  //Will be checking the validated of the checksum.
+	if(rx_cmd->cmd_id - 1 >= 0x00 && rx_cmd->cmd_id - 1 <= NUM_CMDS){
+		return 1;  //Will be checking the validated of the checksum.
+	}
+	else{
+		return 0;
+	}
+
 }
 
 
@@ -96,33 +94,25 @@ void delay ( volatile unsigned int n)
 
 void exe_iap(rx_cmd_t* rcv_cmd){
 
+	// TODO Add a sequence of commands to ensure the cmd reception, and then to get the address of the image.
 
 	uint8_t prog_status, auth_status;
+	MSS_SPI_set_slave_select( &g_mss_spi0, MSS_SPI_SLAVE_0 );
 
-	if(rcv_cmd->parameters[0] == 0x07 || rcv_cmd->parameters[0] == 0x14 || rcv_cmd->parameters[0] == 0x21){
-		NVM_write(REPRO_CODE_WORD_ADDR, &(rcv_cmd->parameters[0]), 1, NVM_DO_NOT_LOCK_PAGE);
-		latest_codeword = rcv_cmd->parameters[0];
-		REPRO_CODE_WORD_ADDR += 0x01;
+	g_mss_spi0.hw_reg->CONTROL |= (0x04000000);
+	delay(80000);
+
+	auth_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_AUTHENTICATE, 0x001000);
+
+	delay(80000);
+
+	if(auth_status){
+		ERR_LOG = ERR_LOG | 0x01;
+	}
+	else{
+		prog_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_PROGRAM, 0x001000);
 	}
 
-
-	if(code_word[0] == 0x07 && code_word[1] == 0x14 && code_word[2] == 0x21){
-		MSS_SPI_set_slave_select( &g_mss_spi0, MSS_SPI_SLAVE_0 );
-
-		g_mss_spi0.hw_reg->CONTROL |= (0x04000000);
-		delay(80000);
-
-		auth_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_AUTHENTICATE, 0x001000);
-
-		delay(80000);
-
-		if(auth_status){
-			ERR_LOG = ERR_LOG | 0x01;
-		}
-		else{
-			prog_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_PROGRAM, 0x001000);
-		}
-	}
 
 }
 

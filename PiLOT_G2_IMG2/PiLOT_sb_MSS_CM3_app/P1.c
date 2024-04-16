@@ -30,6 +30,8 @@ extern uint8_t reset_counts[1];
 extern rx_cmd_t* rx_cmd_pkt;
 extern uint8_t Time_Vector[32];
 
+
+
 //uint16_t data_test[256] = {0};
 
 void timer_intr_dis(){
@@ -52,6 +54,7 @@ void store_pkt(){
 				return;
 			}
 		}
+
 
 }
 
@@ -108,6 +111,20 @@ void vGetPktStruct(pkt_name_t pktname, void* pktdata, uint8_t pktsize){
 //}
 
 
+uint16_t make_FLetcher(uint8_t *data,uint16_t len) {
+	uint8_t sumA = 0,sumB = 0,temp = 0;
+	uint8_t i = 0;
+	for(i = 0;i<len;i++) {
+		sumA = (sumA + data[i]) % 255;
+		sumB = (sumB + sumA) % 255;
+	}
+	temp = 255 - ((sumA + sumB) % 255);
+	sumB = 255 - ((sumA + temp) % 255);
+
+	return ((sumB << 8) | temp);
+
+}
+
 void get_hk(){
 	hk_pkt = (hk_pkt_t* )data;
 	uint16_t ax, ay, az;
@@ -115,12 +132,14 @@ void get_hk(){
 	uint16_t CDH_VC[2];
 	uint16_t PIS_VC[2];
 	uint16_t imu_temp;
-	uint8_t result=0, flag;
+	uint16_t result=0;
+	uint8_t flag;
 	uint8_t i = 0 ;
 	uint8_t msg[18] = "\n\rGot HK Readings\0";
-	result = get_IMU_acc(&ax, &ay, &az);
-	result = get_IMU_gyro(&roll_rate, &pitch_rate, &yaw_rate);
-	result = get_IMU_temp(&imu_temp);
+	uint16_t hk_status;
+	result = (get_IMU_acc(&ax, &ay, &az) == 0 ? 0 : 1);
+	result |= ((get_IMU_gyro(&roll_rate, &pitch_rate, &yaw_rate) == 0 ? 0 : 1) << 1);
+	result |= ((get_IMU_temp(&imu_temp) == 0 ? : 1) << 2);
 //	CDH_VC[0] = read_bus_voltage( VC1,  2, &flag);
 //	PIS_VC[0] = read_bus_voltage(VC1, 3, &flag);
 //	CDH_VC[1] = read_shunt_voltage(VC1, 2, &flag);
@@ -136,7 +155,7 @@ void get_hk(){
 	for(;i<16;i++){
 		hk_pkt->RTM[i] = RTM[i];
 	}
-	i = 0;
+
 	hk_pkt->Cmd_RS485_Succ_counts = cmd_rs485_succ_count;
 	hk_pkt->Cmd_RS485_Fail_counts = cmd_rs485_fail_count;
 	hk_pkt->Acc[0] = ((ax));
@@ -151,7 +170,9 @@ void get_hk(){
 //	hk_pkt->CDH_VC[0] = read_bus_voltage( VC1,  2, &flag);
 //	hk_pkt->PIS_VC[0] = read_bus_voltage( VC1,  3, &flag);
 	hk_pkt->Voltages[0] = read_bus_voltage(VC1, 2, &flag);
+	result |= flag << 3;
 	hk_pkt->Voltages[1] = read_bus_voltage(VC1, 3, &flag);
+	result |= flag << 4;
 //	hk_pkt->Sensor_Board_VC[1] = read_shunt_voltage(VC1, 1, &flag);
 //	hk_pkt->CDH_VC[1] = read_shunt_voltage( VC1,  2, &flag);
 //	hk_pkt->PIS_VC[1] = read_shunt_voltage( VC1,  3, &flag);
@@ -164,7 +185,14 @@ void get_hk(){
 	hk_pkt->Thermistor_Read_Pointer = thermistor_partition.read_pointer;
 
 	hk_pkt->Currents[0] = read_shunt_voltage( VC1,  2, &flag);
+	result |= flag << 5;
 	hk_pkt->Currents[1] = read_shunt_voltage( VC1,  3, &flag);
+	result |= flag << 6;
+
+	get_time_vector(Time_Vector);
+	for(;i<32;i++){
+		hk_pkt->GTime_SVector[i] = Time_Vector[i];
+	}
 
 	hk_pkt->ccsds_p1 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p1(tlm_pkt_type, HK_API_ID))));
 	hk_pkt->ccsds_p2 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p2((hk_seq_num++)))));
@@ -172,16 +200,18 @@ void get_hk(){
 	hk_pkt->ccsds_s1 = 0;
 	hk_pkt->ccsds_s2 = 0;
 
-	uint32_t a;
 	if(store_in_sd_card){
 		sd_dump = 1;
 		hk_pkt->sd_dump = sd_dump;
-		store_data(&hk_partition, data);
+		hk_pkt->Fletcher_Code = make_FLetcher(data, sizeof(hk_pkt_t) - 2);
+		result |= ((store_data(&hk_partition, data) == 0 ? 0 : 1) << 7);
 //		a = MSS_GPIO_get_inputs();
 //		if(a && 0x01 == 0){
 //			store_in_sd_card = 0;
 //		}
 //		store_in_sd_card = 0;
+		store_data(&hk_partition, data);
+		store_in_sd_card = 0;
 	}
 	else{
 		sd_dump = 0;
@@ -189,6 +219,8 @@ void get_hk(){
 //		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
 		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 	}
+
+
 
 //	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 //	MSS_UART_polled_tx_string(&g_mss_uart0, msg);
@@ -208,7 +240,7 @@ void get_temp(){
 	if(store_in_sd_card){
 		sd_dump_thermistor = 1;
 		store_data(&thermistor_partition, data);
-//		store_in_sd_card = 0;
+		store_in_sd_card = 0;
 	}
 	else{
 		sd_dump_thermistor = 0;
@@ -218,8 +250,6 @@ void get_temp(){
 }
 
 void get_sd_data(){
-
 	read_data(&hk_partition, data);
-//	vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
-//	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
+	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 }

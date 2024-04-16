@@ -25,7 +25,6 @@
 
 #include "core_i2c.h"
 
-
 uint8_t ADC_Init(i2c_instance_t *i2c_chx,uint8_t address);
 uint16_t get_ADC_value(i2c_instance_t *i2c_chx,uint8_t address,uint8_t chx,uint8_t *flag);
 
