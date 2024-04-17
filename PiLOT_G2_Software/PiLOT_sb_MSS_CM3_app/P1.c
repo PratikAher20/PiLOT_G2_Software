@@ -12,7 +12,7 @@ thermistor_pkt_t* thermistor_pkt;
 uint8_t data[512];
 uint16_t hk_seq_num =0;
 uint8_t RTM[16];
-
+uint8_t latest_codeword = 0;
 uint16_t blck_pkt[4][256];
 uint8_t send_pkt_flg = 0;
 uint8_t active_blck = 0;
@@ -30,6 +30,7 @@ extern uint8_t reset_counts[1];
 extern rx_cmd_t* rx_cmd_pkt;
 extern uint8_t Time_Vector[32];
 extern uint8_t CHK_CMD;
+uint8_t cmd_cntr = 0;
 
 
 //uint16_t data_test[256] = {0};
@@ -137,7 +138,6 @@ void get_hk(){
 	uint8_t i = 0 ;
 	uint8_t msg[18] = "\n\rGot HK Readings\0";
 	uint16_t hk_status;
-	uint8_t cmd_cntr = 0;
 
 	result = (get_IMU_acc(&ax, &ay, &az) == 0 ? 0 : 1);
 	result |= ((get_IMU_gyro(&roll_rate, &pitch_rate, &yaw_rate) == 0 ? 0 : 1) << 1);

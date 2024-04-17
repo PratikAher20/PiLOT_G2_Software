@@ -115,6 +115,7 @@ uint16_t get_comms(){
 	comms_pkt->comms_adf_cmd_rx = cmd_rx_count;
 	comms_pkt->comms_adf_cmd_succ = cmd_succ_count;
 	comms_pkt->comms_adf_cmd_reject = cmd_reject_count;
+//	adf_send_cmd(CMD_PHY_RX);
 	comms_pkt->comms_adf_rssi_cca = rssi_cca;
 	comms_pkt->comms_adf_preamble_patt = get_preamble_pkt();
 	comms_pkt->comms_adf_sync_word = get_sync_word();

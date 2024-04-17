@@ -258,7 +258,7 @@ int main(){
 
 	uint16_t curr_tpsram_read_addr;
 	uint16_t rssi;
-	uint8_t cmd;
+	uint8_t cmd[8];
 	uint8_t cmd_rx_flag = 0;
 
 
@@ -302,12 +302,12 @@ int main(){
 //
 		while(CHK_CMD){
 //
-			rx_pkt(&cmd, &rssi, &cmd_rx_flag);
+			rx_pkt(cmd, &rssi, &cmd_rx_flag);
 			if(cmd_rx_flag == 1){
 				cmd_rx_count++;
 				cmd_rx_flag = 0;
-				get_cmd(&cmd, 1);
-
+				get_cmd(cmd, 1);
+				MSS_WD_reload();
 				break;
 			}
 //
@@ -324,10 +324,10 @@ int main(){
 //			curr_value = MSS_TIM1_get_current_value();
 		}
 //
-//		adf_send_cmd(CMD_PHY_ON);
-//		adf_send_cmd(CMD_PHY_CCA);
-//
-//		get_rssi_cca_data(&rssi_cca);
+		adf_send_cmd(CMD_PHY_ON);
+		adf_send_cmd(CMD_PHY_CCA);
+
+		get_rssi_cca_data(&rssi_cca);
 //
 //		curr_value = MSS_TIM1_get_current_value();
 //

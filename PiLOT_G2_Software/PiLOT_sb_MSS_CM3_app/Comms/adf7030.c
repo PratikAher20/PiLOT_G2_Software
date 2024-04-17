@@ -597,9 +597,9 @@ void get_temp_data(uint8_t *temp){
 }
 
 void get_rssi_cca_data(uint16_t* rssi){
-	uint8_t rx_buf[6];
+	uint8_t rx_buf_cca[6];
 	//uint16_t rssi;
-	rx_buf[0] = 0x00;
+	rx_buf_cca[0] = 0x00;
 	uint8_t state;
 
 	adf_send_cmd(CMD_PHY_CCA);
@@ -610,11 +610,11 @@ void get_rssi_cca_data(uint16_t* rssi){
 		state = adf_get_state();
 	}
 
-	while(rx_buf[0] == 0x00){
-		adf_read_from_memory(RMODE_1, PROFILE_CCA_READBACK, rx_buf, 4);
+	while(rx_buf_cca[0] == 0x00){
+		adf_read_from_memory(RMODE_1, PROFILE_CCA_READBACK, rx_buf_cca, 4);
 	}
 
-	*rssi = (uint16_t)((rx_buf[4] & 0x07) << 8) + rx_buf[5];
+	*rssi = (uint16_t)((rx_buf_cca[4] & 0x07) << 8) + rx_buf_cca[5];
 	*rssi = ~(*rssi) + 1;
 	*rssi = *rssi & 0x0FFF;
 	if(*rssi > 2048){
@@ -713,7 +713,7 @@ uint8_t rx_pkt(uint8_t * cmd, uint16_t* rssi, uint8_t* cmd_rx_flg){
 
 	uint8_t rx_buf[6];
 	uint8_t tries = 0;
-	uint8_t i = 0;
+	uint8_t mode = 0;
 	rx_buf[5] = 0x00;
 	uint8_t clr_tx_buf[4];
 	clr_tx_buf[0] = 0xFF;
@@ -735,7 +735,7 @@ uint8_t rx_pkt(uint8_t * cmd, uint16_t* rssi, uint8_t* cmd_rx_flg){
 //		adf_read_from_memory(RMODE_1, IRQ_CTRL_STATUS0, rx_buf, 4);
 //	}
 
-	adf_read_from_memory(RMODE_1, IRQ_CTRL_STATUS0, rx_buf, 4);
+//	adf_read_from_memory(RMODE_1, IRQ_CTRL_STATUS0, rx_buf, 4);
 
 	do{
 		timer_dis();
@@ -752,12 +752,9 @@ uint8_t rx_pkt(uint8_t * cmd, uint16_t* rssi, uint8_t* cmd_rx_flg){
 
 //	chk_status();
 	//If tries<100 read from rx_buffer! or else do not
-	if(tries < 100){
+	mode = adf_get_state();
 
-		while(rx_buf[5] == 0xDF){
-			adf_read_from_memory(RMODE_1, IRQ_CTRL_STATUS0, rx_buf, 4);
-			adf_write_to_memory(WMODE_1, IRQ_CTRL_STATUS0, clr_tx, 4);
-		}
+	if(tries < 100 && mode == 2){
 
 		*cmd_rx_flg = 1;
 
@@ -802,6 +799,7 @@ uint8_t rx_pkt(uint8_t * cmd, uint16_t* rssi, uint8_t* cmd_rx_flg){
 
 
 		adf_write_to_memory(WMODE_1, RX_BUFFER, clr_tx_buf, 4);
+		adf_write_to_memory(WMODE_1, IRQ_CTRL_STATUS0, clr_tx, 4);
 		get_rssi_data(rssi);
 	}
 
