@@ -264,7 +264,6 @@ int main(){
 
 	uint32_t wd_reset;
 
-
 	vc_init(VC1);
 
 //

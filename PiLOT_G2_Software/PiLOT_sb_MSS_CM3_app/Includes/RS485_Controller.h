@@ -30,7 +30,7 @@
 #define RS_485_Controller_0 0x50005000u
 #define APB_READ_CMD_0		0x5000B000u
 #define APB_READ_TLM_0		0x5000C000u
-#define SLAVE_ADDR      0xAu
+#define SLAVE_ADDR      0x26u
 #define RS485_BAUD_RATE 2000000
 #define NUM_BYTES	32
 #define PAY_ID	0x07

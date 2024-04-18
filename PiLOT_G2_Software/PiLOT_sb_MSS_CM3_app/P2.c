@@ -150,8 +150,8 @@ uint16_t get_comms(){
 		sd_dump_comms = 0;
 		comms_pkt->comms_sd_dump = sd_dump_comms;
 		comms_pkt->Fletcher_Code = make_FLetcher(data, sizeof(comms_pkt_t) - 2);
-//		vGetPktStruct(comms, (void*) comms_pkt, sizeof(comms_pkt_t));
-		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(comms_pkt_t));
+		vGetPktStruct(comms, (void*) comms_pkt, sizeof(comms_pkt_t));
+//		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(comms_pkt_t));
 	}
 
 //	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(comms_pkt_t));

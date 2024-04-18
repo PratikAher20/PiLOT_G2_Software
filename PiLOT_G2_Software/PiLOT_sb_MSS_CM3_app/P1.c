@@ -226,8 +226,8 @@ void get_hk(){
 	else{
 		sd_dump = 0;
 		hk_pkt->sd_dump = sd_dump;
-//		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
-		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
+		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
+//		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 	}
 
 
