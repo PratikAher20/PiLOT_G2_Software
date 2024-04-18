@@ -46,8 +46,8 @@
 #define P1_ADC_ADDR		0x40
 
 void p1_init();
-uint16_t get_hk()
-void get_temp();
+uint16_t get_hk();
+uint16_t get_temp();
 //void get_comms();
 
 
@@ -72,6 +72,9 @@ void get_temp();
 #define INIT_API_ID    	5
 #define INIT_PKT_LENGTH  sizeof(init_packet_t)
 #define INIT_FLETCHER_CODE 0xCDCD
+
+#define LOGS_API_ID		6
+#define LOGS_PKT_LENGTH	sizeof(log_packet_t)
 
 #define TIME_API_ID			60
 #define TIME_PKT_LENGTH		sizeof(timer_pkt)
@@ -289,7 +292,8 @@ typedef enum pkt_name{
 	comms = 1,
 	thermistor = 2,
 	gmc = 3,
-    logs = 4
+    logs = 4,
+    sd = 5
 }pkt_name_t;
 
 typedef struct pkt{

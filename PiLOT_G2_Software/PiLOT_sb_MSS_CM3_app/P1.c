@@ -230,6 +230,7 @@ uint16_t get_hk(){
 //		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 	}
 
+	return result;
 
 
 //	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
@@ -237,14 +238,16 @@ uint16_t get_hk(){
 }
 
 
-void get_temp(){
+uint16_t get_temp(){
 	uint8_t i = 0;
 	uint8_t flag;
 	uint8_t sd_dump_thermistor = 0;
+	uint16_t res = 0;
 	thermistor_pkt = (thermistor_pkt_t*) data;
 
 	for(;i<8;i++){
-		thermistor_pkt->Temperature_Values[i] = get_ADC_value(TEMP_ADC_CORE_I2C, ADC_ADDR, i, flag);
+		thermistor_pkt->Temperature_Values[i] = get_ADC_value(TEMP_ADC_CORE_I2C, ADC_ADDR, i, &flag);
+		res |= (flag << i);
 	}
 
 	if(store_in_sd_card){
@@ -257,6 +260,8 @@ void get_temp(){
 //		vGetPktStruct(thermistor, (void*) thermistor_pkt, sizeof(thermistor_pkt_t));
 		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 	}
+
+	return res;
 }
 
 void get_sd_data(){

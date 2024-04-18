@@ -12,6 +12,9 @@ extern uint16_t command_cnt;
 extern uint16_t command_reject_cnt;
 extern timer_instance_t hk_timer;
 extern timer_instance_t comms_timer;
+extern timer_instance_t gmc_timer;
+extern timer_instance_t temp_timer;
+extern timer_instance_t sd_timer;
 extern uint8_t ERR_LOG;
 extern uint8_t latest_codeword;
 extern uint32_t cmd_adf_read_addr;
@@ -75,13 +78,38 @@ void set_pkt_rate(rx_cmd_t* rcv_cmd){
 			TMR_enable_int(&comms_timer);
 			TMR_start(&comms_timer);
 		}
+		else if(rcv_cmd->parameters[0] == thermistor){
+			TMR_init(&temp_timer, CORETIMER_C2_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, new_time_period);
+			TMR_enable_int(&temp_timer);
+			TMR_start(&temp_timer);
+		}
+		else if(rcv_cmd->parameters[0] == sd){
+			TMR_init(&sd_timer, CORETIMER_C3_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, new_time_period);
+			TMR_enable_int(&sd_timer);
+			TMR_start(&sd_timer);
+		}
+		else if(rcv_cmd->parameters[0] == gmc){
+			TMR_init(&gmc_timer, CORETIMER_C4_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, new_time_period);
+			TMR_enable_int(&gmc_timer);
+			TMR_start(&gmc_timer);
+		}
 	}
 	else{
+		//Here, instead of disabling the NVIC interrupts, we can stop the timer, so that the packetisation can again be restarted with another command
 		if(rcv_cmd->parameters[0] == hk){
 			NVIC_DisableIRQ(FabricIrq4_IRQn);
 		}
 		else if(rcv_cmd->parameters[0] == comms){
 			NVIC_DisableIRQ(FabricIrq5_IRQn);
+		}
+		else if(rcv_cmd->parameters[0] == thermistor){
+			NVIC_DisableIRQ(FabricIrq6_IRQn);
+		}
+		else if(rcv_cmd->parameters[0] == sd){
+			NVIC_DisableIRQ(FabricIrq7_IRQn);
+		}
+		else if(rcv_cmd->parameters[0] == gmc){
+			NVIC_DisableIRQ(FabricIrq8_IRQn);
 		}
 	}
 
