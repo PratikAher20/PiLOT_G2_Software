@@ -126,7 +126,7 @@ uint16_t make_FLetcher(uint8_t *data,uint16_t len) {
 
 }
 
-void get_hk(){
+uint16_t get_hk(){
 	hk_pkt = (hk_pkt_t* )data;
 	uint16_t ax, ay, az;
 	uint16_t roll_rate, pitch_rate, yaw_rate;

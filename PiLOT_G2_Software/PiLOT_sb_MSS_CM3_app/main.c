@@ -23,6 +23,9 @@ partition_t hk_partition;
 partition_t comms_partition;
 partition_t gmc_partition;
 partition_t thermistor_partition;
+
+//Create partition for log packets
+partition_t log_partiton;
 extern uint8_t store_in_sd_card;
 uint8_t IMG_ID = 0;
 uint16_t rssi_cca;
@@ -55,36 +58,87 @@ log_packet_t *log_packet_ptr;
 //Declare log counter
 uint8_t log_counter;
 
+//Declare logs sequence number variable
+uint16_t logs_seq_no;
+
+//Declare variable for status for each packet
+uint16_t hk_status,gmc_status,comms_status,therm_status;
+
+//Function to form Log packet
+void form_log_packet() {
+	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
+	log_packet_ptr->ccsds_p1 = PILOT_REVERSE_BYTE_ORDER(ccsds_p1(tlm_pkt_type,LOGS_API_ID));
+	log_packet_ptr->ccsds_p2 = PILOT_REVERSE_BYTE_ORDER(ccsds_p2((logs_seq_no)));
+	log_packet_ptr->ccsds_p3 = PILOT_REVERSE_BYTE_ORDER(ccsds_p3(LOGS_PKT_LENGTH));
+	log_packet_ptr->ccsds_s2 = current_time_lower;
+	log_packet_ptr->ccsds_s1 = current_time_upper;
+	log_packet_ptr->Fletcher_Code = make_FLetcher(log_data,LOGS_PKT_LENGTH-2);
+	//Need to replace the below l
+	// add_to_queue(LOGS_PKT_LENGTH,&log_p,log_data,&logs_miss,LOGS_TASK_ID);
+	if(store_in_sd_card){
+		store_data(&log_partiton, log_data);
+	}
+	else{
+		vGetPktStruct(logs, (void*) log_packet_ptr, sizeof(log_packet_t));
+		MSS_UART_polled_tx(&g_mss_uart0, log_data, sizeof(log_packet_t));
+	}
+	log_counter = 0;
+	logs_seq_no++;
+}
 void HK_ISR(){
 	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
 
-	get_hk();
-//	if(log_counter >= 10) {
-////		form_log_packet();
-//	}
-	//Need to add mutex here
-//	log_packet_ptr->logs[log_counter].task_id = HK_TASK_ID;
-//	log_packet_ptr->logs[log_counter].time_H = current_time_upper;
-//	log_packet_ptr->logs[log_counter].time_L = current_time_lower;
-//	log_packet_ptr->logs[log_counter].task_status = hk_status;
-//	log_counter++;
-	//Need to remove mutex here
+	hk_status = get_hk();
+	if(log_counter >= 10) {
+		form_log_packet();
+	}
+	log_packet_ptr->logs[log_counter].task_id = HK_TASK_ID;
+	log_packet_ptr->logs[log_counter].time_H = current_time_upper;
+	log_packet_ptr->logs[log_counter].time_L = current_time_lower;
+	log_packet_ptr->logs[log_counter].task_status = hk_status;
+	log_counter++;
 	TMR_clear_int(&hk_timer);
 }
 
 void GMC_ISR(){
-	uint8_t gmc_status;
+	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
 	gmc_status = get_gmc();
+	if(log_counter >= 10) {
+		form_log_packet();
+	}
+	log_packet_ptr->logs[log_counter].task_id = GMC_TASK_ID;
+	log_packet_ptr->logs[log_counter].time_H = current_time_upper;
+	log_packet_ptr->logs[log_counter].time_L = current_time_lower;
+	log_packet_ptr->logs[log_counter].task_status = gmc_status;
+	log_counter++;
 	TMR_clear_int(&gmc_timer);
 }
 
 void COMMS_ISR(){
-	uint16_t comms_status = get_comms();
+	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
+	comms_status = get_comms();
+	if(log_counter >= 10) {
+		form_log_packet();
+	}
+	log_packet_ptr->logs[log_counter].task_id = COMMS_TASK_ID;
+	log_packet_ptr->logs[log_counter].time_H = current_time_upper;
+	log_packet_ptr->logs[log_counter].time_L = current_time_lower;
+	log_packet_ptr->logs[log_counter].task_status = comms_status;
+	log_counter++;
 	TMR_clear_int(&comms_timer);
 }
 
 void THER_ISR(){
-	get_temp();
+	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
+	therm_status =  get_temp();
+	if(log_counter >= 10) {
+		form_log_packet();
+	}
+	log_packet_ptr->logs[log_counter].task_id = THERMISTOR_TASK_ID;
+	log_packet_ptr->logs[log_counter].time_H = current_time_upper;
+	log_packet_ptr->logs[log_counter].time_L = current_time_lower;
+	log_packet_ptr->logs[log_counter].task_status = therm_status;
+	log_counter++;
 	TMR_clear_int(&temp_timer);
 }
 
@@ -234,11 +288,15 @@ int main(){
 	initialise_partition(&comms_partition, COMMS_BLOCK_INIT, COMMS_BLOCK_END);
 	initialise_partition(&thermistor_partition, THERMISTOR_BLOCK_INIT, THERMISTOR_BLOCK_END);
 	initialise_partition(&gmc_partition, GMC_BLOCK_INIT, GMC_BLOCK_END);
+	initialise_partition(&log_partiton, LOGS_BLOCK_INIT, LOGS_BLOCK_END);
 	//Assign log packet pointer to log data buffer
 	log_packet_ptr = (log_packet_t*)log_data;
 
 	//Initialise log counter to zero
 	log_counter = 0;
+
+	//Initailise the log sequence number
+	logs_seq_no = 1;
 
 	//Function to initialise 64 bit timer
 //	Tim64_init();

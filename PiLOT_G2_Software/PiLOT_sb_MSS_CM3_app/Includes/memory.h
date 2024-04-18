@@ -18,25 +18,25 @@
 #define CURRENT_BLOCK 1024
 
 //Define the initial block numbers of all partitions
-#define PAYLOAD_BLOCK_INIT        	0x4F1A6E
-#define HK_BLOCK_INIT        		0xA
-#define COMMS_BLOCK_INIT          	0x5703D2
-#define GMC_BLOCK_INIT				700
-#define THERMISTOR_BLOCK_INIT		0x59647E
+#define LOGS_BLOCK_INIT        			0x4F1A6E
+#define HK_BLOCK_INIT        			0xA
+#define COMMS_BLOCK_INIT          		0x5703D2
+#define GMC_BLOCK_INIT					700
+#define THERMISTOR_BLOCK_INIT			0x59647E
 
 //Define the ending block numbers of all the partitions
-#define PAYLOAD_BLOCK_END			0x57036E
-#define HK_BLOCK_END				0x4F1A0A
-#define COMMS_BLOCK_END				0x57CE52
-#define GMC_BLOCK_END				800
-#define THERMISTOR_BLOCK_END				0x7A59FE
+#define LOGS_BLOCK_END					0x57036E
+#define HK_BLOCK_END					0x4F1A0A
+#define COMMS_BLOCK_END					0x57CE52
+#define GMC_BLOCK_END					800
+#define THERMISTOR_BLOCK_END			0x7A59FE
 
 //All the Partitions used
-#define HK_PARTITION 				0x01
-#define PAYLOAD_PARTITION			0x02
-#define GMC_PARTITION				0x03
-#define LOGS_PARTITION				0x04
-#define ARIS_PARTITION				0x05
+#define HK_PARTITION 					0x01
+#define THERMISTOR_PARTITION			0x02
+#define GMC_PARTITION					0x03
+#define LOGS_PARTITION					0x04
+#define COMMS_PARTITION					0x05
 
 /**
  * @brief To store data in the SD card, partitions are created, with each partition having the below four parameters.

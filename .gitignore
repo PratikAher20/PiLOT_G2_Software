@@ -1,0 +1,7 @@
+PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/subdir.mk
+PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/libPiLOT_sb_MSS_CM3_hw_platform.a
+PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/libPiLOT_sb_MSS_CM3_hw_platform.a
+PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/*.a
+PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/*.mk
+PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/*.o
+PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/*.d

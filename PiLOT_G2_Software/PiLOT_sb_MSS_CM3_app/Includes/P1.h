@@ -46,7 +46,7 @@
 #define P1_ADC_ADDR		0x40
 
 void p1_init();
-void get_hk();
+uint16_t get_hk()
 void get_temp();
 //void get_comms();
 
@@ -81,8 +81,9 @@ void get_temp();
 #define THERMISTOR_TASK_ID	1
 #define HK_TASK_ID			2
 #define SD_HK_TASK_ID		3
-#define ARIS_TASK_ID		4
+#define COMMS_TASK_ID		4
 #define LOGS_TASK_ID		5
+#define GMC_TASK_ID         6
 
 typedef struct {
 	uint32_t collect_time;
@@ -287,7 +288,8 @@ typedef enum pkt_name{
 	hk = 0,
 	comms = 1,
 	thermistor = 2,
-	gmc = 3
+	gmc = 3,
+    logs = 4
 }pkt_name_t;
 
 typedef struct pkt{
