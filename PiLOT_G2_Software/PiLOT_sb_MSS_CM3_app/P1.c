@@ -30,6 +30,7 @@ extern uint8_t reset_counts[1];
 extern rx_cmd_t* rx_cmd_pkt;
 extern uint8_t Time_Vector[32];
 extern uint8_t CHK_CMD;
+extern uint64_t current_time_upper,current_time_lower;
 uint8_t cmd_cntr = 0;
 
 
@@ -139,6 +140,8 @@ uint16_t get_hk(){
 	uint8_t msg[18] = "\n\rGot HK Readings\0";
 	uint16_t hk_status;
 
+	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
+
 	result = (get_IMU_acc(&ax, &ay, &az) == 0 ? 0 : 1);
 	result |= ((get_IMU_gyro(&roll_rate, &pitch_rate, &yaw_rate) == 0 ? 0 : 1) << 1);
 	result |= ((get_IMU_temp(&imu_temp) == 0 ? : 1) << 2);
@@ -191,6 +194,8 @@ uint16_t get_hk(){
 	hk_pkt->Currents[1] = read_shunt_voltage( VC1,  3, &flag);
 	result |= flag << 6;
 
+	hk_pkt->latest_codeword_rx = latest_codeword;
+
 	get_time_vector(Time_Vector);
 	for(;i<32;i++){
 		hk_pkt->GTime_SVector[i] = Time_Vector[i];
@@ -199,8 +204,8 @@ uint16_t get_hk(){
 	hk_pkt->ccsds_p1 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p1(tlm_pkt_type, HK_API_ID))));
 	hk_pkt->ccsds_p2 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p2((hk_seq_num++)))));
 	hk_pkt->ccsds_p3 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p3(HK_PKT_LENGTH))));
-	hk_pkt->ccsds_s1 = 0;
-	hk_pkt->ccsds_s2 = 0;
+	hk_pkt->ccsds_s2 = current_time_lower;
+	hk_pkt->ccsds_s1 = current_time_upper;
 
 	if(cmd_cntr == 20){
 		cmd_cntr = 1;
@@ -226,8 +231,9 @@ uint16_t get_hk(){
 	else{
 		sd_dump = 0;
 		hk_pkt->sd_dump = sd_dump;
-		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
-//		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
+		hk_pkt->Fletcher_Code = make_FLetcher(data, sizeof(hk_pkt_t) - 2);
+//		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
+		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 	}
 
 	return result;

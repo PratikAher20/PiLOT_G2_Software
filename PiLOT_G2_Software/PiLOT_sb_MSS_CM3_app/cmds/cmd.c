@@ -65,7 +65,7 @@ void cmd_noop(rx_cmd_t* rcv_cmd){
 
 void set_pkt_rate(rx_cmd_t* rcv_cmd){
 
-	uint32_t new_time_period = MSS_SYS_M3_CLK_FREQ/1024 * rcv_cmd->parameters[1];
+	uint32_t new_time_period = MSS_SYS_M3_CLK_FREQ/1024 * (rcv_cmd->parameters[1] / 10);
 
 	if(rcv_cmd->parameters[1] != 0){
 		if(rcv_cmd->parameters[0] == hk){
@@ -97,19 +97,24 @@ void set_pkt_rate(rx_cmd_t* rcv_cmd){
 	else{
 		//Here, instead of disabling the NVIC interrupts, we can stop the timer, so that the packetisation can again be restarted with another command
 		if(rcv_cmd->parameters[0] == hk){
-			NVIC_DisableIRQ(FabricIrq4_IRQn);
+			TMR_stop(&hk_timer);
+//			NVIC_DisableIRQ(FabricIrq4_IRQn);
 		}
 		else if(rcv_cmd->parameters[0] == comms){
-			NVIC_DisableIRQ(FabricIrq5_IRQn);
+			TMR_stop(&comms_timer);
+//			NVIC_DisableIRQ(FabricIrq5_IRQn);
 		}
 		else if(rcv_cmd->parameters[0] == thermistor){
-			NVIC_DisableIRQ(FabricIrq6_IRQn);
+			TMR_stop(&temp_timer);
+//			NVIC_DisableIRQ(FabricIrq6_IRQn);
 		}
 		else if(rcv_cmd->parameters[0] == sd){
-			NVIC_DisableIRQ(FabricIrq7_IRQn);
+			TMR_stop(&sd_timer);
+//			NVIC_DisableIRQ(FabricIrq7_IRQn);
 		}
 		else if(rcv_cmd->parameters[0] == gmc){
-			NVIC_DisableIRQ(FabricIrq8_IRQn);
+			TMR_stop(&gmc_timer);
+//			NVIC_DisableIRQ(FabricIrq8_IRQn);
 		}
 	}
 

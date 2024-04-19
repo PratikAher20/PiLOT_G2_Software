@@ -740,6 +740,7 @@ uint8_t rx_pkt(uint8_t * cmd, uint16_t* rssi, uint8_t* cmd_rx_flg){
 	do{
 		timer_dis();
 		adf_read_from_memory(RMODE_1, IRQ_CTRL_STATUS0, rx_buf, 4);
+		mode = adf_get_state();
 		timer_ena();
 		if(rx_buf[5] == 0xDF){
 			break;
@@ -752,7 +753,7 @@ uint8_t rx_pkt(uint8_t * cmd, uint16_t* rssi, uint8_t* cmd_rx_flg){
 
 //	chk_status();
 	//If tries<100 read from rx_buffer! or else do not
-	mode = adf_get_state();
+//	mode = adf_get_state();
 
 	if(tries < 100 && mode == 2){
 

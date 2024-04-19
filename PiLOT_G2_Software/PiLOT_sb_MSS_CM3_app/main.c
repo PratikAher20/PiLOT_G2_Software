@@ -27,6 +27,7 @@ partition_t thermistor_partition;
 //Create partition for log packets
 partition_t log_partiton;
 extern uint8_t store_in_sd_card;
+extern uint32_t REPRO_CODE_WORD_ADDR;
 uint8_t IMG_ID = 0;
 uint16_t rssi_cca;
 uint16_t rssi;
@@ -79,7 +80,7 @@ void form_log_packet() {
 		store_data(&log_partiton, log_data);
 	}
 	else{
-		vGetPktStruct(logs, (void*) log_packet_ptr, sizeof(log_packet_t));
+//		vGetPktStruct(logs, (void*) log_packet_ptr, sizeof(log_packet_t));
 		MSS_UART_polled_tx(&g_mss_uart0, log_data, sizeof(log_packet_t));
 	}
 	log_counter = 0;
@@ -240,7 +241,7 @@ void Tim64_init() {
 void get_init(){
 	init_pkt = (init_packet_t* )data;
 	init_pkt->Status_1 = stat1;
-	init_pkt->Adf_inti_status = adf_status;
+	init_pkt->Adf_init_status = adf_status;
 	init_pkt->status_2 = stat2;
 	init_pkt->ccsds_p1 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p1(tlm_pkt_type, INIT_API_ID))));
 	init_pkt->ccsds_p2 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p2((0)))));
@@ -255,6 +256,11 @@ void get_init(){
 		init_pkt->GTime_SVector[i] = Time_Vector[i];
 	}
 	init_pkt->Fletcher_Code = make_FLetcher(data, sizeof(init_packet_t) - 2);
+
+
+//	vGetPktStruct(init, (void*) init_pkt, sizeof(init_packet_t));
+	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(init_packet_t));
+
 
 }
 
@@ -289,6 +295,13 @@ int main(){
 	initialise_partition(&thermistor_partition, THERMISTOR_BLOCK_INIT, THERMISTOR_BLOCK_END);
 	initialise_partition(&gmc_partition, GMC_BLOCK_INIT, GMC_BLOCK_END);
 	initialise_partition(&log_partiton, LOGS_BLOCK_INIT, LOGS_BLOCK_END);
+
+	uint8_t init_envm[3];
+	init_envm[0] = 0x00;
+	init_envm[1] = 0x00;
+	init_envm[2] = 0x00;
+	NVM_write(REPRO_CODE_WORD_ADDR, init_envm, 3, NVM_DO_NOT_LOCK_PAGE);
+
 	//Assign log packet pointer to log data buffer
 	log_packet_ptr = (log_packet_t*)log_data;
 
@@ -301,6 +314,7 @@ int main(){
 	//Function to initialise 64 bit timer
 //	Tim64_init();
 
+	uint8_t mode = 0;
 	counter_init(&counter_i2c);
 
 	stat1 |= ADC_Init(TEMP_ADC_CORE_I2C, ADC_ADDR);
@@ -312,7 +326,15 @@ int main(){
 	stat1 |= init_RS485_Controller();
 
 	adf_status = adf_init();
-//	mode = adf_get_state();
+	mode = adf_get_state();
+
+
+
+	stat2 |= mode;
+	stat2 = (stat2 << 1);
+	stat2 |= vc_init(VC1);
+	stat2 = (stat2 << 1);
+
 
 	uint16_t curr_tpsram_read_addr;
 	uint16_t rssi;
@@ -322,9 +344,6 @@ int main(){
 
 	uint32_t wd_reset;
 
-	vc_init(VC1);
-
-//
 	init_cmd_engine();
 
 
