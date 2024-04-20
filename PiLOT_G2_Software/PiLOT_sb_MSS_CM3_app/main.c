@@ -80,8 +80,8 @@ void form_log_packet() {
 		store_data(&log_partiton, log_data);
 	}
 	else{
-//		vGetPktStruct(logs, (void*) log_packet_ptr, sizeof(log_packet_t));
-		MSS_UART_polled_tx(&g_mss_uart0, log_data, sizeof(log_packet_t));
+		vGetPktStruct(logs, (void*) log_packet_ptr, sizeof(log_packet_t));
+//		MSS_UART_polled_tx(&g_mss_uart0, log_data, sizeof(log_packet_t));
 	}
 	log_counter = 0;
 	logs_seq_no++;
@@ -181,9 +181,9 @@ void timer_intr_set(){
 
 	TMR_start(&hk_timer);
 	TMR_start(&comms_timer);
-//	TMR_start(&temp_timer);
-//	TMR_start(&sd_timer);
-//	TMR_start(&gmc_timer);
+	TMR_start(&temp_timer);
+	TMR_start(&sd_timer);
+	TMR_start(&gmc_timer);
 }
 
 void timer_dis(){
@@ -258,8 +258,8 @@ void get_init(){
 	init_pkt->Fletcher_Code = make_FLetcher(data, sizeof(init_packet_t) - 2);
 
 
-//	vGetPktStruct(init, (void*) init_pkt, sizeof(init_packet_t));
-	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(init_packet_t));
+	vGetPktStruct(init, (void*) init_pkt, sizeof(init_packet_t));
+//	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(init_packet_t));
 
 
 }
@@ -312,7 +312,7 @@ int main(){
 	logs_seq_no = 1;
 
 	//Function to initialise 64 bit timer
-//	Tim64_init();
+	Tim64_init();
 
 	uint8_t mode = 0;
 	counter_init(&counter_i2c);
@@ -327,7 +327,6 @@ int main(){
 
 	adf_status = adf_init();
 	mode = adf_get_state();
-
 
 
 	stat2 |= mode;

@@ -495,7 +495,7 @@ uint8_t adf_get_state() {
 	uint8_t tries = 0;
     while((!(misc_fw[0] == 0xe4 || misc_fw[0] == 0xA4)) && tries++ < 100){
     	adf_read_from_memory(RMODE_1,MISC_FW,misc_fw,4);
-    	if( misc_fw[0] == 0xe2 || misc_fw[0] == 0xA2){
+    	if( misc_fw[0] == 0xe2 || misc_fw[0] == 0xA2 || misc_fw[0] == 0x00){
     		break;
     	}
     }

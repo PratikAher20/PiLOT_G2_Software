@@ -76,12 +76,14 @@ uint8_t get_gmc(){
 //		gmc_pkt->GMC_GTime_SVector[i] = Time_Vector[i];
 //	}
 
+	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
+
 	gmc_pkt->ccsds_p1 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p1(tlm_pkt_type, GMC_API_ID))));
 	gmc_pkt->ccsds_p2 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p2((gmc_seq_num++)))));
 	gmc_pkt->ccsds_p3 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p3(GMC_PKT_LENGTH))));
-	gmc_pkt->ccsds_s1 = 0;
+	gmc_pkt->ccsds_s1 = current_time_upper;
 
-	gmc_pkt->ccsds_s2 = 0;
+	gmc_pkt->ccsds_s2 = current_time_lower;
 
 	if(store_in_sd_card){
 			sd_dump_gmc = 1;
@@ -94,8 +96,8 @@ uint8_t get_gmc(){
 			sd_dump_gmc = 0;
 			gmc_pkt->GMC_sd_dump = sd_dump_gmc;
 			gmc_pkt->Fletcher_Code = make_FLetcher(data, sizeof(gmc_pkt_t) - 2);
-	//		vGetPktStruct(comms, (void*) comms_pkt, sizeof(comms_pkt_t));
-			MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(gmc_pkt_t));
+			vGetPktStruct(gmc, (void*) gmc_pkt, sizeof(gmc_pkt_t));
+//			MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(gmc_pkt_t));
 		}
 
 

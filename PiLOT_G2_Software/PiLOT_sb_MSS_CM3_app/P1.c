@@ -11,6 +11,7 @@ hk_pkt_t* hk_pkt;
 thermistor_pkt_t* thermistor_pkt;
 uint8_t data[512];
 uint16_t hk_seq_num =0;
+uint16_t temp_seq_num =0;
 uint8_t RTM[16];
 uint8_t latest_codeword = 0;
 uint16_t blck_pkt[4][256];
@@ -232,8 +233,8 @@ uint16_t get_hk(){
 		sd_dump = 0;
 		hk_pkt->sd_dump = sd_dump;
 		hk_pkt->Fletcher_Code = make_FLetcher(data, sizeof(hk_pkt_t) - 2);
-//		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
-		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
+		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
+//		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 	}
 
 	return result;
@@ -251,20 +252,38 @@ uint16_t get_temp(){
 	uint16_t res = 0;
 	thermistor_pkt = (thermistor_pkt_t*) data;
 
+	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
+
+	thermistor_pkt->ccsds_p1 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p1(tlm_pkt_type, THERMISTOR_API_ID))));
+	thermistor_pkt->ccsds_p2 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p2((temp_seq_num++)))));
+	thermistor_pkt->ccsds_p3 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p3(THERMISTOR_PKT_LENGTH))));
+	thermistor_pkt->ccsds_s2 = current_time_lower;
+	thermistor_pkt->ccsds_s1 = current_time_upper;
+
 	for(;i<8;i++){
 		thermistor_pkt->Temperature_Values[i] = get_ADC_value(TEMP_ADC_CORE_I2C, ADC_ADDR, i, &flag);
 		res |= (flag << i);
 	}
 
+	get_time_vector(Time_Vector);
+	for(;i<32;i++){
+		thermistor_pkt->GTime_SVector[i] = Time_Vector[i];
+	}
+
+
 	if(store_in_sd_card){
 		sd_dump_thermistor = 1;
+		thermistor_pkt->sd_dump = sd_dump_thermistor;
+		thermistor_pkt->Fletcher_Code = make_FLetcher(data, sizeof(thermistor_pkt_t) - 2);
 		store_data(&thermistor_partition, data);
 		store_in_sd_card = 0;
 	}
 	else{
 		sd_dump_thermistor = 0;
-//		vGetPktStruct(thermistor, (void*) thermistor_pkt, sizeof(thermistor_pkt_t));
-		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
+		thermistor_pkt->sd_dump = sd_dump_thermistor;
+		thermistor_pkt->Fletcher_Code = make_FLetcher(data, sizeof(thermistor_pkt_t) - 2);
+		vGetPktStruct(thermistor, (void*) thermistor_pkt, sizeof(thermistor_pkt_t));
+//		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(thermistor_pkt_t));
 	}
 
 	return res;

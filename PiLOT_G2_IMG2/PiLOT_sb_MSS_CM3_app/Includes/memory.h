@@ -18,6 +18,7 @@
 #define CURRENT_BLOCK 1024
 
 //Define the initial block numbers of all partitions
+#define LOGS_BLOCK_INIT        		0x4F1A6E
 #define PAYLOAD_BLOCK_INIT        	0x4F1A6E
 #define HK_BLOCK_INIT        		0xA
 #define COMMS_BLOCK_INIT          	0x5703D2
@@ -25,11 +26,12 @@
 #define THERMISTOR_BLOCK_INIT		0x59647E
 
 //Define the ending block numbers of all the partitions
+#define LOGS_BLOCK_END				0x57036E
 #define PAYLOAD_BLOCK_END			0x57036E
 #define HK_BLOCK_END				0x4F1A0A
 #define COMMS_BLOCK_END				0x57CE52
 #define GMC_BLOCK_END				800
-#define THERMISTOR_BLOCK_END				0x7A59FE
+#define THERMISTOR_BLOCK_END		0x7A59FE
 
 //All the Partitions used
 #define HK_PARTITION 				0x01

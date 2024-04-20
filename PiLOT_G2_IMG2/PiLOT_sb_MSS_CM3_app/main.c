@@ -11,6 +11,8 @@
 
 //IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2
 
+extern uint8_t data[512];
+init_packet_t* init_pkt;
 timer_instance_t hk_timer;
 timer_instance_t comms_timer;
 timer_instance_t gmc_timer;
@@ -21,8 +23,10 @@ partition_t hk_partition;
 partition_t comms_partition;
 partition_t gmc_partition;
 partition_t thermistor_partition;
+partition_t log_partiton;
 extern uint8_t store_in_sd_card;
-uint8_t IMG_ID = 0;
+extern uint32_t REPRO_CODE_WORD_ADDR;
+uint8_t IMG_ID = 1;
 uint16_t rssi_cca;
 uint16_t rssi;
 uint8_t ERR_LOG = 0;
@@ -36,7 +40,13 @@ uint8_t reset_counts[1] = {0};
 rx_cmd_t* rx_cmd_pkt;
 uint8_t Time_Vector[32];
 uint16_t Read_TPSRAM_addr;
+uint8_t stat1 = 0;
+uint8_t stat2 = 0;
+uint8_t adf_status = 0;
 
+
+
+uint64_t current_time_upper,current_time_lower;
 
 //Declare variables to hold the current 64 bit timer counts
 uint64_t current_time_upper,current_time_lower;
@@ -50,36 +60,87 @@ log_packet_t *log_packet_ptr;
 //Declare log counter
 uint8_t log_counter;
 
+//Declare logs sequence number variable
+uint16_t logs_seq_no;
+
+//Declare variable for status for each packet
+uint16_t hk_status,gmc_status,comms_status,therm_status;
+
+//Function to form Log packet
+void form_log_packet() {
+	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
+	log_packet_ptr->ccsds_p1 = PILOT_REVERSE_BYTE_ORDER(ccsds_p1(tlm_pkt_type,LOGS_API_ID));
+	log_packet_ptr->ccsds_p2 = PILOT_REVERSE_BYTE_ORDER(ccsds_p2((logs_seq_no)));
+	log_packet_ptr->ccsds_p3 = PILOT_REVERSE_BYTE_ORDER(ccsds_p3(LOGS_PKT_LENGTH));
+	log_packet_ptr->ccsds_s2 = current_time_lower;
+	log_packet_ptr->ccsds_s1 = current_time_upper;
+	log_packet_ptr->Fletcher_Code = make_FLetcher(log_data,LOGS_PKT_LENGTH-2);
+	//Need to replace the below l
+	// add_to_queue(LOGS_PKT_LENGTH,&log_p,log_data,&logs_miss,LOGS_TASK_ID);
+	if(store_in_sd_card){
+		store_data(&log_partiton, log_data);
+	}
+	else{
+//		vGetPktStruct(logs, (void*) log_packet_ptr, sizeof(log_packet_t));
+		MSS_UART_polled_tx(&g_mss_uart0, log_data, sizeof(log_packet_t));
+	}
+	log_counter = 0;
+	logs_seq_no++;
+}
 void HK_ISR(){
 	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
 
-	get_hk();
-//	if(log_counter >= 10) {
-////		form_log_packet();
-//	}
-	//Need to add mutex here
-//	log_packet_ptr->logs[log_counter].task_id = HK_TASK_ID;
-//	log_packet_ptr->logs[log_counter].time_H = current_time_upper;
-//	log_packet_ptr->logs[log_counter].time_L = current_time_lower;
-//	log_packet_ptr->logs[log_counter].task_status = hk_status;
-//	log_counter++;
-	//Need to remove mutex here
+	hk_status = get_hk();
+	if(log_counter >= 10) {
+		form_log_packet();
+	}
+	log_packet_ptr->logs[log_counter].task_id = HK_TASK_ID;
+	log_packet_ptr->logs[log_counter].time_H = current_time_upper;
+	log_packet_ptr->logs[log_counter].time_L = current_time_lower;
+	log_packet_ptr->logs[log_counter].task_status = hk_status;
+	log_counter++;
 	TMR_clear_int(&hk_timer);
 }
 
 void GMC_ISR(){
-	uint8_t gmc_status;
+	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
 	gmc_status = get_gmc();
+	if(log_counter >= 10) {
+		form_log_packet();
+	}
+	log_packet_ptr->logs[log_counter].task_id = GMC_TASK_ID;
+	log_packet_ptr->logs[log_counter].time_H = current_time_upper;
+	log_packet_ptr->logs[log_counter].time_L = current_time_lower;
+	log_packet_ptr->logs[log_counter].task_status = gmc_status;
+	log_counter++;
 	TMR_clear_int(&gmc_timer);
 }
 
 void COMMS_ISR(){
-	uint16_t comms_status = get_comms();
+	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
+	comms_status = get_comms();
+	if(log_counter >= 10) {
+		form_log_packet();
+	}
+	log_packet_ptr->logs[log_counter].task_id = COMMS_TASK_ID;
+	log_packet_ptr->logs[log_counter].time_H = current_time_upper;
+	log_packet_ptr->logs[log_counter].time_L = current_time_lower;
+	log_packet_ptr->logs[log_counter].task_status = comms_status;
+	log_counter++;
 	TMR_clear_int(&comms_timer);
 }
 
 void THER_ISR(){
-	get_temp();
+	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
+	therm_status =  get_temp();
+	if(log_counter >= 10) {
+		form_log_packet();
+	}
+	log_packet_ptr->logs[log_counter].task_id = THERMISTOR_TASK_ID;
+	log_packet_ptr->logs[log_counter].time_H = current_time_upper;
+	log_packet_ptr->logs[log_counter].time_L = current_time_lower;
+	log_packet_ptr->logs[log_counter].task_status = therm_status;
+	log_counter++;
 	TMR_clear_int(&temp_timer);
 }
 
@@ -120,7 +181,7 @@ void timer_intr_set(){
 	NVIC_SetPriority(FabricIrq8_IRQn, 254);
 
 	TMR_start(&hk_timer);
-//	TMR_start(&comms_timer);
+	TMR_start(&comms_timer);
 //	TMR_start(&temp_timer);
 //	TMR_start(&sd_timer);
 //	TMR_start(&gmc_timer);
@@ -177,98 +238,112 @@ void Tim64_init() {
 	MSS_TIM64_start();
 }
 
+void get_init(){
+	init_pkt = (init_packet_t* )data;
+	init_pkt->Status_1 = stat1;
+	init_pkt->Adf_init_status = adf_status;
+	init_pkt->status_2 = stat2;
+	init_pkt->ccsds_p1 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p1(tlm_pkt_type, INIT_API_ID))));
+	init_pkt->ccsds_p2 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p2((0)))));
+	init_pkt->ccsds_p3 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p3(INIT_PKT_LENGTH))));
+	init_pkt->ccsds_s1 = 0;
+	init_pkt->ccsds_s2 = 0;
+
+	uint8_t i = 0;
+
+	get_time_vector(Time_Vector);
+	for(;i<32;i++){
+		init_pkt->GTime_SVector[i] = Time_Vector[i];
+	}
+	init_pkt->Fletcher_Code = make_FLetcher(data, sizeof(init_packet_t) - 2);
+
+
+//	vGetPktStruct(init, (void*) init_pkt, sizeof(init_packet_t));
+	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(init_packet_t));
+
+}
+
 int main(){
 
-    //adf_init
-    //gmc_init
-    //sd_init
-    //pslv_interface_init
-    //interface_init
+//adf_init
+	//gmc_init
+	//sd_init
+	//pslv_interface_init
+	//interface_init
 	MSS_WD_init();
 	MSS_WD_reload();
 	p1_init();
+	MSS_GPIO_init();
+	MSS_GPIO_config(MSS_GPIO_0, MSS_GPIO_OUTPUT_MODE);
+	MSS_GPIO_config(MSS_GPIO_2, MSS_GPIO_OUTPUT_MODE);
+	MSS_GPIO_config(MSS_GPIO_6, MSS_GPIO_OUTPUT_MODE);
+
+	MSS_GPIO_set_output(MSS_GPIO_0, 1);	//Control_Interface ON
+	MSS_GPIO_set_output(MSS_GPIO_2, 1);	//COmms_ON
+	MSS_GPIO_set_output(MSS_GPIO_6, 1);	//GMC_on
+
+	MSS_SYS_init(MSS_SYS_NO_EVENT_HANDLER);
+	MSS_SPI_init( &g_mss_spi0 );
+	MSS_SPI_configure_master_mode(&g_mss_spi0, MSS_SPI_SLAVE_0, MSS_SPI_MODE0, 8u, 8);
+
+	MSS_SPI_init(&g_mss_spi1);
+	MSS_SPI_configure_master_mode(&g_mss_spi1, MSS_SPI_SLAVE_0, MSS_SPI_MODE0, 512, 8);
 
 	initialise_partition(&hk_partition, HK_BLOCK_INIT, HK_BLOCK_END);
 	initialise_partition(&comms_partition, COMMS_BLOCK_INIT, COMMS_BLOCK_END);
 	initialise_partition(&thermistor_partition, THERMISTOR_BLOCK_INIT, THERMISTOR_BLOCK_END);
 	initialise_partition(&gmc_partition, GMC_BLOCK_INIT, GMC_BLOCK_END);
+	initialise_partition(&log_partiton, LOGS_BLOCK_INIT, LOGS_BLOCK_END);
+
+	uint8_t init_envm[3];
+	init_envm[0] = 0x00;
+	init_envm[1] = 0x00;
+	init_envm[2] = 0x00;
+	NVM_write(REPRO_CODE_WORD_ADDR, init_envm, 3, NVM_DO_NOT_LOCK_PAGE);
+
 	//Assign log packet pointer to log data buffer
 	log_packet_ptr = (log_packet_t*)log_data;
 
 	//Initialise log counter to zero
 	log_counter = 0;
 
+	//Initailise the log sequence number
+	logs_seq_no = 1;
+
 	//Function to initialise 64 bit timer
-//	Tim64_init();
+	Tim64_init();
 
-	ADC_Init(TEMP_ADC_CORE_I2C, ADC_ADDR);
-
+	uint8_t mode = 0;
 	counter_init(&counter_i2c);
-	ADC_Init(&counter_i2c, ADC_ADDR);
 
-	uint16_t ax, ay, az;
-	uint16_t roll_rate, pitch_rate, yaw_rate;
-	uint16_t imu_temp;
-	uint8_t result = 0, flag;
-	uint32_t tmr_value;
-	uint16_t i = 1;
-	uint16_t cont, waddr, raddr;
-	uint16_t buf[256];
-	buf[0] = 0;
-	uint16_t data[256];
+	stat1 |= ADC_Init(TEMP_ADC_CORE_I2C, ADC_ADDR);
+	stat1 = (stat1 << 1);
+	stat1 |= ADC_Init(&counter_i2c, ADC_ADDR);
+	stat1 = (stat1 << 1);
+	stat1 |= SD_Init();
+	stat1 = (stat1 << 5);
+	stat1 |= init_RS485_Controller();
+
+	adf_status = adf_init();
+	mode = adf_get_state();
+
+
+
+	stat2 |= mode;
+	stat2 = (stat2 << 1);
+	stat2 |= vc_init(VC1);
+	stat2 = (stat2 << 1);
+
+
 	uint16_t curr_tpsram_read_addr;
 	uint16_t rssi;
-	uint8_t mode;
-	uint32_t freq;
-	uint8_t cmd;
+	uint8_t cmd[8];
 	uint8_t cmd_rx_flag = 0;
 
-	MSS_SYS_init(MSS_SYS_NO_EVENT_HANDLER);
-	MSS_SPI_init( &g_mss_spi0 );
-	MSS_SPI_configure_master_mode
-		(
-			&g_mss_spi0,
-			MSS_SPI_SLAVE_0,
-			MSS_SPI_MODE0,
-			8u,
-			8
-		);
-	MSS_GPIO_init();
-	MSS_GPIO_config(MSS_GPIO_0, MSS_GPIO_OUTPUT_MODE);
-	MSS_GPIO_config(MSS_GPIO_10, MSS_GPIO_OUTPUT_MODE);
-	MSS_GPIO_set_output(MSS_GPIO_0, 1);
-	uint32_t sd_addr = 10;
-	uint8_t sd_data_write[512];
-	uint8_t data_read[512];
-	uint8_t sd_flg;
+
 	uint32_t wd_reset;
 
-	sd_data_write[0] = 0x21;
-	sd_data_write[1] = 0x20;
-	sd_data_write[3] = 0x19;
-	sd_data_write[4] = 0x18;
-
-	MSS_SPI_init(&g_mss_spi1);
-	MSS_SPI_configure_master_mode(&g_mss_spi1, MSS_SPI_SLAVE_0, MSS_SPI_MODE0, 512, 8);
-
-	sd_flg = SD_Init();
-
-	vc_init(VC_SENSOR_I2C);
-////
-//	sd_flg = SD_Write(sd_addr, sd_data_write);
-//
-//	sd_flg = SD_Read(sd_addr, data_read);
-//
 	init_cmd_engine();
-
-	cont = HAL_get_16bit_reg(RS_485_Controller_0, READ_CONST);
-
-
-	waddr = init_RS485_Controller();
-
-	adf_init();
-
-	mode = adf_get_state();
 
 	 MSS_UART_init(&g_mss_uart0,
 	                   MSS_UART_9600_BAUD,
@@ -284,10 +359,7 @@ int main(){
 	uint32_t CMD_CHK_TIMER = 0xFFFFFFFF - (MSS_SYS_M3_CLK_FREQ* (10));
 	uint32_t curr_value = 0x0;
 
-	MSS_TIM1_init(MSS_TIMER_PERIODIC_MODE);
-    MSS_TIM1_load_immediate(timer_count);
-    MSS_TIM1_start();
-
+	get_init();
 
 	while(1){
 
