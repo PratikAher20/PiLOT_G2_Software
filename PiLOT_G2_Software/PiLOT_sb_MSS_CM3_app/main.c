@@ -80,8 +80,8 @@ void form_log_packet() {
 		store_data(&log_partiton, log_data);
 	}
 	else{
-		vGetPktStruct(logs, (void*) log_packet_ptr, sizeof(log_packet_t));
-//		MSS_UART_polled_tx(&g_mss_uart0, log_data, sizeof(log_packet_t));
+//		vGetPktStruct(logs, (void*) log_packet_ptr, sizeof(log_packet_t));
+		MSS_UART_polled_tx(&g_mss_uart0, log_data, sizeof(log_packet_t));
 	}
 	log_counter = 0;
 	logs_seq_no++;
@@ -181,9 +181,9 @@ void timer_intr_set(){
 
 	TMR_start(&hk_timer);
 	TMR_start(&comms_timer);
-	TMR_start(&temp_timer);
-	TMR_start(&sd_timer);
-	TMR_start(&gmc_timer);
+//	TMR_start(&temp_timer);
+//	TMR_start(&sd_timer);
+//	TMR_start(&gmc_timer);
 }
 
 void timer_dis(){
@@ -258,8 +258,8 @@ void get_init(){
 	init_pkt->Fletcher_Code = make_FLetcher(data, sizeof(init_packet_t) - 2);
 
 
-	vGetPktStruct(init, (void*) init_pkt, sizeof(init_packet_t));
-//	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(init_packet_t));
+//	vGetPktStruct(init, (void*) init_pkt, sizeof(init_packet_t));
+	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(init_packet_t));
 
 
 }
@@ -402,7 +402,9 @@ int main(){
 		adf_send_cmd(CMD_PHY_ON);
 		adf_send_cmd(CMD_PHY_CCA);
 
+		timer_dis();
 		get_rssi_cca_data(&rssi_cca);
+		timer_ena();
 //
 //		curr_value = MSS_TIM1_get_current_value();
 //

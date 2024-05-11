@@ -21,6 +21,7 @@ extern uint32_t cmd_adf_read_addr;
 extern uint8_t cmd_adf_read_No_double_words;
 extern uint32_t cmd_adf_data[8];
 extern uint8_t RTM[16];
+extern uint8_t IMG_ID;
 
 uint32_t REPRO_CODE_WORD_ADDR = 0x60033000;
 uint8_t* code_word = (uint8_t*) 0x60033000;
@@ -141,21 +142,41 @@ void exe_iap(rx_cmd_t* rcv_cmd){
 
 
 	if(code_word[0] == 0x07 && code_word[1] == 0x14 && code_word[2] == 0x21){
-		MSS_SPI_set_slave_select( &g_mss_spi0, MSS_SPI_SLAVE_0 );
+		if(IMG_ID == 0){
+			MSS_SPI_set_slave_select( &g_mss_spi0, MSS_SPI_SLAVE_0 );
 
-		g_mss_spi0.hw_reg->CONTROL |= (0x04000000);
-		delay(80000);
+			g_mss_spi0.hw_reg->CONTROL |= (0x04000000);
+			delay(80000);
 
-		auth_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_AUTHENTICATE, 0x001000);
+			auth_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_AUTHENTICATE, 0x001000);
 
-		delay(80000);
+			delay(80000);
 
-		if(auth_status){
-			ERR_LOG = ERR_LOG | 0x01;
+			if(auth_status){
+				ERR_LOG = ERR_LOG | 0x01;
+			}
+			else{
+				prog_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_PROGRAM, 0x001000);
+			}
 		}
 		else{
-			prog_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_PROGRAM, 0x001000);
+			MSS_SPI_set_slave_select( &g_mss_spi0, MSS_SPI_SLAVE_0 );
+
+			g_mss_spi0.hw_reg->CONTROL |= (0x04000000);
+			delay(80000);
+
+			auth_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_AUTHENTICATE, 0x001000);
+
+			delay(80000);
+
+			if(auth_status){
+				ERR_LOG = ERR_LOG | 0x01;
+			}
+			else{
+				prog_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_PROGRAM, 0x001000);
+			}
 		}
+
 	}
 
 }

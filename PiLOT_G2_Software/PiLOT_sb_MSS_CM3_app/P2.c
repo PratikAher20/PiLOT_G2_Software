@@ -90,7 +90,6 @@ uint8_t get_gmc(){
 			gmc_pkt->GMC_sd_dump = sd_dump_gmc;
 			gmc_pkt->Fletcher_Code = make_FLetcher(data, sizeof(gmc_pkt_t) - 2);
 			store_data(&gmc_partition, data);
-	//		store_in_sd_card = 0;
 		}
 		else{
 			sd_dump_gmc = 0;
@@ -149,7 +148,6 @@ uint16_t get_comms(){
 		comms_pkt->comms_sd_dump = sd_dump_comms;
 		comms_pkt->Fletcher_Code = make_FLetcher(data, sizeof(comms_pkt_t) - 2);
 		store_data(&comms_partition, data);
-		store_in_sd_card = 0;
 	}
 	else{
 		sd_dump_comms = 0;

@@ -327,8 +327,6 @@ int main(){
 	adf_status = adf_init();
 	mode = adf_get_state();
 
-
-
 	stat2 |= mode;
 	stat2 = (stat2 << 1);
 	stat2 |= vc_init(VC1);
@@ -365,7 +363,9 @@ int main(){
 
 		adf_send_cmd(CMD_PHY_CCA);
 
+		timer_dis();
 		get_rssi_cca_data(&rssi_cca);
+		timer_ena();
 
 		if(store_in_sd_card == 1){
 			curr_tpsram_read_addr = HAL_get_16bit_reg(RS_485_Controller_0, READ_RADDR);

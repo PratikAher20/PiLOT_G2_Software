@@ -221,20 +221,14 @@ uint16_t get_hk(){
 		hk_pkt->sd_dump = sd_dump;
 		hk_pkt->Fletcher_Code = make_FLetcher(data, sizeof(hk_pkt_t) - 2);
 		result |= ((store_data(&hk_partition, data) == 0 ? 0 : 1) << 7);
-//		a = MSS_GPIO_get_inputs();
-//		if(a && 0x01 == 0){
-//			store_in_sd_card = 0;
-//		}
-//		store_in_sd_card = 0;
 		store_data(&hk_partition, data);
-		store_in_sd_card = 0;
 	}
 	else{
 		sd_dump = 0;
 		hk_pkt->sd_dump = sd_dump;
 		hk_pkt->Fletcher_Code = make_FLetcher(data, sizeof(hk_pkt_t) - 2);
-		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
-//		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
+//		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
+		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 	}
 
 	return result;
@@ -276,7 +270,6 @@ uint16_t get_temp(){
 		thermistor_pkt->sd_dump = sd_dump_thermistor;
 		thermistor_pkt->Fletcher_Code = make_FLetcher(data, sizeof(thermistor_pkt_t) - 2);
 		store_data(&thermistor_partition, data);
-		store_in_sd_card = 0;
 	}
 	else{
 		sd_dump_thermistor = 0;

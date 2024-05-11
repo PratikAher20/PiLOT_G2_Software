@@ -31,6 +31,11 @@ uint8_t adf_init(){
 	enable_intr[1] = 0xFF;
 	enable_intr[2] = 0x10;
 	enable_intr[3] = 0x17;
+	uint8_t rssi_cca[6];
+	rssi_cca[0] = 0x00;
+	rssi_cca[1] = 0x00;
+	rssi_cca[2] = 0x00;
+	rssi_cca[3] = 0x00;
 	//Set limit as a multiple of 100us
 	// limit = (data[0] - 48) * 100;
 	// limit = limit * MSS_SYS_M3_CLK_FREQ / 1000000;
@@ -136,6 +141,12 @@ uint8_t adf_init(){
 	}
 
 	count = config_adf7030();
+
+	adf_read_from_memory(RMODE_1, PROFILE_CCA_READBACK, rssi_cca, 6);
+
+	rssi_cca[3] = rssi_cca[3] && 0x00;
+
+	adf_write_to_memory(WMODE_1, PROFILE_CCA_READBACK, rssi_cca, 4);
 
 	if(count == 0){
 		count = cmd_ready_set();
