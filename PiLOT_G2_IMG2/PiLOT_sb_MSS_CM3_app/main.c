@@ -9,6 +9,7 @@
 #include "cmd.h"
 //#include "RS485_Controller.h"
 
+//Update Image
 //IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2//IMG-2
 
 extern uint8_t data[512];

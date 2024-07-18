@@ -9,6 +9,7 @@
 #include "cmd.h"
 //#include "RS485_Controller.h"
 
+//Golden Image
 //IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1
 
 extern uint8_t data[512];
@@ -181,9 +182,9 @@ void timer_intr_set(){
 
 	TMR_start(&hk_timer);
 	TMR_start(&comms_timer);
-//	TMR_start(&temp_timer);
-//	TMR_start(&sd_timer);
-//	TMR_start(&gmc_timer);
+	TMR_start(&temp_timer);
+	TMR_start(&sd_timer);
+	TMR_start(&gmc_timer);
 }
 
 void timer_dis(){

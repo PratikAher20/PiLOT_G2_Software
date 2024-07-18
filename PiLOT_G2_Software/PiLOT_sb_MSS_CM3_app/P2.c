@@ -95,8 +95,8 @@ uint8_t get_gmc(){
 			sd_dump_gmc = 0;
 			gmc_pkt->GMC_sd_dump = sd_dump_gmc;
 			gmc_pkt->Fletcher_Code = make_FLetcher(data, sizeof(gmc_pkt_t) - 2);
-			vGetPktStruct(gmc, (void*) gmc_pkt, sizeof(gmc_pkt_t));
-//			MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(gmc_pkt_t));
+//			vGetPktStruct(gmc, (void*) gmc_pkt, sizeof(gmc_pkt_t));
+			MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(gmc_pkt_t));
 		}
 
 

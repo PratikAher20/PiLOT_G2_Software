@@ -275,8 +275,8 @@ uint16_t get_temp(){
 		sd_dump_thermistor = 0;
 		thermistor_pkt->sd_dump = sd_dump_thermistor;
 		thermistor_pkt->Fletcher_Code = make_FLetcher(data, sizeof(thermistor_pkt_t) - 2);
-		vGetPktStruct(thermistor, (void*) thermistor_pkt, sizeof(thermistor_pkt_t));
-//		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(thermistor_pkt_t));
+//		vGetPktStruct(thermistor, (void*) thermistor_pkt, sizeof(thermistor_pkt_t));
+		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(thermistor_pkt_t));
 	}
 
 	return res;
