@@ -30,7 +30,7 @@
  * @param tx_size   : the number of bytes to be written to the vc sensor
  * @return uint8_t  : returns 0 if successful, non-zero otherwise
  */
-uint8_t vc_write(uint8_t addr, uint8_t *tx, uint8_t tx_size);
+uint8_t vc_write(i2c_instance_t* I2C, uint8_t addr, uint8_t *tx, uint8_t tx_size);
 
 /**
  * @brief Function to read from the vc sensor
@@ -40,7 +40,7 @@ uint8_t vc_write(uint8_t addr, uint8_t *tx, uint8_t tx_size);
  * @param rx_size   : the number of bytes to read from the vc sensor
  * @return uint8_t  : returns 0 if successful, non-zero otherwise
  */
-uint8_t vc_read(uint8_t addr, uint8_t *rx, uint8_t rx_size);
+uint8_t vc_read(i2c_instance_t* I2C, uint8_t addr, uint8_t *rx, uint8_t rx_size);
 
 /**
  * @brief Function to read a register from the vc sensor
@@ -50,7 +50,7 @@ uint8_t vc_read(uint8_t addr, uint8_t *rx, uint8_t rx_size);
  * @param rx            : the two byte array to store the data read
  * @return uint8_t      : returns 0 if successful, non-zero otherwise
  */
-uint8_t vc_read_reg(uint8_t vc_addr, uint8_t reg_addr,uint8_t *rx);
+uint8_t vc_read_reg(i2c_instance_t* I2C, uint8_t vc_addr, uint8_t reg_addr,uint8_t *rx);
 
 /**
  * @brief Function to write to a register in the vc sensor
@@ -61,7 +61,7 @@ uint8_t vc_read_reg(uint8_t vc_addr, uint8_t reg_addr,uint8_t *rx);
  * @param tx_size       : the number of bytes to be written to the register
  * @return uint8_t      : returns 0 if successful, non-zero otherwise
  */
-uint8_t vc_write_reg(uint8_t vc_addr, uint8_t reg_addr,uint8_t *tx,uint8_t tx_size);
+uint8_t vc_write_reg(i2c_instance_t* I2C, uint8_t vc_addr, uint8_t reg_addr,uint8_t *tx,uint8_t tx_size);
 
 /**
  * @brief Function to initialise a vc sensor
@@ -69,7 +69,7 @@ uint8_t vc_write_reg(uint8_t vc_addr, uint8_t reg_addr,uint8_t *tx,uint8_t tx_si
  * @param addr          : the address of the vc sensor to be initialised
  * @return uint8_t      : returns 0 if successful, non-zero otherwise
  */
-uint8_t vc_init(uint8_t addr);
+uint8_t vc_init(i2c_instance_t* I2C, uint8_t addr);
 
 /**
  * @brief Function to read the bus voltage from the vc sensor
@@ -79,7 +79,7 @@ uint8_t vc_init(uint8_t addr);
  * @param flag          : this flag is set to 0 if the read was successful, 1 otherwise
  * @return uint16_t     : returns the value of the bus voltage register for the given channel
  */
-uint16_t read_bus_voltage(uint8_t addr, uint8_t chx,uint8_t *flag);
+uint16_t read_bus_voltage(i2c_instance_t* I2C, uint8_t addr, uint8_t chx,uint8_t *flag);
 
 /**
  * @brief Function to read the shunt voltage from the vc sensor
@@ -89,7 +89,7 @@ uint16_t read_bus_voltage(uint8_t addr, uint8_t chx,uint8_t *flag);
  * @param flag          : this flag is set to 0 if the read was successful, 1 otherwise
  * @return uint16_t     : returns the value of the shunt voltage register for the given channel
  */
-uint16_t read_shunt_voltage(uint8_t addr, uint8_t chx,uint8_t *flag);
+uint16_t read_shunt_voltage(i2c_instance_t* I2C, uint8_t addr, uint8_t chx,uint8_t *flag);
 
 
 #endif /* INCLUDES_VC_SENSOR_H_ */

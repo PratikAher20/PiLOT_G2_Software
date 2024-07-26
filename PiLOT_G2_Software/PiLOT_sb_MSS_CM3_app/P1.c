@@ -175,10 +175,17 @@ uint16_t get_hk(){
 //	hk_pkt->Sensor_Board_VC[0] = read_bus_voltage(VC1, 1, &flag);
 //	hk_pkt->CDH_VC[0] = read_bus_voltage( VC1,  2, &flag);
 //	hk_pkt->PIS_VC[0] = read_bus_voltage( VC1,  3, &flag);
-	hk_pkt->Voltages[0] = read_bus_voltage(VC1, 2, &flag);
+	hk_pkt->Voltages[0] = read_bus_voltage(VC_SENSOR_I2C, VC1, 2, &flag);
 	result |= flag << 3;
-	hk_pkt->Voltages[1] = read_bus_voltage(VC1, 3, &flag);
+	hk_pkt->Voltages[1] = read_bus_voltage(VC_SENSOR_I2C, VC1, 3, &flag);
 	result |= flag << 4;
+	hk_pkt->Voltages[2] = read_bus_voltage(TEMP_ADC_CORE_I2C, VC1, 1, &flag);
+//	result |= flag << 5;
+	hk_pkt->Voltages[3] = read_bus_voltage(TEMP_ADC_CORE_I2C, VC1, 2, &flag);
+//	result |= flag << 6;
+	hk_pkt->Voltages[4] = read_bus_voltage(TEMP_ADC_CORE_I2C, VC1, 3, &flag);
+//	result |= flag << 6;
+
 //	hk_pkt->Sensor_Board_VC[1] = read_shunt_voltage(VC1, 1, &flag);
 //	hk_pkt->CDH_VC[1] = read_shunt_voltage( VC1,  2, &flag);
 //	hk_pkt->PIS_VC[1] = read_shunt_voltage( VC1,  3, &flag);
@@ -190,10 +197,16 @@ uint16_t get_hk(){
 	hk_pkt->Thermistor_Write_Pointer = thermistor_partition.write_pointer;
 	hk_pkt->Thermistor_Read_Pointer = thermistor_partition.read_pointer;
 
-	hk_pkt->Currents[0] = read_shunt_voltage( VC1,  2, &flag);
+	hk_pkt->Currents[0] = read_shunt_voltage(VC_SENSOR_I2C, VC1,  2, &flag);
 	result |= flag << 5;
-	hk_pkt->Currents[1] = read_shunt_voltage( VC1,  3, &flag);
+	hk_pkt->Currents[1] = read_shunt_voltage(VC_SENSOR_I2C, VC1,  3, &flag);
 	result |= flag << 6;
+	hk_pkt->Currents[2] = read_shunt_voltage(TEMP_ADC_CORE_I2C, VC1,  1, &flag);
+//	result |= flag << 9;
+	hk_pkt->Currents[3] = read_shunt_voltage(TEMP_ADC_CORE_I2C, VC1,  2, &flag);
+//	result |= flag << 10;
+	hk_pkt->Currents[4] = read_shunt_voltage(TEMP_ADC_CORE_I2C, VC1,  3, &flag);
+//	result |= flag << 10;
 
 	hk_pkt->latest_codeword_rx = latest_codeword;
 

@@ -108,8 +108,8 @@ typedef struct {
     uint16_t imu_temp;
 //    uint16_t CDH_VC[2];
 //    uint16_t PIS_VC[2];
-    uint16_t Voltages[2];
-    uint16_t Currents[2];
+    uint16_t Voltages[5];
+    uint16_t Currents[5];
 
     uint32_t HK_Read_Pointer;
     uint32_t HK_Write_Pointer;

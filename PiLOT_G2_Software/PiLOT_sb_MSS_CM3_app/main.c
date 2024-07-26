@@ -326,15 +326,16 @@ int main(){
 	stat1 = (stat1 << 5);
 	stat1 |= init_RS485_Controller();
 
-	adf_status = adf_init();
-	mode = adf_get_state();
+//	adf_status = adf_init();
+//	mode = adf_get_state();
 
 
-	stat2 |= mode;
+//	stat2 |= mode;
+//	stat2 = (stat2 << 1);
+	stat2 |= vc_init(VC_SENSOR_I2C, VC1);
 	stat2 = (stat2 << 1);
-	stat2 |= vc_init(VC1);
-	stat2 = (stat2 << 1);
 
+	vc_init(TEMP_ADC_CORE_I2C, VC1);
 
 	uint16_t curr_tpsram_read_addr;
 	uint16_t rssi;
@@ -350,7 +351,6 @@ int main(){
 	 MSS_UART_init(&g_mss_uart0,
 	                   MSS_UART_9600_BAUD,
 	                   MSS_UART_DATA_8_BITS | MSS_UART_NO_PARITY | MSS_UART_ONE_STOP_BIT);
-
 
 	NVIC_ClearPendingIRQ(FabricIrq4_IRQn);
 	NVIC_ClearPendingIRQ(FabricIrq5_IRQn);
