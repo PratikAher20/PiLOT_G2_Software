@@ -198,7 +198,7 @@ void timer_ena(){
 }
 
 void get_cmd(uint8_t* cmd, uint8_t src){
-
+	//src == 0 for TTPU and 1 for ADF
 	rx_cmd_pkt = (rx_cmd_t*) cmd;
 
 	if(cmd_valid(rx_cmd_pkt, src)){

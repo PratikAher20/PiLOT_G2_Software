@@ -49,8 +49,16 @@ void GPIO3_IRQHandler(void){
 		cmd[i] = HAL_get_8bit_reg(APB_READ_CMD_0, READ_SRAM_CMD);
 	}
 
+	i = 0;
+
 	for(;i<32;i++){
 		cmd[i] = HAL_get_8bit_reg(APB_READ_CMD_0, READ_SRAM_CMD);
+	}
+
+	i = 0;
+
+	for(;i<32;i++){
+		cmd[i] = cmd[i+3];
 	}
 
 	get_cmd(cmd, 0);

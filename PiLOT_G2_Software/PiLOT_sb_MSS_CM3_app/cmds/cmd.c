@@ -28,7 +28,7 @@ uint8_t* code_word = (uint8_t*) 0x60033000;
 
 uint8_t cmd_valid(rx_cmd_t* rx_cmd, uint8_t src){
 	//Logic to check validity of the command ID within limits along with the params limits.
-
+	//Check the Checksum of the cmds from TTPU and then proceed to check the cmd id.
 	if(rx_cmd->cmd_id - 1 >= 0x00 && rx_cmd->cmd_id - 1 <= NUM_CMDS){
 		return 1;  //Will be checking the validated of the checksum.
 	}
