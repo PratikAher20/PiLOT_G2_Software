@@ -12,6 +12,9 @@ extern uint8_t cmd_rs485_succ_count;
 extern uint8_t cmd_rs485_fail_count;
 extern uint8_t store_in_sd_card;
 extern timer_instance_t sd_timer;
+extern uint8_t Time_Vector[32];
+
+uint8_t no_of_TTPU_cmds = 0;
 
 void GPIO1_IRQHandler( void ){
     uint16_t a, i = 0;
@@ -45,13 +48,21 @@ void GPIO3_IRQHandler(void){
 //	}
 	uint8_t i = 0;
 	uint8_t cmd[32];
-	for(;i<32;i++){
-		cmd[i] = HAL_get_8bit_reg(APB_READ_CMD_0, READ_SRAM_CMD);
-	}
+	no_of_TTPU_cmds++;
 
-	for(;i<32;i++){
-		cmd[i] = HAL_get_8bit_reg(APB_READ_CMD_0, READ_SRAM_CMD);
+	if(no_of_TTPU_cmds == NUMBER_OF_REPRO_CMDS){
+		cmd[0] = 0x03;
 	}
+	else{
+		cmd[0] = 0x01;
+	}
+//	for(;i<32;i++){
+//		cmd[i] = HAL_get_8bit_reg(APB_READ_CMD_0, READ_SRAM_CMD);
+//	}
+//
+//	for(;i<32;i++){
+//		cmd[i] = HAL_get_8bit_reg(APB_READ_CMD_0, READ_SRAM_CMD);
+//	}
 
 	get_cmd(cmd, 0);
 
@@ -70,17 +81,15 @@ void GPIO3_IRQHandler(void){
 
 }
 
-void get_time_vector(uint8_t* time_vect){
+void get_time_vector(){
 
 	uint8_t i = 0;
 
+
 	for(;i<32;i++){
-		time_vect[i] = HAL_get_8bit_reg(APB_READ_TLM_0, READ_RADDR);
+		Time_Vector[i] = HAL_get_8bit_reg(APB_READ_TLM_0, READ_SRAM_CMD);
 	 }
-	 i=0;
-	 for(;i<32;i++){
-		 time_vect[i] = HAL_get_8bit_reg(APB_READ_TLM_0, READ_RADDR);
-	 }
+
 }
 
 

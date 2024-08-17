@@ -18,6 +18,7 @@ extern partition_t gmc_partition;
 extern uint8_t store_in_sd_card;
 extern uint8_t IMG_ID;
 extern uint64_t current_time_upper,current_time_lower;
+extern uint8_t Time_Vector[32];
 
 uint8_t sd_dump_comms = 0;
 uint8_t sd_dump_gmc = 0;
@@ -69,12 +70,12 @@ uint8_t get_gmc(){
 	gmc_pkt->GMC_Voltage_ADC[i] = ADC_voltages[i];
 	}
 
-//	get_time_vector(Time_Vector);
+	get_time_vector();
 
 	i = 0;
-//	for(;i<32;i++){
-//		gmc_pkt->GMC_GTime_SVector[i] = Time_Vector[i];
-//	}
+	for(;i<32;i++){
+		gmc_pkt->GMC_GTime_SVector[i] = Time_Vector[i];
+	}
 
 	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
 
@@ -95,8 +96,8 @@ uint8_t get_gmc(){
 			sd_dump_gmc = 0;
 			gmc_pkt->GMC_sd_dump = sd_dump_gmc;
 			gmc_pkt->Fletcher_Code = make_FLetcher(data, sizeof(gmc_pkt_t) - 2);
-//			vGetPktStruct(gmc, (void*) gmc_pkt, sizeof(gmc_pkt_t));
-			MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(gmc_pkt_t));
+			vGetPktStruct(gmc, (void*) gmc_pkt, sizeof(gmc_pkt_t));
+//			MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(gmc_pkt_t));
 		}
 
 
@@ -133,7 +134,7 @@ uint16_t get_comms(){
 		comms_pkt->comms_adf_data[i] =	cmd_adf_data[i];
 	}
 
-
+	i = 0;
 
 //	comms_pkt->comms_adf_state = adf_get_state();
 
@@ -142,6 +143,12 @@ uint16_t get_comms(){
 	comms_pkt->ccsds_p3 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p3(COMMS_PKT_LENGTH))));
 	comms_pkt->ccsds_s2 = current_time_lower;
 	comms_pkt->ccsds_s1 = current_time_upper;
+
+	get_time_vector();
+	for(;i<32;i++){
+		comms_pkt->comms_GTime_SVector[i] = Time_Vector[i];
+	}
+
 
 	if(store_in_sd_card){
 		sd_dump_comms = 1;
@@ -153,8 +160,8 @@ uint16_t get_comms(){
 		sd_dump_comms = 0;
 		comms_pkt->comms_sd_dump = sd_dump_comms;
 		comms_pkt->Fletcher_Code = make_FLetcher(data, sizeof(comms_pkt_t) - 2);
-//		vGetPktStruct(comms, (void*) comms_pkt, sizeof(comms_pkt_t));
-		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(comms_pkt_t));
+		vGetPktStruct(comms, (void*) comms_pkt, sizeof(comms_pkt_t));
+//		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(comms_pkt_t));
 	}
 
 //	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(comms_pkt_t));

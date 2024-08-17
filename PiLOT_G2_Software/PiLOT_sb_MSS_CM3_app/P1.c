@@ -65,7 +65,7 @@ void store_pkt(){
 void p1_init(){
 	I2C_init(VC_SENSOR_I2C, COREI2C_0_0, VC1, I2C_PCLK_DIV_256);	//VC_Sensor
 	I2C_init(IMU_CORE_I2C, COREI2C_3_0, IMU_ADDR, I2C_PCLK_DIV_256);	//IMU_Sensor
-	I2C_init(TEMP_ADC_CORE_I2C, COREI2C_1_0, ADC_ADDR, I2C_PCLK_DIV_256);	//Temp_ADC_Sensor
+	I2C_init(TEMP_ADC_CORE_I2C, COREI2C_1_0, ADC_ADDR, I2C_BCLK_DIV_8);	//Temp_ADC_Sensor
 }
 
 
@@ -210,9 +210,10 @@ uint16_t get_hk(){
 
 	hk_pkt->latest_codeword_rx = latest_codeword;
 
-	get_time_vector(Time_Vector);
+	i = 0;
+	get_time_vector();
 	for(;i<32;i++){
-		hk_pkt->GTime_SVector[i] = Time_Vector[i];
+		hk_pkt->HKGTime_SVector[i] = Time_Vector[i];
 	}
 
 	hk_pkt->ccsds_p1 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p1(tlm_pkt_type, HK_API_ID))));
@@ -240,8 +241,8 @@ uint16_t get_hk(){
 		sd_dump = 0;
 		hk_pkt->sd_dump = sd_dump;
 		hk_pkt->Fletcher_Code = make_FLetcher(data, sizeof(hk_pkt_t) - 2);
-//		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
-		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
+		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
+//		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 	}
 
 	return result;
@@ -271,10 +272,10 @@ uint16_t get_temp(){
 		thermistor_pkt->Temperature_Values[i] = get_ADC_value(TEMP_ADC_CORE_I2C, ADC_ADDR, i, &flag);
 		res |= (flag << i);
 	}
-
-	get_time_vector(Time_Vector);
+	i = 0;
+	get_time_vector();
 	for(;i<32;i++){
-		thermistor_pkt->GTime_SVector[i] = Time_Vector[i];
+		thermistor_pkt->TempGTime_SVector[i] = Time_Vector[i];
 	}
 
 
@@ -288,8 +289,8 @@ uint16_t get_temp(){
 		sd_dump_thermistor = 0;
 		thermistor_pkt->sd_dump = sd_dump_thermistor;
 		thermistor_pkt->Fletcher_Code = make_FLetcher(data, sizeof(thermistor_pkt_t) - 2);
-//		vGetPktStruct(thermistor, (void*) thermistor_pkt, sizeof(thermistor_pkt_t));
-		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(thermistor_pkt_t));
+		vGetPktStruct(thermistor, (void*) thermistor_pkt, sizeof(thermistor_pkt_t));
+//		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(thermistor_pkt_t));
 	}
 
 	return res;

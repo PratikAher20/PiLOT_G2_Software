@@ -45,7 +45,7 @@ all: PiLOT_sb_MSS_CM3_app secondary-outputs
 PiLOT_sb_MSS_CM3_app: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GNU C Linker'
-	arm-none-eabi-gcc -mthumb -mcpu=cortex-m3 -L"C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug" -TC:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\CMSIS\startup_gcc\debug-in-microsemi-smartfusion2-esram.ld -Wl,-Map=$(EXECUTABLE).map -Xlinker -gc-sections -o"PiLOT_sb_MSS_CM3_app" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -mthumb -mcpu=cortex-m3 -L"E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\Debug" -TE:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\CMSIS\startup_gcc\production-smartfusion2-execute-in-place.ld -Wl,-Map=$(EXECUTABLE).map -Xlinker -gc-sections -o"PiLOT_sb_MSS_CM3_app" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

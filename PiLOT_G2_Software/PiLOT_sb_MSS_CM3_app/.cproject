@@ -475,6 +475,8 @@
 <option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.cross.cortexm3.exe.release.option.debugging.level.885691619" name="Debug Level" superClass="gnu.c.compiler.cross.cortexm3.exe.release.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
 <option id="gnu.c.compiler.option.include.paths.2076154215" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 <listOptionValue builtIn="false" value="${workspace_loc:/PiLOT_sb_MSS_CM3_hw_platform/}"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/PiLOT_sb_MSS_CM3_hw_platform}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/PiLOT_sb_MSS_CM3_app/Includes}&quot;"/>
 <listOptionValue builtIn="false" value="${workspace_loc:/PiLOT_sb_MSS_CM3_hw_platform/CMSIS}"/>
 <listOptionValue builtIn="false" value="${workspace_loc:/PiLOT_sb_MSS_CM3_hw_platform/CMSIS/startup_gcc}"/>
 <listOptionValue builtIn="false" value="${workspace_loc:/PiLOT_sb_MSS_CM3_hw_platform/drivers}"/>

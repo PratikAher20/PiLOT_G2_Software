@@ -30,9 +30,10 @@ extern uint8_t IMG_ID;
 extern uint8_t reset_counts[1];
 extern rx_cmd_t* rx_cmd_pkt;
 extern uint8_t Time_Vector[32];
+extern uint8_t CHK_CMD;
 extern uint64_t current_time_upper,current_time_lower;
 
-
+uint8_t cmd_cntr = 0;
 //uint16_t data_test[256] = {0};
 
 void timer_intr_dis(){
@@ -63,7 +64,7 @@ void store_pkt(){
 void p1_init(){
 	I2C_init(VC_SENSOR_I2C, COREI2C_0_0, VC1, I2C_PCLK_DIV_256);	//VC_Sensor
 	I2C_init(IMU_CORE_I2C, COREI2C_3_0, IMU_ADDR, I2C_PCLK_DIV_256);	//IMU_Sensor
-	I2C_init(TEMP_ADC_CORE_I2C, COREI2C_1_0, ADC_ADDR, I2C_PCLK_DIV_256);	//Temp_ADC_Sensor
+	I2C_init(TEMP_ADC_CORE_I2C, COREI2C_1_0, ADC_ADDR, I2C_BCLK_DIV_8);	//Temp_ADC_Sensor
 }
 
 
@@ -173,10 +174,17 @@ uint16_t get_hk(){
 //	hk_pkt->Sensor_Board_VC[0] = read_bus_voltage(VC1, 1, &flag);
 //	hk_pkt->CDH_VC[0] = read_bus_voltage( VC1,  2, &flag);
 //	hk_pkt->PIS_VC[0] = read_bus_voltage( VC1,  3, &flag);
-	hk_pkt->Voltages[0] = read_bus_voltage(VC1, 2, &flag);
+	hk_pkt->Voltages[0] = read_bus_voltage(VC_SENSOR_I2C, VC1, 2, &flag);
 	result |= flag << 3;
-	hk_pkt->Voltages[1] = read_bus_voltage(VC1, 3, &flag);
+	hk_pkt->Voltages[1] = read_bus_voltage(VC_SENSOR_I2C, VC1, 3, &flag);
 	result |= flag << 4;
+	hk_pkt->Voltages[2] = read_bus_voltage(TEMP_ADC_CORE_I2C, VC1, 1, &flag);
+//	result |= flag << 5;
+	hk_pkt->Voltages[3] = read_bus_voltage(TEMP_ADC_CORE_I2C, VC1, 2, &flag);
+//	result |= flag << 6;
+	hk_pkt->Voltages[4] = read_bus_voltage(TEMP_ADC_CORE_I2C, VC1, 3, &flag);
+//	result |= flag << 6;
+
 //	hk_pkt->Sensor_Board_VC[1] = read_shunt_voltage(VC1, 1, &flag);
 //	hk_pkt->CDH_VC[1] = read_shunt_voltage( VC1,  2, &flag);
 //	hk_pkt->PIS_VC[1] = read_shunt_voltage( VC1,  3, &flag);
@@ -188,16 +196,23 @@ uint16_t get_hk(){
 	hk_pkt->Thermistor_Write_Pointer = thermistor_partition.write_pointer;
 	hk_pkt->Thermistor_Read_Pointer = thermistor_partition.read_pointer;
 
-	hk_pkt->Currents[0] = read_shunt_voltage( VC1,  2, &flag);
+	hk_pkt->Currents[0] = read_shunt_voltage(VC_SENSOR_I2C, VC1,  2, &flag);
 	result |= flag << 5;
-	hk_pkt->Currents[1] = read_shunt_voltage( VC1,  3, &flag);
+	hk_pkt->Currents[1] = read_shunt_voltage(VC_SENSOR_I2C, VC1,  3, &flag);
 	result |= flag << 6;
+	hk_pkt->Currents[2] = read_shunt_voltage(TEMP_ADC_CORE_I2C, VC1,  1, &flag);
+//	result |= flag << 9;
+	hk_pkt->Currents[3] = read_shunt_voltage(TEMP_ADC_CORE_I2C, VC1,  2, &flag);
+//	result |= flag << 10;
+	hk_pkt->Currents[4] = read_shunt_voltage(TEMP_ADC_CORE_I2C, VC1,  3, &flag);
+//	result |= flag << 10;
 
 	hk_pkt->latest_codeword_rx = latest_codeword;
 
-	get_time_vector(Time_Vector);
+	i = 0;
+	get_time_vector();
 	for(;i<32;i++){
-		hk_pkt->GTime_SVector[i] = Time_Vector[i];
+		hk_pkt->HKGTime_SVector[i] = Time_Vector[i];
 	}
 
 	hk_pkt->ccsds_p1 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p1(tlm_pkt_type, HK_API_ID))));
@@ -205,6 +220,14 @@ uint16_t get_hk(){
 	hk_pkt->ccsds_p3 = PILOT_REVERSE_BYTE_ORDER(((ccsds_p3(HK_PKT_LENGTH))));
 	hk_pkt->ccsds_s2 = current_time_lower;
 	hk_pkt->ccsds_s1 = current_time_upper;
+
+	if(cmd_cntr == 20){
+		cmd_cntr = 1;
+		CHK_CMD = 0;
+	}
+	else{
+		cmd_cntr++ ;
+	}
 
 	if(store_in_sd_card){
 		sd_dump = 1;
@@ -217,8 +240,8 @@ uint16_t get_hk(){
 		sd_dump = 0;
 		hk_pkt->sd_dump = sd_dump;
 		hk_pkt->Fletcher_Code = make_FLetcher(data, sizeof(hk_pkt_t) - 2);
-//		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
-		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
+		vGetPktStruct(hk, (void*) hk_pkt, sizeof(hk_pkt_t));
+//		MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(hk_pkt_t));
 	}
 
 	return result;
@@ -249,9 +272,10 @@ uint16_t get_temp(){
 		res |= (flag << i);
 	}
 
-	get_time_vector(Time_Vector);
+	i = 0;
+	get_time_vector();
 	for(;i<32;i++){
-		thermistor_pkt->GTime_SVector[i] = Time_Vector[i];
+		thermistor_pkt->TempGTime_SVector[i] = Time_Vector[i];
 	}
 
 

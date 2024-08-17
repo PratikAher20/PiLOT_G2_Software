@@ -35,8 +35,9 @@
 #define NUM_BYTES	32
 #define PAY_ID	0x07
 #define CLKS_PER_BIT    MSS_SYS_M3_CLK_FREQ / RS485_BAUD_RATE
+#define NUMBER_OF_REPRO_CMDS	5
 
 uint8_t init_RS485_Controller();
-void get_time_vector(uint8_t* time_vect);
+void get_time_vecto();
 
 #endif /* INCLUDES_RS485_CONTROLLER_H_ */

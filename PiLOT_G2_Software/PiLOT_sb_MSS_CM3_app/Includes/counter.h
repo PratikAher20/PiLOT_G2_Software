@@ -31,7 +31,7 @@
 #define     counter_addr            0x32
 #define     base_addr               COREI2C_2_0
 #define     RESET_GMC_GPIO          MSS_GPIO_6
-#define 	GMC_ADC_address 			0x21
+#define 	GMC_ADC_address 			0x23
 
 i2c_instance_t counter_i2c;
 

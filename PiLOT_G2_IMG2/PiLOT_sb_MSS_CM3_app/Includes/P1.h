@@ -108,8 +108,8 @@ typedef struct {
     uint16_t imu_temp;
 //    uint16_t CDH_VC[2];
 //    uint16_t PIS_VC[2];
-    uint16_t Voltages[2];
-    uint16_t Currents[2];
+    uint16_t Voltages[5];
+    uint16_t Currents[5];
 
     uint32_t HK_Read_Pointer;
     uint32_t HK_Write_Pointer;
@@ -126,7 +126,7 @@ typedef struct {
 //    uint16_t hk_miss;
 //    uint16_t payload_miss;
     uint8_t sd_dump;
-    uint8_t GTime_SVector[32];
+    uint8_t HKGTime_SVector[32];
 //
     uint16_t Fletcher_Code;
 }__attribute__((packed)) hk_pkt_t;
@@ -141,7 +141,7 @@ typedef struct{
 	uint32_t ccsds_s2;
 	uint16_t Temperature_Values[8];
 	uint8_t sd_dump;
-	uint8_t GTime_SVector[32];
+	uint8_t TempGTime_SVector[32];
 	uint16_t Fletcher_Code;
 
 }__attribute__((packed))thermistor_pkt_t;

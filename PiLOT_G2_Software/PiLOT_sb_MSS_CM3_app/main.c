@@ -81,8 +81,8 @@ void form_log_packet() {
 		store_data(&log_partiton, log_data);
 	}
 	else{
-//		vGetPktStruct(logs, (void*) log_packet_ptr, sizeof(log_packet_t));
-		MSS_UART_polled_tx(&g_mss_uart0, log_data, sizeof(log_packet_t));
+		vGetPktStruct(logs, (void*) log_packet_ptr, sizeof(log_packet_t));
+//		MSS_UART_polled_tx(&g_mss_uart0, log_data, sizeof(log_packet_t));
 	}
 	log_counter = 0;
 	logs_seq_no++;
@@ -252,15 +252,15 @@ void get_init(){
 
 	uint8_t i = 0;
 
-	get_time_vector(Time_Vector);
+	get_time_vector();
 	for(;i<32;i++){
 		init_pkt->GTime_SVector[i] = Time_Vector[i];
 	}
 	init_pkt->Fletcher_Code = make_FLetcher(data, sizeof(init_packet_t) - 2);
 
 
-//	vGetPktStruct(init, (void*) init_pkt, sizeof(init_packet_t));
-	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(init_packet_t));
+	vGetPktStruct(init, (void*) init_pkt, sizeof(init_packet_t));
+//	MSS_UART_polled_tx(&g_mss_uart0, data, sizeof(init_packet_t));
 
 
 }
@@ -326,12 +326,12 @@ int main(){
 	stat1 = (stat1 << 5);
 	stat1 |= init_RS485_Controller();
 
-//	adf_status = adf_init();
-//	mode = adf_get_state();
+	adf_status = adf_init();
+	mode = adf_get_state();
 
 
-//	stat2 |= mode;
-//	stat2 = (stat2 << 1);
+	stat2 |= mode;
+	stat2 = (stat2 << 1);
 	stat2 |= vc_init(VC_SENSOR_I2C, VC1);
 	stat2 = (stat2 << 1);
 

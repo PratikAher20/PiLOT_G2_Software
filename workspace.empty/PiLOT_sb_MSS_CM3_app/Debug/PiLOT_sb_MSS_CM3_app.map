@@ -1,0 +1,2173 @@
+Archive member included because of file (symbol)
+
+E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hw_reg_access.o)
+                              ./P1.o (HW_set_16bit_reg)
+E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+                              ./P1.o (g_mss_uart0)
+E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                              ./main.o (MSS_SYS_init)
+E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                              ./main.o (g_mss_spi0)
+E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+                              ./main.o (NVM_write)
+E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+                              ./main.o (MSS_GPIO_init)
+E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+                              ./main.o (TMR_init)
+E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+                              ./Comms/adf7030.o (SPI_init)
+E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                              ./P1.o (I2C_init)
+E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+                              E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o) (I2C_enable_irq)
+E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                              E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o) (SystemCoreClock)
+E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hal.o)
+                              E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o) (HAL_disable_interrupts)
+E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+                              E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o) (MSS_COMBLK_init)
+c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+                              E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o (__errno)
+c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+                              c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o) (_impure_ptr)
+c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+                              E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o (__libc_init_array)
+c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+                              E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o) (memcpy)
+c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+                              ./OBC/Flash.o (memset)
+
+Allocating common symbols
+Common symbol       size              file
+
+log_counter         0x1               ./main.o
+gmc_pkt             0x4               ./P2.o
+ADC_voltages        0x10              ./P2.o
+comms_timer         0x4               ./main.o
+comms_pkt           0x4               ./P2.o
+log_packet_ptr      0x4               ./main.o
+data_read           0x5               ./OBC/Flash.o
+gmc_partition       0x10              ./main.o
+Read_TPSRAM_addr    0x2               ./main.o
+g_core_i2c2         0x6c              ./P1.o
+g_core_i2c0         0x6c              ./P1.o
+g_core_i2c1         0x6c              ./P1.o
+g_mss_spi1          0x84              E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+gmc_voltage_flags   0x1               ./GMC/counter.o
+flag                0x1               ./OBC/SD.o
+gmc_radiation_count
+                    0x4               ./P2.o
+hk_pkt              0x4               ./P1.o
+log_data            0x200             ./main.o
+adf_spi             0x4               ./Comms/adf7030.o
+g_core_spi0         0x48              ./P1.o
+g_core_i2c5         0x6c              ./P1.o
+count_val           0x3               ./P2.o
+init_command        0x2               ./PIS/VC_Sensor.o
+temp_timer          0x4               ./main.o
+g_core_i2c3         0x6c              ./P1.o
+free_res            0x3               ./P2.o
+current_time_lower  0x8               ./main.o
+cmd_adf_data        0x20              ./P2.o
+read                0x2               ./PIS/VC_Sensor.o
+g_mss_uart1         0x40              E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+bvol                0x2               ./PIS/VC_Sensor.o
+sd_timer            0x4               ./main.o
+thermistor_pkt      0x4               ./P1.o
+rx_buf              0x10              ./OBC/Flash.o
+data                0x200             ./P1.o
+current_time_upper  0x8               ./main.o
+rx_cmd_pkt          0x4               ./main.o
+gmc_free_res_value  0x4               ./P2.o
+g_mss_uart0         0x40              E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+rssi_cca            0x2               ./main.o
+count               0x1               ./PIS/VC_Sensor.o
+cmd_buff            0x10              ./P1.o
+thermistor_partition
+                    0x10              ./main.o
+rssi                0x2               ./main.o
+config_reg          0x1               ./PIS/VC_Sensor.o
+core_i2c_status     0x1               ./P1.o
+radio_memory_configuration_start_spi_command
+                    0x4               ./Comms/adf7030.o
+blck_pkt            0x800             ./P1.o
+g_mss_spi0          0x84              E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+comms_partition     0x10              ./main.o
+cmd_list            0x23              ./cmds/cmd.o
+hk_partition        0x10              ./main.o
+counter_i2c         0x6c              ./P1.o
+hk_timer            0x4               ./main.o
+Time_Vector         0x20              ./main.o
+RTM                 0x10              ./P1.o
+status              0x1               ./P2.o
+g_core_i2c4         0x6c              ./P1.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .data          0x00000000        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .text          0x00000000        0x0 ./P1.o
+ .data          0x00000000        0x0 ./P1.o
+ .bss           0x00000000        0x0 ./P1.o
+ .text.NVIC_EnableIRQ
+                0x00000000       0x38 ./P1.o
+ .text.NVIC_DisableIRQ
+                0x00000000       0x3c ./P1.o
+ .bss.send_pkt_flg
+                0x00000000        0x1 ./P1.o
+ .bss.active_blck
+                0x00000000        0x1 ./P1.o
+ .bss.wri_ptr   0x00000000        0x1 ./P1.o
+ .text.timer_intr_dis
+                0x00000000       0x10 ./P1.o
+ .text.timer_intr_en
+                0x00000000       0x10 ./P1.o
+ .text.store_pkt
+                0x00000000       0x60 ./P1.o
+ .text.vGetPktStruct
+                0x00000000       0xf8 ./P1.o
+ .text          0x00000000        0x0 ./P2.o
+ .data          0x00000000        0x0 ./P2.o
+ .bss           0x00000000        0x0 ./P2.o
+ .bss.sd_dump_gmc
+                0x00000000        0x1 ./P2.o
+ .bss.data_test
+                0x00000000       0x34 ./P2.o
+ .bss.gmc_seq_num
+                0x00000000        0x2 ./P2.o
+ .text.get_gmc  0x00000000      0x554 ./P2.o
+ .text          0x00000000        0x0 ./main.o
+ .data          0x00000000        0x0 ./main.o
+ .bss           0x00000000        0x0 ./main.o
+ .text          0x00000000        0x0 ./packet_definition.o
+ .data          0x00000000        0x0 ./packet_definition.o
+ .bss           0x00000000        0x0 ./packet_definition.o
+ .text          0x00000000        0x0 ./cmds/cmd.o
+ .data          0x00000000        0x0 ./cmds/cmd.o
+ .bss           0x00000000        0x0 ./cmds/cmd.o
+ .text          0x00000000        0x0 ./PIS/RS485_Controller.o
+ .data          0x00000000        0x0 ./PIS/RS485_Controller.o
+ .bss           0x00000000        0x0 ./PIS/RS485_Controller.o
+ .text          0x00000000        0x0 ./PIS/VC_Sensor.o
+ .data          0x00000000        0x0 ./PIS/VC_Sensor.o
+ .bss           0x00000000        0x0 ./PIS/VC_Sensor.o
+ .text.vc_write_reg
+                0x00000000       0x58 ./PIS/VC_Sensor.o
+ .text.vc_init  0x00000000       0x78 ./PIS/VC_Sensor.o
+ .text          0x00000000        0x0 ./OBC/ADC.o
+ .data          0x00000000        0x0 ./OBC/ADC.o
+ .bss           0x00000000        0x0 ./OBC/ADC.o
+ .text          0x00000000        0x0 ./OBC/Flash.o
+ .data          0x00000000        0x0 ./OBC/Flash.o
+ .bss           0x00000000        0x0 ./OBC/Flash.o
+ .data.CMD_RDB  0x00000000        0x4 ./OBC/Flash.o
+ .data.cmd      0x00000000        0x1 ./OBC/Flash.o
+ .text.read_status_reg
+                0x00000000       0x5c ./OBC/Flash.o
+ .text.chk_busy
+                0x00000000       0x94 ./OBC/Flash.o
+ .text.write_cmd_data
+                0x00000000       0xf0 ./OBC/Flash.o
+ .text.FLASH_program
+                0x00000000      0x1b0 ./OBC/Flash.o
+ .text.flash_erase
+                0x00000000       0x80 ./OBC/Flash.o
+ .text.flash_sec_erase
+                0x00000000       0xa8 ./OBC/Flash.o
+ .text.flash_64kb_block_erase
+                0x00000000       0xb0 ./OBC/Flash.o
+ .text.Flash_write_enable
+                0x00000000       0xb4 ./OBC/Flash.o
+ .text.flash_write
+                0x00000000      0x560 ./OBC/Flash.o
+ .text.flash_read
+                0x00000000       0x90 ./OBC/Flash.o
+ .text.flash_fast_read
+                0x00000000       0x88 ./OBC/Flash.o
+ .text.Read_mgf_id
+                0x00000000       0x68 ./OBC/Flash.o
+ .text.Flash_unblock_blocks
+                0x00000000       0x60 ./OBC/Flash.o
+ .text.wait_ready
+                0x00000000       0x44 ./OBC/Flash.o
+ .text.flash_init
+                0x00000000       0x50 ./OBC/Flash.o
+ .rodata.C.26.3811
+                0x00000000        0x4 ./OBC/Flash.o
+ .rodata.C.22.3727
+                0x00000000        0x4 ./OBC/Flash.o
+ COMMON         0x00000000       0x18 ./OBC/Flash.o
+ .text          0x00000000        0x0 ./OBC/IMU.o
+ .data          0x00000000        0x0 ./OBC/IMU.o
+ .bss           0x00000000        0x0 ./OBC/IMU.o
+ .text          0x00000000        0x0 ./OBC/SD.o
+ .data          0x00000000        0x0 ./OBC/SD.o
+ .bss           0x00000000        0x0 ./OBC/SD.o
+ .data.CMD1     0x00000000        0x8 ./OBC/SD.o
+ .text          0x00000000        0x0 ./OBC/memory.o
+ .data          0x00000000        0x0 ./OBC/memory.o
+ .bss           0x00000000        0x0 ./OBC/memory.o
+ .text          0x00000000        0x0 ./GMC/counter.o
+ .data          0x00000000        0x0 ./GMC/counter.o
+ .bss           0x00000000        0x0 ./GMC/counter.o
+ .data.rx_size  0x00000000        0x1 ./GMC/counter.o
+ .text.reset_counter
+                0x00000000       0x68 ./GMC/counter.o
+ .text.get_count
+                0x00000000       0x54 ./GMC/counter.o
+ .text.set_free_res
+                0x00000000       0x68 ./GMC/counter.o
+ .text.get_free_res
+                0x00000000       0x8c ./GMC/counter.o
+ .text.get_gmc_voltages
+                0x00000000       0x80 ./GMC/counter.o
+ COMMON         0x00000000        0x1 ./GMC/counter.o
+ .text          0x00000000        0x0 ./Comms/adf7030.o
+ .data          0x00000000        0x0 ./Comms/adf7030.o
+ .bss           0x00000000        0x0 ./Comms/adf7030.o
+ .data.callibrations_config
+                0x00000000     0x1b64 ./Comms/adf7030.o
+ .bss.config_length_header
+                0x00000000        0x4 ./Comms/adf7030.o
+ .text.adf_send_cmd_without_ready
+                0x00000000       0x78 ./Comms/adf7030.o
+ .text.adf_config_gpio
+                0x00000000      0x160 ./Comms/adf7030.o
+ .text.read_cmd
+                0x00000000       0x38 ./Comms/adf7030.o
+ .text.get_temp_data
+                0x00000000       0x58 ./Comms/adf7030.o
+ .rodata        0x00000000       0x10 ./Comms/adf7030.o
+ .text.send_nop
+                0x00000000      0x13c ./Comms/adf7030.o
+ .text.chk_status
+                0x00000000       0xbc ./Comms/adf7030.o
+ .text.tx_pkt   0x00000000      0x1b4 ./Comms/adf7030.o
+ .rodata.C.83.5497
+                0x00000000        0x4 ./Comms/adf7030.o
+ .text          0x00000000        0x0 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+ .data          0x00000000        0x0 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+ .bss           0x00000000        0x0 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+ .text          0x00000000        0x0 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .data          0x00000000        0x0 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .bss           0x00000000        0x0 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .bss.__env     0x00000000        0x4 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .data.environ  0x00000000        0x4 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._close   0x00000000       0x18 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._execve  0x00000000       0x28 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._exit    0x00000000        0xc E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._fork    0x00000000       0x18 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._fstat   0x00000000       0x24 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._getpid  0x00000000       0x10 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._isatty  0x00000000       0x18 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._kill    0x00000000       0x24 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._link    0x00000000       0x24 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._lseek   0x00000000       0x1c E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._open    0x00000000       0x1c E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._read    0x00000000       0x1c E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._write_r
+                0x00000000       0x20 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .rodata        0x00000000       0x30 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._sbrk    0x00000000       0xe4 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._stat    0x00000000       0x24 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._times   0x00000000       0x18 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._unlink  0x00000000       0x24 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._wait    0x00000000       0x24 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .bss.heap_end.2220
+                0x00000000        0x4 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .data          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hw_reg_access.o)
+ .bss           0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hw_reg_access.o)
+ .text          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .data          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .bss           0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.NVIC_EnableIRQ
+                0x00000000       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.NVIC_DisableIRQ
+                0x00000000       0x3c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_lin_init
+                0x00000000       0x78 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_irda_init
+                0x00000000       0xfc E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_smartcard_init
+                0x00000000       0x94 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_polled_tx_string
+                0x00000000       0xcc E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_irq_tx
+                0x00000000       0xb4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_tx_complete
+                0x00000000       0x90 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_get_rx
+                0x00000000       0xdc E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_irq
+                0x00000000       0xbc E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_irq
+                0x00000000       0xb8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_rx_handler
+                0x00000000       0xc0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_loopback
+                0x00000000       0xec E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_rxstatus_handler
+                0x00000000       0x8c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_tx_handler
+                0x00000000       0x9c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_modemstatus_handler
+                0x00000000       0x8c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_fill_tx_fifo
+                0x00000000       0xd4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_get_rx_status
+                0x00000000       0x80 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_get_modem_status
+                0x00000000       0x60 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_get_tx_status
+                0x00000000       0x78 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_break
+                0x00000000       0x5c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_clear_break
+                0x00000000       0x5c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_pidpei_handler
+                0x00000000       0x8c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_linbreak_handler
+                0x00000000       0x8c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_linsync_handler
+                0x00000000       0x8c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_nack_handler
+                0x00000000       0x8c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_rx_timeout_handler
+                0x00000000       0x8c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_half_duplex
+                0x00000000       0x5c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_half_duplex
+                0x00000000       0x5c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_rx_endian
+                0x00000000       0x88 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_tx_endian
+                0x00000000       0x88 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_filter_length
+                0x00000000       0x68 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_afm
+                0x00000000       0x5c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_afm
+                0x00000000       0x5c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_afclear
+                0x00000000       0x5c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_afclear
+                0x00000000       0x5c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_rx_timeout
+                0x00000000       0x6c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_rx_timeout
+                0x00000000       0x5c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_tx_time_guard
+                0x00000000       0x6c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_tx_time_guard
+                0x00000000       0x5c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_address
+                0x00000000       0x5c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_ready_mode
+                0x00000000       0x88 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_usart_mode
+                0x00000000       0x90 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .data          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss           0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_get_serial_number
+                0x00000000       0x2c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_get_user_code
+                0x00000000       0x2c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_get_design_version
+                0x00000000       0x2c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_get_device_certificate
+                0x00000000       0x2c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_get_secondary_device_certificate
+                0x00000000       0x90 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.ind       0x00000000        0x1 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_flash_freeze
+                0x00000000       0xf0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_128bit_aes
+                0x00000000       0xa4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_256bit_aes
+                0x00000000       0xa4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_sha256
+                0x00000000       0x7c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_hmac
+                0x00000000       0x98 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_key_tree
+                0x00000000       0x7c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_challenge_response
+                0x00000000       0x78 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_nrbg_reset
+                0x00000000       0x7c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_nrbg_self_test
+                0x00000000       0x68 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_nrbg_instantiate
+                0x00000000       0x6c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_nrbg_generate
+                0x00000000       0x70 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_nrbg_reseed
+                0x00000000       0x50 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_nrbg_uninstantiate
+                0x00000000       0x70 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_zeroize_device
+                0x00000000       0xa4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.g_isp_response
+                0x00000000        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.g_isp_completion_handler
+                0x00000000        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.g_isp_page_read_handler
+                0x00000000        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.g_mode    0x00000000        0x1 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .data.wait_for_clock_switch
+                0x00000000        0x1 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.isp_page_read_handler
+                0x00000000       0xa8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.isp_sys_completion_handler
+                0x00000000       0x70 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_start_isp
+                0x00000000      0x154 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_create_activation_code
+                0x00000000       0xa8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_delete_activation_code
+                0x00000000       0xa8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_get_number_of_keys
+                0x00000000       0xd8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_enroll_key
+                0x00000000       0xf0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_delete_key
+                0x00000000       0xb0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_fetch_key
+                0x00000000       0xc8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_export_keycodes
+                0x00000000       0xac E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_import_keycodes
+                0x00000000       0xac E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_fetch_ecc_public_key
+                0x00000000       0xa4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_puf_get_random_seed
+                0x00000000       0xa4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_ecc_point_multiplication
+                0x00000000       0xcc E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_ecc_point_addition
+                0x00000000       0xcc E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_ecc_get_base_point
+                0x00000000       0x3c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_start_clock_monitor
+                0x00000000       0xd4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_stop_clock_monitor
+                0x00000000       0xd4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_enable_puf_power_down
+                0x00000000       0xd4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_disable_puf_power_down
+                0x00000000       0xd4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_clear_lock_parity
+                0x00000000       0xd4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_clear_mesh_short
+                0x00000000       0xd4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.execute_service
+                0x00000000       0x6c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.write_ptr_value_into_array
+                0x00000000       0x60 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.write_array_into_ptr_value
+                0x00000000       0x70 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .rodata.C.119.4941
+                0x00000000       0x60 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .data          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .bss           0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_configure_slave_mode
+                0x00000000       0xd0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_set_frame_rx_handler
+                0x00000000       0xf0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_set_slave_tx_frame
+                0x00000000      0x110 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_set_slave_block_buffers
+                0x00000000      0x23c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_set_cmd_handler
+                0x00000000       0xc4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_set_cmd_response
+                0x00000000       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_enable
+                0x00000000       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_disable
+                0x00000000       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_set_transfer_byte_count
+                0x00000000       0x84 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_tx_done
+                0x00000000       0x24 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .data          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .bss           0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .text.NVM_unlock
+                0x00000000      0x20c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .text.NVM_read_page_write_count
+                0x00000000      0x13c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .text          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .data          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .bss           0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .text.MSS_GPIO_drive_inout
+                0x00000000      0x128 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .text.MSS_GPIO_disable_irq
+                0x00000000       0x50 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .text          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .data          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .bss           0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .text.TMR_stop
+                0x00000000       0x3c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .text.TMR_current_value
+                0x00000000       0x40 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .text.TMR_reload
+                0x00000000       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .text          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .data          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .bss           0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_configure_slave_mode
+                0x00000000       0x84 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_transfer_frame
+                0x00000000       0x94 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_set_frame_rx_handler
+                0x00000000      0x140 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_set_slave_tx_frame
+                0x00000000      0x13c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_set_slave_block_buffers
+                0x00000000      0x1c8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_set_cmd_handler
+                0x00000000       0xbc E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_set_cmd_response
+                0x00000000       0x58 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_enable
+                0x00000000       0x34 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_disable
+                0x00000000       0x34 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.SPI_isr  0x00000000      0x4d4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.fill_slave_tx_fifo
+                0x00000000       0xc0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.read_slave_rx_fifo
+                0x00000000       0xd4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .data          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .bss           0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_channel_init
+                0x00000000       0xec E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_get_status
+                0x00000000       0x20 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_system_tick
+                0x00000000       0x68 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_set_slave_tx_buffer
+                0x00000000       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_set_slave_rx_buffer
+                0x00000000       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_set_slave_mem_offset_length
+                0x00000000       0x34 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_register_write_handler
+                0x00000000       0x28 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_enable_slave
+                0x00000000       0x44 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_disable_slave
+                0x00000000       0x40 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_set_slave_second_addr
+                0x00000000       0x30 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_disable_slave_second_addr
+                0x00000000       0x24 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_set_gca
+                0x00000000       0x2c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_clear_gca
+                0x00000000       0x2c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_smbus_init
+                0x00000000       0x24 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_enable_smbus_irq
+                0x00000000       0x6c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_disable_smbus_irq
+                0x00000000       0x6c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_suspend_smbus_slave
+                0x00000000       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_resume_smbus_slave
+                0x00000000       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_reset_smbus
+                0x00000000       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_set_smbus_alert
+                0x00000000       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_clear_smbus_alert
+                0x00000000       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_get_irq_status
+                0x00000000       0x70 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_set_user_data
+                0x00000000       0x1c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_get_user_data
+                0x00000000       0x18 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .data          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .bss           0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .text          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .data          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .bss           0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .data          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hal.o)
+ .bss           0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hal.o)
+ .text          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .data          0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss           0x00000000        0x0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.MSS_COMBLK_send_cmd_with_ptr
+                0x00000000      0x160 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.MSS_COMBLK_send_paged_cmd
+                0x00000000      0x1a4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text          0x00000000        0xc c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .text          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .data          0x00000000       0xf4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .rodata        0x00000000        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .rodata.str1.4
+                0x00000000        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .text          0x00000000      0x190 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .text          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x20000000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+LOAD ./P1.o
+LOAD ./P2.o
+LOAD ./main.o
+LOAD ./packet_definition.o
+LOAD ./cmds/cmd.o
+LOAD ./PIS/RS485_Controller.o
+LOAD ./PIS/VC_Sensor.o
+LOAD ./OBC/ADC.o
+LOAD ./OBC/Flash.o
+LOAD ./OBC/IMU.o
+LOAD ./OBC/SD.o
+LOAD ./OBC/memory.o
+LOAD ./GMC/counter.o
+LOAD ./Comms/adf7030.o
+LOAD E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+LOAD E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+LOAD E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a
+START GROUP
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a
+END GROUP
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+START GROUP
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a
+END GROUP
+                0x00000000                __DYNAMIC = 0x0
+                0x20000000                RAM_START_ADDRESS = 0x20000000
+                0x00010000                RAM_SIZE = 0x10000
+                0x00001000                MAIN_STACK_SIZE = 0x1000
+                0x00001000                MIN_SIZE_HEAP = 0x1000
+                0x20010000                PROVIDE (__main_stack_start, (RAM_START_ADDRESS + RAM_SIZE))
+                0x20010000                PROVIDE (_estack, __main_stack_start)
+                0x00000000                PROVIDE (__mirrored_nvm, 0x0)
+                0x00000000                PROVIDE (__smartfusion2_memory_remap, 0x0)
+
+.vector_table   0x20000000      0x190
+                0x20000000                __vector_table_load = LOADADDR (.vector_table)
+                0x20000000                __vector_table_start = .
+                0x20000000                __vector_table_vma_base_address = .
+ *(.isr_vector)
+ .isr_vector    0x20000000      0x190 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+                0x20000000                g_pfnVectors
+                0x20000190                . = ALIGN (0x10)
+                0x20000190                _evector_table = .
+
+.boot_code      0x20000190      0x330
+ *(.boot_code)
+ .boot_code     0x20000190      0x330 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+                0x20000190                Reset_Handler
+                0x2000037e                NMI_Handler
+                0x20000380                HardFault_Handler
+                0x20000382                MemManage_Handler
+                0x20000384                BusFault_Handler
+                0x20000386                UsageFault_Handler
+                0x20000388                SVC_Handler
+                0x2000038a                DebugMon_Handler
+                0x2000038c                PendSV_Handler
+                0x2000038e                SysTick_Handler
+                0x20000390                WdogWakeup_IRQHandler
+                0x20000392                RTC_Wakeup_IRQHandler
+                0x20000398                I2C0_IRQHandler
+                0x2000039a                I2C0_SMBAlert_IRQHandler
+                0x2000039c                I2C0_SMBus_IRQHandler
+                0x2000039e                I2C1_IRQHandler
+                0x200003a0                I2C1_SMBAlert_IRQHandler
+                0x200003a2                I2C1_SMBus_IRQHandler
+                0x200003a8                EthernetMAC_IRQHandler
+                0x200003aa                DMA_IRQHandler
+                0x200003ac                Timer1_IRQHandler
+                0x200003ae                Timer2_IRQHandler
+                0x200003b0                CAN_IRQHandler
+                0x200003b2                ENVM0_IRQHandler
+                0x200003b4                ENVM1_IRQHandler
+                0x200003b8                USB_IRQHandler
+                0x200003ba                USB_DMA_IRQHandler
+                0x200003bc                PLL_Lock_IRQHandler
+                0x200003be                PLL_LockLost_IRQHandler
+                0x200003c0                CommSwitchError_IRQHandler
+                0x200003c2                CacheError_IRQHandler
+                0x200003c4                DDR_IRQHandler
+                0x200003c6                HPDMA_Complete_IRQHandler
+                0x200003c8                HPDMA_Error_IRQHandler
+                0x200003ca                ECC_Error_IRQHandler
+                0x200003cc                MDDR_IOCalib_IRQHandler
+                0x200003ce                FAB_PLL_Lock_IRQHandler
+                0x200003d0                FAB_PLL_LockLost_IRQHandler
+                0x200003d2                FIC64_IRQHandler
+                0x200003e4                FabricIrq8_IRQHandler
+                0x200003e6                FabricIrq9_IRQHandler
+                0x200003e8                FabricIrq10_IRQHandler
+                0x200003ea                FabricIrq11_IRQHandler
+                0x200003ec                FabricIrq12_IRQHandler
+                0x200003ee                FabricIrq13_IRQHandler
+                0x200003f0                FabricIrq14_IRQHandler
+                0x200003f2                FabricIrq15_IRQHandler
+                0x200003f4                GPIO0_IRQHandler
+                0x200003f8                GPIO2_IRQHandler
+                0x200003fc                GPIO4_IRQHandler
+                0x200003fe                GPIO5_IRQHandler
+                0x20000400                GPIO6_IRQHandler
+                0x20000402                GPIO7_IRQHandler
+                0x20000404                GPIO8_IRQHandler
+                0x20000406                GPIO9_IRQHandler
+                0x20000408                GPIO10_IRQHandler
+                0x2000040a                GPIO11_IRQHandler
+                0x2000040c                GPIO12_IRQHandler
+                0x2000040e                GPIO13_IRQHandler
+                0x20000410                GPIO14_IRQHandler
+                0x20000412                GPIO15_IRQHandler
+                0x20000414                GPIO16_IRQHandler
+                0x20000416                GPIO17_IRQHandler
+                0x20000418                GPIO18_IRQHandler
+                0x2000041a                GPIO19_IRQHandler
+                0x2000041c                GPIO20_IRQHandler
+                0x2000041e                GPIO21_IRQHandler
+                0x20000420                GPIO22_IRQHandler
+                0x20000422                GPIO23_IRQHandler
+                0x20000424                GPIO24_IRQHandler
+                0x20000426                GPIO25_IRQHandler
+                0x20000428                GPIO26_IRQHandler
+                0x2000042a                GPIO27_IRQHandler
+                0x2000042c                GPIO28_IRQHandler
+                0x2000042e                GPIO29_IRQHandler
+                0x20000430                GPIO30_IRQHandler
+                0x20000432                GPIO31_IRQHandler
+                0x20000434                mscc_post_hw_cfg_init
+                0x200004c0                . = ALIGN (0x10)
+
+.text           0x200004c0     0xa7a0
+ CREATE_OBJECT_SYMBOLS
+                0x200004c0                __text_load = LOADADDR (.text)
+                0x200004c0                __text_start = .
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x200004c0       0x30 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .text.MSS_WD_current_value
+                0x200004f0       0x18 ./P1.o
+ .text.make_FLetcher
+                0x20000508      0x138 ./P1.o
+                0x20000508                make_FLetcher
+ .text.p1_init  0x20000640       0x58 ./P1.o
+                0x20000640                p1_init
+ .text.get_hk   0x20000698      0x948 ./P1.o
+                0x20000698                get_hk
+ .text.get_temp
+                0x20000fe0       0xdc ./P1.o
+                0x20000fe0                get_temp
+ .text.get_sd_data
+                0x200010bc       0x1c ./P1.o
+                0x200010bc                get_sd_data
+ .text.get_comms
+                0x200010d8      0x538 ./P2.o
+                0x200010d8                get_comms
+ .text.NVIC_EnableIRQ
+                0x20001610       0x38 ./main.o
+ .text.NVIC_DisableIRQ
+                0x20001648       0x3c ./main.o
+ .text.NVIC_ClearPendingIRQ
+                0x20001684       0x3c ./main.o
+ .text.NVIC_SetPriority
+                0x200016c0       0x5c ./main.o
+ .text.MSS_TIM1_init
+                0x2000171c       0x84 ./main.o
+ .text.MSS_TIM1_start
+                0x200017a0       0x1c ./main.o
+ .text.MSS_TIM1_get_current_value
+                0x200017bc       0x18 ./main.o
+ .text.MSS_TIM1_load_immediate
+                0x200017d4       0x20 ./main.o
+ .text.MSS_TIM64_init
+                0x200017f4       0xa4 ./main.o
+ .text.MSS_TIM64_start
+                0x20001898       0x1c ./main.o
+ .text.MSS_TIM64_get_current_value
+                0x200018b4       0x30 ./main.o
+ .text.MSS_TIM64_load_immediate
+                0x200018e4       0x2c ./main.o
+ .text.MSS_WD_init
+                0x20001910       0x6c ./main.o
+ .text.MSS_WD_reload
+                0x2000197c       0x1c ./main.o
+ .text.MSS_WD_timeout_occured
+                0x20001998       0x18 ./main.o
+ .text.MSS_WD_clear_timeout_event
+                0x200019b0       0x1c ./main.o
+ .text.HK_ISR   0x200019cc      0x1b4 ./main.o
+                0x200019cc                HK_ISR
+ .text.COMMS_ISR
+                0x20001b80       0x24 ./main.o
+                0x20001b80                COMMS_ISR
+ .text.THER_ISR
+                0x20001ba4       0x18 ./main.o
+                0x20001ba4                THER_ISR
+ .text.SD_ISR   0x20001bbc       0x3c ./main.o
+                0x20001bbc                SD_ISR
+ .text.timer_intr_set
+                0x20001bf8      0x128 ./main.o
+                0x20001bf8                timer_intr_set
+ .text.timer_dis
+                0x20001d20       0x10 ./main.o
+                0x20001d20                timer_dis
+ .text.timer_ena
+                0x20001d30       0x10 ./main.o
+                0x20001d30                timer_ena
+ .text.get_cmd  0x20001d40       0x7c ./main.o
+                0x20001d40                get_cmd
+ .text.init_cmd_engine
+                0x20001dbc       0x74 ./main.o
+                0x20001dbc                init_cmd_engine
+ .text.Tim64_init
+                0x20001e30       0x20 ./main.o
+                0x20001e30                Tim64_init
+ .text.main     0x20001e50      0x3d4 ./main.o
+                0x20001e50                main
+ .text.FabricIrq0_IRQHandler
+                0x20002224       0x14 ./main.o
+                0x20002224                FabricIrq0_IRQHandler
+ .text.FabricIrq1_IRQHandler
+                0x20002238       0x14 ./main.o
+                0x20002238                FabricIrq1_IRQHandler
+ .text.FabricIrq2_IRQHandler
+                0x2000224c       0x14 ./main.o
+                0x2000224c                FabricIrq2_IRQHandler
+ .text.FabricIrq3_IRQHandler
+                0x20002260       0x14 ./main.o
+                0x20002260                FabricIrq3_IRQHandler
+ .text.FabricIrq4_IRQHandler
+                0x20002274        0xc ./main.o
+                0x20002274                FabricIrq4_IRQHandler
+ .text.FabricIrq5_IRQHandler
+                0x20002280        0xc ./main.o
+                0x20002280                FabricIrq5_IRQHandler
+ .text.FabricIrq6_IRQHandler
+                0x2000228c        0xc ./main.o
+                0x2000228c                FabricIrq6_IRQHandler
+ .text.FabricIrq7_IRQHandler
+                0x20002298        0xc ./main.o
+                0x20002298                FabricIrq7_IRQHandler
+ .text.NVIC_DisableIRQ
+                0x200022a4       0x3c ./cmds/cmd.o
+ .text.cmd_valid
+                0x200022e0       0x28 ./cmds/cmd.o
+                0x200022e0                cmd_valid
+ .text.add_cmd  0x20002308       0xbc ./cmds/cmd.o
+                0x20002308                add_cmd
+ .text.cmd_engine
+                0x200023c4       0x50 ./cmds/cmd.o
+                0x200023c4                cmd_engine
+ .text.cmd_noop
+                0x20002414       0x14 ./cmds/cmd.o
+                0x20002414                cmd_noop
+ .text.set_pkt_rate
+                0x20002428       0xd0 ./cmds/cmd.o
+                0x20002428                set_pkt_rate
+ .text.delay    0x200024f8       0x24 ./cmds/cmd.o
+                0x200024f8                delay
+ .text.exe_iap  0x2000251c      0x12c ./cmds/cmd.o
+                0x2000251c                exe_iap
+ .text.read_adf_reg
+                0x20002648      0x100 ./cmds/cmd.o
+                0x20002648                read_adf_reg
+ .text.exe_rtm  0x20002748       0x3c ./cmds/cmd.o
+                0x20002748                exe_rtm
+ .text.NVIC_EnableIRQ
+                0x20002784       0x38 ./PIS/RS485_Controller.o
+ .text.NVIC_SetPriority
+                0x200027bc       0x5c ./PIS/RS485_Controller.o
+ .text.MSS_GPIO_get_inputs
+                0x20002818       0x18 ./PIS/RS485_Controller.o
+ .text.GPIO1_IRQHandler
+                0x20002830       0x64 ./PIS/RS485_Controller.o
+                0x20002830                GPIO1_IRQHandler
+ .text.GPIO3_IRQHandler
+                0x20002894      0x100 ./PIS/RS485_Controller.o
+                0x20002894                GPIO3_IRQHandler
+ .text.get_time_vector
+                0x20002994       0x6c ./PIS/RS485_Controller.o
+                0x20002994                get_time_vector
+ .text.init_RS485_Controller
+                0x20002a00       0xe8 ./PIS/RS485_Controller.o
+                0x20002a00                init_RS485_Controller
+ .text.vc_write
+                0x20002ae8       0xa8 ./PIS/VC_Sensor.o
+                0x20002ae8                vc_write
+ .text.vc_read  0x20002b90       0xa8 ./PIS/VC_Sensor.o
+                0x20002b90                vc_read
+ .text.vc_read_reg
+                0x20002c38       0x58 ./PIS/VC_Sensor.o
+                0x20002c38                vc_read_reg
+ .text.read_bus_voltage
+                0x20002c90       0xbc ./PIS/VC_Sensor.o
+                0x20002c90                read_bus_voltage
+ .text.read_shunt_voltage
+                0x20002d4c       0xc0 ./PIS/VC_Sensor.o
+                0x20002d4c                read_shunt_voltage
+ .text.ADC_Init
+                0x20002e0c       0xf0 ./OBC/ADC.o
+                0x20002e0c                ADC_Init
+ .text.get_ADC_value
+                0x20002efc       0xa0 ./OBC/ADC.o
+                0x20002efc                get_ADC_value
+ .text.get_IMU_acc
+                0x20002f9c      0x318 ./OBC/IMU.o
+                0x20002f9c                get_IMU_acc
+ .text.get_IMU_gyro
+                0x200032b4      0x2e4 ./OBC/IMU.o
+                0x200032b4                get_IMU_gyro
+ .text.get_IMU_temp
+                0x20003598       0xc0 ./OBC/IMU.o
+                0x20003598                get_IMU_temp
+ .text.SD_Init  0x20003658      0x47c ./OBC/SD.o
+                0x20003658                SD_Init
+ .text.SD_Write
+                0x20003ad4      0x23c ./OBC/SD.o
+                0x20003ad4                SD_Write
+ .text.SD_Read  0x20003d10      0x1bc ./OBC/SD.o
+                0x20003d10                SD_Read
+ .text.initialise_partition
+                0x20003ecc       0x30 ./OBC/memory.o
+                0x20003ecc                initialise_partition
+ .text.store_data
+                0x20003efc       0x5c ./OBC/memory.o
+                0x20003efc                store_data
+ .text.read_data
+                0x20003f58       0x5c ./OBC/memory.o
+                0x20003f58                read_data
+ .text.counter_init
+                0x20003fb4       0x64 ./GMC/counter.o
+                0x20003fb4                counter_init
+ .text.set_adf_spi_instance
+                0x20004018       0x20 ./Comms/adf7030.o
+                0x20004018                set_adf_spi_instance
+ .text.adf_init
+                0x20004038      0x298 ./Comms/adf7030.o
+                0x20004038                adf_init
+ .text.apply_file
+                0x200042d0       0xcc ./Comms/adf7030.o
+                0x200042d0                apply_file
+ .text.config_adf7030
+                0x2000439c      0x100 ./Comms/adf7030.o
+                0x2000439c                config_adf7030
+ .text.adf_write_to_memory
+                0x2000449c       0x94 ./Comms/adf7030.o
+                0x2000449c                adf_write_to_memory
+ .text.adf_read_from_memory
+                0x20004530       0x98 ./Comms/adf7030.o
+                0x20004530                adf_read_from_memory
+ .text.adf_send_cmd
+                0x200045c8       0xcc ./Comms/adf7030.o
+                0x200045c8                adf_send_cmd
+ .text.cmd_ready_set
+                0x20004694       0x7c ./Comms/adf7030.o
+                0x20004694                cmd_ready_set
+ .text.adf_in_idle
+                0x20004710       0x7c ./Comms/adf7030.o
+                0x20004710                adf_in_idle
+ .text.adf_spi_trans_read
+                0x2000478c       0x68 ./Comms/adf7030.o
+                0x2000478c                adf_spi_trans_read
+ .text.adf_spi_trans_write
+                0x200047f4       0xf4 ./Comms/adf7030.o
+                0x200047f4                adf_spi_trans_write
+ .text.adf_get_state
+                0x200048e8       0x94 ./Comms/adf7030.o
+                0x200048e8                adf_get_state
+ .text.get_rssi_data
+                0x2000497c       0x94 ./Comms/adf7030.o
+                0x2000497c                get_rssi_data
+ .text.get_rssi_cca_data
+                0x20004a10       0xb4 ./Comms/adf7030.o
+                0x20004a10                get_rssi_cca_data
+ .text.rx_pkt   0x20004ac4      0x2e4 ./Comms/adf7030.o
+                0x20004ac4                rx_pkt
+ .text.get_preamble_pkt
+                0x20004da8       0x30 ./Comms/adf7030.o
+                0x20004da8                get_preamble_pkt
+ .text.get_sync_word
+                0x20004dd8       0x50 ./Comms/adf7030.o
+                0x20004dd8                get_sync_word
+ .text.get_freq
+                0x20004e28       0x50 ./Comms/adf7030.o
+                0x20004e28                get_freq
+ .text          0x20004e78       0x90 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hw_reg_access.o)
+                0x20004e78                HW_set_32bit_reg
+                0x20004e7c                HW_get_32bit_reg
+                0x20004e80                HW_set_32bit_reg_field
+                0x20004e9c                HW_get_32bit_reg_field
+                0x20004ea8                HW_set_16bit_reg
+                0x20004eac                HW_get_16bit_reg
+                0x20004eb0                HW_set_16bit_reg_field
+                0x20004ecc                HW_get_16bit_reg_field
+                0x20004ed8                HW_set_8bit_reg
+                0x20004edc                HW_get_8bit_reg
+                0x20004ee0                HW_set_8bit_reg_field
+                0x20004efc                HW_get_8bit_reg_field
+ .text.NVIC_ClearPendingIRQ
+                0x20004f08       0x3c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.set_bit_reg8
+                0x20004f44       0x40 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.clear_bit_reg8
+                0x20004f84       0x40 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.read_bit_reg8
+                0x20004fc4       0x40 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_init
+                0x20005004       0x84 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x20005004                MSS_UART_init
+ .text.MSS_UART_polled_tx
+                0x20005088       0xe4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x20005088                MSS_UART_polled_tx
+ .text.UART0_IRQHandler
+                0x2000516c       0x24 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x2000516c                UART0_IRQHandler
+ .text.UART1_IRQHandler
+                0x20005190       0x24 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x20005190                UART1_IRQHandler
+ .text.config_baud_divisors
+                0x200051b4      0x198 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.global_init
+                0x2000534c      0x26c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_isr
+                0x200055b8      0x22c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.default_tx_handler
+                0x200057e4      0x10c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_SYS_init
+                0x200058f0       0x64 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x200058f0                MSS_SYS_init
+ .text.asynchronous_event_handler
+                0x20005954      0x12c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.determine_seq
+                0x20005a80       0xc8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.clk_switching_fix
+                0x20005b48      0x3a0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.revert_clk_config
+                0x20005ee8      0x254 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.MSS_SYS_initiate_iap
+                0x2000613c      0x198 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x2000613c                MSS_SYS_initiate_iap
+ .text.MSS_SYS_check_digest
+                0x200062d4      0x108 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x200062d4                MSS_SYS_check_digest
+ .text.request_completion_handler
+                0x200063dc       0x30 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.signal_request_start
+                0x2000640c       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.wait_for_request_completion
+                0x20006444       0x28 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .text.NVIC_EnableIRQ
+                0x2000646c       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.NVIC_DisableIRQ
+                0x200064a4       0x3c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.NVIC_ClearPendingIRQ
+                0x200064e0       0x3c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_init
+                0x2000651c      0x134 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x2000651c                MSS_SPI_init
+ .text.recover_from_rx_overflow
+                0x20006650      0x160 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.MSS_SPI_configure_master_mode
+                0x200067b0      0x150 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x200067b0                MSS_SPI_configure_master_mode
+ .text.MSS_SPI_set_slave_select
+                0x20006900      0x108 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x20006900                MSS_SPI_set_slave_select
+ .text.MSS_SPI_clear_slave_select
+                0x20006a08       0x90 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x20006a08                MSS_SPI_clear_slave_select
+ .text.MSS_SPI_transfer_frame
+                0x20006a98       0xc0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x20006a98                MSS_SPI_transfer_frame
+ .text.MSS_SPI_transfer_block
+                0x20006b58      0x228 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x20006b58                MSS_SPI_transfer_block
+ .text.fill_slave_tx_fifo
+                0x20006d80       0xe0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.read_slave_rx_fifo
+                0x20006e60       0xac E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.mss_spi_isr
+                0x20006f0c      0x2b0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .text.SPI0_IRQHandler
+                0x200071bc       0x24 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x200071bc                SPI0_IRQHandler
+ .text.SPI1_IRQHandler
+                0x200071e0       0x24 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x200071e0                SPI1_IRQHandler
+ .text.NVM_write
+                0x20007204      0x238 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+                0x20007204                NVM_write
+ .text.get_error_code
+                0x2000743c       0x64 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .text.request_nvm_access
+                0x200074a0       0xa8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .text.get_ctrl_access
+                0x20007548       0x80 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .text.release_ctrl_access
+                0x200075c8       0x94 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .text.wait_nvm_ready
+                0x2000765c       0x50 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .text.write_nvm
+                0x200076ac      0x158 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .text.get_remaining_page_length
+                0x20007804       0x44 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .text.fill_wd_buffer
+                0x20007848      0x130 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .text.check_protection_reserved_nvm
+                0x20007978      0x680 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .text.protection_check
+                0x20007ff8       0x34 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .text.NVIC_EnableIRQ
+                0x2000802c       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .text.NVIC_DisableIRQ
+                0x20008064       0x3c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .text.NVIC_ClearPendingIRQ
+                0x200080a0       0x3c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .text.MSS_GPIO_init
+                0x200080dc       0xac E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+                0x200080dc                MSS_GPIO_init
+ .text.MSS_GPIO_config
+                0x20008188       0x3c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+                0x20008188                MSS_GPIO_config
+ .text.MSS_GPIO_set_output
+                0x200081c4       0x70 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+                0x200081c4                MSS_GPIO_set_output
+ .text.MSS_GPIO_enable_irq
+                0x20008234       0x60 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+                0x20008234                MSS_GPIO_enable_irq
+ .text.MSS_GPIO_clear_irq
+                0x20008294       0x40 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+                0x20008294                MSS_GPIO_clear_irq
+ .text.TMR_init
+                0x200082d4       0xd0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+                0x200082d4                TMR_init
+ .text.TMR_start
+                0x200083a4       0x3c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+                0x200083a4                TMR_start
+ .text.TMR_enable_int
+                0x200083e0       0x3c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+                0x200083e0                TMR_enable_int
+ .text.TMR_clear_int
+                0x2000841c       0x34 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+                0x2000841c                TMR_clear_int
+ .text.SPI_init
+                0x20008450       0xe4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+                0x20008450                SPI_init
+ .text.SPI_configure_master_mode
+                0x20008534       0x84 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+                0x20008534                SPI_configure_master_mode
+ .text.SPI_set_slave_select
+                0x200085b8       0xa8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+                0x200085b8                SPI_set_slave_select
+ .text.SPI_clear_slave_select
+                0x20008660       0xac E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+                0x20008660                SPI_clear_slave_select
+ .text.SPI_transfer_block
+                0x2000870c      0x400 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+                0x2000870c                SPI_transfer_block
+ .text.recover_from_rx_overflow
+                0x20008b0c       0x60 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .text.I2C_init
+                0x20008b6c       0xec E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                0x20008b6c                I2C_init
+ .text.I2C_write
+                0x20008c58       0xe4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                0x20008c58                I2C_write
+ .text.I2C_read
+                0x20008d3c       0xe4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                0x20008d3c                I2C_read
+ .text.I2C_write_read
+                0x20008e20      0x130 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                0x20008e20                I2C_write_read
+ .text.I2C_wait_complete
+                0x20008f50       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                0x20008f50                I2C_wait_complete
+ .text.enable_slave_if_required
+                0x20008f88       0x30 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .text.I2C_isr  0x20008fb8      0xa94 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                0x20008fb8                I2C_isr
+ .text.NVIC_EnableIRQ
+                0x20009a4c       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .text.NVIC_DisableIRQ
+                0x20009a84       0x3c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .text.I2C_enable_irq
+                0x20009ac0       0x94 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+                0x20009ac0                I2C_enable_irq
+ .text.I2C_disable_irq
+                0x20009b54       0x94 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+                0x20009b54                I2C_disable_irq
+ .text.SystemInit
+                0x20009be8       0x28 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x20009be8                SystemInit
+ .text.SystemCoreClockUpdate
+                0x20009c10      0x14c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x20009c10                SystemCoreClockUpdate
+ .text.get_rcosc_25_50mhz_frequency
+                0x20009d5c       0x44 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.set_clock_frequency_globals
+                0x20009da0       0x6c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.get_silicon_revision
+                0x20009e0c       0x50 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.silicon_workarounds
+                0x20009e5c       0x20 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.m2s050_rev_a_workarounds
+                0x20009e7c       0x44 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text          0x20009ec0        0xe E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hal.o)
+                0x20009ec0                HAL_disable_interrupts
+                0x20009ec8                HAL_restore_interrupts
+ *fill*         0x20009ece        0x2 00
+ .text.NVIC_EnableIRQ
+                0x20009ed0       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.NVIC_DisableIRQ
+                0x20009f08       0x3c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.NVIC_ClearPendingIRQ
+                0x20009f44       0x3c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.MSS_COMBLK_init
+                0x20009f80      0x13c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+                0x20009f80                MSS_COMBLK_init
+ .text.MSS_COMBLK_send_cmd
+                0x2000a0bc      0x1ac E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+                0x2000a0bc                MSS_COMBLK_send_cmd
+ .text.ComBlk_IRQHandler
+                0x2000a268       0x54 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+                0x2000a268                ComBlk_IRQHandler
+ .text.handle_tx_okay_irq
+                0x2000a2bc      0x2c4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.handle_rx_okay_irq
+                0x2000a580      0x2f8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.complete_request
+                0x2000a878       0x58 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.abort_current_cmd
+                0x2000a8d0       0x60 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.send_cmd_opcode
+                0x2000a930       0x50 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.fill_tx_fifo
+                0x2000a980       0x80 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text.process_sys_ctrl_command
+                0x2000aa00       0x30 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .text          0x2000aa30       0x50 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+                0x2000aa30                __libc_init_array
+ .text          0x2000aa80       0xd4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+                0x2000aa80                memset
+ *(.plt)
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+                0x2000ab54                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x2000ab54       0x14 ./P1.o
+ .rodata.C.0.1475
+                0x2000ab68        0x4 ./OBC/ADC.o
+ .rodata.C.8.2448
+                0x2000ab6c        0x4 ./OBC/IMU.o
+ .rodata.C.0.2383
+                0x2000ab70        0x4 ./OBC/IMU.o
+ .rodata.C.57.5283
+                0x2000ab74        0x4 ./Comms/adf7030.o
+ .rodata.C.58.5284
+                0x2000ab78        0x4 ./Comms/adf7030.o
+ .rodata.C.59.5285
+                0x2000ab7c        0x4 ./Comms/adf7030.o
+ .rodata.C.60.5286
+                0x2000ab80        0x4 ./Comms/adf7030.o
+ .rodata.g_nvm  0x2000ab84        0x8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .rodata.g_nvm32
+                0x2000ab8c        0x8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .rodata.g_config_reg_lut
+                0x2000ab94       0x80 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .rodata.g_gpio_irqn_lut
+                0x2000ac14       0x20 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .rodata.C.18.3527
+                0x2000ac34        0x8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ *(.gcc_except_table)
+ *(.eh_frame_hdr)
+ *(.eh_frame)
+ *(.vector_table)
+ *(.init)
+ .init          0x2000ac3c        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x2000ac3c                _init
+ .init          0x2000ac40        0x8 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ *(.fini)
+ .fini          0x2000ac48        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x2000ac48                _fini
+ .fini          0x2000ac4c        0x8 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+                0x2000ac54                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x2000ac54                PROVIDE (__preinit_array_end, .)
+                0x2000ac54                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x2000ac54        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+                0x2000ac58                PROVIDE (__init_array_end, .)
+                0x2000ac58                PROVIDE (__fini_array_start, .)
+ *(.fini_array)
+ .fini_array    0x2000ac58        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x2000ac5c                PROVIDE (__fini_array_end, .)
+                0x2000ac60                . = ALIGN (0x10)
+ *fill*         0x2000ac5c        0x4 00
+                0x2000ac60                __exidx_start = .
+
+.v4_bx          0x2000ac60        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x2000ac60                __exidx_end = .
+                0x2000ac60                _etext = .
+                0x2000ac60                PROVIDE (__text_end, .)
+
+.data           0x2000ac60      0x350
+                0x2000ac60                __data_load = LOADADDR (.data)
+                0x2000ac60                _sidata = LOADADDR (.data)
+                0x2000ac60                __data_start = .
+                0x2000ac60                _sdata = .
+ *(.jcr)
+ .jcr           0x2000ac60        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .jcr           0x2000ac60        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ *(.got.plt)
+ *(.got)
+ *(.shdata)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data.REPRO_CODE_WORD_ADDR
+                0x2000ac64        0x4 ./cmds/cmd.o
+                0x2000ac64                REPRO_CODE_WORD_ADDR
+ .data.code_word
+                0x2000ac68        0x4 ./cmds/cmd.o
+                0x2000ac68                code_word
+ .data.CMD0     0x2000ac6c        0x8 ./OBC/SD.o
+                0x2000ac6c                CMD0
+ .data.CMD8     0x2000ac74        0x8 ./OBC/SD.o
+                0x2000ac74                CMD8
+ .data.CMD58    0x2000ac7c        0x8 ./OBC/SD.o
+                0x2000ac7c                CMD58
+ .data.CMD55    0x2000ac84        0x8 ./OBC/SD.o
+                0x2000ac84                CMD55
+ .data.ACMD41   0x2000ac8c        0x8 ./OBC/SD.o
+                0x2000ac8c                ACMD41
+ .data.radio_memory_configuration
+                0x2000ac94      0x2d8 ./Comms/adf7030.o
+                0x2000ac94                radio_memory_configuration
+ .data.div1_seq
+                0x2000af6c        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x2000af6c                div1_seq
+ .data.div2_seq
+                0x2000af70        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x2000af70                div2_seq
+ .data.div4_seq
+                0x2000af74        0x8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x2000af74                div4_seq
+ .data.div8_seq
+                0x2000af7c        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x2000af7c                div8_seq
+ .data.div16_seq
+                0x2000af80        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x2000af80                div16_seq
+ .data.div32_seq
+                0x2000af84        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x2000af84                div32_seq
+ .data.g_initial_envm_cr
+                0x2000af88        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .data.SystemCoreClock
+                0x2000af8c        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x2000af8c                SystemCoreClock
+ .data.g_FrequencyPCLK0
+                0x2000af90        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x2000af90                g_FrequencyPCLK0
+ .data.g_FrequencyPCLK1
+                0x2000af94        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x2000af94                g_FrequencyPCLK1
+ .data.g_FrequencyPCLK2
+                0x2000af98        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x2000af98                g_FrequencyPCLK2
+ .data.g_FrequencyFIC0
+                0x2000af9c        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x2000af9c                g_FrequencyFIC0
+ .data.g_FrequencyFIC1
+                0x2000afa0        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x2000afa0                g_FrequencyFIC1
+ .data.g_FrequencyFIC64
+                0x2000afa4        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x2000afa4                g_FrequencyFIC64
+                0x2000afb0                . = ALIGN (0x10)
+ *fill*         0x2000afa8        0x8 00
+                0x2000afb0                _edata = .
+
+.bss            0x2000afb0     0x1290
+                0x2000afb0                __bss_start__ = .
+                0x2000afb0                _sbss = .
+ *(.shbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x2000afb0        0x1 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ *fill*         0x2000afb1        0x1 00
+ .bss.hk_seq_num
+                0x2000afb2        0x2 ./P1.o
+                0x2000afb2                hk_seq_num
+ .bss.latest_codeword
+                0x2000afb4        0x1 ./P1.o
+                0x2000afb4                latest_codeword
+ .bss.store_in_sd_card
+                0x2000afb5        0x1 ./P1.o
+                0x2000afb5                store_in_sd_card
+ .bss.sd_dump_comms
+                0x2000afb6        0x1 ./P2.o
+                0x2000afb6                sd_dump_comms
+ *fill*         0x2000afb7        0x1 00
+ .bss.comms_seq_num
+                0x2000afb8        0x2 ./P2.o
+                0x2000afb8                comms_seq_num
+ *fill*         0x2000afba        0x2 00
+ .bss.cmd_adf_read_addr
+                0x2000afbc        0x4 ./P2.o
+                0x2000afbc                cmd_adf_read_addr
+ .bss.cmd_adf_read_No_double_words
+                0x2000afc0        0x1 ./P2.o
+                0x2000afc0                cmd_adf_read_No_double_words
+ .bss.IMG_ID    0x2000afc1        0x1 ./main.o
+                0x2000afc1                IMG_ID
+ .bss.ERR_LOG   0x2000afc2        0x1 ./main.o
+                0x2000afc2                ERR_LOG
+ .bss.cmd_rx_count
+                0x2000afc3        0x1 ./main.o
+                0x2000afc3                cmd_rx_count
+ .bss.cmd_succ_count
+                0x2000afc4        0x1 ./main.o
+                0x2000afc4                cmd_succ_count
+ .bss.cmd_reject_count
+                0x2000afc5        0x1 ./main.o
+                0x2000afc5                cmd_reject_count
+ .bss.cmd_rs485_succ_count
+                0x2000afc6        0x1 ./main.o
+                0x2000afc6                cmd_rs485_succ_count
+ .bss.cmd_rs485_fail_count
+                0x2000afc7        0x1 ./main.o
+                0x2000afc7                cmd_rs485_fail_count
+ .bss.sd_dump   0x2000afc8        0x1 ./main.o
+                0x2000afc8                sd_dump
+ *fill*         0x2000afc9        0x3 00
+ .bss.reset_counts
+                0x2000afcc        0x4 ./main.o
+                0x2000afcc                reset_counts
+ .bss.g_request_in_progress
+                0x2000afd0        0x1 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ *fill*         0x2000afd1        0x1 00
+ .bss.g_last_response_length
+                0x2000afd2        0x2 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.g_event_handler
+                0x2000afd4        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.g_response
+                0x2000afd8        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.g_initial_mssddr_facc1_cr
+                0x2000afdc        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.divisor   0x2000afe0       0x10 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                0x2000afe0                divisor
+ .bss.g_initial_mssddr_facc2_cr
+                0x2000aff0        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .bss.g_do_not_lock_page
+                0x2000aff4        0x1 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .bss.g_envm_ctrl_locks
+                0x2000aff5        0x1 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ *fill*         0x2000aff6        0x2 00
+ .bss.NULL_timer_instance
+                0x2000aff8        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .bss.g_comblk_cmd_opcode
+                0x2000affc        0x1 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ *fill*         0x2000affd        0x3 00
+ .bss.g_comblk_p_cmd
+                0x2000b000        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_cmd_size
+                0x2000b004        0x2 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ *fill*         0x2000b006        0x2 00
+ .bss.g_comblk_p_data
+                0x2000b008        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_data_size
+                0x2000b00c        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_p_response
+                0x2000b010        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_response_size
+                0x2000b014        0x2 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_response_idx
+                0x2000b016        0x2 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_completion_handler
+                0x2000b018        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_page_handler
+                0x2000b01c        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_request_in_progress
+                0x2000b020        0x1 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .bss.g_comblk_state
+                0x2000b021        0x1 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ *fill*         0x2000b022        0x2 00
+ .bss.g_async_event_handler
+                0x2000b024        0x4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ *(COMMON)
+ COMMON         0x2000b028      0xd68 ./P1.o
+                0x2000b028                g_core_i2c2
+                0x2000b094                g_core_i2c0
+                0x2000b100                g_core_i2c1
+                0x2000b16c                hk_pkt
+                0x2000b170                g_core_spi0
+                0x2000b1b8                g_core_i2c5
+                0x2000b224                g_core_i2c3
+                0x2000b290                thermistor_pkt
+                0x2000b294                data
+                0x2000b494                cmd_buff
+                0x2000b4a4                core_i2c_status
+                0x2000b4a8                blck_pkt
+                0x2000bca8                counter_i2c
+                0x2000bd14                RTM
+                0x2000bd24                g_core_i2c4
+ COMMON         0x2000bd90       0x49 ./P2.o
+                0x2000bd90                gmc_pkt
+                0x2000bd94                ADC_voltages
+                0x2000bda4                comms_pkt
+                0x2000bda8                gmc_radiation_count
+                0x2000bdac                count_val
+                0x2000bdb0                free_res
+                0x2000bdb4                cmd_adf_data
+                0x2000bdd4                gmc_free_res_value
+                0x2000bdd8                status
+ *fill*         0x2000bdd9        0x7 00
+ COMMON         0x2000bde0      0x2a0 ./main.o
+                0x2000bde0                log_counter
+                0x2000bde4                comms_timer
+                0x2000bde8                log_packet_ptr
+                0x2000bdec                gmc_partition
+                0x2000bdfc                Read_TPSRAM_addr
+                0x2000be00                log_data
+                0x2000c000                temp_timer
+                0x2000c008                current_time_lower
+                0x2000c010                sd_timer
+                0x2000c018                current_time_upper
+                0x2000c020                rx_cmd_pkt
+                0x2000c024                rssi_cca
+                0x2000c028                thermistor_partition
+                0x2000c038                rssi
+                0x2000c03c                comms_partition
+                0x2000c04c                hk_partition
+                0x2000c05c                hk_timer
+                0x2000c060                Time_Vector
+ COMMON         0x2000c080       0x23 ./cmds/cmd.o
+                0x2000c080                cmd_list
+ *fill*         0x2000c0a3        0x1 00
+ COMMON         0x2000c0a4        0xa ./PIS/VC_Sensor.o
+                0x2000c0a4                init_command
+                0x2000c0a8                read
+                0x2000c0aa                bvol
+                0x2000c0ac                count
+                0x2000c0ad                config_reg
+ COMMON         0x2000c0ae        0x1 ./OBC/SD.o
+                0x2000c0ae                flag
+ *fill*         0x2000c0af        0x1 00
+ COMMON         0x2000c0b0        0x8 ./Comms/adf7030.o
+                0x2000c0b0                adf_spi
+                0x2000c0b4                radio_memory_configuration_start_spi_command
+ COMMON         0x2000c0b8       0x80 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x2000c0b8                g_mss_uart1
+                0x2000c0f8                g_mss_uart0
+ COMMON         0x2000c138      0x108 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                0x2000c138                g_mss_spi1
+                0x2000c1bc                g_mss_spi0
+                0x2000c240                . = ALIGN (0x10)
+                0x2000c240                __bss_end__ = .
+                0x2000c240                _end = .
+                0x2000c240                __end = _end
+                0x2000c240                _ebss = .
+                0x2000c240                PROVIDE (end, .)
+
+.heap           0x2000c240     0x2dc0
+                0x2000c240                __heap_start__ = .
+                0x2000d240                . = (. + MIN_SIZE_HEAP)
+ *fill*         0x2000c240     0x1000 00
+                0x2000f000                . = (. + (((ABSOLUTE (RAM_START_ADDRESS) + RAM_SIZE) - MAIN_STACK_SIZE) - .))
+ *fill*         0x2000d240     0x1dc0 00
+                0x2000f000                _eheap = .
+
+.stack          0x2000f000     0x1000
+                0x2000f000                __stack_start__ = .
+                0x20010000                . = (. + MAIN_STACK_SIZE)
+ *fill*         0x2000f000     0x1000 00
+                0x20010000                _estack = .
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.comment        0x00000000      0x45e
+ .comment       0x00000000       0x2b ./P1.o
+ .comment       0x0000002b       0x2b ./P2.o
+ .comment       0x00000056       0x2b ./main.o
+ .comment       0x00000081       0x2b ./packet_definition.o
+ .comment       0x000000ac       0x2b ./cmds/cmd.o
+ .comment       0x000000d7       0x2b ./PIS/RS485_Controller.o
+ .comment       0x00000102       0x2b ./PIS/VC_Sensor.o
+ .comment       0x0000012d       0x2b ./OBC/ADC.o
+ .comment       0x00000158       0x2b ./OBC/Flash.o
+ .comment       0x00000183       0x2b ./OBC/IMU.o
+ .comment       0x000001ae       0x2b ./OBC/SD.o
+ .comment       0x000001d9       0x2b ./OBC/memory.o
+ .comment       0x00000204       0x2b ./GMC/counter.o
+ .comment       0x0000022f       0x2b ./Comms/adf7030.o
+ .comment       0x0000025a       0x2b E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .comment       0x00000285       0x2b E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .comment       0x000002b0       0x2b E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .comment       0x000002db       0x2b E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .comment       0x00000306       0x2b E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .comment       0x00000331       0x2b E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .comment       0x0000035c       0x2b E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .comment       0x00000387       0x2b E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .comment       0x000003b2       0x2b E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .comment       0x000003dd       0x2b E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .comment       0x00000408       0x2b E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .comment       0x00000433       0x2b E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_aranges  0x00000000      0xe70
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x78 ./P1.o
+ .debug_aranges
+                0x00000078       0x28 ./P2.o
+ .debug_aranges
+                0x000000a0      0x130 ./main.o
+ .debug_aranges
+                0x000001d0       0x68 ./cmds/cmd.o
+ .debug_aranges
+                0x00000238       0x50 ./PIS/RS485_Controller.o
+ .debug_aranges
+                0x00000288       0x50 ./PIS/VC_Sensor.o
+ .debug_aranges
+                0x000002d8       0x28 ./OBC/ADC.o
+ .debug_aranges
+                0x00000300       0x90 ./OBC/Flash.o
+ .debug_aranges
+                0x00000390       0x30 ./OBC/IMU.o
+ .debug_aranges
+                0x000003c0       0x30 ./OBC/SD.o
+ .debug_aranges
+                0x000003f0       0x30 ./OBC/memory.o
+ .debug_aranges
+                0x00000420       0x48 ./GMC/counter.o
+ .debug_aranges
+                0x00000468       0xe0 ./Comms/adf7030.o
+ .debug_aranges
+                0x00000548       0xa8 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_aranges
+                0x000005f0      0x1d0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_aranges
+                0x000007c0      0x1c8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_aranges
+                0x00000988       0xe0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_aranges
+                0x00000a68       0x80 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .debug_aranges
+                0x00000ae8       0x68 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_aranges
+                0x00000b50       0x50 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_aranges
+                0x00000ba0       0xa8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_aranges
+                0x00000c48      0x110 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_aranges
+                0x00000d58       0x38 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_aranges
+                0x00000d90       0x50 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_aranges
+                0x00000de0       0x90 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_pubnames
+                0x00000000     0x267c
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x1df ./P1.o
+ .debug_pubnames
+                0x000001df      0x1e7 ./P2.o
+ .debug_pubnames
+                0x000003c6      0x3eb ./main.o
+ .debug_pubnames
+                0x000007b1      0x169 ./cmds/cmd.o
+ .debug_pubnames
+                0x0000091a      0x10b ./PIS/RS485_Controller.o
+ .debug_pubnames
+                0x00000a25      0x13f ./PIS/VC_Sensor.o
+ .debug_pubnames
+                0x00000b64       0x31 ./OBC/ADC.o
+ .debug_pubnames
+                0x00000b95      0x155 ./OBC/Flash.o
+ .debug_pubnames
+                0x00000cea       0x54 ./OBC/IMU.o
+ .debug_pubnames
+                0x00000d3e       0x7a ./OBC/SD.o
+ .debug_pubnames
+                0x00000db8       0x48 ./OBC/memory.o
+ .debug_pubnames
+                0x00000e00       0xc0 ./GMC/counter.o
+ .debug_pubnames
+                0x00000ec0      0x2f5 ./Comms/adf7030.o
+ .debug_pubnames
+                0x000011b5       0xeb E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_pubnames
+                0x000012a0      0x50f E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_pubnames
+                0x000017af      0x571 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_pubnames
+                0x00001d20      0x21a E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_pubnames
+                0x00001f3a       0x4d E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .debug_pubnames
+                0x00001f87       0xb1 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_pubnames
+                0x00002038       0x84 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_pubnames
+                0x000020bc      0x170 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_pubnames
+                0x0000222c      0x2b9 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_pubnames
+                0x000024e5       0x39 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_pubnames
+                0x0000251e       0xcb E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_pubnames
+                0x000025e9       0x93 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_info     0x00000000    0x167be
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000     0x15ba ./P1.o
+ .debug_info    0x000015ba     0x1096 ./P2.o
+ .debug_info    0x00002650     0x2922 ./main.o
+ .debug_info    0x00004f72       0x29 ./packet_definition.o
+ .debug_info    0x00004f9b     0x10dc ./cmds/cmd.o
+ .debug_info    0x00006077     0x1014 ./PIS/RS485_Controller.o
+ .debug_info    0x0000708b      0x626 ./PIS/VC_Sensor.o
+ .debug_info    0x000076b1      0x462 ./OBC/ADC.o
+ .debug_info    0x00007b13      0xcb3 ./OBC/Flash.o
+ .debug_info    0x000087c6      0x5b9 ./OBC/IMU.o
+ .debug_info    0x00008d7f      0x95d ./OBC/SD.o
+ .debug_info    0x000096dc      0x1bb ./OBC/memory.o
+ .debug_info    0x00009897      0x689 ./GMC/counter.o
+ .debug_info    0x00009f20     0x121d ./Comms/adf7030.o
+ .debug_info    0x0000b13d      0x6ed E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_info    0x0000b82a     0x1ed4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_info    0x0000d6fe     0x1fb4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_info    0x0000f6b2     0x1723 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_info    0x00010dd5     0x12b1 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .debug_info    0x00012086     0x1164 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_info    0x000131ea      0x242 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_info    0x0001342c      0x7d9 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_info    0x00013c05      0xd0c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_info    0x00014911      0x7ce E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_info    0x000150df      0xbbf E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_info    0x00015c9e      0xb20 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_abbrev   0x00000000     0x29ef
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x2ae ./P1.o
+ .debug_abbrev  0x000002ae      0x1bc ./P2.o
+ .debug_abbrev  0x0000046a      0x2ef ./main.o
+ .debug_abbrev  0x00000759       0x16 ./packet_definition.o
+ .debug_abbrev  0x0000076f      0x23d ./cmds/cmd.o
+ .debug_abbrev  0x000009ac      0x1f8 ./PIS/RS485_Controller.o
+ .debug_abbrev  0x00000ba4      0x131 ./PIS/VC_Sensor.o
+ .debug_abbrev  0x00000cd5      0x125 ./OBC/ADC.o
+ .debug_abbrev  0x00000dfa      0x230 ./OBC/Flash.o
+ .debug_abbrev  0x0000102a      0x12f ./OBC/IMU.o
+ .debug_abbrev  0x00001159      0x16a ./OBC/SD.o
+ .debug_abbrev  0x000012c3       0xc0 ./OBC/memory.o
+ .debug_abbrev  0x00001383      0x140 ./GMC/counter.o
+ .debug_abbrev  0x000014c3      0x271 ./Comms/adf7030.o
+ .debug_abbrev  0x00001734      0x170 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_abbrev  0x000018a4      0x280 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_abbrev  0x00001b24      0x1fe E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_abbrev  0x00001d22      0x1ee E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_abbrev  0x00001f10      0x198 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .debug_abbrev  0x000020a8      0x165 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_abbrev  0x0000220d       0xb0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_abbrev  0x000022bd      0x14f E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_abbrev  0x0000240c      0x185 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_abbrev  0x00002591      0x169 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_abbrev  0x000026fa      0x150 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_abbrev  0x0000284a      0x1a5 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_line     0x00000000     0xda57
+ *(.debug_line)
+ .debug_line    0x00000000     0x1281 ./P1.o
+ .debug_line    0x00001281     0x11af ./P2.o
+ .debug_line    0x00002430     0x1454 ./main.o
+ .debug_line    0x00003884       0x37 ./packet_definition.o
+ .debug_line    0x000038bb     0x1205 ./cmds/cmd.o
+ .debug_line    0x00004ac0     0x11df ./PIS/RS485_Controller.o
+ .debug_line    0x00005c9f      0x9a1 ./PIS/VC_Sensor.o
+ .debug_line    0x00006640      0x245 ./OBC/ADC.o
+ .debug_line    0x00006885      0x535 ./OBC/Flash.o
+ .debug_line    0x00006dba      0x4db ./OBC/IMU.o
+ .debug_line    0x00007295      0x41c ./OBC/SD.o
+ .debug_line    0x000076b1      0x381 ./OBC/memory.o
+ .debug_line    0x00007a32      0x4a7 ./GMC/counter.o
+ .debug_line    0x00007ed9     0x1497 ./Comms/adf7030.o
+ .debug_line    0x00009370      0x4b6 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_line    0x00009826      0x8f8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_line    0x0000a11e      0xa2a E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_line    0x0000ab48      0x6d1 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_line    0x0000b219      0x544 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .debug_line    0x0000b75d      0x389 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_line    0x0000bae6      0x445 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_line    0x0000bf2b      0x744 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_line    0x0000c66f      0x824 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_line    0x0000ce93      0x4a3 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_line    0x0000d336      0x228 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_line    0x0000d55e      0x4f9 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_frame    0x00000000     0x30bc
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x170 ./P1.o
+ .debug_frame   0x00000170       0x50 ./P2.o
+ .debug_frame   0x000001c0      0x3f0 ./main.o
+ .debug_frame   0x000005b0      0x138 ./cmds/cmd.o
+ .debug_frame   0x000006e8       0xe0 ./PIS/RS485_Controller.o
+ .debug_frame   0x000007c8       0xf0 ./PIS/VC_Sensor.o
+ .debug_frame   0x000008b8       0x50 ./OBC/ADC.o
+ .debug_frame   0x00000908      0x1f8 ./OBC/Flash.o
+ .debug_frame   0x00000b00       0x70 ./OBC/IMU.o
+ .debug_frame   0x00000b70       0x70 ./OBC/SD.o
+ .debug_frame   0x00000be0       0x6c ./OBC/memory.o
+ .debug_frame   0x00000c4c       0xd0 ./GMC/counter.o
+ .debug_frame   0x00000d1c      0x334 ./Comms/adf7030.o
+ .debug_frame   0x00001050      0x21c E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_frame   0x0000126c      0x6b4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_frame   0x00001920      0x6b0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_frame   0x00001fd0      0x320 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_frame   0x000022f0      0x194 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .debug_frame   0x00002484      0x130 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_frame   0x000025b4       0xf0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_frame   0x000026a4      0x250 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_frame   0x000028f4      0x3e4 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_frame   0x00002cd8       0x88 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_frame   0x00002d60       0xd8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_frame   0x00002e38      0x1dc E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .debug_frame   0x00003014       0x20 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .debug_frame   0x00003034       0x2c c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .debug_frame   0x00003060       0x34 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x00003094       0x28 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+
+.debug_str      0x00000000     0x5862
+ *(.debug_str)
+ .debug_str     0x00000000      0xfd9 ./P1.o
+                               0x11f6 (size before relaxing)
+ .debug_str     0x00000fd9      0x28b ./P2.o
+                                0xfdc (size before relaxing)
+ .debug_str     0x00001264     0x118d ./main.o
+                               0x20f1 (size before relaxing)
+ .debug_str     0x000023f1       0x17 ./packet_definition.o
+                                 0x77 (size before relaxing)
+ .debug_str     0x00002408       0xb9 ./cmds/cmd.o
+                                0xf41 (size before relaxing)
+ .debug_str     0x000024c1      0x217 ./PIS/RS485_Controller.o
+                                0xf93 (size before relaxing)
+ .debug_str     0x000026d8       0x8e ./PIS/VC_Sensor.o
+                                0x4cf (size before relaxing)
+ .debug_str     0x00002766       0x63 ./OBC/ADC.o
+                                0x426 (size before relaxing)
+ .debug_str     0x000027c9      0x27d ./OBC/Flash.o
+                                0xc3d (size before relaxing)
+ .debug_str     0x00002a46       0xf1 ./OBC/IMU.o
+                                0x4dc (size before relaxing)
+ .debug_str     0x00002b37       0x69 ./OBC/SD.o
+                                0xb75 (size before relaxing)
+ .debug_str     0x00002ba0       0x3e ./OBC/memory.o
+                                0x19e (size before relaxing)
+ .debug_str     0x00002bde       0xa1 ./GMC/counter.o
+                                0x6c8 (size before relaxing)
+ .debug_str     0x00002c7f      0x317 ./Comms/adf7030.o
+                                0xbc8 (size before relaxing)
+ .debug_str     0x00002f96      0x241 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                                0x32f (size before relaxing)
+ .debug_str     0x000031d7      0xa0f E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+                               0x1995 (size before relaxing)
+ .debug_str     0x00003be6      0xa20 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+                               0x1306 (size before relaxing)
+ .debug_str     0x00004606      0x2e1 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+                               0x154e (size before relaxing)
+ .debug_str     0x000048e7      0x45c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+                                0xd07 (size before relaxing)
+ .debug_str     0x00004d43      0x15c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+                               0x120f (size before relaxing)
+ .debug_str     0x00004e9f       0xa0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+                                0x1f3 (size before relaxing)
+ .debug_str     0x00004f3f       0x39 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+                                0x5de (size before relaxing)
+ .debug_str     0x00004f78      0x474 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+                                0x93a (size before relaxing)
+ .debug_str     0x000053ec       0x42 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+                                0x9bc (size before relaxing)
+ .debug_str     0x0000542e      0x174 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                                0xa0f (size before relaxing)
+ .debug_str     0x000055a2      0x2c0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+                                0xa62 (size before relaxing)
+
+.debug_loc      0x00000000     0x51a1
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x25a ./P1.o
+ .debug_loc     0x0000025a       0x6e ./P2.o
+ .debug_loc     0x000002c8      0x6a4 ./main.o
+ .debug_loc     0x0000096c      0x226 ./cmds/cmd.o
+ .debug_loc     0x00000b92      0x175 ./PIS/RS485_Controller.o
+ .debug_loc     0x00000d07      0x181 ./PIS/VC_Sensor.o
+ .debug_loc     0x00000e88       0x6e ./OBC/ADC.o
+ .debug_loc     0x00000ef6      0x33d ./OBC/Flash.o
+ .debug_loc     0x00001233       0xa9 ./OBC/IMU.o
+ .debug_loc     0x000012dc       0xa5 ./OBC/SD.o
+ .debug_loc     0x00001381       0xa5 ./OBC/memory.o
+ .debug_loc     0x00001426      0x14a ./GMC/counter.o
+ .debug_loc     0x00001570      0x563 ./Comms/adf7030.o
+ .debug_loc     0x00001ad3      0x3c6 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_loc     0x00001e99      0xbb9 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_loc     0x00002a52      0xb8c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_loc     0x000035de      0x549 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_loc     0x00003b27      0x2ce E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .debug_loc     0x00003df5      0x226 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_loc     0x0000401b      0x181 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_loc     0x0000419c      0x3de E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_loc     0x0000457a      0x6a9 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_loc     0x00004c23       0xdc E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_loc     0x00004cff      0x169 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_loc     0x00004e68      0x339 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_macinfo  0x00000000    0xc2d86
+ *(.debug_macinfo)
+ .debug_macinfo
+                0x00000000     0xbb2d ./P1.o
+ .debug_macinfo
+                0x0000bb2d     0xbb35 ./P2.o
+ .debug_macinfo
+                0x00017662     0xbb31 ./main.o
+ .debug_macinfo
+                0x00023193      0xc81 ./packet_definition.o
+ .debug_macinfo
+                0x00023e14     0xbb31 ./cmds/cmd.o
+ .debug_macinfo
+                0x0002f945     0xbb34 ./PIS/RS485_Controller.o
+ .debug_macinfo
+                0x0003b479     0x858c ./PIS/VC_Sensor.o
+ .debug_macinfo
+                0x00043a05     0x16f0 ./OBC/ADC.o
+ .debug_macinfo
+                0x000450f5     0x6fc2 ./OBC/Flash.o
+ .debug_macinfo
+                0x0004c0b7     0x4071 ./OBC/IMU.o
+ .debug_macinfo
+                0x00050128     0x73d4 ./OBC/SD.o
+ .debug_macinfo
+                0x000574fc     0x757d ./OBC/memory.o
+ .debug_macinfo
+                0x0005ea79     0x76a6 ./GMC/counter.o
+ .debug_macinfo
+                0x0006611f     0xbb3d ./Comms/adf7030.o
+ .debug_macinfo
+                0x00071c5c     0x4bf0 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_macinfo
+                0x0007684c     0x8184 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_macinfo
+                0x0007e9d0     0xa898 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_macinfo
+                0x00089268     0x8fd8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_macinfo
+                0x00092240     0x7acf E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .debug_macinfo
+                0x00099d0f     0x777c E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_macinfo
+                0x000a148b     0x2593 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_macinfo
+                0x000a3a1e     0x4d64 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_macinfo
+                0x000a8782     0x44f1 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_macinfo
+                0x000acc73     0x79df E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_macinfo
+                0x000b4652     0x73cd E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_macinfo
+                0x000bba1f     0x7367 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x00000000       0x25
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x19 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .ARM.attributes
+                0x00000019       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .ARM.attributes
+                0x00000042       0x31 ./P1.o
+ .ARM.attributes
+                0x00000073       0x31 ./P2.o
+ .ARM.attributes
+                0x000000a4       0x31 ./main.o
+ .ARM.attributes
+                0x000000d5       0x31 ./packet_definition.o
+ .ARM.attributes
+                0x00000106       0x31 ./cmds/cmd.o
+ .ARM.attributes
+                0x00000137       0x31 ./PIS/RS485_Controller.o
+ .ARM.attributes
+                0x00000168       0x31 ./PIS/VC_Sensor.o
+ .ARM.attributes
+                0x00000199       0x31 ./OBC/ADC.o
+ .ARM.attributes
+                0x000001ca       0x31 ./OBC/Flash.o
+ .ARM.attributes
+                0x000001fb       0x31 ./OBC/IMU.o
+ .ARM.attributes
+                0x0000022c       0x31 ./OBC/SD.o
+ .ARM.attributes
+                0x0000025d       0x31 ./OBC/memory.o
+ .ARM.attributes
+                0x0000028e       0x31 ./GMC/counter.o
+ .ARM.attributes
+                0x000002bf       0x31 ./Comms/adf7030.o
+ .ARM.attributes
+                0x000002f0       0x21 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+ .ARM.attributes
+                0x00000311       0x31 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .ARM.attributes
+                0x00000342       0x21 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hw_reg_access.o)
+ .ARM.attributes
+                0x00000363       0x31 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .ARM.attributes
+                0x00000394       0x31 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .ARM.attributes
+                0x000003c5       0x31 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .ARM.attributes
+                0x000003f6       0x31 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .ARM.attributes
+                0x00000427       0x31 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .ARM.attributes
+                0x00000458       0x31 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .ARM.attributes
+                0x00000489       0x31 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .ARM.attributes
+                0x000004ba       0x31 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .ARM.attributes
+                0x000004eb       0x31 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .ARM.attributes
+                0x0000051c       0x31 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .ARM.attributes
+                0x0000054d       0x21 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(hal.o)
+ .ARM.attributes
+                0x0000056e       0x31 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)
+ .ARM.attributes
+                0x0000059f       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .ARM.attributes
+                0x000005c8       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x000005f1       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000061a       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000643       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x0000066c       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .ARM.attributes
+                0x00000695       0x19 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.isr_vector)
+OUTPUT(PiLOT_sb_MSS_CM3_app elf32-littlearm)
+
+.debug_ranges   0x00000000      0xe58
+ .debug_ranges  0x00000000       0x70 ./P1.o
+ .debug_ranges  0x00000070       0x20 ./P2.o
+ .debug_ranges  0x00000090      0x128 ./main.o
+ .debug_ranges  0x000001b8       0x60 ./cmds/cmd.o
+ .debug_ranges  0x00000218       0x48 ./PIS/RS485_Controller.o
+ .debug_ranges  0x00000260       0x48 ./PIS/VC_Sensor.o
+ .debug_ranges  0x000002a8       0x20 ./OBC/ADC.o
+ .debug_ranges  0x000002c8       0x88 ./OBC/Flash.o
+ .debug_ranges  0x00000350       0x28 ./OBC/IMU.o
+ .debug_ranges  0x00000378       0x28 ./OBC/SD.o
+ .debug_ranges  0x000003a0       0x28 ./OBC/memory.o
+ .debug_ranges  0x000003c8       0x40 ./GMC/counter.o
+ .debug_ranges  0x00000408       0xd8 ./Comms/adf7030.o
+ .debug_ranges  0x000004e0       0xa0 E:/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_G2_Software/PiLOT_sb_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_ranges  0x00000580      0x1c8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_ranges  0x00000748      0x1f0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_sys_services.o)
+ .debug_ranges  0x00000938       0xd8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_spi.o)
+ .debug_ranges  0x00000a10       0x90 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_nvm.o)
+ .debug_ranges  0x00000aa0       0x60 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_gpio.o)
+ .debug_ranges  0x00000b00       0x48 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_timer.o)
+ .debug_ranges  0x00000b48       0xa0 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_spi.o)
+ .debug_ranges  0x00000be8      0x120 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(core_i2c.o)
+ .debug_ranges  0x00000d08       0x30 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(i2c_interrupt.o)
+ .debug_ranges  0x00000d38       0x48 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_ranges  0x00000d80       0xd8 E:\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_G2_Software\PiLOT_sb_MSS_CM3_hw_platform\Debug\libPiLOT_sb_MSS_CM3_hw_platform.a(mss_comblk.o)

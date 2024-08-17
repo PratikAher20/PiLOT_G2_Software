@@ -9,7 +9,7 @@
 #define OBC_IMU_H_
 
 #define IMU_ADDR 0x6a
-#define ADC_ADDR	0x21
+#define ADC_ADDR	0x23
 #define IMU_WHO_AM_I_REG 0x0F
 
 i2c_instance_t g_core_i2c3;

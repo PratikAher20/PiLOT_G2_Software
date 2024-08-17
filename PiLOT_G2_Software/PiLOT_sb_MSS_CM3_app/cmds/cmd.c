@@ -134,21 +134,21 @@ void exe_iap(rx_cmd_t* rcv_cmd){
 
 	uint8_t prog_status, auth_status;
 
-	if(rcv_cmd->parameters[0] == 0x07 || rcv_cmd->parameters[0] == 0x14 || rcv_cmd->parameters[0] == 0x21){
-		NVM_write(REPRO_CODE_WORD_ADDR, &(rcv_cmd->parameters[0]), 1, NVM_DO_NOT_LOCK_PAGE);
-		latest_codeword = rcv_cmd->parameters[0];
-		REPRO_CODE_WORD_ADDR += 0x01;
-	}
-
-
-	if(code_word[0] == 0x07 && code_word[1] == 0x14 && code_word[2] == 0x21){
+//	if(rcv_cmd->parameters[0] == 0x07 || rcv_cmd->parameters[0] == 0x14 || rcv_cmd->parameters[0] == 0x21){
+//		NVM_write(REPRO_CODE_WORD_ADDR, &(rcv_cmd->parameters[0]), 1, NVM_DO_NOT_LOCK_PAGE);
+//		latest_codeword = rcv_cmd->parameters[0];
+//		REPRO_CODE_WORD_ADDR += 0x01;
+//	}
+//
+//
+//	if(code_word[0] == 0x07 && code_word[1] == 0x14 && code_word[2] == 0x21){
 		if(IMG_ID == 0){
 			MSS_SPI_set_slave_select( &g_mss_spi0, MSS_SPI_SLAVE_0 );
 
 			g_mss_spi0.hw_reg->CONTROL |= (0x04000000);
 			delay(80000);
 
-			auth_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_AUTHENTICATE, 0x001000);
+			auth_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_AUTHENTICATE, 0x400000);
 
 			delay(80000);
 
@@ -156,7 +156,7 @@ void exe_iap(rx_cmd_t* rcv_cmd){
 				ERR_LOG = ERR_LOG | 0x01;
 			}
 			else{
-				prog_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_PROGRAM, 0x001000);
+				prog_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_PROGRAM, 0x400000);
 			}
 		}
 		else{
@@ -177,7 +177,7 @@ void exe_iap(rx_cmd_t* rcv_cmd){
 			}
 		}
 
-	}
+//	}
 
 }
 
