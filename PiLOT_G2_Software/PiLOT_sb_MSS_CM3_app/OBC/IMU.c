@@ -1,8 +1,12 @@
-/*
- * IMU.c
- *
- *  Created on: 11-Mar-2024
- *      Author: S-SPACE
+/**
+ * @file IMU.c
+ * @author Srinidhi G., Pratik A.
+ * @brief : Implementation of the Functions in IMU.h
+ * @version : 1.0
+ * @date 2024-08-17
+ * 
+ * @copyright Copyright (c) 2024
+ * 
  */
 
 #include <stdint.h>

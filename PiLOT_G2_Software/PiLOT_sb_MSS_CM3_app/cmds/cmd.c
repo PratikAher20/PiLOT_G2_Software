@@ -1,3 +1,13 @@
+/**
+ * @file cmd.c
+ * @author Pratik A.
+ * @brief Implementation of functions defined in cmd.h
+ * @version 1.0
+ * @date 2024-08-18
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 
 #include "cmd.h"
 

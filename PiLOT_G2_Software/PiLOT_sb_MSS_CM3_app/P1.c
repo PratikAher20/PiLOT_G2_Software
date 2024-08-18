@@ -1,23 +1,62 @@
-/*
- * P1.c
- *
- *  Created on: 24-Mar-2024
- *      Author: S-SPACE
+/**
+ * @file P1.c
+ * @author Pratik A., Srinidhi G.
+ * @brief : Implements the functions defined in P1.h
+ * @version : 1.0
+ * @date 2024-08-17
+ * 
+ * @copyright Copyright (c) 2024
+ * 
  */
 
 #include "P1.h"
 
+/**
+ * @brief Pointer to HK packet and Thermistor Packet
+ * 
+ */
 hk_pkt_t* hk_pkt;
 thermistor_pkt_t* thermistor_pkt;
+/**
+ * @brief Common Buffer to store Packet data.
+ * 
+ */
 uint8_t data[512];
+/**
+ * @brief Sequence counts for HK and Temp Packet.
+ * 
+ */
 uint16_t hk_seq_num =0;
 uint16_t temp_seq_num =0;
+/**
+ * @brief : Array to store Reply to ME message.
+ * 
+ */
 uint8_t RTM[16];
+/**
+ * @brief Variable to store the latest codeword.
+ * 
+ */
 uint8_t latest_codeword = 0;
+/**
+ * @brief 2-D array for Block Packet of 1KB of data.
+ * 
+ */
 uint16_t blck_pkt[4][256];
-uint8_t send_pkt_flg = 0;
+/**
+ * @brief Varible to know the Active Block for storing the data.
+ * 
+ */
 uint8_t active_blck = 0;
+/**
+ * @brief : Tracking the write pointer of the data in the blocks.
+ * 
+ */
 uint8_t wri_ptr = 0;
+/**
+ * @brief Flag to indicate that TPSRAM is full so start storing in SD_Card
+ * 
+ */
 uint8_t store_in_sd_card = 0;
 extern uint8_t cmd_rx_count;
 extern uint8_t cmd_rs485_succ_count;
@@ -77,14 +116,12 @@ void vGetPktStruct(pkt_name_t pktname, void* pktdata, uint8_t pktsize){
 
 //	xQueueSend(Data_PKT_Queue, &pkt, 0);
 	if(pktsize + wri_ptr >= 255){
-//		send_pkt_flg = 1;
 		active_blck += 1;
 		store_pkt();
 //		MSS_GPIO_set_output(MSS_GPIO_8, 1);
 		wri_ptr = 0;
 		if(active_blck == 4){
 			active_blck = 0;
-//			send_pkt_flg = 2;
 		}
 	}
 

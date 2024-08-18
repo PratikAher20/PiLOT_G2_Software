@@ -1,8 +1,12 @@
-/*
- * VC_Sensor.c
- *
- *  Created on: 11-Mar-2024
- *      Author: S-SPACE
+/**
+ * @file VC_Sensor.c
+ * @author Srinidhi G., Pratik A.
+ * @brief Implementation of Functions in VC_Sensor.h
+ * @version 1.0
+ * @date 2024-08-17
+ * 
+ * @copyright Copyright (c) 2024
+ * 
  */
 
 #include "VC_Sensor.h"

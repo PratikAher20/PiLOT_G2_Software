@@ -1,6 +1,6 @@
 /**
  * @file    :   counter.h
-* @author   :
+* @author   :   Abhishek Verma, Pratik A.
  * @brief   :   This file contains the drivers to interface with the counter IC(S-35770E01I-K8T2U)
  * @version :   1.0
  * @date    :   2024-03-04

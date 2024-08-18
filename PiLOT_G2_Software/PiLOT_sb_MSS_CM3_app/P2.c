@@ -1,8 +1,12 @@
-/*
- * P2.c
- *
- *  Created on: 26-Mar-2024
- *      Author: S-SPACE
+/**
+ * @file P2.c
+ * @author Pratik A., Abhishek Verma
+ * @brief : Implements the function in P2.h
+ * @version : 1.0
+ * @date 2024-08-17
+ * 
+ * @copyright Copyright (c) 2024
+ * 
  */
 
 #include "P2.h"
@@ -20,26 +24,71 @@ extern uint8_t IMG_ID;
 extern uint64_t current_time_upper,current_time_lower;
 extern uint8_t Time_Vector[32];
 
+/**
+ * @brief SD_Dump flags for Comms and GMC packets.
+ * 
+ */
 uint8_t sd_dump_comms = 0;
 uint8_t sd_dump_gmc = 0;
-uint16_t data_test[25] = {0};
+/**
+ * @brief Pointer to Comms and GMC Packet.
+ * 
+ */
 comms_pkt_t* comms_pkt;
 gmc_pkt_t* gmc_pkt;
+/**
+ * @brief Sequence count number for Comms and GMC
+ * 
+ */
 uint16_t comms_seq_num = 0;
 uint16_t gmc_seq_num = 0;
+/**
+ * @brief Variable to store the address to read from ADF
+ * 
+ */
 uint32_t cmd_adf_read_addr = 0;
+/**
+ * @brief Number of Double words to read from ADF
+ * 
+ */
 uint8_t cmd_adf_read_No_double_words = 0;
+/**
+ * @brief Storing the ADF Data
+ * 
+ */
 uint32_t cmd_adf_data[8];
-
+/**
+ * @brief Storing the Radiation Count values.
+ * 
+ */
 uint8_t count_val[3];
+/**
+ * @brief Reading the Data from the Free Register in the Counter.
+ * 
+ */
 uint8_t free_res[3];
+/**
+ * @brief Variable used to concatinate the count and free register values.
+ * 
+ */
 uint32_t gmc_radiation_count;
 uint32_t gmc_free_res_value;
-
+/**
+ * @brief Use to store the status of the I2C transaction.
+ * 
+ */
 uint8_t status;
+/**
+ * @brief Storing ADC voltages from GMC board.
+ * 
+ */
 uint16_t ADC_voltages[8];
 
-
+/**
+ * @brief Packetizing the GMC packet
+ * 
+ * @return uint8_t : Log values.
+ */
 uint8_t get_gmc(){
 	uint16_t i = 0;
 	gmc_pkt = (gmc_pkt_t*) data;
@@ -104,6 +153,11 @@ uint8_t get_gmc(){
 	return status;
 }
 
+/**
+ * @brief Packetizing the Comms Packet
+ * 
+ * @return uint16_t : Log Values.
+ */
 uint16_t get_comms(){
 	uint16_t i = 0;
 	comms_pkt = (comms_pkt_t*) data;

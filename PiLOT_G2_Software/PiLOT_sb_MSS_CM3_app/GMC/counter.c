@@ -1,6 +1,6 @@
 /**
  * @file 	:			counter.c
- * @author 	:
+ * @author 	:			Abhishek Verma, Pratik A.
  * @brief 	:			This is the driver for the GMC counter IC(S-35770E1I-K8T2U)
  * @version :			1.0
  * @date 	:			2024-03-04

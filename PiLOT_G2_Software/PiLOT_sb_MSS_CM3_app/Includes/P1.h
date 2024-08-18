@@ -1,8 +1,12 @@
-/*
- * P1.h
- *
- *  Created on: 24-Mar-2024
- *      Author: S-SPACE
+/**
+ * @file P1.h
+ * @author Pratik A., Srinidhi G.
+ * @brief : Contains Functionality of the P1- Box.
+ * @version : 1.0
+ * @date 2024-08-17
+ * 
+ * @copyright Copyright (c) 2024
+ * 
  */
 
 #ifndef P1_H_
@@ -32,7 +36,10 @@
 //#define CoreTimer_C3_0	0x50009000
 //#define CoreTimer_C4_0	0x5000A000
 
-
+/**
+ * @brief Time Period of all the packets
+ * 
+ */
 #define HK_PKT_PERIOD 		MSS_SYS_M3_CLK_FREQ/1024 * 0.5
 #define COMMS_PKT_PERIOD	MSS_SYS_M3_CLK_FREQ/1024 * 0.8
 #define TEMP_PKT_PERIOD		MSS_SYS_M3_CLK_FREQ/1024 * 1
@@ -42,17 +49,41 @@
 //ENVM Storage address for critical data
 #define ENVM_RESET_COUNT_ADDR		0x60032000
 
-
+/**
+ * @brief I2C_ADDR of the ADC on P1 Interface Board used for Thermistors.
+ * 
+ */
 #define P1_ADC_ADDR		0x40
 
+/**
+ * @brief Initializes the I2C peripherals present in the P1-box.
+ * 
+ */
 void p1_init();
+/**
+ * @brief Packetize the HK packet.
+ * 
+ * @return uint16_t Log values.
+ */
 uint16_t get_hk();
+/**
+ * @brief Packetize the Temperature packet
+ * 
+ * @return uint16_t Log Values.
+ */
 uint16_t get_temp();
 //void get_comms();
 
-
+/**
+ * @brief Macro Function to change the Endianess.
+ * 
+ */
 #define PILOT_REVERSE_BYTE_ORDER(var)	(((var) << 8) | ((var) >> 8))
 
+/**
+ * @brief All Packets ID and Length
+ * 
+ */
 #define HK_API_ID			1
 #define HK_PKT_LENGTH		sizeof(hk_pkt_t)
 
@@ -74,7 +105,7 @@ uint16_t get_temp();
 #define TIME_API_ID			60
 #define TIME_PKT_LENGTH		sizeof(timer_pkt)
 
-//Task IDs
+//Task IDs Used in forming the log packets.
 #define TIMER_TASK_ID		0
 #define THERMISTOR_TASK_ID	1
 #define HK_TASK_ID			2
@@ -83,6 +114,10 @@ uint16_t get_temp();
 #define LOGS_TASK_ID		5
 #define GMC_TASK_ID         6
 
+/**
+ * @brief HK packet Definition.
+ * 
+ */
 typedef struct {
     //CCSDS
 
@@ -131,6 +166,10 @@ typedef struct {
     uint16_t Fletcher_Code;
 }__attribute__((packed)) hk_pkt_t;
 
+/**
+ * @brief Temperature Packet Definition
+ * 
+ */
 typedef struct{
 
 	uint16_t ccsds_p1;
@@ -156,6 +195,10 @@ typedef struct {
 	uint16_t task_status;//task status;
 }__attribute__((packed)) log_entry_t;
 
+/**
+ * @brief Log Packet Definition
+ * 
+ */
 typedef struct {
     //CCSDS
 
@@ -171,7 +214,10 @@ typedef struct {
     uint16_t Fletcher_Code;
 }__attribute__((packed)) log_packet_t;
 
-
+/**
+ * @brief Init Packet Defintion
+ * 
+ */
 typedef struct {
     //CCSDS
 
@@ -191,6 +237,10 @@ typedef struct {
     uint16_t Fletcher_Code;
 }__attribute__((packed)) init_packet_t;
 
+/**
+ * @brief Packet Name ID's
+ * 
+ */
 typedef enum pkt_name{
 	hk = 0,
 	comms = 1,
@@ -201,6 +251,10 @@ typedef enum pkt_name{
     init = 6
 }pkt_name_t;
 
+/**
+ * @brief In-general Packet structure definition
+ * 
+ */
 typedef struct pkt{
 
 	pkt_name_t pkt_type;
@@ -211,10 +265,31 @@ typedef struct pkt{
 
 } __attribute__((packed)) pkt_t;
 
-
+/**
+ * @brief : Gets the Packet and stores it in the block packet.
+ * 
+ * @param pktname : Type of the packet
+ * @param pktdata : Pointer to the packet data
+ * @param pktsize : Size of the packet
+ */
 void vGetPktStruct(pkt_name_t pktname, void* pktdata, uint8_t pktsize);
+/**
+ * @brief Function to store the packet in SD_Card.
+ * 
+ */
 void store_pkt();
+/**
+ * @brief Function to get the data from the SD_Card.
+ * 
+ */
 void get_sd_data();
+/**
+ * @brief : Function to generate the Fletcher code for the packet
+ * 
+ * @param data : Pointer to the Packet Data
+ * @param len : Length of the packet data
+ * @return uint16_t : Returns the generated Fletcher code.
+ */
 uint16_t make_FLetcher(uint8_t *data,uint16_t len);
 
 #endif /* P1_H_ */

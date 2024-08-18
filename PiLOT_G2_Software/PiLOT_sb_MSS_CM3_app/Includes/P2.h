@@ -1,8 +1,12 @@
-/*
- * P2.h
- *
- *  Created on: 26-Mar-2024
- *      Author: S-SPACE
+/**
+ * @file P2.h
+ * @author : Pratik A., Abhishek Verma
+ * @brief : Functionality for P2-Box in PiLOT_G2(Grace)
+ * @version : 1.0
+ * @date 2024-08-17
+ * 
+ * @copyright Copyright (c) 2024
+ * 
  */
 
 #ifndef P2_H_
@@ -12,9 +16,18 @@
 #include "counter.h"
 #include "P1.h"
 
+/**
+ * @brief Packetizing the data for GMC and Comms packet.
+ * 
+ * @return uint8_t : Log Values.
+ */
 uint8_t get_gmc();
 uint16_t get_comms();
 
+/**
+ * @brief Comms Packet Definition
+ * 
+ */
 typedef struct{
 
 	uint16_t ccsds_p1;
@@ -47,6 +60,10 @@ typedef struct{
 
 }__attribute__((packed)) comms_pkt_t;
 
+/**
+ * @brief GMC Packet Definition
+ * 
+ */
 typedef struct{
 	uint16_t ccsds_p1;
 	uint16_t ccsds_p2;

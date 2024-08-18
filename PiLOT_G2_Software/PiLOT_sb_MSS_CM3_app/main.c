@@ -1,8 +1,13 @@
-/*
- * main.c
- *
- *  Created on: 11-Mar-2024
- *      Author: S-SPACE
+/**
+ * @file: main.c
+ * 
+ * @author: Pratik A., Srinidhi G.
+ * @brief: The main() in this file is the entry point of the application code for the PiLOT_G2 Flight Software. 
+ * @version: 1.0
+ * @date: 2024-08-17
+ * 
+ * @copyright Copyright (c) 2024
+ * 
  */
 
 #include "P1.h"
@@ -13,37 +18,115 @@
 //IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1//IMG-1
 
 extern uint8_t data[512];
+/**
+ * @brief Pointer to a init_pkt to collect the status parameters within it.
+ * 
+ */
 init_packet_t* init_pkt;
+/**
+ * @brief Timer Instances for the CORE Timers in Fabric
+ * 
+ */
 timer_instance_t hk_timer;
 timer_instance_t comms_timer;
 timer_instance_t gmc_timer;
 timer_instance_t temp_timer;
 timer_instance_t sd_timer;
 
+
+/**
+ * @brief SD-Card Partitions required for each packet are defined below.
+ * 
+ */
 partition_t hk_partition;
 partition_t comms_partition;
 partition_t gmc_partition;
 partition_t thermistor_partition;
-
-//Create partition for log packets
 partition_t log_partiton;
+/**
+ * @brief Flag to indicate that TPSRAM is full so start storing in SD_Card
+ * 
+ */
 extern uint8_t store_in_sd_card;
+/**
+ * @brief Variable storing the latest Reprogramming Code word uploaded
+ * 
+ */
 extern uint32_t REPRO_CODE_WORD_ADDR;
+/**
+ * @brief Variable for the Software Image ID
+ * 
+ */
 uint8_t IMG_ID = 0;
+/**
+ * @brief Variable to store the RSSI readings in CCA mode for ADF7030
+ * 
+ */
 uint16_t rssi_cca;
-uint16_t rssi;
+/**
+ * @brief Use to store the Error log while authenticating the Repro Image.
+ * 
+ */
 uint8_t ERR_LOG = 0;
+/**
+ * @brief Commands Received through Comms Subsystem
+ * 
+ */
 uint8_t cmd_rx_count = 0;
+/**
+ * @brief Total number of Commands successfully executed.
+ * 
+ */
 uint8_t cmd_succ_count = 0;
+/**
+ * @brief Number of commands rejected.
+ * 
+ */
 uint8_t cmd_reject_count = 0;
+/**
+ * @brief Number of RS485 Commands Recevied correctly.
+ * 
+ */
 uint8_t cmd_rs485_succ_count = 0;
+/**
+ * @brief Number of RS485 Commands Failed.
+ * 
+ */
 uint8_t cmd_rs485_fail_count = 0;
+/**
+ * @brief Flag to notify to store the packet in the SD_Card
+ * 
+ */
 uint8_t sd_dump = 0;
+/**
+ * @brief Number of resets due to watchdog Timer.
+ * 
+ */
 uint8_t reset_counts[1] = {0};
+/**
+ * @brief Pointer to a structure of command packet.
+ * 
+ */
 rx_cmd_t* rx_cmd_pkt;
+/**
+ * @brief Used to store the GPS_Time and State_Vector Data.
+ * 
+ */
 uint8_t Time_Vector[32];
+/**
+ * @brief Reading the TPSRAM address to check if DPU has started or not.
+ * 
+ */
 uint16_t Read_TPSRAM_addr;
+/**
+ * @brief Counter to switch between PHY_ON and PHY_RX mode of ADF7030.
+ * 
+ */
 uint8_t CHK_CMD = 0;
+/**
+ * @brief Variable to store the status in the init packet.
+ * 
+ */
 uint8_t stat1 = 0;
 uint8_t stat2 = 0;
 uint8_t adf_status = 0;
@@ -87,6 +170,10 @@ void form_log_packet() {
 	log_counter = 0;
 	logs_seq_no++;
 }
+/**
+ * @brief Interrupt Service Routines for each packet to collect the data after the timer expires.
+ * 
+ */
 void HK_ISR(){
 	MSS_TIM64_get_current_value(&current_time_upper,&current_time_lower);
 
@@ -153,6 +240,10 @@ void SD_ISR(){
 	TMR_clear_int(&sd_timer);
 }
 
+/**
+ * @brief Function to handle the Timers and its Time period.
+ * 
+ */
 void timer_intr_set(){
 	TMR_init(&hk_timer, CORETIMER_C0_0, TMR_CONTINUOUS_MODE, PRESCALER_DIV_1024, HK_PKT_PERIOD);
 	TMR_enable_int(&hk_timer);
@@ -187,6 +278,10 @@ void timer_intr_set(){
 	TMR_start(&gmc_timer);
 }
 
+/**
+ * @brief Function to enable and disable the Comms Timer. Required when the operations has chances of getting mixed up.
+ * 
+ */
 void timer_dis(){
 //	NVIC_DisableIRQ(FabricIrq4_IRQn);
 	NVIC_DisableIRQ(FabricIrq5_IRQn);
@@ -197,8 +292,13 @@ void timer_ena(){
 	NVIC_EnableIRQ(FabricIrq5_IRQn);
 }
 
+/**
+ * @brief Receiving the command and pointing it to the pointer to structure for the command packet.
+ * 
+ * @param cmd : Pointer to command packet.
+ * @param src : Source of the command packet. 0: TTPU, 1: ADF7030
+ */
 void get_cmd(uint8_t* cmd, uint8_t src){
-	//src == 0 for TTPU and 1 for ADF
 	rx_cmd_pkt = (rx_cmd_t*) cmd;
 
 	if(cmd_valid(rx_cmd_pkt, src)){
@@ -223,6 +323,10 @@ void get_cmd(uint8_t* cmd, uint8_t src){
 	}
 }
 
+/**
+ * @brief Funtcion to add command 
+ * 
+ */
 void init_cmd_engine(){
 	add_cmd(0, 2, cmd_noop);
 	add_cmd(1, 3, set_pkt_rate);
@@ -238,7 +342,10 @@ void Tim64_init() {
 	MSS_TIM64_start();
 }
 
-
+/**
+ * @brief Function to packetize the init packet.
+ * 
+ */
 void get_init(){
 	init_pkt = (init_packet_t* )data;
 	init_pkt->Status_1 = stat1;
@@ -429,6 +536,10 @@ int main(){
 
 }
 
+/**
+ * @brief IRQ_Handlers for all the timers and I2C's IRQ's.
+ * 
+ */
 void FabricIrq0_IRQHandler(void)
 {
     I2C_isr(&g_core_i2c0);

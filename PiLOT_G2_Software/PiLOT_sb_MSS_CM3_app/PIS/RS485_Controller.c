@@ -1,8 +1,12 @@
-/*
- * RS485_Controller.c
- *
- *  Created on: 23-Mar-2024
- *      Author: S-SPACE
+/**
+ * @file RS485_Controller.c
+ * @author Pratik A.
+ * @brief Implemented Functions defined in RS485_Controller.h
+ * @version 1.0
+ * @date 2024-08-17
+ * 
+ * @copyright Copyright (c) 2024
+ * 
  */
 
 #include "RS485_Controller.h"
@@ -14,8 +18,16 @@ extern uint8_t store_in_sd_card;
 extern timer_instance_t sd_timer;
 extern uint8_t Time_Vector[32];
 
+/**
+ * @brief Number of TTPU IRQ's received.
+ * 
+ */
 uint8_t no_of_TTPU_cmds = 0;
 
+/**
+ * @brief IRQ Handler invoked when the TPSRAM is full
+ * 
+ */
 void GPIO1_IRQHandler( void ){
     uint16_t a, i = 0;
     a  = 1;
@@ -40,6 +52,11 @@ void GPIO1_IRQHandler( void ){
     //Clear the interrupt after reading a 256 block packet
 }
 
+/**
+ * @brief IRQ Handler invoked when the command is received from the TTPU.
+ * TODO: Improve the Command Reception code to correctly receive all the parameters from the TTPU.
+ * 
+ */
 void GPIO3_IRQHandler(void){
 
 //	uint8_t cmd[32];

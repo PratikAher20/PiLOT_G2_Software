@@ -1,3 +1,14 @@
+/**
+ * @file adf7030.c
+ * @author Srinidhi G., Pratik A.
+ * @brief Implemented the function defined in adf7030.h
+ * @version 1.0
+ * @date 2024-08-18
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #include "adf7030.h"
 
 ADF_SPI_INSTANCE_t *adf_spi;

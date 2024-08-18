@@ -1,3 +1,14 @@
+/**
+ * @file adf7030.h
+ * @author Srinidhi G., Pratik A.
+ * @brief : Functionality to operate the ADF7030
+ * @version 1.0
+ * @date 2024-08-17
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #ifndef __ADF7030_H__
 #define __ADF7030_H__
 
@@ -197,6 +208,12 @@ uint8_t cmd_buff[16];
 void set_adf_spi_instance(ADF_SPI_INSTANCE_t *instance);
 
 /**
+ * @brief Function to initialize the ADF SPI Instance and other initialization of the Transceiver.
+ * 
+ * @return uint8_t : Log values.
+ */
+uint8_t adf_init();
+/**
  * @brief function to write to adf memory
  * 
  * @param mode : Mode to access memory. Select from any of the above eight modes(presently only mode one is implemented)
@@ -205,14 +222,26 @@ void set_adf_spi_instance(ADF_SPI_INSTANCE_t *instance);
  * @param size : no of bytes to write
  * @return uint8_t 
  */
-
-uint8_t adf_init();
 uint8_t adf_write_to_memory(uint8_t mode,uint32_t addr,uint8_t *data,uint32_t size);
 
+/**
+ * @brief Function to Read from ADF Memory
+ * 
+ * @param mode : Mode to access memory. Select from any of the above eight modes(presently only mode one is implemented)
+ * @param addr : Address to read to memory
+ * @param data : data to read to memory
+ * @param size : no of bytes to read
+ * @return uint8_t* 
+ */
 uint8_t* adf_read_from_memory(uint8_t mode,uint32_t addr,uint8_t *data,uint32_t size);
 
 uint8_t adf_send_cmd_without_ready(uint8_t command);
-
+/**
+ * @brief Function to send commmand to ADF7030
+ * 
+ * @param command : Command byte to be sent
+ * @return uint8_t : Log values
+ */
 uint8_t adf_send_cmd(uint8_t command);
 uint8_t adf_in_idle();
 
@@ -228,30 +257,95 @@ void adf_spi_trans_write( spi_instance_t * this_spi,
     uint8_t * wr_buffer,
     size_t wr_byte_size);
 
+/**
+ * @brief Calibrating the Transceiver
+ * 
+ * @param file : Pointer to the File. File should be included in the Includes folder.
+ * @param size : Size in number of bytes to be written to the ADF transceiver.
+ * @return uint8_t : Log Values.
+ */
 uint8_t apply_file(uint8_t *file, uint16_t size);
 
 uint8_t send_nop();
 
+/**
+ * @brief Function to check the status of the ADF Transceiver.
+ * 
+ * @return uint8_t : Status or Error Code
+ */
 uint8_t chk_status();
 
 extern uint8_t radio_memory_configuration[];
 
 extern uint8_t callibrations_config[];
 
-
+/**
+ * @brief Function to configure the ADF Transceiver and calibrate it.
+ * 
+ * @return uint8_t 
+ */
 uint8_t config_adf7030();
-
+/**
+ * @brief Funciton to check if ADF is ready to accept the command
+ * 
+ * @return uint8_t : 0: Ready, Els: Error Code
+ */
 uint8_t cmd_ready_set();
-
+/**
+ * @brief Function to get the state in which ADF is operating.
+ * 
+ * @return uint8_t : State
+ */
 uint8_t adf_get_state();
-
+/**
+ * @brief Function to configure the GPIO's of the ADF Transceiver
+ * 
+ * @return uint8_t : Log Values.
+ */
 uint8_t adf_config_gpio();
-
+/**
+ * @brief Get the rssi data when a command is received
+ * 
+ * @param rssi : Pointer to store the RSSI data.
+ */
 void get_rssi_data(uint16_t* rssi);
+/**
+ * @brief Get the rssi cca data 
+ * 
+ * @param rssi : Pointer to the RSSI_CCA data.
+ */
 void get_rssi_cca_data(uint16_t* rssi);
+/**
+ * @brief Get the preamble pkt 
+ * 
+ * @return uint8_t : Preamble configured in the ADF
+ */
 uint8_t get_preamble_pkt();
+/**
+ * @brief Get the sync word 
+ * 
+ * @return uint32_t : Sync Word configured in the ADF 
+ */
 uint32_t get_sync_word();
+/**
+ * @brief Get the temp data 
+ * 
+ * @param temp : Pointer to a Temp Data value
+ */
 void get_temp_data(uint8_t *temp);
+/**
+ * @brief Get the freq 
+ * 
+ * @return uint32_t : Frequency at which the ADF Transceiver.
+ */
 uint32_t get_freq();
+/**
+ * @brief Function to poll for to check the reception of the command
+ * 
+ * @param cmd : POinter to store the command received
+ * @param rssi : Pointer to store the RSSI data when command was received.
+ * @param cmd_rx_flg : Flag to notify the reception of the command.
+ * @return uint8_t 
+ */
 uint8_t rx_pkt(uint8_t * cmd, uint16_t* rssi, uint8_t* cmd_rx_flg);
 #endif
