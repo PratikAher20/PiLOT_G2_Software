@@ -64,6 +64,10 @@ uint8_t IMG_ID = 0;
  */
 uint16_t rssi_cca;
 /**
+ * @brief Variable to store the RSSI readings in RX mode for ADF7030
+ */
+uint16_t rssi;
+/**
  * @brief Use to store the Error log while authenticating the Repro Image.
  * 
  */

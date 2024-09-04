@@ -139,6 +139,44 @@ void delay ( volatile unsigned int n)
 	}
 }
 
+
+void copy_esram_image()
+{
+    unsigned int ii=0;
+    unsigned long *exeDestAddr, *exeSrcAddr;
+
+    exeDestAddr = (unsigned long *)0x20008000;
+    exeSrcAddr = (unsigned long *)0x6000D000;
+    /* 60 K B = 61440/4 ptr increments by 4bytes*/
+    for (ii=0; ii<2764; ii++ )
+    {
+    	*exeDestAddr++ = *exeSrcAddr++;
+    }
+
+}
+
+void __attribute__((optimize("O0"))) remap_user_code_eSRAM_0(void)
+{
+//	void __attribute__((optimize("O0"))) remap_user_code_eSRAM_0(void)
+//	{
+//	 int * address = (int *)0x20000004; //pointer to reset handler of application
+//	 __set_MSP(*(int*)0x20000000);   //set the stack pointer to that of the application
+//	 SYSREG->ESRAM_CR |= 0x1;
+//	 ((void (*)())(*address))();    // pointer recast as function pointer and the dereferenced/called
+//	 while(1){ };            //This instruction never executed
+//	}
+
+
+
+	int * address = (int *)0x20008004;
+	__set_MSP(*(int*)0x20008000);
+	SYSREG->ESRAM_CR |= 0x3;
+	((void (*)())(*address))();
+	while(1){ };
+}
+
+
+
 void exe_iap(rx_cmd_t* rcv_cmd){
 
 
@@ -149,43 +187,68 @@ void exe_iap(rx_cmd_t* rcv_cmd){
 //		latest_codeword = rcv_cmd->parameters[0];
 //		REPRO_CODE_WORD_ADDR += 0x01;
 //	}
-//
+
+
+
 //
 //	if(code_word[0] == 0x07 && code_word[1] == 0x14 && code_word[2] == 0x21){
-		if(IMG_ID == 0){
-			MSS_SPI_set_slave_select( &g_mss_spi0, MSS_SPI_SLAVE_0 );
+//		if(IMG_ID == 0){
+//			MSS_SPI_set_slave_select( &g_mss_spi0, MSS_SPI_SLAVE_0 );
+//
+//			g_mss_spi0.hw_reg->CONTROL |= (0x04000000);
+//			delay(80000);
+//
+//			auth_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_AUTHENTICATE, 0x400000);
+//
+//			delay(80000);
+//
+//			if(auth_status){
+//				ERR_LOG = ERR_LOG | 0x01;
+//			}
+//			else{
+//				prog_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_PROGRAM, 0x400000);
+//			}
+//		}
+//		else{
+//			MSS_SPI_set_slave_select( &g_mss_spi0, MSS_SPI_SLAVE_0 );
+//
+//			g_mss_spi0.hw_reg->CONTROL |= (0x04000000);
+//			delay(80000);
+//
+//			auth_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_AUTHENTICATE, 0x001000);
+//
+//			delay(80000);
+//
+//			if(auth_status){
+//				ERR_LOG = ERR_LOG | 0x01;
+//			}
+//			else{
+//				prog_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_PROGRAM, 0x001000);
+//			}
+//		}
 
-			g_mss_spi0.hw_reg->CONTROL |= (0x04000000);
-			delay(80000);
+	MSS_GPIO_init();
+	MSS_GPIO_config(MSS_GPIO_6, MSS_GPIO_OUTPUT_MODE);
+	uint8_t i=100;
+	while(i>1){
+		MSS_GPIO_set_output(MSS_GPIO_6, 1);
+		uint8_t j = 0;
+		for(;j<100;j++){
 
-			auth_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_AUTHENTICATE, 0x400000);
-
-			delay(80000);
-
-			if(auth_status){
-				ERR_LOG = ERR_LOG | 0x01;
-			}
-			else{
-				prog_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_PROGRAM, 0x400000);
-			}
 		}
-		else{
-			MSS_SPI_set_slave_select( &g_mss_spi0, MSS_SPI_SLAVE_0 );
+		MSS_GPIO_set_output(MSS_GPIO_6, 0);
+		j = 0;
+		for(;j<100;j++){
 
-			g_mss_spi0.hw_reg->CONTROL |= (0x04000000);
-			delay(80000);
+				}
+		i--;
+	}
 
-			auth_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_AUTHENTICATE, 0x001000);
+	SYSREG->WDOG_CR = 0x00000000;
 
-			delay(80000);
+	copy_esram_image();
 
-			if(auth_status){
-				ERR_LOG = ERR_LOG | 0x01;
-			}
-			else{
-				prog_status = MSS_SYS_initiate_iap(MSS_SYS_PROG_PROGRAM, 0x001000);
-			}
-		}
+	remap_user_code_eSRAM_0();
 
 //	}
 
