@@ -227,23 +227,6 @@ void exe_iap(rx_cmd_t* rcv_cmd){
 //			}
 //		}
 
-	MSS_GPIO_init();
-	MSS_GPIO_config(MSS_GPIO_6, MSS_GPIO_OUTPUT_MODE);
-	uint8_t i=100;
-	while(i>1){
-		MSS_GPIO_set_output(MSS_GPIO_6, 1);
-		uint8_t j = 0;
-		for(;j<100;j++){
-
-		}
-		MSS_GPIO_set_output(MSS_GPIO_6, 0);
-		j = 0;
-		for(;j<100;j++){
-
-				}
-		i--;
-	}
-
 	SYSREG->WDOG_CR = 0x00000000;
 
 	copy_esram_image();

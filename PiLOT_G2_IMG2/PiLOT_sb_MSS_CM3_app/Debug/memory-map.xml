@@ -1,13 +1,16 @@
-<!-- File generated from C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\CMSIS\startup_gcc\production-smartfusion2-execute-in-place.ld -->
+<!-- File generated from C:\Users\S-SPACE\Desktop\Pratik\Final_Year_Project\PiLOT_G2_Software\PiLOT_G2_IMG2\PiLOT_sb_MSS_CM3_hw_platform\CMSIS\startup_gcc\production-smartfusion2-execute-in-place-bootloader.ld -->
 <board>
  <properties>
   <property name="system-v6-m"/>
  </properties>
  <memory-map>
-    <memory-device address="0x00000000" size="256k" type="flash" device="microsemi-smartfusion2-envm">
+    <memory-device address="0x00000000" size="512k" type="flash" device="microsemi-smartfusion2-envm">
       <description>Flash</description>
     </memory-device>
-    <memory-device address="0x20000000" size="64k" type="ram">
+    <memory-device address="0x20000000" size="32k" type="ram">
+      <description>SRAM</description>
+    </memory-device>
+    <memory-device address="0x2000B000" size="20k" type="ram">
       <description>SRAM</description>
     </memory-device>
   </memory-map>
