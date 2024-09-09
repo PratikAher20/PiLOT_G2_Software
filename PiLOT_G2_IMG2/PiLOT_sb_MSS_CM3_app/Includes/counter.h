@@ -51,4 +51,4 @@ i2c_status_t set_free_res(i2c_instance_t *i2c_GMC_counter, uint8_t byte1, uint8_
 
 i2c_status_t get_free_res(i2c_instance_t *i2c_GMC_counter, uint8_t* free_res);
 
-i2c_status_t get_gmc_voltages(i2c_instance_t *i2c_GMC_ADC, uint8_t* ADC_voltages);
+i2c_status_t get_gmc_voltages(i2c_instance_t *i2c_GMC_ADC, uint16_t* ADC_voltages);

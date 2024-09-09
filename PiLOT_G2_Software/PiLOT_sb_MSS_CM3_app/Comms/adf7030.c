@@ -594,7 +594,7 @@ void read_cmd(uint8_t * cmd_buff){
 
 void get_rssi_data(uint16_t* rssi){
 
-	uint8_t rx_buf[6];
+	uint8_t rx_buf[6], tries = 0;
 	rx_buf[0] = 0x00;
 
 	while(rx_buf[0] == 0x00){
@@ -630,7 +630,7 @@ void get_rssi_cca_data(uint16_t* rssi){
 	uint8_t rx_buf_cca[6];
 	//uint16_t rssi;
 	rx_buf_cca[0] = 0x00;
-	uint8_t state;
+	uint8_t state, tries = 0;
 
 	adf_send_cmd(CMD_PHY_CCA);
 
@@ -639,6 +639,8 @@ void get_rssi_cca_data(uint16_t* rssi){
 	while(state != 2){
 		state = adf_get_state();
 	}
+
+	tries = 0;
 
 	while(rx_buf_cca[0] == 0x00){
 		adf_read_from_memory(RMODE_1, PROFILE_CCA_READBACK, rx_buf_cca, 4);

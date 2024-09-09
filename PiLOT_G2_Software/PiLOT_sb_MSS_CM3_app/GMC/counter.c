@@ -73,7 +73,7 @@ i2c_status_t get_free_res(i2c_instance_t *i2c_GMC_counter, uint8_t* free_res){
     return status;
 }
 
-i2c_status_t get_gmc_voltages(i2c_instance_t *i2c_GMC_ADC, uint8_t* ADC_voltages){
+i2c_status_t get_gmc_voltages(i2c_instance_t *i2c_GMC_ADC, uint16_t* ADC_voltages){
 	uint8_t channel;
 	for (channel=0; channel<8; channel++){
 		ADC_voltages[channel] = get_ADC_value(&counter_i2c, GMC_ADC_address, channel, &flag);

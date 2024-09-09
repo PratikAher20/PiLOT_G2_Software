@@ -377,6 +377,8 @@ int main(){
 				store_in_sd_card = 0;
 			}
 		}
+
+		MSS_WD_reload();
 	}
 
     return 0;

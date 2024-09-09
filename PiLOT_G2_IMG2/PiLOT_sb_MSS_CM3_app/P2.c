@@ -55,11 +55,11 @@ uint8_t get_gmc(){
 
 	status = get_free_res(&counter_i2c, free_res);
 	status = status << 1;
-	gmc_free_res_value = count_val[0];
+	gmc_free_res_value = free_res[0];
 	gmc_free_res_value = gmc_free_res_value << 8;
-	gmc_free_res_value = gmc_free_res_value | count_val[1];
+	gmc_free_res_value = gmc_free_res_value | free_res[1];
 	gmc_free_res_value = gmc_free_res_value << 8;
-	gmc_free_res_value = gmc_free_res_value | count_val[2];
+	gmc_free_res_value = gmc_free_res_value | free_res[2];
 
 	get_gmc_voltages(&counter_i2c, ADC_voltages);
 
