@@ -229,6 +229,7 @@ void exe_iap(rx_cmd_t* rcv_cmd){
 
 	SYSREG->WDOG_CR = 0x00000000;
 
+
 	copy_esram_image();
 
 	remap_user_code_eSRAM_0();
@@ -265,6 +266,30 @@ void exe_rtm(rx_cmd_t* rcv_cmd){
 		RTM[i] = rcv_cmd->parameters[i];
 	}
 
+}
+
+void ctrl_gmc(rx_cmd_t* rcv_cmd){
+
+	if(rcv_cmd->parameters[0] == 0){
+		MSS_GPIO_set_output(MSS_GPIO_6, 0);
+		NVIC_DisableIRQ(FabricIrq8_IRQn);
+	}
+	else{
+		MSS_GPIO_set_output(MSS_GPIO_6, 1);
+		NVIC_EnableIRQ(FabricIrq8_IRQn);
+	}
+}
+
+void ctrl_comms(rx_cmd_t* rcv_cmd){
+
+	if(rcv_cmd->parameters[0] == 0){
+		MSS_GPIO_set_output(MSS_GPIO_2, 0);
+		NVIC_DisableIRQ(FabricIrq5_IRQn);
+	}
+	else{
+		MSS_GPIO_set_output(MSS_GPIO_2, 1);
+		NVIC_EnableIRQ(FabricIrq5_IRQn);
+	}
 }
 
 //void cmd_sc_reset(rx_cmd_t* rcv_cmd){

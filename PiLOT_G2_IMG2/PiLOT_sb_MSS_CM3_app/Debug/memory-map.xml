@@ -10,8 +10,5 @@
     <memory-device address="0x20000000" size="32k" type="ram">
       <description>SRAM</description>
     </memory-device>
-    <memory-device address="0x2000B000" size="20k" type="ram">
-      <description>SRAM</description>
-    </memory-device>
   </memory-map>
 </board>

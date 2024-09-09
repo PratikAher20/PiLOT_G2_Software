@@ -337,6 +337,8 @@ void init_cmd_engine(){
 	add_cmd(2, 3, exe_iap);
 	add_cmd(3, 6, read_adf_reg);
 	add_cmd(4, 16, exe_rtm);
+	add_cmd(5, 2, ctrl_gmc);
+	add_cmd(6, 2, ctrl_comms);
 }
 
 //Function to initialise 64 bit timer

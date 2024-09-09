@@ -17,7 +17,7 @@
 #include "mss_sys_services.h"
 
 #define MAX_CMD_PARAM 32
-#define NUM_CMDS 5
+#define NUM_CMDS 6
 
 /**
  * @brief Structure for a command packet.
@@ -78,6 +78,10 @@ void exe_iap(rx_cmd_t* rcv_cmd);
 void read_adf_reg(rx_cmd_t* rcv_cmd);
 void cmd_sc_reset(rx_cmd_t* rcv_cmd);
 void exe_rtm(rx_cmd_t* rcv_cmd);
+void ctrl_gmc(rx_cmd_t* rcv_cmd);
+void ctrl_comms(rx_cmd_t* rcv_cmd);
+void copy_esram_image();
+void __attribute__((optimize("O0"))) remap_user_code_eSRAM_0(void);
 
 typedef struct pkt_rate{
 

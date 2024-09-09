@@ -60,13 +60,12 @@ MEMORY
     
     /* SmartFusion2 internal eSRAM */
     ram (rwx) : ORIGIN = 0x20000000, LENGTH = 32k
-    ram1 (rwx) : ORIGIN = 0x2000B000, LENGTH = 20k
 }
 
 RAM_START_ADDRESS   = 0x20000000;           /* Must be the same value MEMORY region ram ORIGIN above. */
 RAM_SIZE            = 32k;                  /* Must be the same value MEMORY region ram LENGTH above. */
 MAIN_STACK_SIZE     = 4k;                   /* Cortex main stack size. */
-MIN_SIZE_HEAP       = 2k;                   /* needs to be calculated for your application */
+MIN_SIZE_HEAP       = 4k;                   /* needs to be calculated for your application */
 
 /*******************************************************************************
  * End of board customization.
@@ -170,7 +169,7 @@ SECTIONS
     *(.data .data.* .gnu.linkonce.d.*)
     . = ALIGN(0x10);
     _edata = .;
-  } >ram1 AT>rom
+  } >ram AT>rom
 
   .bss : ALIGN(0x10)
   {
@@ -185,7 +184,7 @@ SECTIONS
     __end = _end;
     _ebss = .;
     PROVIDE(end = .);
-  } >ram1 AT>rom
+  } >ram AT>rom
 
   .heap : ALIGN(0x10)
   {
