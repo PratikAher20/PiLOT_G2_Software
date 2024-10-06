@@ -1,5 +1,7 @@
 # PiLOT_G2/GRACE Flight Software
 PiLOT_G2/GRACE is second payload after PiLOT-1, indigeneuosly built at SSAPCE Lab in IIST.
+![DSC_1665](https://github.com/user-attachments/assets/22eb5b4e-3bde-46c3-a616-e3ac577d7ce2)
+
 ## Main objectives of the mission includes:
 1) First Ever Implementation of In Orbit Reprogramming of both FPGA and ENVM in India at University Level.
 2) Qualify the CubeSat UHF Board designed at IIST.
